@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>2.5 Continuity | Calculus I</title>
+  <meta name="description" content="2.5 Continuity | Calculus I" />
+  <meta name="generator" content="bookdown 0.33 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="2.5 Continuity | Calculus I" />
+  <meta property="og:type" content="book" />
+  <meta property="og:image" content="/Title_Page.png" />
+  
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="2.5 Continuity | Calculus I" />
+  
+  
+  <meta name="twitter:image" content="/Title_Page.png" />
+
+<meta name="author" content="Differential Calculus" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="the-precise-definition-of-a-limit.html"/>
+<link rel="next" href="limits-at-infinity-horizontal-asymptotes.html"/>
+<script src="libs/jquery/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Differential Calculus</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>About This Book</a></li>
+<li class="part"><span><b>I Functions and Models</b></span></li>
+<li class="part"><span><b>II Limits and Derivatives</b></span></li>
+<li class="chapter" data-level="" data-path="the-limit-of-a-function.html"><a href="the-limit-of-a-function.html"><i class="fa fa-check"></i>2.2 The Limit of a Function</a>
+<ul>
+<li class="chapter" data-level="" data-path="the-limit-of-a-function.html"><a href="the-limit-of-a-function.html#the-idea-of-a-limit"><i class="fa fa-check"></i>The Idea of a Limit</a></li>
+<li class="chapter" data-level="" data-path="the-limit-of-a-function.html"><a href="the-limit-of-a-function.html#left-and-right-limits"><i class="fa fa-check"></i>Left and Right Limits</a></li>
+<li class="chapter" data-level="" data-path="the-limit-of-a-function.html"><a href="the-limit-of-a-function.html#limits-that-do-not-exist"><i class="fa fa-check"></i>Limits That Do Not Exist</a></li>
+<li class="chapter" data-level="" data-path="the-limit-of-a-function.html"><a href="the-limit-of-a-function.html#infinite-limits-and-vertical-asymptotes"><i class="fa fa-check"></i>Infinite Limits and Vertical Asymptotes</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="calculating-limits-using-the-limit-laws.html"><a href="calculating-limits-using-the-limit-laws.html"><i class="fa fa-check"></i>2.3 Calculating Limits Using the Limit Laws</a>
+<ul>
+<li class="chapter" data-level="" data-path="calculating-limits-using-the-limit-laws.html"><a href="calculating-limits-using-the-limit-laws.html#the-limit-laws"><i class="fa fa-check"></i>The Limit Laws</a></li>
+<li class="chapter" data-level="" data-path="calculating-limits-using-the-limit-laws.html"><a href="calculating-limits-using-the-limit-laws.html#direct-substitution"><i class="fa fa-check"></i>Direct Substitution</a></li>
+<li class="chapter" data-level="" data-path="calculating-limits-using-the-limit-laws.html"><a href="calculating-limits-using-the-limit-laws.html#limits-of-trigonometric-functions"><i class="fa fa-check"></i>Limits of Trigonometric Functions</a></li>
+<li class="chapter" data-level="" data-path="calculating-limits-using-the-limit-laws.html"><a href="calculating-limits-using-the-limit-laws.html#the-squeeze-theorem"><i class="fa fa-check"></i>The Squeeze Theorem</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="the-precise-definition-of-a-limit.html"><a href="the-precise-definition-of-a-limit.html"><i class="fa fa-check"></i>2.4 The Precise Definition of a Limit</a>
+<ul>
+<li class="chapter" data-level="" data-path="the-precise-definition-of-a-limit.html"><a href="the-precise-definition-of-a-limit.html#proof-of-limit-laws"><i class="fa fa-check"></i>Proof of Limit Laws</a></li>
+<li class="chapter" data-level="" data-path="the-precise-definition-of-a-limit.html"><a href="the-precise-definition-of-a-limit.html#proofs-of-trigonometric-limits"><i class="fa fa-check"></i>Proofs of Trigonometric Limits</a></li>
+<li class="chapter" data-level="" data-path="the-precise-definition-of-a-limit.html"><a href="the-precise-definition-of-a-limit.html#limits-at-infinity-by-definition"><i class="fa fa-check"></i>Limits at Infinity by Definition</a></li>
+<li class="chapter" data-level="" data-path="the-precise-definition-of-a-limit.html"><a href="the-precise-definition-of-a-limit.html#proof-of-direct-substitution-property"><i class="fa fa-check"></i>Proof of Direct Substitution Property</a></li>
+<li class="chapter" data-level="" data-path="the-precise-definition-of-a-limit.html"><a href="the-precise-definition-of-a-limit.html#proof-of-the-squeeze-theorem"><i class="fa fa-check"></i>Proof of The Squeeze Theorem</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="continuity.html"><a href="continuity.html"><i class="fa fa-check"></i>2.5 Continuity</a>
+<ul>
+<li class="chapter" data-level="" data-path="continuity.html"><a href="continuity.html#limits-and-continuity"><i class="fa fa-check"></i>Limits and Continuity</a></li>
+<li class="chapter" data-level="" data-path="continuity.html"><a href="continuity.html#types-of-discontinuities"><i class="fa fa-check"></i>Types of Discontinuities</a></li>
+<li class="chapter" data-level="" data-path="continuity.html"><a href="continuity.html#properties-of-continuous-functions"><i class="fa fa-check"></i>Properties of Continuous Functions</a></li>
+<li class="chapter" data-level="" data-path="continuity.html"><a href="continuity.html#proof-of-continuity-laws"><i class="fa fa-check"></i>Proof of Continuity Laws</a></li>
+<li class="chapter" data-level="" data-path="continuity.html"><a href="continuity.html#the-intermediate-value-theorem"><i class="fa fa-check"></i>The Intermediate Value Theorem</a></li>
+<li class="chapter" data-level="" data-path="continuity.html"><a href="continuity.html#proof-of-the-ivt"><i class="fa fa-check"></i>Proof of The IVT</a></li>
+<li class="chapter" data-level="" data-path="continuity.html"><a href="continuity.html#continuity-of-trigonometric-functions"><i class="fa fa-check"></i>Continuity of Trigonometric Functions</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="limits-at-infinity-horizontal-asymptotes.html"><a href="limits-at-infinity-horizontal-asymptotes.html"><i class="fa fa-check"></i>2.6 Limits at Infinity; Horizontal Asymptotes</a>
+<ul>
+<li class="chapter" data-level="" data-path="limits-at-infinity-horizontal-asymptotes.html"><a href="limits-at-infinity-horizontal-asymptotes.html#limits-at-infinity"><i class="fa fa-check"></i>Limits At Infinity</a></li>
+<li class="chapter" data-level="" data-path="limits-at-infinity-horizontal-asymptotes.html"><a href="limits-at-infinity-horizontal-asymptotes.html#limits-at-infinity-by-definition-1"><i class="fa fa-check"></i>Limits at Infinity by Definition</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="derivatives-and-rates-of-change.html"><a href="derivatives-and-rates-of-change.html"><i class="fa fa-check"></i>2.7 Derivatives and Rates of Change</a>
+<ul>
+<li class="chapter" data-level="" data-path="derivatives-and-rates-of-change.html"><a href="derivatives-and-rates-of-change.html#application-tangent-lines"><i class="fa fa-check"></i>Application: Tangent Lines</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="the-derivative-as-a-function.html"><a href="the-derivative-as-a-function.html"><i class="fa fa-check"></i>2.8 The Derivative as a Function</a>
+<ul>
+<li class="chapter" data-level="" data-path="the-derivative-as-a-function.html"><a href="the-derivative-as-a-function.html#differentiability"><i class="fa fa-check"></i>Differentiability</a></li>
+</ul></li>
+<li class="part"><span><b>III Differentiation Rules</b></span></li>
+<li class="part"><span><b>IV Applications of Differentiation</b></span></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Calculus I</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="continuity" class="section level1 unnumbered hasAnchor">
+<h1>2.5 Continuity<a href="continuity.html#continuity" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="limits-and-continuity" class="section level2 unnumbered hasAnchor">
+<h2>Limits and Continuity<a href="continuity.html#limits-and-continuity" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Let <span class="math inline">\(f\)</span> be a function defined on some interval <span class="math inline">\((a,b)\)</span> and <span class="math inline">\(c \in (a,b)\)</span>. We say that <span class="math inline">\(f\)</span> is continuous at <span class="math inline">\(c\)</span> if three things happen:</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(f(c)\)</span> exists</li>
+<li><span class="math inline">\(\displaystyle\lim_{x \rightarrow c} f(x)\)</span> exists</li>
+<li><span class="math inline">\(\displaystyle\lim_{x \rightarrow c} f(x) = f(c)\)</span>.</li>
+</ol>
+<p>We will see why each of these properties is necessary to ensure continuity. We define continuity in a more compact version below.</p>
+<div style="color: blue;">
+<p><strong>Definition:</strong> A function <span class="math inline">\(f\)</span> is continuous at a point <span class="math inline">\(c\)</span> if <span class="math inline">\(\displaystyle\lim_{x \rightarrow c} f(x) = f(c)\)</span>.</p>
+</div>
+<p>We say that <span class="math inline">\(f\)</span> is continuous on an open interval <span class="math inline">\(I\)</span> if <span class="math inline">\(f\)</span> is continuous at every point <span class="math inline">\(c \in I\)</span>.</p>
+<p>Note that each of the three properties listed in the introduction must occur in order for <span class="math inline">\(f\)</span> to satisfy the definition of continuity.</p>
+<div style="color: green;">
+<p><strong>Example:</strong> Prove that <span class="math inline">\(f(x) = 3x^2 - 5x + 1\)</span> is continuous at 6.</p>
+</div>
+<div style="color: green;">
+<p><strong>Solution:</strong> We need to determine three things:</p>
+<ul>
+<li>Does <span class="math inline">\(f(6)\)</span> exist?</li>
+<li>Does <span class="math inline">\(\displaystyle\lim_{x \rightarrow 6} f(x)\)</span> exist?</li>
+<li>Is <span class="math inline">\(\displaystyle\lim_{x \rightarrow 6} f(x) = f(6)\)</span>?</li>
+</ul>
+<p>First, we know that <span class="math inline">\(f(6) = 3(6)^2 - 5(6) + 1 = 79\)</span>. So, <span class="math inline">\(f(6)\)</span> exists.</p>
+<p>Next, we note that <span class="math inline">\(f\)</span> is a polynomial and hence we can use the limit laws to evaluate <span class="math inline">\(\displaystyle\lim_{x \rightarrow 6} f(x)\)</span>.
+<span class="math display">\[\begin{align*}
+\lim_{x \rightarrow 6} f(x) &amp;= \lim_{x \rightarrow 6} 3x^2 - 5x + 1  \\[6pt]
+&amp;= \lim_{x \rightarrow 6} 3x^2 -  \lim_{x \rightarrow 6} 5x +  \lim_{x \rightarrow 6} 1  &amp;&amp; \mbox{Sum and Difference Laws}\\[6pt]
+&amp;= 3\lim_{x \rightarrow 6} x^2 -  5\lim_{x \rightarrow 6} x +  \lim_{x \rightarrow 6} 1  &amp;&amp; \mbox{Constant Coefficient Law}\\[6pt]
+&amp;= 3\left(\lim_{x \rightarrow 6} x \right)^2 -  5\lim_{x \rightarrow 6} x +  \lim_{x \rightarrow 6} 1  &amp;&amp; \mbox{Power Law}\\[6pt]
+&amp;= 3\left(6 \right)^2 -  5(6) +  \lim_{x \rightarrow 6} 1  &amp;&amp; \mbox{Identity Law}\\[6pt]
+&amp;= 108 - 30 +  1  &amp;&amp; \mbox{Constant Law}\\[6pt]
+&amp;= 79.
+\end{align*}\]</span> So, <span class="math inline">\(\displaystyle\lim_{x \rightarrow 6} f(x)\)</span> exists.\</p>
+<p>Finally, since <span class="math inline">\(\displaystyle\lim_{x \rightarrow 6} f(x) = 79 = f(6)\)</span>, the function <span class="math inline">\(f(x) = 3x^2 - 5x + 1\)</span> is continuous at 6.</p>
+</div>
+<div style="color: blue;">
+<p><strong>Theorem (Continuity of Polynomials):</strong> All polynomials are continuous on <span class="math inline">\(\mathbb{R}\)</span>.</p>
+</div>
+<div style="color: blue;">
+<p><strong>Proof:</strong> All polynomials have the form <span class="math display">\[P(x) = c_n x^n + c_{n-1}x^{n-1} + \cdots + c_1 x + c_0.\]</span> Let <span class="math inline">\(a \in \mathbb{R}\)</span>. Clearly, <span class="math inline">\(P(a) = c_n a^n + c_{n-1}a^{n-1} + \cdots + c_1 a + c_0\)</span>. However, we can also see that <span class="math display">\[\begin{align*}  \lim_{x \rightarrow a} P(x) &amp;= \lim_{x \rightarrow a} c_n x^n + c_{n-1}x^{n-1} + \cdots + c_1 x + c_0  \\[6pt]
+&amp;= \lim_{x \rightarrow a} c_n x^n + \lim_{x \rightarrow a} c_{n-1}x^{n-1} + \cdots + \lim_{x \rightarrow a} c_1 x + \lim_{x \rightarrow a} c_0  &amp;&amp; \mbox{Sum and Difference Laws}\\[6pt]
+&amp;= c_n\lim_{x \rightarrow a} x^n + c_{n-1}\lim_{x \rightarrow a} x^{n-1} + \cdots + c_1\lim_{x \rightarrow a} x + \lim_{x \rightarrow a} c_0  &amp;&amp; \mbox{Constant Coefficient Law}\\[6pt]
+&amp;= c_n \left(\lim_{x \rightarrow a} x\right)^n + c_{n-1}\left(\lim_{x \rightarrow a} x\right)^{n-1} + \cdots + c_1\lim_{x \rightarrow a} x + \lim_{x \rightarrow a} c_0  &amp;&amp; \mbox{Power Law}\\[6pt]
+&amp;= c_n \left( a \right)^n + c_{n-1}\left( a \right)^{n-1} + \cdots + c_1(a) + \lim_{x \rightarrow a} c_0  &amp;&amp; \mbox{Identity Law}\\[6pt]
+&amp;= c_n a^n + c_{n-1}a^{n-1} + \cdots + c_1a +  c_0  &amp;&amp; \mbox{Constant Law,}
+\end{align*}\]</span>
+which is exactly <span class="math inline">\(P(a)\)</span>. Hence, <span class="math inline">\(P(x)\)</span> is continuous on <span class="math inline">\(\mathbb{R}\)</span> since <span class="math inline">\(a\)</span> was arbitrarily selected.</p>
+</div>
+<div style="color: green;">
+<p><strong>Example:</strong> Find a value of <span class="math inline">\(c\)</span> for which the function <span class="math inline">\(f(x) = \begin{cases} 3x^2 - 1 &amp; x \geq 5\\ 2x + c &amp; x &lt; 5 \end{cases}\)</span> is continuous at 5.</p>
+</div>
+<div style="color: green;">
+<p><strong>Proof:</strong> First, since both pieces of <span class="math inline">\(f\)</span> are polynomials, we know that <span class="math inline">\(f\)</span> is continuous on <span class="math inline">\(\mathbb{R}\)</span> except possibly at 5. Since <span class="math inline">\(f(5) = 3(5)^2 - 1 = 74\)</span>, we need to find a value <span class="math inline">\(c\)</span> so that <span class="math inline">\(\displaystyle\lim_{x \rightarrow 5} f(x) = 74\)</span>.</p>
+<p>Evaluating the right side limit,
+<span class="math display">\[\begin{align*}  \lim_{x \rightarrow 5^+} f(x) &amp;= \lim_{x \rightarrow 5^+} 3x^2 - 1 \\
+&amp;= 3(5)^2 - 1  &amp;&amp; \mbox{since the polynomial is continuous at 5}\\[6pt]
+&amp;= 74.
+\end{align*}\]</span></p>
+<p>Evaluating the left side limit,
+<span class="math display">\[\begin{align*}  \lim_{x \rightarrow 5^-} f(x) &amp;= \lim_{x \rightarrow 5^-} 2x + c \\
+&amp;= 2(5) + c  &amp;&amp; \mbox{since the polynomial is continuous at 5}\\[6pt]
+&amp;= 10 + c.
+\end{align*}\]</span></p>
+<p>For the limit to exist the left limit (74) must be the same as the right limit (<span class="math inline">\(10 + c\)</span>). Hence, <span class="math inline">\(74 = 10 + c\)</span> or <span class="math inline">\(c = 64\)</span>. Now, the left limit is the same as the right limit at 5 (both are 74) and the limit is equal to <span class="math inline">\(f(5)\)</span>. Hence, <span class="math inline">\(c = 64\)</span> ensures that <span class="math inline">\(f\)</span> is continuous at 5 and therefore on <span class="math inline">\(\mathbb{R}\)</span>.</p>
+</div>
+<p>Practice Problems</p>
+<ol style="list-style-type: upper-alpha">
+<li>Determine if the given functions are continuous at the given value of <span class="math inline">\(a\)</span>:</li>
+</ol>
+<ul>
+<li><p><span class="math inline">\(f(x) = 2x^3 - 5x^2 + 1\)</span> at <span class="math inline">\(a = 3\)</span></p></li>
+<li><p><span class="math inline">\(g(x) = -3x^2 + 5x + 2\)</span> at <span class="math inline">\(a = 1\)</span></p></li>
+<li><p><span class="math inline">\(f(x) = \sqrt{x - 1} + 5\)</span> at <span class="math inline">\(a = 10\)</span></p></li>
+<li><p><span class="math inline">\(f(x) = \left(x^2 - x + 1 \right)^3\)</span> at <span class="math inline">\(a = -2\)</span></p></li>
+<li><p><span class="math inline">\(f(x) = \frac{x^2 - x -6}{x-3}\)</span> at <span class="math inline">\(a = 2\)</span></p></li>
+<li><p><span class="math inline">\(f(x) = \frac{x^2 - 2x -8}{x-1}\)</span> at <span class="math inline">\(a = 5\)</span></p></li>
+</ul>
+<ol start="2" style="list-style-type: upper-alpha">
+<li>Determine a value <span class="math inline">\(c\)</span> so that the given functions are continuous at the given value of <span class="math inline">\(a\)</span>:</li>
+</ol>
+<ul>
+<li><p><span class="math inline">\(f(x) = \begin{cases} 3x + 2 &amp; x &gt; 3\\ x-c &amp; x \leq 3 \end{cases}\;\;\)</span> at <span class="math inline">\(a = 3\)</span></p></li>
+<li><p><span class="math inline">\(g(x) = \begin{cases} x^2 + 2 &amp; x &gt; 1\\ \sqrt{x} - c &amp; x \leq 1 \end{cases}\;\;\)</span> at <span class="math inline">\(a = 1\)</span></p></li>
+<li><p><span class="math inline">\(f(x) = \begin{cases} |x - 20| &amp; x \geq 10\\ c\sqrt{x-6} + 2 &amp; x &lt; 10 \end{cases}\;\;\)</span> at <span class="math inline">\(a = 10\)</span></p></li>
+<li><p><span class="math inline">\(f(x) = \begin{cases} x^3 + 2x + c &amp; x \not = -2\\ -11 &amp; x = -2 \end{cases}\;\;\)</span> at <span class="math inline">\(a = -2\)</span></p></li>
+</ul>
+</div>
+<div id="types-of-discontinuities" class="section level2 unnumbered hasAnchor">
+<h2>Types of Discontinuities<a href="continuity.html#types-of-discontinuities" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Recall that for a function <span class="math inline">\(f\)</span> to be continuous at <span class="math inline">\(c\)</span>, three things must happen:</p>
+<ul>
+<li><span class="math inline">\(f(c)\)</span> exists</li>
+<li><span class="math inline">\(\displaystyle\lim_{x \rightarrow c} f(x)\)</span> exists</li>
+<li><span class="math inline">\(\displaystyle\lim_{x \rightarrow c} f(x) = f(c)\)</span>.</li>
+</ul>
+<p>In this section we will show examples where <span class="math inline">\(f\)</span> fails to have one or more of these properties and what results is a function that is discontinuous.</p>
+<p>One way to think about continuity is in terms of drawing a graph. If you can draw the graph of a function without lifting your pen, the function is continuous. The graph below is one where <span class="math inline">\(f(c)\)</span> does not exist. The missing point at <span class="math inline">\((1,1)\)</span> causes a discontinuity. Hence, it is important that the function is defined at all points. This type of discontinuity is called a removable discontinuity.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><img src="Pic22.png" /></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<p>The next two graphs illustrate what may happen if the <span class="math inline">\(\displaystyle\lim_{x \rightarrow c} f(x)\)</span> does not exist. In the first one, the graph jumps at the point <span class="math inline">\(x = 1\)</span>. This is called a jump discontinuity.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><img src="Pic23.png" /></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<p>In the second graph, the limit is infinite as <span class="math inline">\(x\)</span> approaches 1. This type of discontinuity is called an infinite discontinuity.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><img src="Pic24.png" /></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<p>Having the function defined at all points and a limit value at every point is still insufficient for continuity. The graph below is another type of removable discontinuity. In this case, the limit value is different than the function value. Hence, part three of our rules is necessary to ensure that the function value is equal to the limit value.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><img src="Pic26.png" /></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<p>Only when all three properties are satisfied do we get a graph of a continuous function.</p>
+<p>The idea of follows in a natural way. The graph below is continuous on <span class="math inline">\([0, \infty)\)</span>. It is continuous at 0 from the right because, rather than taking a two-sided limit, we simply take the limit from the right.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><img src="Pic25.png" /></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<p>Since continuity is generally a concept for functions on an open interval, we extend the idea to functions on a closed interval by simply restricting the limit requirement to being a one-sided limit for the endpoints. Hence, a function like <span class="math inline">\(f(x) = \sqrt{x}\)</span> is continuous on <span class="math inline">\([0,\infty)\)</span> since it is continuous at all points in <span class="math inline">\((0,\infty)\)</span> and also continuous from the right at 0.</p>
+<p>Practice Problems</p>
+<ol style="list-style-type: upper-alpha">
+<li>Sketch a graph of a function with the following properties:
+\begin{enumerate}</li>
+</ol>
+<ul>
+<li><p><span class="math inline">\(f\)</span> is defined on <span class="math inline">\([-3,3)\)</span>, there is a jump discontinuity at <span class="math inline">\(x = -2\)</span> and a removable discontinuity at <span class="math inline">\(x = 0\)</span>. The function <span class="math inline">\(f\)</span> is continuous from the right at <span class="math inline">\(x = -3\)</span> and <span class="math inline">\(f(-3) = 5\)</span>.</p></li>
+<li><p><span class="math inline">\(f\)</span> is defined on <span class="math inline">\([-10,8]\)</span>, there is a jump discontinuity at <span class="math inline">\(x = 0\)</span>, an infinite discontinuity at <span class="math inline">\(x = -2\)</span>, a removable discontinuity at <span class="math inline">\(x = 4\)</span> and <span class="math inline">\(f(4)\)</span> does not exist. The function <span class="math inline">\(f\)</span> is discontinuous at both endpoints.</p></li>
+<li><p><span class="math inline">\(f\)</span> is defined on <span class="math inline">\([-5,5]\)</span>, there is a jump discontinuity at <span class="math inline">\(x = -1\)</span>, an infinite discontinuity at <span class="math inline">\(x = -3\)</span>, a removable discontinuity at <span class="math inline">\(x = 2\)</span> and <span class="math inline">\(f(2) = 1\)</span>. The function <span class="math inline">\(f\)</span> is continuous from the right at <span class="math inline">\(x = -5\)</span> but is not continuous from the left at <span class="math inline">\(x = 5\)</span>.</p></li>
+</ul>
+<ol start="2" style="list-style-type: upper-alpha">
+<li>Determine where the given functions are continuous.</li>
+</ol>
+<ul>
+<li><p><span class="math inline">\(f(x) = \begin{cases} 3x - 5, &amp; x \not = 1\\ 2, &amp; x = 1 \end{cases}\)</span></p></li>
+<li><p><span class="math inline">\(f(x) = \begin{cases} x^2 + 2x, &amp; x \leq -2\\ x^3 - 6x, &amp; x &gt; -2 \end{cases}\)</span></p></li>
+<li><p><span class="math inline">\(f(x) = \frac{x^3 - 8}{x-2}\)</span></p></li>
+<li><p><span class="math inline">\(f(x) = \begin{cases} 0, &amp; x =0\\ x^3 \sin(1/x) &amp; x \not = 0 \end{cases}\)</span></p></li>
+</ul>
+</div>
+<div id="properties-of-continuous-functions" class="section level2 unnumbered hasAnchor">
+<h2>Properties of Continuous Functions<a href="continuity.html#properties-of-continuous-functions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Once we know that a function is continuous, we can evaluate limits by simply substituting the limit value into the function. That makes continuity a very powerful property. We already know that all polynomials are continuous.</p>
+<div style="color: green;">
+<p><strong>Example:</strong> Determine <span class="math inline">\(\displaystyle\lim_{x \rightarrow 2} x^3 - 5x + 6\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Solution:</strong> Since <span class="math inline">\(f(x) = x^3 - 5x + 6\)</span> is a polynomial, it is continuous on <span class="math inline">\(\mathbb{R}\)</span>. Hence, <span class="math display">\[\displaystyle\lim_{x \rightarrow 2} f(x) = f(2).\]</span> Since <span class="math inline">\(f(2) = 2^3 - 5(2) + 6 = 4\)</span>, we know that <span class="math display">\[\displaystyle\lim_{x \rightarrow 2} x^3 - 5x + 6 = 4.\]</span></p>
+</div>
+<p>Here we examine some more properties of continuous functions.</p>
+<div style="color: blue;">
+<strong>Theorem:</strong> Let <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> be continuous on an open interval <span class="math inline">\(I\)</span> and <span class="math inline">\(c \in \mathbb{R}\)</span>. The following properties hold:
+</div>
+<p>Each of these continuity laws is easy to prove and we will prove them later on. An easy result of the continuity laws is that rational functions are continuous on their domains.</p>
+<div style="color: blue;">
+<p><strong>Corollary:</strong> Any rational function is continuous on its domain.</p>
+</div>
+<div style="color: green;">
+<p><strong>Example:</strong> Determine where <span class="math inline">\(f(x) = \dfrac{x^2 - 2x - 8}{x-4}\)</span> is continuous and find <span class="math inline">\(\displaystyle\lim_{x \rightarrow 4} f(x)\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Solution:</strong> From the corollary, we know that <span class="math inline">\(\dfrac{x^2 - 2x - 8}{x-2}\)</span> is continuous on its domain (property 4). Since <span class="math display">\[\dfrac{x^2 - 2x - 8}{x-4} = \dfrac{(x-4)(x+2)}{x-4} = x+2, \;\; \text{when } x \not = 4,\]</span> we know that it is continuous on everywhere except <span class="math inline">\(x = 4\)</span> which we write as <span class="math display">\[domain(f(x)) = \mathbb{R} - \{4\}.\]</span></p>
+<p>Since <span class="math inline">\(f(x) = \dfrac{x^2 - 2x - 8}{x-4}\)</span> is continuous everywhere except at <span class="math inline">\(x = 4\)</span>, and because <span class="math display">\[f(x) = \dfrac{x^2 - 2x - 8}{x-4} = x+2\]</span> at all values of <span class="math inline">\(x\)</span> other than <span class="math inline">\(x = 4\)</span>, we can evaluate <span class="math inline">\(\displaystyle\lim_{x \rightarrow 4} \dfrac{x^2 - 2x - 8}{x-4}\)</span> as if we were evaluating <span class="math inline">\(\displaystyle\lim_{x \rightarrow 4} x+2\)</span> since we know the function acts identically at all values except <span class="math inline">\(x = 4\)</span> (and a limit never acts at the limit point). Therefore,
+<span class="math display">\[\begin{align*}  \lim_{x \rightarrow 4} \dfrac{x^2 - 2x - 8}{x-4} &amp;=  \lim_{x \rightarrow 4} \dfrac{(x-4)(x+2)}{x-4}\\
+&amp;=  \lim_{x \rightarrow 4} x+2 \\
+&amp;= 4 + 2\\
+&amp;= 6.
+\end{align*}\]</span></p>
+</div>
+<div style="color: green;">
+<p><strong>Example:</strong> Determine where <span class="math inline">\(g(x) = \dfrac{(x-1)(x^2 - 3x - 10)}{x^2 - 4x + 3}\)</span> is continuous and find <span class="math inline">\(\displaystyle\lim_{x \rightarrow 1} g(x)\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Solution:</strong> From the corollary, we know that <span class="math inline">\(\dfrac{(x-1)(x^2 - 3x - 10)}{x^2 - 4x + 3}\)</span> is continuous on its domain (property 4). Since <span class="math display">\[\dfrac{(x-1)(x^2 - 3x - 10)}{x^2 - 4x + 3} = \dfrac{(x-1)(x+2)(x-5)}{(x-1)(x-3)} = \dfrac{(x+2)(x-5)}{(x-3)}, \;\; \text{when } x \not = 1,\]</span> we know that it is continuous on everywhere except <span class="math inline">\(x = 1\)</span> and <span class="math inline">\(x = 3\)</span> which we write as <span class="math display">\[domain(g(x)) = \mathbb{R} - \{1,3\}.\]</span></p>
+<p>Since <span class="math inline">\(g(x) = \dfrac{(x-1)(x^2 - 3x - 10)}{x^2 - 4x + 3}\)</span> is continuous everywhere except at <span class="math inline">\(x = 1\)</span> and <span class="math inline">\(3\)</span>, and because <span class="math inline">\(g(x) = \dfrac{(x+2)(x-5)}{(x-3)}\)</span> at all values of <span class="math inline">\(x\)</span> other than <span class="math inline">\(x = 1\)</span> and <span class="math inline">\(3\)</span>, we can evaluate <span class="math inline">\(\displaystyle\lim_{x \rightarrow 1} g(x)\)</span> as if we were evaluating <span class="math inline">\(\displaystyle\lim_{x \rightarrow 1} \dfrac{(x+2)(x-5)}{(x-3)}\)</span> since we know the function acts identically at all values except <span class="math inline">\(x = 1\)</span> and is undefined at 3 (and a limit never acts at the limit point). Therefore,
+<span class="math display">\[\begin{align*}  \lim_{x \rightarrow 1} \dfrac{(x-1)(x^2 - 3x - 10)}{x^2 - 4x + 3} &amp;=  \lim_{x \rightarrow 1}  \dfrac{(x-1)(x+2)(x-5)}{(x-1)(x-3)}\\
+&amp;=  \lim_{x \rightarrow 1} \dfrac{(x+2)(x-5)}{(x-3)} \\
+&amp;= \dfrac{(1+2)(1-5)}{(1-3)}\\
+&amp;= \dfrac{(3)(-4)}{-2}\\
+&amp;= 6.
+\end{align*}\]</span></p>
+</div>
+<p>Another property that is easy to prove involves continuity for roots.</p>
+<div style="color: blue;">
+<p><strong>Theorem:</strong> If <span class="math inline">\(n \in \mathbb{Z}^+\)</span> and is even, then <span class="math inline">\(f(x) = \sqrt[n]{x}\)</span> is continuous on <span class="math inline">\([0,\infty)\)</span>. If <span class="math inline">\(n \in \mathbb{Z}^+\)</span> is odd, then <span class="math inline">\(f\)</span> is continuous on <span class="math inline">\((-\infty, \infty)\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Example:</strong> Determine where <span class="math inline">\(f(x) = x - \sqrt{x-2}\)</span> is continuous.</p>
+</div>
+<div style="color: green;">
+<p><strong>Solution:</strong> The function <span class="math inline">\(f\)</span> is the difference of two functions <span class="math inline">\(x\)</span> and <span class="math inline">\(\sqrt{x-2}\)</span>. The domain of <span class="math inline">\(x\)</span> is <span class="math inline">\(\mathbb{R}\)</span> while the domain of <span class="math inline">\(\sqrt{x-2}\)</span> is <span class="math inline">\(x-2 \geq 0\)</span> or <span class="math inline">\(x \geq 2\)</span>. Therefore, <span class="math inline">\(f\)</span> is continuous on its domain <span class="math inline">\(D = \{x | x \geq 2\}\)</span>.</p>
+</div>
+<p>We note that in the previous example we had a difference of functions. The first function <span class="math inline">\(g(x) = x\)</span> was continuous on <span class="math inline">\(\mathbb{R}\)</span> while the second function <span class="math inline">\(h(x) = \sqrt{x-2}\)</span> was continuous for <span class="math inline">\(x \geq 2\)</span>. The function <span class="math inline">\(f(x) = x - \sqrt{x} = g(x) - h(x)\)</span> (the difference between <span class="math inline">\(g\)</span> and <span class="math inline">\(h\)</span>) is continuous where <span class="math inline">\(g\)</span> and <span class="math inline">\(h\)</span> are continuous.</p>
+<div style="color: blue;">
+<p><strong>Theorem:</strong> Let <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> be continuous on intervals <span class="math inline">\(I_1\)</span> and <span class="math inline">\(I_2\)</span> respectively. Suppose that <span class="math inline">\(g(x) \not = 0\)</span> on <span class="math inline">\(I_3\)</span>. Then</p>
+<ol style="list-style-type: decimal">
+<li>the domain of <span class="math inline">\(cf(x)\)</span> is <span class="math inline">\(I_1\)</span>,</li>
+<li>the domain of <span class="math inline">\(f(x) \pm g(x)\)</span> is <span class="math inline">\(I_1 \cap I_2\)</span>,</li>
+<li>the domain of <span class="math inline">\(f(x) \cdot g(x)\)</span> is <span class="math inline">\(I_1 \cap I_2\)</span>,</li>
+<li>the domain of <span class="math inline">\(f(x)/ g(x)\)</span> is <span class="math inline">\((I_1 \cap I_2) \cap I_3\)</span>,</li>
+</ol>
+<p>where <span class="math inline">\(A \cap B\)</span> indicates the values common to both intervals <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Example:</strong> Determine where <span class="math inline">\(f(x) = \dfrac{\sqrt[4]{x+3}}{x-5}\)</span> is continuous.</p>
+</div>
+<div style="color: green;">
+<p><strong>Solution:</strong> The function <span class="math inline">\(f\)</span> is the quotient of two functions <span class="math inline">\(\sqrt[4]{x+3}\)</span> and <span class="math inline">\(x-5\)</span>. The domain of <span class="math inline">\(\sqrt[4]{x+3}\)</span> is <span class="math inline">\(x+3 \geq 0\)</span> or <span class="math inline">\(x \geq -3\)</span> (from Theorem <span class="math inline">\(\ref{thm:ContinuousRootTheorem}\)</span>) while the domain of <span class="math inline">\(x-5\)</span> is <span class="math inline">\(\mathbb{R}\)</span>. We also note that <span class="math inline">\(x-5 = 0\)</span> when <span class="math inline">\(x = 5\)</span>. Therefore, in this example, <span class="math inline">\(I_1 = \{x|x \geq -3\}\)</span>, <span class="math inline">\(I_2 = \mathbb{R}\)</span> and <span class="math inline">\(I_3 = \mathbb{R}-\{5\}\)</span>. We know <span class="math inline">\(f\)</span> is continuous on <span class="math display">\[\begin{align*}
+(I_1 \cap I_2) \cap I_3 &amp;= \left(\{x | x \geq -3\} \cap \mathbb{R} \right) \cap \left(\mathbb{R} - \{5\} \right)\\
+&amp;= \{x | x \geq -3\} \cap \left(\mathbb{R} - \{5\} \right)\\
+&amp;= \{x | x \geq -3, x \not = 5\},
+\end{align*}\]</span>
+which we can rewrite as <span class="math inline">\([-3,5) \cup (5,\infty)\)</span>.</p>
+</div>
+<p>Practice Problems</p>
+<p>Determine where the given functions are continuous.</p>
+<ul>
+<li><p><span class="math inline">\(f(x) = x^2 - 5x + 100\)</span></p></li>
+<li><p><span class="math inline">\(f(x) = \dfrac{1}{x^2 - 10x + 25}\)</span></p></li>
+<li><p><span class="math inline">\(f(x) = \dfrac{x^3}{x^2 + x -6}\)</span></p></li>
+<li><p><span class="math inline">\(f(x) = \sqrt[3]{x}\)</span></p></li>
+<li><p><span class="math inline">\(f(x) = 2x^3 - \sqrt[3](x)\)</span></p></li>
+<li><p><span class="math inline">\(f(x) = \sqrt{x - 3}\)</span></p></li>
+<li><p><span class="math inline">\(f(x) = x\sqrt{x - 5}\)</span></p></li>
+<li><p><span class="math inline">\(f(x) = \sqrt{x} + \sqrt{3-x}\)</span></p></li>
+<li><p><span class="math inline">\(f(x) = \sqrt[3]{x-5} + \sqrt[4]{x+3}\)</span></p></li>
+<li><p><span class="math inline">\(f(x) = \dfrac{\sqrt{x + 3}}{\sqrt{10 - x}}\)</span></p></li>
+</ul>
+</div>
+<div id="proof-of-continuity-laws" class="section level2 unnumbered hasAnchor">
+<h2>Proof of Continuity Laws<a href="continuity.html#proof-of-continuity-laws" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In this section, we prove the continuity laws.</p>
+<div style="color: blue;">
+<p><strong>Theorem:</strong> Let <span class="math inline">\(f\)</span> be continuous on an open interval <span class="math inline">\(I\)</span> and <span class="math inline">\(c \in \mathbb{R}\)</span>. Then <span class="math inline">\(cf(x)\)</span> is continuous.</p>
+</div>
+<div style="color: blue;">
+<p><strong>Proof:</strong> Let <span class="math inline">\(f\)</span> be continuous on an open interval <span class="math inline">\(I\)</span> and let <span class="math inline">\(a \in I\)</span>. Then <span class="math display">\[\lim_{x \rightarrow a} f(x) = f(a).\]</span> We need to show that <span class="math display">\[\lim_{x \rightarrow a} cf(x) = cf(a).\]</span> Since <span class="math inline">\(f\)</span> is continuous at <span class="math inline">\(a\)</span>, we know <span class="math display">\[\begin{align*} \lim_{x \rightarrow a} cf(x) &amp;= c\lim_{x \rightarrow a} f(x)\\
+&amp;= cf(a). \end{align*}\]</span>
+Therefore, since <span class="math display">\[\lim_{x \rightarrow a} cf(x) = cf(a),\]</span> we know that <span class="math inline">\(cf(x)\)</span> is</p>
+</div>
+<div style="color: blue;">
+<p><strong>Theorem:</strong> Let <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> be continuous on an open interval <span class="math inline">\(I\)</span>. Then <span class="math inline">\(f(x) \pm g(x)\)</span> is continuous.</p>
+</div>
+<div style="color: blue;">
+<p><strong>Proof:</strong> Let <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> be continuous and <span class="math inline">\(a \in I\)</span>. We need to show that
+<span class="math display">\[\displaystyle\lim_{x \rightarrow a} f(x) + g(x) = f(a) + g(a).\]</span></p>
+<p>Since we know that <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> are continuous on <span class="math inline">\(I\)</span>, we know that <span class="math display">\[\lim_{x \rightarrow a} f(x) = f(a) \;\;\; \text{and} \;\;\; \lim_{x \rightarrow a} g(x) = g(a).\]</span> Therefore, we have
+<span class="math display">\[\begin{align*}  \lim_{x \rightarrow a} f(x) + g(x) &amp;= \lim_{x \rightarrow a} f(x) + \lim_{x \rightarrow a} g(x) &amp;&amp; \mbox{Sum Rule for limits}\\[6pt]
+&amp;= f(a) + g(a).
+\end{align*}\]</span>
+Therefore, the function <span class="math inline">\(f+g\)</span> is continuous.</p>
+</div>
+<div style="color: blue;">
+<p><strong>Theorem:</strong> Let <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> be continuous on an open interval <span class="math inline">\(I\)</span>. Then <span class="math inline">\(f(x)g(x)\)</span> is continuous.</p>
+</div>
+<div style="color: blue;">
+<p><strong>Proof:</strong> Using limit laws (the Multiplication Law), we know that if <span class="math display">\[\lim_{x \rightarrow a} f(x) = f(a) = L,\]</span> and if <span class="math display">\[\lim_{x \rightarrow a} g(x) = g(a) = M,\]</span> then <span class="math display">\[\lim_{x \rightarrow a} f(x)g(x) = LM = f(a)g(a),\]</span> and hence the</p>
+</div>
+<div style="color: blue;">
+<p><strong>Theorem:</strong> Let <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> be continuous on an open interval <span class="math inline">\(I\)</span>. Then <span class="math inline">\(f(x) / g(x)\)</span> is continuous if <span class="math inline">\(g(x) \not = 0\)</span> for <span class="math inline">\(x \in I\)</span>.</p>
+</div>
+<div style="color: blue;">
+<p><strong>Proof:</strong> Using limit laws (the Division Law), we know that if <span class="math display">\[\lim_{x \rightarrow a} f(x) = f(a) = L,\]</span> and if <span class="math display">\[\lim_{x \rightarrow a} g(x) = g(a) = M \not = 0,\]</span> then <span class="math display">\[\lim_{x \rightarrow a} \dfrac{f(x)}{g(x)} = \dfrac{L}{M} = \dfrac{f(a)}{g(a)},\]</span> with <span class="math inline">\(g(a) \not = 0\)</span> and hence the quotient of continuous functions is continuous.</p>
+</div>
+<div style="color: blue;">
+<p><strong>Corollary:</strong> Any rational function is continuous on its domain.</p>
+</div>
+<div style="color: blue;">
+<p><strong>Proof:</strong> All rational functions have the form <span class="math display">\[f(x) = \dfrac{P(x)}{Q(x)},\]</span> with <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span> both polynomials. Furthermore, the domain of <span class="math inline">\(f\)</span> is given by <span class="math display">\[D = \{x | x \in \mathbb{R}, Q(x) \not = 0\}.\]</span> Since <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span> are continuous everywhere, property 4 of the continuity laws guarantees that <span class="math inline">\(f\)</span> is continuous for all <span class="math inline">\(x \in D\)</span>.</p>
+</div>
+<p>We now prove that roots are continuous on their domains.</p>
+<div style="color: blue;">
+<p><strong>Theorem (Inversion Theorem):</strong> If <span class="math inline">\(f\)</span> is continuous and one-to-one on an interval <span class="math inline">\(I\)</span>, then <span class="math inline">\(f^{-1}\)</span> is also continuous.</p>
+</div>
+<div style="color: blue;">
+<p><strong>Proof:</strong> A continuous function on an interval must be strictly monotonic as if it were not, there would be numbers <span class="math inline">\(a,b\)</span> and <span class="math inline">\(c\)</span> on the interval with <span class="math inline">\(a &lt; b &lt; c\)</span> such that <span class="math inline">\(f(b)\)</span> did not lie between <span class="math inline">\(f(a)\)</span> and <span class="math inline">\(f(c)\)</span>. If <span class="math inline">\(f(a)\)</span> was between <span class="math inline">\(f(b)\)</span> and <span class="math inline">\(f(c)\)</span>, then the IVT guarantees a value <span class="math inline">\(x \in (b,c)\)</span> such that <span class="math inline">\(f(x) = f(a)\)</span> (a contradiction to <span class="math inline">\(f\)</span> being one-to-one. The only other possibility is that <span class="math inline">\(f(c)\)</span> was between <span class="math inline">\(f(a)\)</span> and <span class="math inline">\(f(b)\)</span> which is similar. Therefore, <span class="math inline">\(f\)</span> must be monotonic.</p>
+<p>WLOG, assume <span class="math inline">\(f\)</span> is strictly increasing (the monotonically decreasing case is identical). Let <span class="math inline">\(x_0\)</span> be in <span class="math inline">\(I\)</span> with <span class="math inline">\(y_0 = f(x_0)\)</span>. It stands to show that <span class="math inline">\(\displaystyle\lim_{y \rightarrow y_0}f^{-1}(y) = x_0\)</span>.</p>
+<p>Let <span class="math inline">\(\varepsilon &gt; 0\)</span> be given. Since <span class="math inline">\(x_0 - \varepsilon &lt; x_0 &lt; x_0 + \varepsilon\)</span>, we know that <span class="math inline">\(f(x_0- \varepsilon) &lt; f(x_0) &lt; f(x_0 + \varepsilon)\)</span>. Select <span class="math display">\[\delta = \min(f(x_0) - f(x_0 - \varepsilon), f(x_0 + \varepsilon) - f(x_0)).\]</span> Then <span class="math inline">\(f(x_0 + \varepsilon) &lt; f(x_0) - \delta\)</span> and <span class="math inline">\(f(x_0) + \delta &lt; f(x_0 + \varepsilon)\)</span>. That means that if <span class="math inline">\(f(x_0) - \delta &lt; y &lt; f(x_0) + \delta\)</span>, then <span class="math inline">\(f(x_0 - \varepsilon) &lt; y &lt; f(x_0 + \varepsilon)\)</span>. Since <span class="math inline">\(f\)</span> is strictly increasing, so too if <span class="math inline">\(f^{-1}\)</span> and therefore <span class="math inline">\(x_0 - \varepsilon &lt; f^{-1}(y) &lt; x_0 + \varepsilon\)</span>. So, we have <span class="math display">\[|f^{-1}(y) - f^{-1}(y_0)| &lt; \varepsilon,\]</span> provided <span class="math inline">\(|y-y_0| &lt; \delta\)</span>, as required.</p>
+</div>
+<div style="color: blue;">
+<p><strong>Theorem:</strong> If <span class="math inline">\(n \in \mathbb{Z}^+\)</span> and is even, then <span class="math inline">\(f(x) = \sqrt[n]{x}\)</span> is continuous on <span class="math inline">\([0,\infty)\)</span>. If <span class="math inline">\(n \in \mathbb{Z}^+\)</span> is odd, then <span class="math inline">\(f\)</span> is continuous on <span class="math inline">\((-\infty, \infty)\)</span>.</p>
+</div>
+<div style="color: blue;">
+<p><strong>Proof:</strong> Let <span class="math inline">\(f(x) = x^n\)</span>. Then <span class="math inline">\(f\)</span> is monotonic on <span class="math inline">\([0,\infty)\)</span> if <span class="math inline">\(n\)</span> is even and <span class="math inline">\((-\infty,\infty)\)</span> if <span class="math inline">\(n\)</span> is odd. Hence, the result follows from the Inversion Theorem by noting that <span class="math inline">\(g(x) = \sqrt[n]{x}\)</span> is the inverse of <span class="math inline">\(f\)</span>.</p>
+</div>
+<p>Practice Problems</p>
+<ol style="list-style-type: upper-alpha">
+<li><p>Find the inverse of <span class="math inline">\(f(x) = x^5\)</span> and sketch both <span class="math inline">\(f\)</span> and <span class="math inline">\(f^{-1}\)</span>.</p></li>
+<li><p>The volume of water in a bottle is a function of the height <span class="math inline">\(H\)</span> of the water. For example, <span class="math inline">\(V = f(H)\)</span>. Similarly, the height of water is a function of the volume of water in the bottle. For example, <span class="math inline">\(H = g(V)\)</span>. Show that <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> are inverse functions.</p></li>
+<li><p>Are there functions <span class="math inline">\(f(x) = x^n\)</span> which are their own inverse function? Which one(s)?</p></li>
+<li><p>Prove that the sum of two increasing functions is increasing.</p></li>
+<li><p>Show that the inverse of an increasing function is increasing. What is the analogy for a decreasing function?</p></li>
+<li><p>Suppose <span class="math inline">\(f\)</span> is increasing. Is <span class="math inline">\(f \circ f\)</span> increasing? If <span class="math inline">\(f\)</span> is decreasing is <span class="math inline">\(f \circ f\)</span> decreasing.</p></li>
+</ol>
+</div>
+<div id="the-intermediate-value-theorem" class="section level2 unnumbered hasAnchor">
+<h2>The Intermediate Value Theorem<a href="continuity.html#the-intermediate-value-theorem" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Suppose we have a continuous function <span class="math inline">\(f\)</span> which is defined on the interval <span class="math inline">\([a,b]\)</span>. If we know that <span class="math inline">\(f(a) &lt; f(b)\)</span>, then for any value <span class="math inline">\(N \in (f(a), f(b))\)</span>, there is at least one value <span class="math inline">\(c \in (a,b)\)</span> for which <span class="math inline">\(f(c) = N\)</span>. The continuity of <span class="math inline">\(f\)</span> in the diagram below makes that fact clear.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><img src="Pic27.png" /></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<p>We generalize the intermediate value theorem below.</p>
+<div style="color: blue;">
+<p><strong>Theorem (Intermediate Value Theorem):</strong> Let <span class="math inline">\(f\)</span> be a continuous function on <span class="math inline">\([a,b]\)</span>. If <span class="math inline">\(f(a) \not = f(b)\)</span>, then for any number <span class="math inline">\(N\)</span> between <span class="math inline">\(f(a)\)</span> and <span class="math inline">\(f(b)\)</span>, there is a value <span class="math inline">\(c \in (a,b)\)</span> such that <span class="math inline">\(f(c) = N\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Example:</strong> Let <span class="math inline">\(f(x) = \sqrt{x} - x + x^4\)</span>. Show that there is a value <span class="math inline">\(c\)</span> so that\ <span class="math inline">\(f(c) = 0.721\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Solution:</strong> First, we note that <span class="math inline">\(f\)</span> is the sum of continuous functions on <span class="math inline">\(\mathbb{R}\)</span>, so <span class="math inline">\(f\)</span> is continuous. Next, we note that <span class="math inline">\(f(0) = 0\)</span> and that <span class="math inline">\(f(1) = 1\)</span>. Thus, by the intermediate value theorem, there must be a value <span class="math inline">\(c \in (0,1)\)</span> so that <span class="math inline">\(f(c) = 0.721\)</span>.</p>
+</div>
+<p>We note here that the intermediate value theorem does not specify the value of <span class="math inline">\(c\)</span>; but rather, it guarantees the existence of such a number. Proofs and arguments of this type are called existence proofs.</p>
+<div style="color: blue;">
+<p><strong>Corollary (Bolzano’s Theorem):</strong> Suppose <span class="math inline">\(f\)</span> is a continuous function on <span class="math inline">\([a,b]\)</span> and suppose that <span class="math inline">\(f(a)\)</span> and <span class="math inline">\(f(b)\)</span> have opposite signs. There exists a number <span class="math inline">\(c \in [a,b]\)</span> for which <span class="math inline">\(f(c) = 0\)</span>.</p>
+</div>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><img src="Pic28.png" /></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<div style="color: green;">
+<p><strong>Example:</strong> Suppose <span class="math inline">\(f(x) = x^3 - x - 1\)</span>. Show that there is a value <span class="math inline">\(N \in \mathbb{R}\)</span> for which <span class="math inline">\(f(N) = 0\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Solution:</strong> We note that <span class="math inline">\(f\)</span> is a polynomial and so <span class="math inline">\(f\)</span> is continuous. We also note that <span class="math inline">\(f(0)= -1\)</span> while <span class="math inline">\(f(2) = 5\)</span>. So, <span class="math inline">\(f(0)\)</span> and <span class="math inline">\(f(2)\)</span> have opposite signs. Therefore, there is a value <span class="math inline">\(c \in [0,2]\)</span> for which <span class="math inline">\(f(c) = 0\)</span>.</p>
+</div>
+<p>Again, we note that Bolzano’s theorem does not tell us the exact value of <span class="math inline">\(c\)</span> but rather proves its existence and shows where we might look for it. In this case, <span class="math inline">\(c \in [0,2]\)</span>. (Actually, <span class="math inline">\(c \approx 1.3247\)</span>).</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><img src="Pic29.png" /></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<p>Practice Problems</p>
+<ol style="list-style-type: upper-alpha">
+<li>For each function below and given <span class="math inline">\(N\)</span>, prove that there is a value <span class="math inline">\(c\)</span> for which <span class="math inline">\(f(c) = N\)</span>:</li>
+</ol>
+<ul>
+<li><span class="math inline">\(f(x) = 3x^3 - 5\)</span>, <span class="math inline">\(N = 1.49\)</span></li>
+<li><span class="math inline">\(f(x) = \sqrt{x - 5} - x^2\)</span>, <span class="math inline">\(N = -10\)</span></li>
+<li><span class="math inline">\(f(x) = \sqrt[3]{x} - x + x^2\)</span>, <span class="math inline">\(N = 5\)</span></li>
+<li><span class="math inline">\(f(x) = \dfrac{x}{(x-3)(x-2)}\)</span>, <span class="math inline">\(N = 4.5\)</span></li>
+</ul>
+<ol start="2" style="list-style-type: upper-alpha">
+<li>Use Bolzano’s Theorem to show each of the following functions have a zero:</li>
+</ol>
+<ul>
+<li><span class="math inline">\(g(x) = \dfrac{x^3 - x + 7}{\sqrt{x^2 - 5}}\)</span></li>
+<li><span class="math inline">\(g(x) = |x| - x^4 + x^2 - 3\)</span></li>
+<li><span class="math inline">\(g(x) = \sqrt{x^3 + 5} - 1 + x\)</span></li>
+<li><span class="math inline">\(g(x) = \sqrt{\dfrac{1}{x}} - 4\)</span></li>
+</ul>
+</div>
+<div id="proof-of-the-ivt" class="section level2 unnumbered hasAnchor">
+<h2>Proof of The IVT<a href="continuity.html#proof-of-the-ivt" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div style="color: blue;">
+<p><strong>Theorem (Intermediate Value Theorem):</strong> Let <span class="math inline">\(f\)</span> be a continuous function on <span class="math inline">\([a,b]\)</span>. If <span class="math inline">\(f(a) \not = f(b)\)</span>, then for any number <span class="math inline">\(c\)</span> between <span class="math inline">\(f(a)\)</span> and <span class="math inline">\(f(b)\)</span>, there is a value <span class="math inline">\(x \in (a,b)\)</span> such that <span class="math inline">\(f(x) = c\)</span>.</p>
+</div>
+<p>We note here that the intermediate value theorem does not specify the value of <span class="math inline">\(c\)</span>; but rather, it guarantees the existence of such a number.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><img src="Pic30.png" /></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<p>The proof of the intermediate value theorem takes advantage of the completeness axiom. An axiom is a statement that is assumed to be true without proof. To understand the completeness axiom, we need to know something about upper bounds. A real number <span class="math inline">\(x\)</span> is called a least upper bound for a set <span class="math inline">\(S\)</span> if:</p>
+<ol style="list-style-type: decimal">
+<li>The number <span class="math inline">\(x\)</span> is an upper bound for the set <span class="math inline">\(S\)</span>. That is, if <span class="math inline">\(s \in S\)</span>, then <span class="math inline">\(s \leq x\)</span>.</li>
+<li>If <span class="math inline">\(y\)</span> is any other upper bound for the set <span class="math inline">\(S\)</span>, then <span class="math inline">\(x \leq y\)</span>.</li>
+</ol>
+<p>We note that there is no requirement that <span class="math inline">\(x\)</span> is a member of <span class="math inline">\(S\)</span>.</p>
+<div style="color: blue;">
+<p><strong>Theorem (Completeness Axiom):</strong> If <span class="math inline">\(S\)</span> is a non-empty set of real numbers that is bounded above, then there exists exactly one real number that is the least upper bound of <span class="math inline">\(S\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Example:</strong> Consider the set <span class="math inline">\(S = \{1 - 1/x | x \in \mathbb{Z}^+ \}\)</span>. We can write out some of the values in <span class="math inline">\(S\)</span>: <span class="math display">\[S = \{0, 1/2, 2/3, 3/4, 4/5, 5/6, 6/7, \ldots \}.\]</span> First, we see that <span class="math inline">\(S\)</span> is non-empty. Also, notice that there is no value of <span class="math inline">\(S\)</span> that exceeds 1. So, <span class="math inline">\(S\)</span> is bounded above by 1. The completeness axiom guarantees that <span class="math inline">\(S\)</span> has a least upper bound. Since 1 is the smallest of all values that are larger than those in <span class="math inline">\(S\)</span>, 1 is the least upper bound for <span class="math inline">\(S\)</span>.</p>
+</div>
+<div style="color: blue;">
+<p><strong>Proof (of the Intermediate Value Theorem):</strong> We prove the first case, <span class="math inline">\(f(a)&lt;u&lt;f(b)\)</span>. The second case (where <span class="math inline">\(f(a) &gt; u &gt; f(b)\)</span>) is similar and left as an exercise.</p>
+<p>Let <span class="math inline">\(S\)</span> be the set of all <span class="math inline">\(x\in [a,b]\)</span> such that <span class="math inline">\(f(x)\leq u\)</span>. Then <span class="math inline">\(S\)</span> is non-empty since <span class="math inline">\(a \in S\)</span>, and <span class="math inline">\(S\)</span> is bounded above by <span class="math inline">\(b\)</span>. Hence, by completeness, <span class="math inline">\(S\)</span> has a least upper bound, <span class="math inline">\(c\)</span>. That is, <span class="math inline">\(c\)</span> is the lowest number that is greater than or equal to every member of <span class="math inline">\(S\)</span>. We claim (and will subsequently prove) that <span class="math inline">\(f(c)=u\)</span>.</p>
+<p>Let <span class="math inline">\(\varepsilon &gt; 0\)</span> be given. Since <span class="math inline">\(f\)</span> is continuous, there is a <span class="math inline">\(\delta &gt;0\)</span> such that <span class="math inline">\(|f(x)-f(c)| &lt; \varepsilon\)</span> whenever <span class="math inline">\(|x-c|&lt;\delta\)</span>. Thus, <span class="math display">\[f(x)-\varepsilon  &lt;f(c)&lt;f(x)+\varepsilon,\]</span> whenever $ x (c-,c+)$. By the completeness axiom, there exist <span class="math inline">\(a^{*}\in (c-\delta ,c]\)</span> that is contained in <span class="math inline">\(S\)</span>, so that for that <span class="math inline">\(a^{*}\)</span> <span class="math display">\[f(c)&lt;f(a^{*})+\varepsilon \leq u+\varepsilon.\]</span>
+Choose <span class="math inline">\(a^{**}\in [c,c+\delta )\)</span> that will obviously not be contained in <span class="math inline">\(S\)</span>, so we have <span class="math display">\[f(c)&gt;f(a^{**})-\varepsilon \geq u-\varepsilon.\]</span>
+Both inequalities <span class="math inline">\(u-\varepsilon &lt;f(c)&lt;u+\varepsilon,\)</span> hold for all <span class="math inline">\(\varepsilon &gt; 0\)</span>. Therefore, we deduce <span class="math inline">\(f(c)=u\)</span> as the only possible value, as claimed.</p>
+</div>
+<div style="color: blue;">
+<p><strong>Theorem (Bolzano’s Theorem):</strong> Suppose <span class="math inline">\(f\)</span> is a continuous function on <span class="math inline">\([a,b]\)</span> and suppose that <span class="math inline">\(f(a)\)</span> and <span class="math inline">\(f(b)\)</span> have opposite signs. There exists a number <span class="math inline">\(c \in [a,b]\)</span> for which <span class="math inline">\(f(c) = 0\)</span>.</p>
+</div>
+<p>Practice Problems</p>
+<ol style="list-style-type: upper-alpha">
+<li><p>Finish the proof of the intermediate value theorem by showing the second case where <span class="math inline">\(f(a) &gt; u &gt; f(b)\)</span>.</p></li>
+<li><p>Prove Bolzano’s theorem.</p></li>
+<li><p>Show that there is a number <span class="math inline">\(a\)</span> that is one more than it’s cube.</p></li>
+<li><p>Show that it is necessary that <span class="math inline">\(f\)</span> is continuous for the intermediate value theorem to hold.</p></li>
+<li><p>Show that <span class="math inline">\(f(x) = x^5 - 4x^3 - 1\)</span> has at least 2 real solutions by applying Bolzano’s theorem to two different intervals.</p></li>
+<li><p>A climber leaves base-camp at 8AM and climbs to the top of a hill arriving at 8PM. He remains there until the next day when, at 8AM he climbs back down the hill along the same path arriving back at the base-camp at 8PM. Prove that there is a spot on the path that the climber passes at the same time both days.</p></li>
+<li><p>Let <span class="math inline">\(f:[0,1] \rightarrow [0,1]\)</span> be continuous. Show that there exists and <span class="math inline">\(a \in [0,1]\)</span> such that <span class="math inline">\(f(a) = a\)</span>.</p></li>
+</ol>
+</div>
+<div id="continuity-of-trigonometric-functions" class="section level2 unnumbered hasAnchor">
+<h2>Continuity of Trigonometric Functions<a href="continuity.html#continuity-of-trigonometric-functions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>When we look at the graphs of <span class="math inline">\(y = \sin x\)</span> and <span class="math inline">\(y = \cos x\)</span>, we would suspect that both of those functions are continuous. If these two functions are continuous (and they are), we can show that <span class="math inline">\(\tan x = \frac{\sin x}{\cos x}\)</span> is also continuous at all real numbers except where <span class="math inline">\(\cos x = 0\)</span>.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><img src="Pic31.png" /></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<p>In fact, it turns out that the inverse function of any continuous function is also continuous. With these facts in mind, we provide the following theorem.</p>
+<div style="color: blue;">
+<p><strong>Lemma:</strong> The sine and cosine functions are continuous at 0. That is, <span class="math display">\[\displaystyle\lim_{\theta \rightarrow 0} \sin(\theta) = 0 \;\;\; \text{ and } \;\;\; \displaystyle\lim_{\theta \rightarrow 0} \cos(\theta) = 1.\]</span></p>
+</div>
+<div style="color: blue;">
+<p><strong>Proof:</strong> Consider the portion of the unit circle in Figure <span class="math inline">\(\ref{SineXIsLessThanX}\)</span> with radius <span class="math inline">\(AB = 1\)</span>. We begin by noting that <span class="math inline">\(-\theta \leq \sin \theta \leq \theta\)</span>.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><img src="Pic32.png" /></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<p>The length of the line segment <span class="math inline">\(CB\)</span> corresponds to <span class="math inline">\(\sin \theta\)</span> (by definition). The length of the arc is <span class="math inline">\(\theta\)</span>. Since <span class="math inline">\(CB\)</span> is shorter than the arc of length <span class="math inline">\(\theta\)</span>, we know that <span class="math inline">\(\sin \theta \leq \theta\)</span>. A similar calculation below the axis shows that <span class="math inline">\(-\theta \leq \sin \theta\)</span>. So, <span class="math inline">\(-\theta \leq \sin \theta \leq \theta\)</span>. Since <span class="math display">\[\lim_{\theta \rightarrow 0} -\theta = 0 = \lim_{\theta \rightarrow 0} \theta = 0,\]</span> we have <span class="math inline">\(\displaystyle\lim_{\theta \rightarrow 0} \sin \theta = 0\)</span>. So the sine function is continuous at 0.</p>
+<p>To show that <span class="math inline">\(\displaystyle\lim_{\theta \rightarrow 0} \cos \theta = \cos 0\)</span>, we note that
+<span class="math display">\[\begin{align*} \lim_{\theta \rightarrow 0} \cos(\theta) &amp;= \lim_{\theta \rightarrow 0} 1 - 2\sin^2(\theta/2)\\
+&amp;=  1 - 2 \lim_{\theta \rightarrow 0}\sin(\theta/2)\lim_{\theta \rightarrow 0}\sin(\theta/2)\\
+&amp;= 1.
+\end{align*}\]</span> Therefore, both sine and cosine are continuous at 1.</p>
+</div>
+<div style="color: blue;">
+<p><strong>Theorem:</strong> All trigonometric functions and inverse trigonometric functions are continuous on their domains.</p>
+</div>
+<div style="color: blue;">
+<p><strong>Proof:</strong> We show that <span class="math inline">\(\sin(x)\)</span> and <span class="math inline">\(\cos(x)\)</span> are continuous everywhere. The continuity of the other trigonometric functions follows from continuity laws. The continuity of inverse trigonometric functions follows from Theorem <span class="math inline">\(\ref{InversionTheorem}\)</span>.</p>
+<p>Observe that <span class="math display">\[\begin{align*} \lim_{\theta \rightarrow \theta_0} \sin(\theta) &amp;= \lim_{\alpha \rightarrow 0} \sin(\alpha + \theta_0)\\
+&amp;= \lim_{\alpha \rightarrow 0} \sin(\alpha)\cos(\theta_0) + \cos(\alpha)\sin(\theta_0)\\
+&amp;= \lim_{\alpha \rightarrow 0} \sin(\alpha)\cos(\theta_0) + \lim_{\alpha \rightarrow 0} \cos(\alpha)\sin(\theta_0)\\
+&amp;= \cos(\theta_0)\lim_{\alpha \rightarrow 0} \sin(\alpha) + \sin(\theta_0)\lim_{\alpha \rightarrow 0} \cos(\alpha)\\
+&amp;= \sin(\theta_0).
+\end{align*}\]</span></p>
+<p>Next, notice that <span class="math display">\[\begin{align*}  \lim_{\theta \rightarrow \theta_0} \cos(\theta) &amp;= \lim_{\alpha \rightarrow 0} \cos(\alpha + \theta_0)\\
+&amp;= \lim_{\alpha \rightarrow 0} \cos(\alpha + \theta_0)\\
+&amp;= \lim_{\alpha \rightarrow 0} \cos(\alpha)\cos(\theta_0) - \sin(\alpha)\sin(\theta_0)\\
+&amp;= \lim_{\alpha \rightarrow 0} \cos(\alpha)\cos(\theta_0) - \lim_{\alpha \rightarrow 0}\sin(\alpha)\sin(\theta_0)\\
+&amp;= \cos(\theta_0)\lim_{\alpha \rightarrow 0} \cos(\alpha) - \sin(\theta_0)\lim_{\alpha \rightarrow 0}\sin(\alpha)\\
+&amp;= \cos(\theta_0).
+\end{align*}\]</span>
+Therefore, sine and cosine are continuous on <span class="math inline">\(\mathbb{R}\)</span> and the theorem follows.</p>
+</div>
+<div style="color: green;">
+<p><strong>Example:</strong> Determine the value of <span class="math inline">\(\displaystyle\lim_{x \rightarrow 0} 1 + 2\sin x\)</span> and <span class="math inline">\(\displaystyle\lim_{x \rightarrow \pi} 4-\cos x\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Solution:</strong> Since all trigonometric functions are continuous, we know <span class="math display">\[\displaystyle\lim_{x \rightarrow 0} 1 + 2\sin x = 1 + 2\sin(0) = 1\]</span> and <span class="math display">\[\displaystyle\lim_{x \rightarrow 0} 4-\cos x = 4-\cos(0) = 3.\]</span></p>
+</div>
+<p>We note here that both the exponential function <span class="math inline">\(y = a^x\)</span> and its inverse <span class="math inline">\(y = \log_a(x)\)</span> are both also continuous on their domains.</p>
+<div style="color: blue;">
+<p><strong>Theorem:</strong> Exponential and logarithmic functions are continuous on their domains.</p>
+</div>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><img src="Pic33.png" /></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<div style="color: blue;">
+<p><strong>Proof:</strong> It is enough to show that <span class="math inline">\(a^x\)</span> is continuous. The fact that logarithms are continuous follows by Theorem <span class="math inline">\(\ref{InversionTheorem}\)</span> since logs are the inverse of exponential functions.</p>
+<p>Let <span class="math inline">\(\varepsilon &gt; 0\)</span> be given, <span class="math inline">\(c \in \mathbb{R}\)</span>, <span class="math inline">\(a &gt; 1\)</span> and take <span class="math inline">\(|x-c| &lt; \delta = \log_a(1 + \varepsilon a^{-c})\)</span>. We need to show that <span class="math inline">\(|a^x - a^c| &lt; \varepsilon\)</span>. If <span class="math inline">\(x \geq c\)</span>, we know that
+<span class="math display">\[x-c &lt; \delta \Leftrightarrow x &lt; c+\delta \Leftrightarrow a^x &lt; a^{c+\delta}.\]</span>
+So, <span class="math display">\[0 \leq a^x-a^c &lt; a^c(a^{\delta}-1) &lt; a^c(a^{\log_a(1+\varepsilon a^{-c})}-1) = \varepsilon.\]</span> A similar argument works if <span class="math inline">\(x \leq c\)</span>. So <span class="math inline">\(a^x\)</span> is continuous if <span class="math inline">\(a &gt; 1\)</span>.</p>
+<p>The same argument (with signs reversed) works if <span class="math inline">\(a &lt; 1\)</span>. Finally, if <span class="math inline">\(a = 1\)</span>, we no longer have an exponential function but rather a linear function which we know is continuous.</p>
+<p>Therefore, logarithmic and exponential functions are continuous on their domains.</p>
+</div>
+<div style="color: green;">
+<p><strong>Example:</strong> Determine where <span class="math inline">\(f(x) = \dfrac{\ln(x) + \sin(x)}{x^3 + 1}\)</span> is continuous.</p>
+</div>
+<div style="color: green;">
+<p><strong>Solution:</strong> We know that <span class="math inline">\(f\)</span> is continuous on its domain since it is the sum and quotient of continuous functions. The domain of <span class="math inline">\(\sin x\)</span> is <span class="math inline">\(\mathbb{R}\)</span>. The domain of <span class="math inline">\(\ln(x)\)</span> is <span class="math inline">\((0,\infty)\)</span> and the denominator <span class="math inline">\(x^3 + 1 = (x+1)(x^2 - x + 1)\)</span> is non-zero except when <span class="math inline">\(x = -1\)</span>. Therefore, the domain of <span class="math inline">\(f\)</span> is <span class="math inline">\((0,\infty)\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Example:</strong> Determine where <span class="math inline">\(f(x) = \cos(x^3)\)</span> and <span class="math inline">\(g(x) = \ln(1 + \sin(x))\)</span> are continuous.</p>
+</div>
+<div style="color: green;">
+<p><strong>Solution:</strong> Since all trigonometric functions are continuous, we know that <span class="math inline">\(f(x) = \cos(x^3)\)</span> is continuous on <span class="math inline">\(\mathbb{R}\)</span> since it is the composition of two functions that are both continuous on <span class="math inline">\(\mathbb{R}\)</span>.</p>
+<p>For the function <span class="math inline">\(g(x) = \ln(1 + \sin(x))\)</span>, we need to determine when <span class="math inline">\(1 + \sin(x) &gt; 0\)</span> since the domain of logarithmic functions is <span class="math inline">\((0,\infty)\)</span>. We know that <span class="math inline">\(1 + \sin(x) &gt; 0\)</span> except when <span class="math inline">\(\sin(x) = -1\)</span>. The function <span class="math inline">\(\sin(x)\)</span> takes the value of -1 at <span class="math inline">\(3\pi/2\)</span> and every multiple of <span class="math inline">\(2\pi\)</span> before and after. Therefore, <span class="math inline">\(g(x)\)</span> is continuous except when <span class="math inline">\(x = 3\pi/2 + 2k\pi\)</span> with <span class="math inline">\(k \in \mathbb{Z}\)</span>.</p>
+</div>
+<p>Practice Problems</p>
+<ol style="list-style-type: upper-alpha">
+<li>For each function below, determine where they are continuous.</li>
+</ol>
+<ul>
+<li><span class="math inline">\(y = \sin(x)\)</span></li>
+<li><span class="math inline">\(y = \cos(x)\)</span></li>
+<li><span class="math inline">\(y = \tan(x)\)</span></li>
+<li><span class="math inline">\(y = \csc(x)\)</span></li>
+<li><span class="math inline">\(y = \sec(x)\)</span></li>
+<li><span class="math inline">\(y = \cot(x)\)</span></li>
+<li><span class="math inline">\(y = \arcsin(x)\)</span></li>
+<li><span class="math inline">\(y = \arccos(x)\)</span></li>
+<li><span class="math inline">\(y = \arctan(x)\)</span></li>
+<li><span class="math inline">\(y = \ln(x)\)</span></li>
+<li><span class="math inline">\(y = e^x\)</span></li>
+</ul>
+<ol start="2" style="list-style-type: upper-alpha">
+<li>For each function below, determine where they are continuous.</li>
+</ol>
+<ul>
+<li><span class="math inline">\(f(x) = \sqrt{\sin(x)}\)</span></li>
+<li><span class="math inline">\(f(x) = \tan(x) + \sec(x)\)</span></li>
+<li><span class="math inline">\(f(x) = \cos(\ln(x))\)</span></li>
+<li><span class="math inline">\(f(x) = e^{\sin(x)}\)</span></li>
+<li><span class="math inline">\(f(x) = \sqrt[3]{\tan(x)}\)</span></li>
+<li><span class="math inline">\(f(x) = \tan(x) - \ln(x)\)</span></li>
+<li><span class="math inline">\(f(x) = \sin(\tan(x))\)</span></li>
+<li><span class="math inline">\(f(x) = e^{\ln(x)}\)</span></li>
+</ul>
+<ol start="3" style="list-style-type: upper-alpha">
+<li>Finish the proof of Theorem <span class="math inline">\(\ref{thm:LogsandExponentialsAreCts}\)</span> by (a) completing the details of the argument for <span class="math inline">\(x \leq c\)</span> and <span class="math inline">\(a &gt; 1\)</span>, (b) completing the details of the argument for <span class="math inline">\(a &lt; 1\)</span> and (c) showing that logarithms are continuous.</li>
+</ol>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="the-precise-definition-of-a-limit.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="limits-at-infinity-horizontal-asymptotes.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook/js/app.min.js"></script>
+<script src="libs/gitbook/js/clipboard.min.js"></script>
+<script src="libs/gitbook/js/plugin-search.js"></script>
+<script src="libs/gitbook/js/plugin-sharing.js"></script>
+<script src="libs/gitbook/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook/js/jquery.highlight.js"></script>
+<script src="libs/gitbook/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/02-LimitsAndDerivatives.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

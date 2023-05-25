@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>2.3 Calculating Limits Using the Limit Laws | Calculus I</title>
+  <meta name="description" content="2.3 Calculating Limits Using the Limit Laws | Calculus I" />
+  <meta name="generator" content="bookdown 0.33 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="2.3 Calculating Limits Using the Limit Laws | Calculus I" />
+  <meta property="og:type" content="book" />
+  <meta property="og:image" content="/Title_Page.png" />
+  
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="2.3 Calculating Limits Using the Limit Laws | Calculus I" />
+  
+  
+  <meta name="twitter:image" content="/Title_Page.png" />
+
+<meta name="author" content="Differential Calculus" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="the-limit-of-a-function.html"/>
+<link rel="next" href="the-precise-definition-of-a-limit.html"/>
+<script src="libs/jquery/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Differential Calculus</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>About This Book</a></li>
+<li class="part"><span><b>I Functions and Models</b></span></li>
+<li class="part"><span><b>II Limits and Derivatives</b></span></li>
+<li class="chapter" data-level="" data-path="the-limit-of-a-function.html"><a href="the-limit-of-a-function.html"><i class="fa fa-check"></i>2.2 The Limit of a Function</a>
+<ul>
+<li class="chapter" data-level="" data-path="the-limit-of-a-function.html"><a href="the-limit-of-a-function.html#the-idea-of-a-limit"><i class="fa fa-check"></i>The Idea of a Limit</a></li>
+<li class="chapter" data-level="" data-path="the-limit-of-a-function.html"><a href="the-limit-of-a-function.html#left-and-right-limits"><i class="fa fa-check"></i>Left and Right Limits</a></li>
+<li class="chapter" data-level="" data-path="the-limit-of-a-function.html"><a href="the-limit-of-a-function.html#limits-that-do-not-exist"><i class="fa fa-check"></i>Limits That Do Not Exist</a></li>
+<li class="chapter" data-level="" data-path="the-limit-of-a-function.html"><a href="the-limit-of-a-function.html#infinite-limits-and-vertical-asymptotes"><i class="fa fa-check"></i>Infinite Limits and Vertical Asymptotes</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="calculating-limits-using-the-limit-laws.html"><a href="calculating-limits-using-the-limit-laws.html"><i class="fa fa-check"></i>2.3 Calculating Limits Using the Limit Laws</a>
+<ul>
+<li class="chapter" data-level="" data-path="calculating-limits-using-the-limit-laws.html"><a href="calculating-limits-using-the-limit-laws.html#the-limit-laws"><i class="fa fa-check"></i>The Limit Laws</a></li>
+<li class="chapter" data-level="" data-path="calculating-limits-using-the-limit-laws.html"><a href="calculating-limits-using-the-limit-laws.html#direct-substitution"><i class="fa fa-check"></i>Direct Substitution</a></li>
+<li class="chapter" data-level="" data-path="calculating-limits-using-the-limit-laws.html"><a href="calculating-limits-using-the-limit-laws.html#limits-of-trigonometric-functions"><i class="fa fa-check"></i>Limits of Trigonometric Functions</a></li>
+<li class="chapter" data-level="" data-path="calculating-limits-using-the-limit-laws.html"><a href="calculating-limits-using-the-limit-laws.html#the-squeeze-theorem"><i class="fa fa-check"></i>The Squeeze Theorem</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="the-precise-definition-of-a-limit.html"><a href="the-precise-definition-of-a-limit.html"><i class="fa fa-check"></i>2.4 The Precise Definition of a Limit</a>
+<ul>
+<li class="chapter" data-level="" data-path="the-precise-definition-of-a-limit.html"><a href="the-precise-definition-of-a-limit.html#proof-of-limit-laws"><i class="fa fa-check"></i>Proof of Limit Laws</a></li>
+<li class="chapter" data-level="" data-path="the-precise-definition-of-a-limit.html"><a href="the-precise-definition-of-a-limit.html#proofs-of-trigonometric-limits"><i class="fa fa-check"></i>Proofs of Trigonometric Limits</a></li>
+<li class="chapter" data-level="" data-path="the-precise-definition-of-a-limit.html"><a href="the-precise-definition-of-a-limit.html#limits-at-infinity-by-definition"><i class="fa fa-check"></i>Limits at Infinity by Definition</a></li>
+<li class="chapter" data-level="" data-path="the-precise-definition-of-a-limit.html"><a href="the-precise-definition-of-a-limit.html#proof-of-direct-substitution-property"><i class="fa fa-check"></i>Proof of Direct Substitution Property</a></li>
+<li class="chapter" data-level="" data-path="the-precise-definition-of-a-limit.html"><a href="the-precise-definition-of-a-limit.html#proof-of-the-squeeze-theorem"><i class="fa fa-check"></i>Proof of The Squeeze Theorem</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="continuity.html"><a href="continuity.html"><i class="fa fa-check"></i>2.5 Continuity</a>
+<ul>
+<li class="chapter" data-level="" data-path="continuity.html"><a href="continuity.html#limits-and-continuity"><i class="fa fa-check"></i>Limits and Continuity</a></li>
+<li class="chapter" data-level="" data-path="continuity.html"><a href="continuity.html#types-of-discontinuities"><i class="fa fa-check"></i>Types of Discontinuities</a></li>
+<li class="chapter" data-level="" data-path="continuity.html"><a href="continuity.html#properties-of-continuous-functions"><i class="fa fa-check"></i>Properties of Continuous Functions</a></li>
+<li class="chapter" data-level="" data-path="continuity.html"><a href="continuity.html#proof-of-continuity-laws"><i class="fa fa-check"></i>Proof of Continuity Laws</a></li>
+<li class="chapter" data-level="" data-path="continuity.html"><a href="continuity.html#the-intermediate-value-theorem"><i class="fa fa-check"></i>The Intermediate Value Theorem</a></li>
+<li class="chapter" data-level="" data-path="continuity.html"><a href="continuity.html#proof-of-the-ivt"><i class="fa fa-check"></i>Proof of The IVT</a></li>
+<li class="chapter" data-level="" data-path="continuity.html"><a href="continuity.html#continuity-of-trigonometric-functions"><i class="fa fa-check"></i>Continuity of Trigonometric Functions</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="limits-at-infinity-horizontal-asymptotes.html"><a href="limits-at-infinity-horizontal-asymptotes.html"><i class="fa fa-check"></i>2.6 Limits at Infinity; Horizontal Asymptotes</a>
+<ul>
+<li class="chapter" data-level="" data-path="limits-at-infinity-horizontal-asymptotes.html"><a href="limits-at-infinity-horizontal-asymptotes.html#limits-at-infinity"><i class="fa fa-check"></i>Limits At Infinity</a></li>
+<li class="chapter" data-level="" data-path="limits-at-infinity-horizontal-asymptotes.html"><a href="limits-at-infinity-horizontal-asymptotes.html#limits-at-infinity-by-definition-1"><i class="fa fa-check"></i>Limits at Infinity by Definition</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="derivatives-and-rates-of-change.html"><a href="derivatives-and-rates-of-change.html"><i class="fa fa-check"></i>2.7 Derivatives and Rates of Change</a>
+<ul>
+<li class="chapter" data-level="" data-path="derivatives-and-rates-of-change.html"><a href="derivatives-and-rates-of-change.html#application-tangent-lines"><i class="fa fa-check"></i>Application: Tangent Lines</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="the-derivative-as-a-function.html"><a href="the-derivative-as-a-function.html"><i class="fa fa-check"></i>2.8 The Derivative as a Function</a>
+<ul>
+<li class="chapter" data-level="" data-path="the-derivative-as-a-function.html"><a href="the-derivative-as-a-function.html#differentiability"><i class="fa fa-check"></i>Differentiability</a></li>
+</ul></li>
+<li class="part"><span><b>III Differentiation Rules</b></span></li>
+<li class="part"><span><b>IV Applications of Differentiation</b></span></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Calculus I</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="calculating-limits-using-the-limit-laws" class="section level1 unnumbered hasAnchor">
+<h1>2.3 Calculating Limits Using the Limit Laws<a href="calculating-limits-using-the-limit-laws.html#calculating-limits-using-the-limit-laws" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="the-limit-laws" class="section level2 unnumbered hasAnchor">
+<h2>The Limit Laws<a href="calculating-limits-using-the-limit-laws.html#the-limit-laws" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>It should be clear by now that using a table to calculate a limit is both tedious and potentially inaccurate. In this section, we will develop some rules that will help us quickly and accurately compute limits.</p>
+<div style="color: blue;">
+<p><strong>Theorem (Limit Laws):</strong> Let <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> be functions, <span class="math inline">\(c\)</span> a constant and <span class="math inline">\(a,n \in \mathbb{R}\)</span>. Suppose <span class="math inline">\(\displaystyle\lim_{x \rightarrow a} f(x) = L\)</span> and <span class="math inline">\(\displaystyle\lim_{x \rightarrow a} g(x) = M\)</span> with <span class="math inline">\(L,M \in \mathbb{R}\)</span>. The following properties hold:</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(\displaystyle\lim_{x \rightarrow a} c = c\)</span> (Constant Law)</li>
+<li><span class="math inline">\(\displaystyle\lim_{x \rightarrow a} x = a\)</span> (Identity Law)</li>
+<li><span class="math inline">\(\displaystyle\lim_{x \rightarrow a} f(x) \pm g(x) = L \pm M\)</span> (Sum and Difference Laws)</li>
+<li><span class="math inline">\(\displaystyle\lim_{x \rightarrow a} cf(x) = c \displaystyle\lim_{x \rightarrow a} f(x) = cL\)</span> (Constant Coefficient Law)</li>
+<li><span class="math inline">\(\displaystyle\lim_{x \rightarrow a} f(x) \cdot g(x) = \displaystyle\lim_{x \rightarrow a} f(x) \cdot \displaystyle\lim_{x \rightarrow a} g(x) = L \cdot M\)</span> (Multiplication Law)</li>
+<li><span class="math inline">\(\displaystyle\lim_{x \rightarrow a} \frac{f(x)}{g(x)} = \dfrac{\displaystyle\lim_{x \rightarrow a} f(x)}{\displaystyle\lim_{x \rightarrow a} g(x)} = \dfrac{L}{M}\)</span>, with <span class="math inline">\(M \not = 0\)</span> (Division Law</li>
+<li><span class="math inline">\(\displaystyle\lim_{x \rightarrow a} \left( f(x) \right)^n = \left(\displaystyle\lim_{x \rightarrow a} f(x) \right)^n = L^n\)</span> (Power Law)</li>
+</ol>
+</div>
+<p>We will prove all of these laws in . For now, we will illustrate each law with examples.</p>
+<p>The constant law deals with constant functions (horizontal lines). Since <span class="math inline">\(f(x)\)</span> is always equal to <span class="math inline">\(c\)</span>, it doesn’t matter what <span class="math inline">\(x\)</span> approaches. The resulting limit is always <span class="math inline">\(c\)</span>.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><img src="Pic5.png" /></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<div style="color: green;">
+<p><strong>Example:</strong> Evaluate <span class="math inline">\(\displaystyle\lim_{x \rightarrow 3} 10\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Solution:</strong> Since 10 is a constant, we can use the Constant Law from the Limit Laws theorem part 1 to see <span class="math inline">\(\displaystyle\lim_{x \rightarrow 3} 10 = 10\)</span>.</p>
+</div>
+<p>The Identity Law deals with the function <span class="math inline">\(f(x) = x\)</span>. Since the <span class="math inline">\(y\)</span> and <span class="math inline">\(x\)</span> values are the same, whatever value <span class="math inline">\(x\)</span> approaches, <span class="math inline">\(y\)</span> will have to approach the same value.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><img src="Pic6.png" /></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<div style="color: green;">
+<p><strong>Example:</strong> Evaluate <span class="math inline">\(\displaystyle\lim_{x \rightarrow 2} x\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Solution:</strong> We recognize this as the Identity Law (from the Limit Laws theorem part 2). Using that result, we find <span class="math inline">\(\displaystyle\lim_{x \rightarrow 2} x = 2\)</span>.</p>
+</div>
+<p>The Sum Law tells us that the limit of a sum is the sum of the individual limits. That is, to evaluate the limit of a sum, simply deal with each limit individually.</p>
+<div style="color: green;">
+<p><strong>Example:</strong> Evaluate <span class="math inline">\(\displaystyle\lim_{x \rightarrow -2} (x + 5)\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Solution:</strong> Both <span class="math inline">\(f(x) = x\)</span> and <span class="math inline">\(g(x) = 5\)</span> are functions. So, we can use the Sum Law (Limit Laws theorem part 3). So, <span class="math display">\[\begin{align*} \displaystyle\lim_{x \rightarrow -2} (x + 5) &amp;= \displaystyle\lim_{x \rightarrow -2} x + \displaystyle\lim_{x \rightarrow -2} 5 &amp;&amp; \text{Sum Law}\\
+&amp;= -2 + 5 &amp;&amp;\text{Identity and Constant Laws}\\
+&amp;= 3.
+\end{align*}\]</span></p>
+</div>
+<p>In essence, the Subtraction Law works the same as the Addition Law (with the obvious change).</p>
+<div style="color: green;">
+<p><strong>Example:</strong> Evaluate <span class="math inline">\(\displaystyle\lim_{x \rightarrow 1} (3 - x)\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Solution:</strong> Both <span class="math inline">\(f(x) = 3\)</span> and <span class="math inline">\(g(x) = x\)</span> are functions. So, we can use the Difference Law (Limit Laws theorem part 3). So, <span class="math display">\[\begin{align*} \displaystyle\lim_{x \rightarrow 1} (3 - x) &amp;= \displaystyle\lim_{x \rightarrow 1} 3 - \displaystyle\lim_{x \rightarrow 1} x &amp;&amp; \text{Difference Law}\\
+&amp;= 3 - 1 &amp;&amp;\text{Identity and Constant Laws}\\
+&amp;= 2.
+\end{align*}\]</span></p>
+</div>
+<p>The Constant Coefficient Law tells us that if we have a constant times a function, we can move the constant outside of the limit and evaluate the limit of the function and then multiply the result by the constant.</p>
+<div style="color: green;">
+<p><strong>Example:</strong> Evaluate <span class="math inline">\(\displaystyle\lim_{x \rightarrow 5} 8x\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Solution:</strong> We can use the Constant Coefficient Law (Limit Laws theorem part 4). So, <span class="math display">\[\begin{align*} \displaystyle\lim_{x \rightarrow 5} 8x &amp;= 8\displaystyle\lim_{x \rightarrow 5} x &amp;&amp; \text{Constant Coefficient Law}\\
+&amp;= 8(5) &amp;&amp;\text{Identity Law}\\
+&amp;= 40.
+\end{align*}\]</span></p>
+</div>
+<p>We now try to put the first 4 laws into use in the same example. In particular, we can now evaluate limits of linear functions.</p>
+<div style="color: green;">
+<p><strong>Example:</strong> Evaluate <span class="math inline">\(\displaystyle\lim_{x \rightarrow 2} 3x - 7\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Solution:</strong> Some of these steps can be combined. We show them all here for clarity.
+<span class="math display">\[\begin{align*} \displaystyle\lim_{x \rightarrow 2} 3x - 7 &amp;= \displaystyle\lim_{x \rightarrow 2} 3x - \displaystyle\lim_{x \rightarrow 2} 7 &amp;&amp; \text{Difference Law}\\
+&amp;= 3\displaystyle\lim_{x \rightarrow 2} x - \displaystyle\lim_{x \rightarrow 2} 7 &amp;&amp; \text{Constant Coefficient Law}\\
+&amp;= 3(2) - 7 &amp;&amp; \mbox{Identity and Constant Laws}\\
+&amp;= 6 - 7\\
+&amp;= -1.
+\end{align*}\]</span></p>
+</div>
+<p>The Multiplication Law tells us that if we have the limit of a product, we can apply the limit to each of the functions being multiplied together then multiply the result.</p>
+<div style="color: green;">
+<p><strong>Example:</strong> Evaluate <span class="math inline">\(\displaystyle\lim_{x\to 6} x^2\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Solution:</strong> Some of these steps can be combined. We show them all here for clarity.
+<span class="math display">\[\begin{align*}
+\displaystyle\lim_{x\to 6} x^2 &amp; = \displaystyle\lim_{x\to 6} (x\cdot x)\\
+&amp; = \left(\displaystyle\lim_{x\to 6} x\right)\left(\lim_{x\to6} x\right)&amp;&amp; \mbox{Multiplication Law}\\
+&amp; = (6)(6) &amp;&amp; \mbox{Identity Law}\\
+&amp; = 36
+\end{align*}\]</span></p>
+</div>
+<p>The Power Law says that if we have a limit of a power, we can take the limit of the function inside the power then raise the result to the appropriate power. Be careful that the limit is non-zero if your power is negative.</p>
+<div style="color: green;">
+<p><strong>Example:</strong> Evaluate <span class="math inline">\(\displaystyle\lim_{x\to -1} (3 + x)^5\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Solution:</strong> Some of these steps can be combined. We show them all here for clarity.
+<span class="math display">\[\begin{align*}
+\displaystyle\lim_{x\to-1} (x+3)^5 &amp; = \left(\displaystyle\lim_{x\to-1} (x+ 3)\right)^5 &amp;&amp; \mbox{Power Law}\\
+&amp; = \left(\displaystyle\lim_{x\to-1} x + \displaystyle\lim_{x\to-1} 3\right)^5 &amp;&amp; \mbox{Addition Law}\\
+&amp; = ( -1 + 3)^5 &amp;&amp; \mbox{Identity and Constant Laws}\\
+&amp; = 2^5\\
+&amp; = 32
+\end{align*}\]</span></p>
+</div>
+<div style="color: green;">
+<p><strong>Example:</strong> Evaluate <span class="math inline">\(\displaystyle\lim_{x\to-2} (5 {x}^4 + 6 {x})\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Example:</strong> Some of these steps can be combined. We show them all here for clarity.
+<span class="math display">\[\begin{align*}
+\displaystyle\lim_{x\to-2} (5 {x}^4 + 6 {x}) &amp; = \displaystyle\lim_{x\to-2} (5 {x}^4) + \displaystyle\lim_{x\to-2} (6  x) &amp;&amp; \mbox{Addition Law}\\
+&amp; = 5\,\displaystyle\lim_{x\to-2} ( {x}^4) + 6\,\displaystyle\lim_{x\to-2}   x &amp;&amp; \mbox{Constant Coefficient Law}\\
+&amp; = 5\left( {\displaystyle\lim_{x\to-2} x}\right)^4 + 6\, {\displaystyle\lim_{x\to-2} x} &amp;&amp; \mbox{Power Law}\\
+&amp; = 5( {-2})^4 + 6( {-2}) &amp;&amp; \mbox{Identity Law}\\
+&amp; = 5(16) - 12\\
+&amp; = 80 - 12\\
+&amp; = 68
+\end{align*}\]</span></p>
+</div>
+<p>The Division Law works similar to the Power Law. Again, we must be careful that the limit of the denominator is non-zero.</p>
+<div style="color: green;">
+<p><strong>Example:</strong> Evaluate <span class="math inline">\(\displaystyle\lim_{x\to -5}\frac{3 x}{ x-10}\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Example:</strong> Some of these steps can be combined. We show them all here for clarity.
+<span class="math display">\[\begin{align*}
+\displaystyle\lim_{x\to -5}\frac{3  x}{  x-10} &amp; = \frac{\displaystyle\lim\limits_{x\to -5} (3   x)}{\displaystyle\lim\limits_{x\to -5} (  x-10)} &amp;&amp; \mbox{Division Law}\\[6pt]
+&amp; = \frac{3\,\displaystyle\lim\limits_{x\to-5}   x}{\displaystyle\lim\limits_{x\to-5}(  x- 10)} &amp;&amp; \mbox{Constant Coefficient Law}\\[6pt]
+&amp; = \frac{3\, {\displaystyle\lim\limits_{x\to-5} x}}{ {\displaystyle\lim\limits_{x\to-5} x} - \displaystyle\lim\limits_{x\to-5} 10} &amp;&amp; \mbox{Subtraction Law}\\[6pt]
+&amp; = \frac{3( {-5})}{ {-5} -10} &amp;&amp; \mbox{Identity and Constant Laws}\\[6pt]
+&amp; = \frac{-15}{-15}\\[6pt]
+&amp; = 1
+\end{align*}\]</span></p>
+</div>
+<p>Practice Problems</p>
+<p>Determine the value of each of the following limits.</p>
+<ul>
+<li><p><span class="math inline">\(\displaystyle\lim_{x \rightarrow 5} \frac{x}{x+5}\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle\lim_{x \rightarrow 0} \frac{2x + 1}{x + 5}\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle\lim_{x \rightarrow -3} x^3 + 2x - 1\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle\lim_{x \rightarrow -4} x^5 + 3x^3 - x^2 + 20\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle\lim_{x \rightarrow -6} \left(3x^2 -10 \right)^4\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle\lim_{x \rightarrow 2} \left(5x - 6 \right)^{-2}\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle\lim_{x \rightarrow 1} \left(\frac{2x^2 + 1}{3x^3 - x + 1} \right)^2\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle\lim_{x \rightarrow 2} \left(\frac{x-1}{4x + 3} \right)^{-3}\)</span></p></li>
+</ul>
+</div>
+<div id="direct-substitution" class="section level2 unnumbered hasAnchor">
+<h2>Direct Substitution<a href="calculating-limits-using-the-limit-laws.html#direct-substitution" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We did the following example in the previous chapter.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><img src="Pic7.png" /></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<div style="color: green;">
+<p><strong>Example:</strong> Evaluate <span class="math inline">\(\displaystyle\lim_{x\to -5}\frac{3 x}{ x-10}\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Solution:</strong> Using limit laws, we see<br />
+<span class="math display">\[\begin{align*}
+\displaystyle\lim_{x\to -5}\frac{3  x}{  x-10} &amp; = \frac{\displaystyle\lim\limits_{x\to -5} (3   x)}{\displaystyle\lim\limits_{x\to -5} (  x-10)} &amp;&amp; \mbox{Division Law}\\[6pt]
+&amp; = \frac{3\,\displaystyle\lim\limits_{x\to-5}   x}{\displaystyle\lim\limits_{x\to-5}(  x- 10)} &amp;&amp; \mbox{Constant Coefficient Law}\\[6pt]
+&amp; = \frac{3\, {\displaystyle\lim\limits_{x\to-5} x}}{ {\displaystyle\lim\limits_{x\to-5} x} - \displaystyle\lim\limits_{x\to-5} 10} &amp;&amp; \mbox{Subtraction Law}\\[6pt]
+&amp; = \frac{3( {-5})}{ {-5} -10} &amp;&amp; \mbox{Identity and Constant Laws}\\[6pt]
+&amp; = \frac{-15}{-15}\\[6pt]
+&amp; = 1
+\end{align*}\]</span></p>
+</div>
+<p>If <span class="math inline">\(f(x) = \frac{3 x}{ x-10}\)</span>, we can see that <span class="math inline">\(f(-5) = 1\)</span>. There is no coincidence that <span class="math display">\[\displaystyle\lim_{x\to -5}\frac{3  x}{  x-10} = f(-5)\]</span> as we see from the following theorem.</p>
+<div style="color: blue;">
+<p><strong>Theorem (Direct Substitution Rule):</strong> If <span class="math inline">\(f\)</span> is a polynomial or rational function, and <span class="math inline">\(a\)</span> is in the domain of <span class="math inline">\(f\)</span>, then <span class="math display">\[\lim_{ x \rightarrow a} f(x) = f(a).\]</span></p>
+</div>
+<p>Any function with the direct substitution property is called . We will see more on this in Chapter <span class="math inline">\(\ref{chap:Continuity}\)</span> and prove Theorem <span class="math inline">\(\ref{DirectSubstitutionProperty}\)</span>.</p>
+<div style="color: green;">
+<p><strong>Example:</strong> Evaluate <span class="math inline">\(\displaystyle\lim_{x\to -5}\frac{3 x}{ x-10}\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Solution:</strong> Since the domain of <span class="math inline">\(f(x) = \frac{3 x}{ x-10}\)</span> is all reals except <span class="math inline">\(x = 10\)</span> (usually written <span class="math inline">\(\mathbb{R} - \{10\}\)</span>) and <span class="math inline">\(x = -5\)</span> is in the domain, we know that <span class="math display">\[\displaystyle\lim_{x\to -5}\frac{3  x}{  x-10} = f(-5) = 1,\]</span>
+by the direct substitution property.</p>
+</div>
+<p>Sometimes the direct substitution property does not work quite as easily as the previous example.</p>
+<div style="color: green;">
+<p><strong>Example:</strong> Evaluate <span class="math inline">\(\displaystyle\lim_{x\to -1}\frac{x^3 - 1}{x-1}\)</span>.\</p>
+</div>
+<div style="color: green;">
+<p><strong>Solution:</strong> If <span class="math inline">\(f(x) = \frac{x^3 - 1}{x-1}\)</span>, then the direct substitution property does not apply since <span class="math inline">\(f(1)\)</span> is undefined. So, we use some algebra.
+<span class="math display">\[ \frac{x^3 - 1}{x-1} = \frac{(x-1)(x^2 + x + 1)}{x-1}.\]</span>
+Since the numerator and denominator have a common factor of <span class="math inline">\(x-1\)</span>, we can cancel the common factor provided it is non-zero. When we take the limit as <span class="math inline">\(x\)</span> approaches 1, we have <span class="math inline">\(x \not = 1\)</span> and therefore <span class="math inline">\(x-1 \not = 0\)</span>. So,
+<span class="math display">\[\begin{align*}  \lim_{x\to -1} \frac{x^3 - 1}{x-1} &amp;= \lim_{x\to -1} \frac{(x-1)(x^2 + x + 1)}{x-1}\\\\
+&amp;= \lim_{x\to -1} x^2 + x + 1\\\\
+&amp;= (-1)^2 + (-1) + 1\\\\
+&amp;= 1.
+\end{align*}\]</span></p>
+</div>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><img src="Pic8.png" /></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<div style="color: green;">
+<p><strong>Example:</strong> Evaluate <span class="math inline">\(\displaystyle\lim_{x\to 0}\frac{\sqrt{x^2 + 4} - 2}{x^2}\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Solution:</strong> Since 0 is not in the domain of the function, we cannot apply the direct substitution property directly. We can try to rationalize the numerator.
+<span class="math display">\[\begin{align*}
+\lim_{x\to 0}\frac{\sqrt{x^2 + 4} - 2}{x^2} &amp;= \lim_{x\to 0}\frac{\sqrt{x^2 + 4} - 2}{x^2} \times \frac{\sqrt{x^2 + 4} + 2}{\sqrt{x^2 + 4} + 2}\\\\
+&amp;= \lim_{x\to 0}\frac{(x^2 + 4) -4}{x^2\sqrt{x^2 + 4} + 2}\\\\
+&amp;= \lim_{x\to 0}\frac{x^2}{x^2\sqrt{x^2 + 4} + 2}\\\\
+&amp;= \lim_{x\to 0}\frac{1}{\sqrt{x^2 + 4} + 2}\\\\
+&amp;= \frac{1}{\sqrt{\lim_{x\to 0}(x^2 + 4)} + 2}\\\\
+&amp;= \frac{1}{\sqrt{0^2 + 4} + 2}\\\\
+&amp;= \frac{1}{2 + 2}\\\\
+&amp;= \frac{1}{4}.
+\end{align*}\]</span></p>
+</div>
+<p>Practice Problems</p>
+<p>Determine the value of each of the following limits.</p>
+<ul>
+<li><p><span class="math inline">\(\displaystyle\lim_{x \rightarrow -3} \frac{x^2 - x - 12}{x + 3}\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle\lim_{x \rightarrow 1} \frac{x^2 + x - 2}{x -1}\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle\lim_{x \rightarrow 2} \frac{x^3 - 8}{x-2}\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle\lim_{x \rightarrow -4} \frac{x^3 + 64}{x + 4}\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle\lim_{x \rightarrow 2} \frac{\frac{1}{x} - \frac{1}{2}}{x-2}\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle\lim_{x \rightarrow 1} \frac{\sqrt{x} - x^2}{1 - \sqrt{x}}\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle\lim_{x \rightarrow 0} \frac{x}{\sqrt{1 + 3x} - 1}\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle\lim_{x \rightarrow 2} \frac{x - \sqrt{3x - 2}}{x^2-4}\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle\lim_{x \rightarrow 9} \frac{x^2 - 81}{\sqrt{x} - 3}\)</span></p></li>
+</ul>
+<p>B. Find <span class="math inline">\(\displaystyle\lim_{h \rightarrow 0} \dfrac{f(x + h) - f(x)}{h}\)</span> for each of the given functions.</p>
+<ul>
+<li><p><span class="math inline">\(f(x) = 2x - 1\)</span></p></li>
+<li><p><span class="math inline">\(f(x) = x^2 - 2x\)</span></p></li>
+<li><p><span class="math inline">\(f(x) = x^3 + x - 1\)</span></p></li>
+<li><p><span class="math inline">\(f(x) = \sqrt{x}\)</span></p></li>
+<li><p><span class="math inline">\(f(x) = \frac{1}{x}\)</span></p></li>
+<li><p><span class="math inline">\(f(x) = \sqrt{x} - 5\)</span></p></li>
+<li><p><span class="math inline">\(f(x) = \frac{3}{x - 1}\)</span></p></li>
+</ul>
+</div>
+<div id="limits-of-trigonometric-functions" class="section level2 unnumbered hasAnchor">
+<h2>Limits of Trigonometric Functions<a href="calculating-limits-using-the-limit-laws.html#limits-of-trigonometric-functions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div style="color: blue;">
+<p><strong>Theorem (Trigonometric Limits):</strong> <span class="math inline">\(\displaystyle\lim_{\theta \rightarrow 0} \dfrac{\sin \theta}{\theta} = 1\)</span> and <span class="math inline">\(\displaystyle\lim_{\theta \rightarrow 0} \dfrac{\cos \theta - 1}{\theta} = 0\)</span>.</p>
+</div>
+<p>The graphs below confirm the result of the theorem.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><img src="Pic14.png" /></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<div style="color: green;">
+<p><strong>Example:</strong> Evaluate the following limit: <span class="math inline">\(\displaystyle \mathop {\lim }\limits_{x \to 0} \frac{{\sin x }}{{3x }}\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Solution:</strong> Using our limit laws, <span class="math display">\[\begin{align*}
+\displaystyle \mathop {\lim }\limits_{x  \to 0} \frac{{\sin x }}{{3x }} &amp;= \displaystyle \mathop {\lim }\limits_{x  \to 0} \dfrac{1}{3} \;\; \frac{{\sin x }}{{x }}  \\[6pt]
+&amp;= \displaystyle \mathop {\lim }\limits_{x  \to 0} \dfrac{1}{3} \mathop {\lim }\limits_{x  \to 0} \frac{{\sin x }}{{x }}  \\[6pt]
+&amp;= \displaystyle \dfrac{1}{3} (1)  \\[6pt]
+&amp;= \dfrac{1}{3}.
+\end{align*}\]</span>
+Therefore, <span class="math inline">\(\displaystyle \mathop {\lim }\limits_{x \to 0} \frac{{\sin x }}{{3x }} = \dfrac{1}{3}\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Example:</strong> Evaluate the following limit: <span class="math inline">\(\displaystyle \mathop {\lim }\limits_{\theta \to 0} \frac{{\sin 4\theta }}{{\theta }}\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Example:</strong> By the limit laws,
+<span class="math display">\[\begin{align*}
+\displaystyle \mathop {\lim }\limits_{\theta  \to 0} \frac{{\sin 4\theta }}{{\theta }} &amp;= \displaystyle \mathop {\lim }\limits_{\theta  \to 0} \dfrac{4}{4} \;\; \frac{{\sin 4\theta }}{{\theta }}  \\[6pt]
+&amp;= \displaystyle \mathop {\lim }\limits_{\theta  \to 0} 4 \mathop {\lim }\limits_{\theta  \to 0} \frac{{\sin 4\theta }}{{4\theta }}  \\[6pt]
+&amp;= \displaystyle 4 (1)  \\[6pt]
+&amp;= 4.
+\end{align*}\]</span>
+Therefore, <span class="math inline">\(\displaystyle \mathop {\lim }\limits_{\theta \to 0} \frac{{\sin \theta }}{{3\theta }} = \dfrac{1}{3}\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Example:</strong> Evaluate the following limit: <span class="math inline">\(\displaystyle \mathop {\lim }\limits_{x \to 0} \frac{{x }}{{\sin 6x }}\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Example:</strong> We can evaluate using the limit laws. <span class="math display">\[\begin{align*}
+\displaystyle \mathop {\lim }\limits_{x  \to 0} \frac{{x }}{{\sin 6x }} &amp;= \displaystyle \mathop {\lim }\limits_{x  \to 0} \dfrac{1}{\frac{{\sin 6x }}{{x }}}  \\[6pt]
+&amp;= \displaystyle  \dfrac{\mathop {\lim }\limits_{x  \to 0} 1}{\mathop {\lim }\limits_{x  \to 0} \frac{{\sin 6x }}{{x }}}  \\[6pt]
+&amp;= \displaystyle  \dfrac{\mathop {\lim }\limits_{x  \to 0} 1}{\mathop {\lim }\limits_{x  \to 0} \frac{6}{6}\frac{{\sin 6x }}{{x }}}  \\[6pt]
+&amp;= \displaystyle  \dfrac{\mathop {\lim }\limits_{x  \to 0} 1}{\mathop {\lim }\limits_{x  \to 0} 6\frac{{\sin 6x }}{{6x }}}  \\[6pt]
+&amp;= \displaystyle  \dfrac{\mathop {\lim }\limits_{x  \to 0} 1}{\mathop {\lim }\limits_{x  \to 0} 6 \mathop {\lim }\limits_{x  \to 0} \frac{{\sin 6x }}{{6x }}}  \\[6pt]
+&amp;= \displaystyle  \dfrac{1}{ 6(1)}  \\[6pt]
+&amp;= \dfrac{1}{6}.
+\end{align*}\]</span>
+Therefore, <span class="math inline">\(\displaystyle \mathop {\lim }\limits_{x \to 0} \frac{{x }}{{\sin 6x }} = \dfrac{1}{6}\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Example:</strong> Evaluate the following limit: <span class="math inline">\(\displaystyle \mathop {\lim }\limits_{t \to 0} \frac{{\sin \left( {2t} \right)}}{{\sin \left( {9t} \right)}}\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Solution:</strong> Limit laws give us<span class="math display">\[\begin{align*}
+\displaystyle \mathop {\lim }\limits_{t \to 0} \frac{{\sin \left( {2t} \right)}}{{\sin \left( {9t} \right)}}
+&amp;= \displaystyle \mathop {\lim }\limits_{t \to 0} \frac{{\sin \left( {2t} \right)}}{{\sin \left( {9t} \right)}} \cdot \dfrac{2 \times 9}{2 \times 9}\\
+&amp;= \displaystyle \mathop {\lim }\limits_{t \to 0} \frac{{\sin \left( {2t} \right)}}{2} \cdot \dfrac{9}{{\sin \left( {9t} \right)}} \cdot \dfrac{2}{9}\\
+&amp;=   \dfrac{2}{9}.
+\end{align*}\]</span>
+Therefore, <span class="math inline">\(\displaystyle \mathop {\lim }\limits_{t \to 0} \frac{{\sin \left( {2t} \right)}}{{\sin \left( {9t} \right)}} = \dfrac{2}{9}\\\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Example:</strong> Evaluate the following limit: <span class="math inline">\(\displaystyle \mathop {\lim }\limits_{x \to 3} \frac{{\sin \left( {x - 3} \right)}}{{x - 3}}\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Solution:</strong> Let <span class="math inline">\(t = x-3\)</span>, so as <span class="math inline">\(x \rightarrow 3\)</span>, we have <span class="math inline">\(t \rightarrow 0\)</span>. <span class="math display">\[\begin{align*}
+\displaystyle \mathop {\lim }\limits_{x \to 3} \frac{{\sin \left( {x - 3} \right)}}{{x - 3}}
+&amp;= \displaystyle \mathop {\lim }\limits_{t \to 0} \frac{{\sin \left( {t} \right)}}{{t}}\\
+&amp;= 1.
+\end{align*}\]</span>
+Therefore, <span class="math inline">\(\displaystyle \mathop {\lim }\limits_{x \to 3} \frac{{\sin \left( {x - 3} \right)}}{{x - 3}} = 1\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Example:</strong> Evaluate the following limit: <span class="math inline">\(\displaystyle \mathop {\lim }\limits_{z \to 0} \frac{{\cos \left( {3z} \right) - 1}}{z}\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Solution:</strong> We can use limit laws to see that
+<span class="math display">\[\begin{align*} \mathop {\lim }\limits_{z \to 0} \frac{{\cos \left( {3z} \right) - 1}}{z}
+&amp;= \mathop {\lim }\limits_{z \to 0} \frac{{3\left( {\cos \left( {3z} \right) - 1} \right)}}{{3z}}\\
+&amp;= 3\mathop {\lim }\limits_{z \to 0} \frac{{\cos \left( {3z} \right) - 1}}{{3z}}\\
+&amp;= 3\left( 0 \right)\\
+&amp;= 0 \end{align*}\]</span>
+Therefore, <span class="math inline">\(\displaystyle \mathop {\lim }\limits_{z \to 0} \frac{{\cos \left( {3z} \right) - 1}}{z} = 0\)</span>.</p>
+</div>
+<p>Practice Problems</p>
+<ol style="list-style-type: upper-alpha">
+<li>Determine each of the following limits.</li>
+</ol>
+<ul>
+<li><p><span class="math inline">\(\displaystyle \mathop {\lim }\limits_{x \to 0} \frac{\sin(x)}{4x}\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \mathop {\lim }\limits_{x \to 0} \frac{\sin(7x)}{x}\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \mathop {\lim }\limits_{x \to 0} \frac{x}{\sin(2x)}\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \mathop {\lim }\limits_{x \to 0} \frac{\sin(3x)}{\sin(4x)}\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \mathop {\lim }\limits_{x \to 3} \frac{\sin(x-3)}{x-3}\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \mathop {\lim }\limits_{x \to 6} \frac{\sin(x-6)}{6-x}\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \mathop {\lim }\limits_{x \to 0} \frac{\cos(2x)-1}{x}\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \mathop {\lim }\limits_{x \to 0} \frac{1-\cos(3x)}{x}\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \mathop {\lim }\limits_{x \to 0} \frac{\cos(8x)-1}{5x}\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \mathop {\lim }\limits_{x \to -4} \frac{\sin(x+4)}{3x+12}\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \mathop {\lim }\limits_{x \to 0} \frac{\cos(3x)-1}{1-\cos(5x)}\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \mathop {\lim }\limits_{x \to 0} \frac{\cos(5x)-1}{\sin(2x)}\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \mathop {\lim }\limits_{x \to 0} \frac{\sin(x^2)}{\cos(x^2)-1}\)</span></p></li>
+</ul>
+</div>
+<div id="the-squeeze-theorem" class="section level2 unnumbered hasAnchor">
+<h2>The Squeeze Theorem<a href="calculating-limits-using-the-limit-laws.html#the-squeeze-theorem" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The squeeze theorem says, in essence, that if we have a function <span class="math inline">\(f\)</span> and a function <span class="math inline">\(h\)</span> with <span class="math inline">\(f(x) \geq h(x)\)</span> but at a point <span class="math inline">\(a\)</span>, the two graphs meet at some <span class="math inline">\(y\)</span>-value <span class="math inline">\(L\)</span> (ie, share the same limit at <span class="math inline">\(a\)</span>), and if there is a function <span class="math inline">\(g\)</span> that is sandwiched between <span class="math inline">\(f\)</span> and <span class="math inline">\(h\)</span>, then it must also have that same limit at <span class="math inline">\(a\)</span>.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><img src="Pic15.png" /></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<div style="color: blue;">
+<p><strong>Theorem (Squeeze Theorem):</strong> Suppose <span class="math inline">\(f(x) \leq g(x) \leq h(x)\)</span> are defined on some interval <span class="math inline">\(I\)</span> containing <span class="math inline">\(a\)</span> (though possibly not at <span class="math inline">\(a\)</span> itself), and suppose that <span class="math display">\[\displaystyle\lim_{x \rightarrow a} f(x) = \displaystyle\lim_{x \rightarrow a} h(x) = L,\]</span> then <span class="math display">\[\displaystyle\lim_{x \rightarrow a} g(x) = L.\]</span></p>
+</div>
+<p>While the Squeeze Theorem seems intuitively obvious, we will prove it formally in .</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><img src="Pic16.png" /></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<div style="color: green;">
+<p><strong>Example:</strong> Suppose there are three functions such that <span class="math inline">\(f(x) \leq g(x) \leq h(x)\)</span> when <span class="math inline">\(x\)</span> is near 6. Further, suppose <span class="math inline">\(f(x) = \frac{1}{3}x^3 - 3x^2 + 35\)</span> and <span class="math inline">\(h(x)= -\dfrac{\sin(x-6)}{x-6}\)</span>.</p>
+<p>Determine <span class="math inline">\(\displaystyle\lim_{x \rightarrow 6} g(x)\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Solution:</strong> First, we determine <span class="math inline">\(\displaystyle\lim_{x\to 6} f(x)\)</span>.
+<span class="math display">\[\begin{align*}
+\displaystyle\lim_{x\to 6} f(x)
+&amp; = \lim_{x\to 6}\left(\frac 1 3 x^3-3x^2+35\right)\\[6pt]
+&amp; = \left(\frac 1 3 (6)^3-3(6)^2+35\right)\\[6pt]
+&amp; = \left(72-108+35\right)\\[6pt]
+&amp; = -1.
+\end{align*}\]</span></p>
+<p>Next, we find <span class="math inline">\(\displaystyle\lim_{x\to 6} h(x)\)</span>.
+<span class="math display">\[\begin{align*}
+\lim_{x\to 6} h(x)
+&amp; = \lim_{x\to 6} -\dfrac{\sin(x-6)}{x-6}\\[6pt]
+&amp; = \lim_{t\to 0} -\dfrac{\sin(t)}{t}\\[6pt]
+&amp; = -1
+\end{align*}\]</span></p>
+<p>Since <span class="math inline">\(\displaystyle\lim_{x\to 6} f(x) = \displaystyle\lim_{x\to 6} h(x) = -1\)</span> and <span class="math inline">\(f(x) \geq g(x) \geq h(x)\)</span>, we know that <span class="math inline">\(\displaystyle\lim_{x\to 6} g(x) = -1\)</span>.</p>
+</div>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><img src="Pic17.png" /></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<div style="color: green;">
+<p><strong>Example:</strong> Determine <span class="math inline">\(\displaystyle\lim_{x \rightarrow 0} x^2\sin(1/x)\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Solution:</strong> We know that <span class="math inline">\(-1 \leq \sin(t) \leq 1\)</span> for all values of <span class="math inline">\(t\)</span>. Hence, <span class="math inline">\(-1 \leq \sin(1/x) \leq 1\)</span> for all <span class="math inline">\(x \not = 0\)</span>. Therefore, <span class="math display">\[-x^2 \leq x^2 \sin(1/x) \leq x^2,\]</span> for all <span class="math inline">\(x\)</span>. We know that
+<span class="math display">\[\begin{align*}
+\lim_{x\to 0} x^2
+&amp; = \lim_{x\to 0} x \cdot \lim_{x\to 0} x\\[6pt]
+&amp; = 0.
+\end{align*}\]</span>
+And we also know that
+<span class="math display">\[\begin{align*}
+\lim_{x\to 0} -x^2
+&amp; = \lim_{x\to 0} -x \cdot \lim_{x\to 0} x\\[6pt]
+&amp; = 0.
+\end{align*}\]</span>
+Therefore, by the squeeze theorem <span class="math display">\[\lim_{x \rightarrow 0} x^2 \sin(1/x) = 0.\]</span></p>
+</div>
+<div style="color: green;">
+<p><strong>Example:</strong> Without using the Power Rule for limits, show that <span class="math inline">\(\displaystyle\lim_{x \rightarrow a} \sqrt{x} = \sqrt{a}\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Solution:</strong> First, we note that <span class="math display">\[\sqrt{x} - \sqrt{a} = \dfrac{(\sqrt{x} - \sqrt{a})(\sqrt{x} + \sqrt{a})}{\sqrt{x} + \sqrt{a}} = \dfrac{x-a}{\sqrt{x} + \sqrt{a}}.\]</span> Therefore, it must be true that <span class="math display">\[\left|\sqrt{x} - \sqrt{a}\right| = \left|\dfrac{(\sqrt{x} - \sqrt{a})(\sqrt{x} + \sqrt{a})}{\sqrt{x} + \sqrt{a}} \right| \leq \dfrac{x-a}{\sqrt{a}},\]</span> with the last inequality true by the fact that <span class="math inline">\(\sqrt{a} \leq \sqrt{a} + \sqrt{x}\)</span> for any <span class="math inline">\(x \geq 0\)</span>.</p>
+<p>We therefore know that <span class="math display">\[-\dfrac{x-a}{\sqrt{a}} \leq \left| \dfrac{(\sqrt{x} - \sqrt{a})(\sqrt{x} + \sqrt{a})}{\sqrt{x} + \sqrt{a}} \right| \leq \dfrac{x-a}{\sqrt{a}}.\]</span></p>
+<p>Clearly, <span class="math display">\[\lim_{x \rightarrow a} -\dfrac{x-a}{\sqrt{a}} = \lim_{x \rightarrow a} \dfrac{x-a}{\sqrt{a}} = 0.\]</span> (It is OK to evaluate these limits even though they have absolute values since we would simply adjust the sign of the fraction depending on <span class="math inline">\(x\)</span>). Therefore, <span class="math display">\[\lim_{x \rightarrow a} \sqrt{x} - \sqrt{a} = 0,\]</span> which means that <span class="math display">\[\lim_{x \rightarrow a} \sqrt{x} = \sqrt{a}.\]</span></p>
+</div>
+<p>Practice Problems</p>
+<ol style="list-style-type: upper-alpha">
+<li>Determine the value of each of the following limits.</li>
+</ol>
+<ul>
+<li><p><span class="math inline">\(\displaystyle\lim_{x \to 0^-} x^3 \cos(2/x)\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle\lim_{x \to 0} |x|\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle\lim_{x \to 0} x^2 e^{\sin(1/x)}\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle\lim_{x \rightarrow 0} \sqrt{x^2 + 3x}\cos(1/x^2)\)</span></p></li>
+</ul>
+<ol start="2" style="list-style-type: upper-alpha">
+<li><p>Show that <span class="math inline">\(\displaystyle\lim_{x \to a} |x| = |a|\)</span>. Hint: Use cases. Use the result to prove that <span class="math inline">\(\displaystyle\lim_{x \rightarrow 0} \frac{|x|}{x}\)</span> does not exist.</p></li>
+<li><p>Assume that <span class="math inline">\(\displaystyle\lim_{x \rightarrow -1^+} f(x)\)</span> exists and that <span class="math display">\[\dfrac{x^2 + x - 2}{x + 3} \leq \dfrac{f(x)}{x^2} \leq \dfrac{x^2 + 2x - 1}{x + 3}.\]</span> Find <span class="math inline">\(\displaystyle\lim_{x \rightarrow -1^+} f(x).\)</span></p></li>
+<li><p>Consider the function <span class="math display">\[f(x) = \begin{cases} 1 + x^4 &amp; x \text{ is rational}\\ 1 + 2x^2 &amp; x \text{ is irrational} \end{cases}.\]</span> Show that <span class="math inline">\(\displaystyle\lim_{x \rightarrow 0} f(x) = 1.\)</span></p></li>
+</ol>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="the-limit-of-a-function.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="the-precise-definition-of-a-limit.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook/js/app.min.js"></script>
+<script src="libs/gitbook/js/clipboard.min.js"></script>
+<script src="libs/gitbook/js/plugin-search.js"></script>
+<script src="libs/gitbook/js/plugin-sharing.js"></script>
+<script src="libs/gitbook/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook/js/jquery.highlight.js"></script>
+<script src="libs/gitbook/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/02-LimitsAndDerivatives.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

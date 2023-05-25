@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Calculus I</title>
-  <meta name="description" content="Calculus I" />
+  <title>2.8 The Derivative as a Function | Calculus I</title>
+  <meta name="description" content="2.8 The Derivative as a Function | Calculus I" />
   <meta name="generator" content="bookdown 0.33 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Calculus I" />
+  <meta property="og:title" content="2.8 The Derivative as a Function | Calculus I" />
   <meta property="og:type" content="book" />
   <meta property="og:image" content="/Title_Page.png" />
   
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Calculus I" />
+  <meta name="twitter:title" content="2.8 The Derivative as a Function | Calculus I" />
   
   
   <meta name="twitter:image" content="/Title_Page.png" />
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
+<link rel="prev" href="derivatives-and-rates-of-change.html"/>
 
-<link rel="next" href="the-limit-of-a-function.html"/>
 <script src="libs/jquery/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook/css/style.css" rel="stylesheet" />
@@ -138,13 +138,64 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Calculus I</h1>
-<p class="author"><em>Differential Calculus</em></p>
+<div id="the-derivative-as-a-function" class="section level1 unnumbered hasAnchor">
+<h1>2.8 The Derivative as a Function<a href="the-derivative-as-a-function.html#the-derivative-as-a-function" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="differentiability" class="section level2 unnumbered hasAnchor">
+<h2>Differentiability<a href="the-derivative-as-a-function.html#differentiability" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Not all functions have derivatives. While most of the functions we have dealt with have had derivatives, it is certainly not the case that they all do. Any function that has a derivative is called .</p>
+<div style="color: blue;">
+<p><strong>Definition:</strong> A function <span class="math inline">\(f\)</span> is called differentiable at <span class="math inline">\(x = a\)</span> if <span class="math inline">\(f^{\prime}(a)\)</span> exist. A function <span class="math inline">\(f\)</span> is called differentiable on an interval if the derivative exists for each point in that interval.</p>
 </div>
-<div id="about-this-book" class="section level1 unnumbered hasAnchor">
-<h1>About This Book<a href="index.html#about-this-book" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Specifically, a function can fail to be differentiable at a point <span class="math inline">\(a\)</span> if there is a vertical tangent line, a discontinuity in the graph or if the graph has a corner.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><img src="Pic39.png" /></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<div style="color: green;">
+<p><strong>Example:</strong> Determine <span class="math inline">\(f^{\prime}(0)\)</span> given <span class="math inline">\(g(x) = |x|\)</span>.\</p>
+</div>
+<div style="color: green;">
+<p><strong>Solution:</strong> We know
+<span class="math display">\[\begin{align*}  f^{\prime}(0) &amp;= \lim_{h \rightarrow 0} \dfrac{f(0+h) - f(0)}{h}\\ \\
+&amp;= \lim_{h \rightarrow 0} \dfrac{|0+h| - |0|}{h}\\ \\
+&amp;= \lim_{h \rightarrow 0} \dfrac{|h|}{h}.
+\end{align*}\]</span>
+Recall that <span class="math display">\[|h| = \begin{cases}h &amp; h \geq 0\\ -h &amp; h &lt; 0 \end{cases}.\]</span> If we take the limit from the left, <span class="math inline">\(h &lt; 0\)</span>. Therefore,
+<span class="math display">\[\lim_{h \rightarrow 0^-} \dfrac{|h|}{h} = \lim_{h \rightarrow 0^{-}} \dfrac{-h}{h} = -1.\]</span> If we take the limit from the right, <span class="math inline">\(h &gt; 0\)</span>. Therefore, <span class="math display">\[\lim_{h \rightarrow 0^+} \dfrac{|h|}{h} = \lim_{h \rightarrow 0^{+}} \dfrac{h}{h} = 1.\]</span> Now, since the two one-sided limits are different so <span class="math inline">\(\displaystyle\lim_{h \rightarrow 0} \dfrac{|h|}{h}\)</span> does not exist. Since the limit does not exist, neither does the derivative.</p>
+</div>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><img src="Pic40.png" /></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<p>Practice Problems</p>
+<ol style="list-style-type: upper-alpha">
+<li>Determine where the following functions are differentiable.</li>
+</ol>
+<ul>
+<li><span class="math inline">\(f(x) = \begin{cases} x+1 &amp; x \geq 0 \\ x-1 &amp; x &lt; 0 \end{cases}\)</span></li>
+<li><span class="math inline">\(f(x) = |x-1|\)</span></li>
+<li><span class="math inline">\(f(x) = \begin{cases} x^2 &amp; x \geq 0 \\ -x&amp; x &lt; 0 \end{cases}\)</span></li>
+<li><span class="math inline">\(f(x) = \dfrac{1}{x^2}\)</span></li>
+<li><span class="math inline">\(f(x) = x^{1/3}\)</span></li>
+<li><span class="math inline">\(f(x) = \dfrac{x}{|x|}\)</span></li>
+<li><span class="math inline">\(f(x) = \sqrt{x}\)</span></li>
+<li><span class="math inline">\(f(x) = \sqrt{x}\)</span></li>
+</ul>
+<ol start="2" style="list-style-type: upper-alpha">
+<li>For each of the functions in part A, sketch a graph of the derivatives.</li>
+</ol>
 
+</div>
 </div>
 
 
@@ -153,13 +204,14 @@
 
 
 
+</div>
             </section>
 
           </div>
         </div>
       </div>
+<a href="derivatives-and-rates-of-change.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
-<a href="the-limit-of-a-function.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook/js/app.min.js"></script>
@@ -190,7 +242,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/USERNAME/REPO/edit/BRANCH/index.Rmd",
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/02-LimitsAndDerivatives.Rmd",
 "text": "Edit"
 },
 "history": {

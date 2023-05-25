@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>2.7 Derivatives and Rates of Change | Calculus I</title>
+  <meta name="description" content="2.7 Derivatives and Rates of Change | Calculus I" />
+  <meta name="generator" content="bookdown 0.33 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="2.7 Derivatives and Rates of Change | Calculus I" />
+  <meta property="og:type" content="book" />
+  <meta property="og:image" content="/Title_Page.png" />
+  
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="2.7 Derivatives and Rates of Change | Calculus I" />
+  
+  
+  <meta name="twitter:image" content="/Title_Page.png" />
+
+<meta name="author" content="Differential Calculus" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="limits-at-infinity-horizontal-asymptotes.html"/>
+<link rel="next" href="the-derivative-as-a-function.html"/>
+<script src="libs/jquery/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Differential Calculus</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>About This Book</a></li>
+<li class="part"><span><b>I Functions and Models</b></span></li>
+<li class="part"><span><b>II Limits and Derivatives</b></span></li>
+<li class="chapter" data-level="" data-path="the-limit-of-a-function.html"><a href="the-limit-of-a-function.html"><i class="fa fa-check"></i>2.2 The Limit of a Function</a>
+<ul>
+<li class="chapter" data-level="" data-path="the-limit-of-a-function.html"><a href="the-limit-of-a-function.html#the-idea-of-a-limit"><i class="fa fa-check"></i>The Idea of a Limit</a></li>
+<li class="chapter" data-level="" data-path="the-limit-of-a-function.html"><a href="the-limit-of-a-function.html#left-and-right-limits"><i class="fa fa-check"></i>Left and Right Limits</a></li>
+<li class="chapter" data-level="" data-path="the-limit-of-a-function.html"><a href="the-limit-of-a-function.html#limits-that-do-not-exist"><i class="fa fa-check"></i>Limits That Do Not Exist</a></li>
+<li class="chapter" data-level="" data-path="the-limit-of-a-function.html"><a href="the-limit-of-a-function.html#infinite-limits-and-vertical-asymptotes"><i class="fa fa-check"></i>Infinite Limits and Vertical Asymptotes</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="calculating-limits-using-the-limit-laws.html"><a href="calculating-limits-using-the-limit-laws.html"><i class="fa fa-check"></i>2.3 Calculating Limits Using the Limit Laws</a>
+<ul>
+<li class="chapter" data-level="" data-path="calculating-limits-using-the-limit-laws.html"><a href="calculating-limits-using-the-limit-laws.html#the-limit-laws"><i class="fa fa-check"></i>The Limit Laws</a></li>
+<li class="chapter" data-level="" data-path="calculating-limits-using-the-limit-laws.html"><a href="calculating-limits-using-the-limit-laws.html#direct-substitution"><i class="fa fa-check"></i>Direct Substitution</a></li>
+<li class="chapter" data-level="" data-path="calculating-limits-using-the-limit-laws.html"><a href="calculating-limits-using-the-limit-laws.html#limits-of-trigonometric-functions"><i class="fa fa-check"></i>Limits of Trigonometric Functions</a></li>
+<li class="chapter" data-level="" data-path="calculating-limits-using-the-limit-laws.html"><a href="calculating-limits-using-the-limit-laws.html#the-squeeze-theorem"><i class="fa fa-check"></i>The Squeeze Theorem</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="the-precise-definition-of-a-limit.html"><a href="the-precise-definition-of-a-limit.html"><i class="fa fa-check"></i>2.4 The Precise Definition of a Limit</a>
+<ul>
+<li class="chapter" data-level="" data-path="the-precise-definition-of-a-limit.html"><a href="the-precise-definition-of-a-limit.html#proof-of-limit-laws"><i class="fa fa-check"></i>Proof of Limit Laws</a></li>
+<li class="chapter" data-level="" data-path="the-precise-definition-of-a-limit.html"><a href="the-precise-definition-of-a-limit.html#proofs-of-trigonometric-limits"><i class="fa fa-check"></i>Proofs of Trigonometric Limits</a></li>
+<li class="chapter" data-level="" data-path="the-precise-definition-of-a-limit.html"><a href="the-precise-definition-of-a-limit.html#limits-at-infinity-by-definition"><i class="fa fa-check"></i>Limits at Infinity by Definition</a></li>
+<li class="chapter" data-level="" data-path="the-precise-definition-of-a-limit.html"><a href="the-precise-definition-of-a-limit.html#proof-of-direct-substitution-property"><i class="fa fa-check"></i>Proof of Direct Substitution Property</a></li>
+<li class="chapter" data-level="" data-path="the-precise-definition-of-a-limit.html"><a href="the-precise-definition-of-a-limit.html#proof-of-the-squeeze-theorem"><i class="fa fa-check"></i>Proof of The Squeeze Theorem</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="continuity.html"><a href="continuity.html"><i class="fa fa-check"></i>2.5 Continuity</a>
+<ul>
+<li class="chapter" data-level="" data-path="continuity.html"><a href="continuity.html#limits-and-continuity"><i class="fa fa-check"></i>Limits and Continuity</a></li>
+<li class="chapter" data-level="" data-path="continuity.html"><a href="continuity.html#types-of-discontinuities"><i class="fa fa-check"></i>Types of Discontinuities</a></li>
+<li class="chapter" data-level="" data-path="continuity.html"><a href="continuity.html#properties-of-continuous-functions"><i class="fa fa-check"></i>Properties of Continuous Functions</a></li>
+<li class="chapter" data-level="" data-path="continuity.html"><a href="continuity.html#proof-of-continuity-laws"><i class="fa fa-check"></i>Proof of Continuity Laws</a></li>
+<li class="chapter" data-level="" data-path="continuity.html"><a href="continuity.html#the-intermediate-value-theorem"><i class="fa fa-check"></i>The Intermediate Value Theorem</a></li>
+<li class="chapter" data-level="" data-path="continuity.html"><a href="continuity.html#proof-of-the-ivt"><i class="fa fa-check"></i>Proof of The IVT</a></li>
+<li class="chapter" data-level="" data-path="continuity.html"><a href="continuity.html#continuity-of-trigonometric-functions"><i class="fa fa-check"></i>Continuity of Trigonometric Functions</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="limits-at-infinity-horizontal-asymptotes.html"><a href="limits-at-infinity-horizontal-asymptotes.html"><i class="fa fa-check"></i>2.6 Limits at Infinity; Horizontal Asymptotes</a>
+<ul>
+<li class="chapter" data-level="" data-path="limits-at-infinity-horizontal-asymptotes.html"><a href="limits-at-infinity-horizontal-asymptotes.html#limits-at-infinity"><i class="fa fa-check"></i>Limits At Infinity</a></li>
+<li class="chapter" data-level="" data-path="limits-at-infinity-horizontal-asymptotes.html"><a href="limits-at-infinity-horizontal-asymptotes.html#limits-at-infinity-by-definition-1"><i class="fa fa-check"></i>Limits at Infinity by Definition</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="derivatives-and-rates-of-change.html"><a href="derivatives-and-rates-of-change.html"><i class="fa fa-check"></i>2.7 Derivatives and Rates of Change</a>
+<ul>
+<li class="chapter" data-level="" data-path="derivatives-and-rates-of-change.html"><a href="derivatives-and-rates-of-change.html#application-tangent-lines"><i class="fa fa-check"></i>Application: Tangent Lines</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="the-derivative-as-a-function.html"><a href="the-derivative-as-a-function.html"><i class="fa fa-check"></i>2.8 The Derivative as a Function</a>
+<ul>
+<li class="chapter" data-level="" data-path="the-derivative-as-a-function.html"><a href="the-derivative-as-a-function.html#differentiability"><i class="fa fa-check"></i>Differentiability</a></li>
+</ul></li>
+<li class="part"><span><b>III Differentiation Rules</b></span></li>
+<li class="part"><span><b>IV Applications of Differentiation</b></span></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Calculus I</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="derivatives-and-rates-of-change" class="section level1 unnumbered hasAnchor">
+<h1>2.7 Derivatives and Rates of Change<a href="derivatives-and-rates-of-change.html#derivatives-and-rates-of-change" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>The slope of a line is given by the formula <span class="math display">\[\text{slope} \; = \; \dfrac{\text{rise}}{\text{run}}.\]</span> Given two points <span class="math inline">\(P(a,b)\)</span> and <span class="math inline">\(Q(c,d)\)</span>, the slope of the line that connects the two points is <span class="math display">\[\text{slope} = \dfrac{b-d}{c-a}.\]</span> As the point <span class="math inline">\(Q\)</span> gets close to <span class="math inline">\(P\)</span>, the slope of the secant line that connects <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span> becomes the same as a tangent line at <span class="math inline">\(P\)</span>. In order to do this, <span class="math inline">\(c \rightarrow a\)</span>. Given this, we have the following definition of a derivative.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><img src="Pic34.png" /></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<div style="color: blue;">
+<p><strong>Definition:</strong> The slope of a tangent line (the derivative) of a function <span class="math inline">\(f\)</span> at a point <span class="math inline">\(a\)</span> is given by <span class="math display">\[f^{\prime}(a) = \lim_{x \rightarrow a} \dfrac{f(x) - f(a)}{x-a}.\]</span> The function <span class="math inline">\(f^{\prime}(a)\)</span> is called the derivative of <span class="math inline">\(f\)</span> at <span class="math inline">\(a\)</span>.</p>
+</div>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><img src="Pic35.png" /></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<div style="color: green;">
+<p><strong>Example:</strong> Let <span class="math inline">\(f(x) = x^2 - 5x + 2\)</span>. Find <span class="math inline">\(f^{\prime}(2)\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Solution:</strong> We know
+<span class="math display">\[\begin{align*}  f^{\prime}(2) &amp;= \lim_{x \rightarrow 2} \dfrac{f(x) - f(2)}{x-2}\\
+&amp;= \lim_{x \rightarrow 2} \dfrac{x^2 - 5x + 2 - (2^2 - 5(2) + 2)}{x-2}\\
+&amp;= \lim_{x \rightarrow 2} \dfrac{x^2 - 5x + 2 - 4 + 10 - 2}{x-2}\\
+&amp;= \lim_{x \rightarrow 2} \dfrac{x^2 - 5x + 6}{x-2}\\
+&amp;= \lim_{x \rightarrow 2} \dfrac{(x-2)(x-3)}{x-2}\\
+&amp;= \lim_{x \rightarrow 2} x-3\\
+&amp;= -1.
+\end{align*}\]</span>
+Therefore, <span class="math inline">\(f^{\prime}(2) = -1\)</span>.</p>
+</div>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><img src="Pic36.png" /></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<p>If we imagine that <span class="math inline">\(x\)</span> is a number close to <span class="math inline">\(a\)</span>, we can write <span class="math inline">\(x = a + h\)</span> and take <span class="math inline">\(x \rightarrow a\)</span> by taking <span class="math inline">\(h \rightarrow 0\)</span>. Rewriting definition <span class="math inline">\(\ref{defn:derivative}\)</span>, we see an alternative form of the derivative <span class="math display">\[f^{\prime}(a) = \lim_{h \rightarrow 0}  \dfrac{f(a+h) - f(a)}{h}.\]</span></p>
+<div style="color: blue;">
+<p><strong>Definition:</strong> The derivative of a function <span class="math inline">\(f\)</span> at a point <span class="math inline">\(x\)</span> is the function <span class="math inline">\(f^{\prime}(x)\)</span> and is defined to be <span class="math display">\[f^{\prime}(x) = \lim_{h \rightarrow 0} \dfrac{f(x+h) - f(x)}{h}.\]</span></p>
+</div>
+<p>The derivative of a function is the slope or rate of change of that function at any point <span class="math inline">\(x\)</span>.</p>
+<div style="color: green;">
+<p><strong>Example:</strong> Let <span class="math inline">\(f(x) = x^3 + x - 5\)</span>. Find <span class="math inline">\(f^{\prime}(x)\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Solution:</strong> We know
+<span class="math display">\[\begin{align*}  f^{\prime}(x) &amp;= \lim_{h \rightarrow 0} \dfrac{f(x+h) - f(x)}{h}\\
+&amp;= \lim_{h \rightarrow 0} \dfrac{(x+h)^3 + (x+h) - 5 - (x^3 + x - 5)}{h}\\
+&amp;= \lim_{h \rightarrow 0} \dfrac{x^3 + 3x^2h + 3xh^2 + h^3 + x+h - x^3 - x)}{h}\\
+&amp;= \lim_{h \rightarrow 0} \dfrac{3x^2h + 3xh^2 + h^3 +h )}{h}\\
+&amp;= \lim_{h \rightarrow 0} \dfrac{h(3x^2 + 3xh + h^2 +1) )}{h}\\
+&amp;= \lim_{h \rightarrow 0} 3x^2 + 3xh + h^2 +1\\
+&amp;= 3x^2  +1.
+\end{align*}\]</span>
+Therefore, <span class="math inline">\(f^{\prime}(x) = 3x^2 + 1\)</span>.</p>
+</div>
+<p>Practice Problems</p>
+<ol style="list-style-type: upper-alpha">
+<li>Use definition <span class="math inline">\(\ref{defn:derivative}\)</span> to determine the following derivatives at the given point.</li>
+</ol>
+<ul>
+<li><span class="math inline">\(f(x) = 5x^4 - 3x^3 + x^2 - 5\)</span> at <span class="math inline">\(a = 1\)</span></li>
+<li><span class="math inline">\(f(x) = 5x^4 - 3x^3 + x^2 - 5\)</span> at <span class="math inline">\(a = 3\)</span></li>
+<li><span class="math inline">\(f(x) = 7x^3- 2x^2 + x - 10\)</span> at <span class="math inline">\(a = 0\)</span></li>
+<li><span class="math inline">\(f(x) = 7x^3- 2x^2 + x - 10\)</span> at <span class="math inline">\(a = -2\)</span></li>
+<li><span class="math inline">\(f(x) = x^4 - 3x^2 + x - 1\)</span> at <span class="math inline">\(a = 4\)</span></li>
+<li><span class="math inline">\(f(x) = x^6 - x^4 + x^2 + 1\)</span> at <span class="math inline">\(a = -3\)</span></li>
+</ul>
+<ol start="2" style="list-style-type: upper-alpha">
+<li>Use definition <span class="math inline">\(\ref{defn:derivative2}\)</span> to determine the value of <span class="math inline">\(f^{\prime}(x)\)</span>.</li>
+</ol>
+<ul>
+<li><span class="math inline">\(f(x) = x^2 - 5x + 1\)</span></li>
+<li><span class="math inline">\(f(x) = 7x^3- 2x^2 + x - 10\)</span></li>
+<li><span class="math inline">\(f(x) = -x^2 + 3x + 10\)</span></li>
+<li><span class="math inline">\(f(x) = 5x^4 - 3x^3 + x^2 - 5\)</span></li>
+<li><span class="math inline">\(f(x) = x^4 - 3x^2 + x - 1\)</span></li>
+<li><span class="math inline">\(f(x) = x^6 - x^4 + x^2 + 1\)</span></li>
+</ul>
+<div id="application-tangent-lines" class="section level2 unnumbered hasAnchor">
+<h2>Application: Tangent Lines<a href="derivatives-and-rates-of-change.html#application-tangent-lines" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The derivative of a function <span class="math inline">\(f\)</span> at a point <span class="math inline">\((a,b)\)</span> is the slope of a tangent line to <span class="math inline">\(f\)</span> at <span class="math inline">\((a,b)\)</span>. Therefore, we can find the equation of a tangent line to <span class="math inline">\(f\)</span> at <span class="math inline">\((a,b)\)</span> using the formula <span class="math display">\[y-b = f^{\prime}(a)(x-a).\]</span></p>
+<div style="color: green;">
+<p><strong>Example:</strong> Let <span class="math inline">\(f(x) = \dfrac{x}{x+1}\)</span>. Find <span class="math inline">\(f^{\prime}(x)\)</span> and the equation of a tangent line to <span class="math inline">\(f\)</span> at <span class="math inline">\(x=2\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Solution:</strong> We know
+<span class="math display">\[\begin{align*}  f^{\prime}(x) &amp;= \lim_{h \rightarrow 0} \dfrac{f(x+h) - f(x)}{h}\\ \\
+&amp;= \lim_{h \rightarrow 0} \dfrac{\frac{x+h}{x+h+1} - \frac{x}{x+1}}{h}\\ \\
+&amp;= \lim_{h \rightarrow 0} \dfrac{\frac{(x+h)(x+1)}{(x+h+1)(x+1)} - \frac{x(x+h+1)}{(x+1)(x + h + 1)}}{h}\\ \\
+&amp;= \lim_{h \rightarrow 0} \dfrac{\frac{(x+h)(x+1)-x(x+h+1)}{(x+h+1)(x+1)}}{h}\\ \\
+&amp;= \lim_{h \rightarrow 0} \dfrac{\frac{x^2 + xh + x + h - x^2 - xh - x}{(x+h+1)(x+1)}}{h}\\ \\
+&amp;= \lim_{h \rightarrow 0} \dfrac{\frac{h}{(x+h+1)(x+1)}}{h}\\ \\
+&amp;= \lim_{h \rightarrow 0} \dfrac{1}{(x+h+1)(x+1)}\\ \\
+&amp;= \dfrac{1}{(x+1)^2}.
+\end{align*}\]</span>
+Therefore, <span class="math inline">\(f^{\prime}(x) = \dfrac{1}{(x+1)^2}\)</span>.</p>
+<p>At <span class="math inline">\(x = 2\)</span>, we have <span class="math inline">\(y = \dfrac{2}{2+1} = \dfrac{1}{3}\)</span>. The slope of <span class="math inline">\(f\)</span> at <span class="math inline">\(x = 2\)</span> is <span class="math inline">\(f^{\prime}(2) = \dfrac{1}{(2+1)^2} = \dfrac{1}{9}\)</span>. Therefore, the equation of the tangent line to <span class="math inline">\(f\)</span> at <span class="math inline">\(2\)</span> is <span class="math display">\[y - \dfrac{2}{3} = \dfrac{1}{9}(x-2).\]</span></p>
+</div>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><img src="Pic37.png" /></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<div style="color: green;">
+<p><strong>Example:</strong> Let <span class="math inline">\(f(x) = \sqrt{x+3}\)</span>. Find <span class="math inline">\(f^{\prime}(x)\)</span> and the equation of a tangent line to <span class="math inline">\(f\)</span> at <span class="math inline">\(x=1\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Solution:</strong> We know
+<span class="math display">\[\begin{align*}  f^{\prime}(x) &amp;= \lim_{h \rightarrow 0} \dfrac{f(x+h) - f(x)}{h}\\ \\
+&amp;= \lim_{h \rightarrow 0} \dfrac{\sqrt{x+h+3} - \sqrt{x+3}}{h}\\ \\
+&amp;= \lim_{h \rightarrow 0} \dfrac{\left[\sqrt{x+h+3} - \sqrt{x+3}\right]\left(\sqrt{x+h+3} + \sqrt{x+3}\right)}{h\left(\sqrt{x+h+3} + \sqrt{x+3}\right)}\\ \\
+&amp;= \lim_{h \rightarrow 0} \dfrac{x+h+3 - (x+3)}{h\left(\sqrt{x+h+3} + \sqrt{x+3}\right)}\\ \\
+&amp;= \lim_{h \rightarrow 0} \dfrac{h}{h\left(\sqrt{x+h+3} + \sqrt{x+3}\right)}\\ \\
+&amp;= \lim_{h \rightarrow 0} \dfrac{1}{\sqrt{x+h+3} + \sqrt{x+3}}\\ \\
+&amp;= \dfrac{1}{2\sqrt{x+3}}.
+\end{align*}\]</span>
+Therefore, <span class="math inline">\(f^{\prime}(x) = \dfrac{1}{2\sqrt{x+3}}\)</span>.</p>
+<p>At <span class="math inline">\(x = 1\)</span>, we have <span class="math inline">\(y = \sqrt{1+3} = 2\)</span>. The slope of <span class="math inline">\(f\)</span> at <span class="math inline">\(x = 1\)</span> is <span class="math inline">\(f^{\prime}(1) = \dfrac{1}{2\sqrt{1+3}} = \dfrac{1}{4}\)</span>. Therefore, the equation of the tangent line to <span class="math inline">\(f\)</span> at <span class="math inline">\(1\)</span> is <span class="math display">\[y - 2 = \dfrac{1}{4}(x-1).\]</span></p>
+</div>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><img src="Pic38.png" /></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<p>Practice Problems</p>
+<p>Find the equation of the tangent line to the function at the given point.</p>
+<ul>
+<li><span class="math inline">\(f(x) = 5x^4 - 3x^3 + x^2 - 5\)</span> at <span class="math inline">\(a = 1\)</span></li>
+<li><span class="math inline">\(f(x) = 7x^3- 2x^2 + x - 10\)</span> at <span class="math inline">\(a = 0\)</span></li>
+<li><span class="math inline">\(f(x) = x^6 - x^4 + x^2 + 1\)</span> at <span class="math inline">\(a = -3\)</span></li>
+<li><span class="math inline">\(f(x) = \sqrt{x+1}\)</span> at <span class="math inline">\(a = 8\)</span></li>
+<li><span class="math inline">\(f(x) = \sqrt{x-5}\)</span> at <span class="math inline">\(a = 9\)</span></li>
+<li><span class="math inline">\(f(x) = \dfrac{1}{x}\)</span> at <span class="math inline">\(a = 1\)</span></li>
+<li><span class="math inline">\(f(x) = \dfrac{3}{x-2}\)</span> at <span class="math inline">\(a = 1\)</span></li>
+<li><span class="math inline">\(f(x) = \sin(x + \pi/2)\)</span> at <span class="math inline">\(a = \pi\)</span></li>
+</ul>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="limits-at-infinity-horizontal-asymptotes.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="the-derivative-as-a-function.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook/js/app.min.js"></script>
+<script src="libs/gitbook/js/clipboard.min.js"></script>
+<script src="libs/gitbook/js/plugin-search.js"></script>
+<script src="libs/gitbook/js/plugin-sharing.js"></script>
+<script src="libs/gitbook/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook/js/jquery.highlight.js"></script>
+<script src="libs/gitbook/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/02-LimitsAndDerivatives.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

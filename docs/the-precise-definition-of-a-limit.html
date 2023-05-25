@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>2.4 The Precise Definition of a Limit | Calculus I</title>
+  <meta name="description" content="2.4 The Precise Definition of a Limit | Calculus I" />
+  <meta name="generator" content="bookdown 0.33 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="2.4 The Precise Definition of a Limit | Calculus I" />
+  <meta property="og:type" content="book" />
+  <meta property="og:image" content="/Title_Page.png" />
+  
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="2.4 The Precise Definition of a Limit | Calculus I" />
+  
+  
+  <meta name="twitter:image" content="/Title_Page.png" />
+
+<meta name="author" content="Differential Calculus" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="calculating-limits-using-the-limit-laws.html"/>
+<link rel="next" href="continuity.html"/>
+<script src="libs/jquery/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Differential Calculus</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>About This Book</a></li>
+<li class="part"><span><b>I Functions and Models</b></span></li>
+<li class="part"><span><b>II Limits and Derivatives</b></span></li>
+<li class="chapter" data-level="" data-path="the-limit-of-a-function.html"><a href="the-limit-of-a-function.html"><i class="fa fa-check"></i>2.2 The Limit of a Function</a>
+<ul>
+<li class="chapter" data-level="" data-path="the-limit-of-a-function.html"><a href="the-limit-of-a-function.html#the-idea-of-a-limit"><i class="fa fa-check"></i>The Idea of a Limit</a></li>
+<li class="chapter" data-level="" data-path="the-limit-of-a-function.html"><a href="the-limit-of-a-function.html#left-and-right-limits"><i class="fa fa-check"></i>Left and Right Limits</a></li>
+<li class="chapter" data-level="" data-path="the-limit-of-a-function.html"><a href="the-limit-of-a-function.html#limits-that-do-not-exist"><i class="fa fa-check"></i>Limits That Do Not Exist</a></li>
+<li class="chapter" data-level="" data-path="the-limit-of-a-function.html"><a href="the-limit-of-a-function.html#infinite-limits-and-vertical-asymptotes"><i class="fa fa-check"></i>Infinite Limits and Vertical Asymptotes</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="calculating-limits-using-the-limit-laws.html"><a href="calculating-limits-using-the-limit-laws.html"><i class="fa fa-check"></i>2.3 Calculating Limits Using the Limit Laws</a>
+<ul>
+<li class="chapter" data-level="" data-path="calculating-limits-using-the-limit-laws.html"><a href="calculating-limits-using-the-limit-laws.html#the-limit-laws"><i class="fa fa-check"></i>The Limit Laws</a></li>
+<li class="chapter" data-level="" data-path="calculating-limits-using-the-limit-laws.html"><a href="calculating-limits-using-the-limit-laws.html#direct-substitution"><i class="fa fa-check"></i>Direct Substitution</a></li>
+<li class="chapter" data-level="" data-path="calculating-limits-using-the-limit-laws.html"><a href="calculating-limits-using-the-limit-laws.html#limits-of-trigonometric-functions"><i class="fa fa-check"></i>Limits of Trigonometric Functions</a></li>
+<li class="chapter" data-level="" data-path="calculating-limits-using-the-limit-laws.html"><a href="calculating-limits-using-the-limit-laws.html#the-squeeze-theorem"><i class="fa fa-check"></i>The Squeeze Theorem</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="the-precise-definition-of-a-limit.html"><a href="the-precise-definition-of-a-limit.html"><i class="fa fa-check"></i>2.4 The Precise Definition of a Limit</a>
+<ul>
+<li class="chapter" data-level="" data-path="the-precise-definition-of-a-limit.html"><a href="the-precise-definition-of-a-limit.html#proof-of-limit-laws"><i class="fa fa-check"></i>Proof of Limit Laws</a></li>
+<li class="chapter" data-level="" data-path="the-precise-definition-of-a-limit.html"><a href="the-precise-definition-of-a-limit.html#proofs-of-trigonometric-limits"><i class="fa fa-check"></i>Proofs of Trigonometric Limits</a></li>
+<li class="chapter" data-level="" data-path="the-precise-definition-of-a-limit.html"><a href="the-precise-definition-of-a-limit.html#limits-at-infinity-by-definition"><i class="fa fa-check"></i>Limits at Infinity by Definition</a></li>
+<li class="chapter" data-level="" data-path="the-precise-definition-of-a-limit.html"><a href="the-precise-definition-of-a-limit.html#proof-of-direct-substitution-property"><i class="fa fa-check"></i>Proof of Direct Substitution Property</a></li>
+<li class="chapter" data-level="" data-path="the-precise-definition-of-a-limit.html"><a href="the-precise-definition-of-a-limit.html#proof-of-the-squeeze-theorem"><i class="fa fa-check"></i>Proof of The Squeeze Theorem</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="continuity.html"><a href="continuity.html"><i class="fa fa-check"></i>2.5 Continuity</a>
+<ul>
+<li class="chapter" data-level="" data-path="continuity.html"><a href="continuity.html#limits-and-continuity"><i class="fa fa-check"></i>Limits and Continuity</a></li>
+<li class="chapter" data-level="" data-path="continuity.html"><a href="continuity.html#types-of-discontinuities"><i class="fa fa-check"></i>Types of Discontinuities</a></li>
+<li class="chapter" data-level="" data-path="continuity.html"><a href="continuity.html#properties-of-continuous-functions"><i class="fa fa-check"></i>Properties of Continuous Functions</a></li>
+<li class="chapter" data-level="" data-path="continuity.html"><a href="continuity.html#proof-of-continuity-laws"><i class="fa fa-check"></i>Proof of Continuity Laws</a></li>
+<li class="chapter" data-level="" data-path="continuity.html"><a href="continuity.html#the-intermediate-value-theorem"><i class="fa fa-check"></i>The Intermediate Value Theorem</a></li>
+<li class="chapter" data-level="" data-path="continuity.html"><a href="continuity.html#proof-of-the-ivt"><i class="fa fa-check"></i>Proof of The IVT</a></li>
+<li class="chapter" data-level="" data-path="continuity.html"><a href="continuity.html#continuity-of-trigonometric-functions"><i class="fa fa-check"></i>Continuity of Trigonometric Functions</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="limits-at-infinity-horizontal-asymptotes.html"><a href="limits-at-infinity-horizontal-asymptotes.html"><i class="fa fa-check"></i>2.6 Limits at Infinity; Horizontal Asymptotes</a>
+<ul>
+<li class="chapter" data-level="" data-path="limits-at-infinity-horizontal-asymptotes.html"><a href="limits-at-infinity-horizontal-asymptotes.html#limits-at-infinity"><i class="fa fa-check"></i>Limits At Infinity</a></li>
+<li class="chapter" data-level="" data-path="limits-at-infinity-horizontal-asymptotes.html"><a href="limits-at-infinity-horizontal-asymptotes.html#limits-at-infinity-by-definition-1"><i class="fa fa-check"></i>Limits at Infinity by Definition</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="derivatives-and-rates-of-change.html"><a href="derivatives-and-rates-of-change.html"><i class="fa fa-check"></i>2.7 Derivatives and Rates of Change</a>
+<ul>
+<li class="chapter" data-level="" data-path="derivatives-and-rates-of-change.html"><a href="derivatives-and-rates-of-change.html#application-tangent-lines"><i class="fa fa-check"></i>Application: Tangent Lines</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="the-derivative-as-a-function.html"><a href="the-derivative-as-a-function.html"><i class="fa fa-check"></i>2.8 The Derivative as a Function</a>
+<ul>
+<li class="chapter" data-level="" data-path="the-derivative-as-a-function.html"><a href="the-derivative-as-a-function.html#differentiability"><i class="fa fa-check"></i>Differentiability</a></li>
+</ul></li>
+<li class="part"><span><b>III Differentiation Rules</b></span></li>
+<li class="part"><span><b>IV Applications of Differentiation</b></span></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Calculus I</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="the-precise-definition-of-a-limit" class="section level1 unnumbered hasAnchor">
+<h1>2.4 The Precise Definition of a Limit<a href="the-precise-definition-of-a-limit.html#the-precise-definition-of-a-limit" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>So far, we have used a fairly colloquial definition of a limit. While a mathematician understands what is technically meant by terms like ``close enough’’, it is important that we make these sorts of terms clear. For that reason, we introduce the precise definition of a limit.</p>
+<div style="color: blue;">
+<p><strong>Definition:</strong> The statement <span class="math inline">\(\displaystyle\lim_{x \rightarrow a} f(x) = L\)</span> means given any real number <span class="math inline">\(\varepsilon &gt; 0\)</span>, there exists another real number <span class="math inline">\(\delta &gt; 0\)</span> so that if <span class="math inline">\(0 &lt; |x-a| &lt; \delta\)</span>, then <span class="math inline">\(|f(x) - L| &lt; \varepsilon\)</span>.</p>
+</div>
+<p>In general, the value of <span class="math inline">\(\delta\)</span> will depend on the value of <span class="math inline">\(\varepsilon\)</span>. In light of that, we begin with <span class="math inline">\(\varepsilon &gt; 0\)</span> and then determine an appropriate value of <span class="math inline">\(\delta &gt; 0\)</span>. Of course, there are infinitely many values of <span class="math inline">\(\delta\)</span> that will work. In particular, for any <span class="math inline">\(\delta\)</span> that works, all values on <span class="math inline">\((0,\delta)\)</span> will also work.</p>
+<p>While this definition seems abstract, it is actually quite sensible. The diagram below will help clarify what is going on.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><img src="Pic18.png" /></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<p>We begin by creating an <span class="math inline">\(\varepsilon\)</span> band around the number <span class="math inline">\(L\)</span> on the vertical axis. You can think of this as . Based on that <span class="math inline">\(\varepsilon\)</span> band, we determine a value of <span class="math inline">\(\delta\)</span> so that a <span class="math inline">\(\delta\)</span> band around the number <span class="math inline">\(a\)</span> on the horizontal axis has corresponding <span class="math inline">\(y\)</span>-values which all fall inside the <span class="math inline">\(\varepsilon\)</span> band. If we can find a <span class="math inline">\(\delta\)</span> band no matter which value of <span class="math inline">\(\varepsilon &gt; 0\)</span> is selected, we have proved that <span class="math inline">\(L\)</span> is the correct limit. If not, then <span class="math inline">\(L\)</span> is not the limit or the limit does not exist.</p>
+<div style="color: green;">
+<p><strong>Example:</strong> Prove that <span class="math inline">\(\displaystyle\lim_{x \rightarrow 8} 3x + 2 = 26\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Solution:</strong> Let <span class="math inline">\(\varepsilon &gt; 0\)</span> be given. Select <span class="math inline">\(\delta = \varepsilon / 3\)</span>. Let <span class="math inline">\(|x-8| &lt; \delta\)</span>. We need to show that <span class="math inline">\(|(3x+2) - 26| &lt; \varepsilon\)</span>. Observe that
+<span class="math display">\[\begin{align*}  |(3x + 2)-26| &amp;= |3x - 24|\\
+&amp;=|3(x - 8)|\\
+&amp;=|3||x-8|\\
+&amp;&lt; 3\delta\\
+&amp;= 3(\varepsilon/3)\\
+&amp;=\varepsilon.
+\end{align*}\]</span>
+Therefore, since <span class="math inline">\(|(3x+2)-26| &lt; \varepsilon\)</span> whenever <span class="math inline">\(|x-8| &lt; \delta\)</span>, we know <span class="math inline">\(\displaystyle\lim_{x \rightarrow 8} 3x+2 = 26\)</span>.</p>
+</div>
+<p>In order to determine the value of <span class="math inline">\(\delta\)</span> above, one needs to reverse engineer the problem. The logical sequence that allows you to determine <span class="math inline">\(\delta\)</span> is the following:
+<span class="math display">\[\begin{align*}  &amp;&amp;&amp; &amp;\hspace{-4in}|(3x + 2) - 26| &amp;&lt; \varepsilon&amp;&amp;&amp;&amp;&amp;\text{ }\\
+&amp;&amp;\Leftrightarrow &amp; &amp;\|3x -24| &amp;&lt; \varepsilon\\
+&amp;&amp;\Leftrightarrow &amp; &amp;|3(x -8)| &amp;&lt; \varepsilon\\
+&amp;&amp;\Leftrightarrow &amp; &amp;3|x -8| &amp;&lt; \varepsilon\\
+&amp;&amp;\Leftrightarrow &amp; &amp;|x-8| &amp;&lt; \varepsilon/3 = \delta.
+\end{align*}\]</span>
+By selecting <span class="math inline">\(\delta = \varepsilon/3\)</span>, the logic will flow backward so that eventually <span class="math inline">\(|(3x + 2)-26| &lt; \varepsilon\)</span>.</p>
+<div style="color: green;">
+<p><strong>Example:</strong> Prove that <span class="math inline">\(\displaystyle\lim_{x \rightarrow 1} 5-2x = 3\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Solution:</strong> Let <span class="math inline">\(\varepsilon &gt; 0\)</span> be given. Select <span class="math inline">\(\delta = \varepsilon / 2\)</span>. Let <span class="math inline">\(|x-1| &lt; \delta\)</span>. We need to show that <span class="math inline">\(|(5-2x) - 3| &lt; \varepsilon\)</span>. Observe that
+<span class="math display">\[\begin{align*}  |(5-2x)-3| &amp;= |2-2x|\\
+&amp;=|2(1-x)|\\
+&amp;=|2||1-x|\\
+&amp;&lt; 2\delta\\
+&amp;= 2(\varepsilon/2)\\
+&amp;=\varepsilon.
+\end{align*}\]</span>
+Therefore, since <span class="math inline">\(|(5-2x)-3| &lt; \varepsilon\)</span> whenever <span class="math inline">\(|x-1| &lt; \delta\)</span>, we know <span class="math inline">\(\displaystyle\lim_{x \rightarrow 1} 5-2x = 3\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Example:</strong> Prove that <span class="math inline">\(\displaystyle\lim_{x \rightarrow 3} x^2 + x = 12\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Solution:</strong> Let <span class="math inline">\(\varepsilon &gt; 0\)</span> be given. Select <span class="math inline">\(\delta = \min(\varepsilon /8,1)\)</span>. Let <span class="math inline">\(|x-3| &lt; \delta\)</span>. We need to show that <span class="math inline">\(|(x^2 + x) - 12| &lt; \varepsilon\)</span>. Observe that since <span class="math inline">\(\delta \leq 1\)</span>, we know that <span class="math inline">\(|x-3| \leq 1\)</span>. So, <span class="math inline">\(-1 \leq x-3 \leq 1\)</span>. Therefore, <span class="math inline">\(|x+4| \leq 8\)</span>. With that in mind,
+<span class="math display">\[\begin{align*}  |(x^2 + x) - 12| &amp;= |x^2 + x - 12|\\
+&amp;= |x^2 + x - 12|\\
+&amp;= |(x+4)(x-3)|\\
+&amp;= |x+4||x-3|\\
+&amp;\leq 8|x-3|\\
+&amp;&lt; 8\delta\\
+&amp;\leq 8 \varepsilon/8\\
+&amp;=\varepsilon.
+\end{align*}\]</span>
+Therefore, since <span class="math inline">\(|(x^2 + x) - 12| &lt; \varepsilon\)</span> whenever <span class="math inline">\(|x-3| &lt; \delta\)</span>, we know <span class="math inline">\(\displaystyle\lim_{x \rightarrow 3} x^2 + x = 12\)</span>.</p>
+</div>
+<p>Practice Problems</p>
+<ol style="list-style-type: upper-alpha">
+<li>Prove each of the following limits using an <span class="math inline">\(\varepsilon\)</span>-<span class="math inline">\(\delta\)</span> argument.</li>
+</ol>
+<ul>
+<li><p><span class="math inline">\(\displaystyle\lim_{x \rightarrow 2} 7x - 3 = 11\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle\lim_{x \rightarrow -1} 4 - 5x = 9\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle\lim_{x \rightarrow 4} -5 - 2x = -13\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle\lim_{x \rightarrow -2} 3x - 5 = -11\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle\lim_{x \rightarrow 2} x^2 + 2 = 6\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle\lim_{x \rightarrow -1} 3x^2 + 3 = 6\)</span></p></li>
+</ul>
+<ol start="2" style="list-style-type: upper-alpha">
+<li>Let <span class="math inline">\(c\)</span> be a constant, <span class="math inline">\(a,n \in \mathbb{R}\)</span> and <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> functions defined on some open interval containing <span class="math inline">\(a\)</span> (though possibly not at <span class="math inline">\(a\)</span> itself). Prove each of the following:</li>
+</ol>
+<ul>
+<li><p><span class="math inline">\(\displaystyle\lim_{x \rightarrow a} c = c\)</span> (Constant Law)</p></li>
+<li><p><span class="math inline">\(\displaystyle\lim_{x \rightarrow a} x = a\)</span> (Identity Law)</p></li>
+<li><p><span class="math inline">\(\displaystyle\lim_{x \rightarrow a} f(x) \pm g(x) = L \pm M\)</span> (Sum and Difference Laws)</p></li>
+<li><p><span class="math inline">\(\displaystyle\lim_{x \rightarrow a} cf(x) = c \displaystyle\lim_{x \rightarrow a} f(x) = cL\)</span> (Constant Coefficient Law)</p></li>
+<li><p><span class="math inline">\(\displaystyle\lim_{x \rightarrow a} f(x) \cdot g(x) = \displaystyle\lim_{x \rightarrow a} f(x) \cdot \displaystyle\lim_{x \rightarrow a} g(x) = L \cdot M\)</span> (Multiplication Law)</p></li>
+<li><p><span class="math inline">\(\displaystyle\lim_{x \rightarrow a} \frac{f(x)}{g(x)} = \dfrac{\displaystyle\lim_{x \rightarrow a} f(x)}{\displaystyle\lim_{x \rightarrow a} g(x)} = \dfrac{L}{M}\)</span> (Division Law)</p></li>
+<li><p><span class="math inline">\(\displaystyle\lim_{x \rightarrow a} \left( f(x) \right)^n = \left(\displaystyle  \lim_{x \rightarrow a} f(x) \right)^n = L^n\)</span> (Power Law)</p></li>
+</ul>
+<div id="proof-of-limit-laws" class="section level2 unnumbered hasAnchor">
+<h2>Proof of Limit Laws<a href="the-precise-definition-of-a-limit.html#proof-of-limit-laws" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In this section, we will prove the various limit laws using the precise definition of a limit.</p>
+<div style="color: blue;">
+<p><strong>Theorem (Limit Laws):</strong> Let <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> be functions, <span class="math inline">\(c\)</span> a constant and <span class="math inline">\(a,n \in \mathbb{R}\)</span>. Suppose <span class="math inline">\(\displaystyle\lim_{x \rightarrow a} f(x) = L\)</span> and <span class="math inline">\(\displaystyle\lim_{x \rightarrow a} g(x) = M\)</span> with <span class="math inline">\(L,M \in \mathbb{R}\)</span>. The following properties hold:</p>
+<ul>
+<li><span class="math inline">\(\displaystyle\lim_{x \rightarrow a} c = c\)</span> (Constant Law)</li>
+<li><span class="math inline">\(\displaystyle\lim_{x \rightarrow a} x = a\)</span> (Identity Law)</li>
+<li><span class="math inline">\(\displaystyle\lim_{x \rightarrow a} f(x) \pm g(x) = L \pm M\)</span> (Sum and Difference Laws)</li>
+<li><span class="math inline">\(\displaystyle\lim_{x \rightarrow a} cf(x) = c \displaystyle\lim_{x \rightarrow a} f(x) = cL\)</span> (Constant Coefficient Law)</li>
+<li><span class="math inline">\(\displaystyle\lim_{x \rightarrow a} f(x) \cdot g(x) = \displaystyle\lim_{x \rightarrow a} f(x) \cdot \displaystyle\lim_{x \rightarrow a} g(x) = L \cdot M\)</span> (Multiplication Law)</li>
+<li><span class="math inline">\(\displaystyle\lim_{x \rightarrow a} \frac{f(x)}{g(x)} = \dfrac{\displaystyle\lim_{x \rightarrow a} f(x)}{\displaystyle\lim_{x \rightarrow a} g(x)} = \dfrac{L}{M}\)</span>, with <span class="math inline">\(M \not = 0\)</span> (Division Law)</li>
+<li><span class="math inline">\(\displaystyle\lim_{x \rightarrow a} \left( f(x) \right)^n = \left(\displaystyle\lim_{x \rightarrow a} f(x) \right)^n = L^n\)</span> (Power Law)</li>
+</ul>
+</div>
+<p>We prove each one of these below.</p>
+<div style="color: blue;">
+<p><strong>Theorem (Constant Law):</strong> Let <span class="math inline">\(a \in \mathbb{R}\)</span> and <span class="math inline">\(c\)</span> a constant. Then, <span class="math inline">\(\displaystyle\lim_{x \rightarrow a} c = c\)</span>.</p>
+</div>
+<div style="color: blue;">
+<p><strong>Proof:</strong><br />
+Let <span class="math inline">\(\varepsilon &gt; 0\)</span> be given. Select any <span class="math inline">\(\delta &gt; 0\)</span> and take <span class="math inline">\(|x-a| &lt; \delta\)</span>. In this situation, <span class="math inline">\(f(x) = c\)</span> and <span class="math inline">\(L = c\)</span>. Then <span class="math inline">\(|f(x) - L| = |c - c| = 0 &lt; \varepsilon\)</span>. Therefore, by the precise definition of a limit, we have <span class="math inline">\(\displaystyle\lim_{x \rightarrow a} c = c\)</span>.</p>
+</div>
+<div style="color: blue;">
+<p><strong>Theorem (Identity Law):</strong> Let <span class="math inline">\(a \in \mathbb{R}\)</span>. Then, <span class="math inline">\(\displaystyle\lim_{x \rightarrow a} x = a\)</span>.</p>
+</div>
+<div style="color: blue;">
+<p><strong>Proof:</strong> Let <span class="math inline">\(\varepsilon &gt; 0\)</span> be given. Select <span class="math inline">\(\delta = \varepsilon\)</span> and take <span class="math inline">\(|x-a| &lt; \delta\)</span>. In this situation, <span class="math inline">\(f(x) = x\)</span> and <span class="math inline">\(L = x\)</span>. Then <span class="math inline">\(|f(x) - L| = |x - a| &lt; \delta = \varepsilon\)</span>. Therefore, by the precise definition of a limit, we have <span class="math inline">\(\displaystyle\lim_{x \rightarrow a} x = a\)</span>.</p>
+</div>
+<div style="color: blue;">
+<p><strong>Theorem (Difference Law):</strong> Let <span class="math inline">\(a \in \mathbb{R}\)</span> and <span class="math display">\[\displaystyle\lim_{x \rightarrow a} f(x) = L \; \text{ and } \; \displaystyle\lim_{x \rightarrow a} g(x) = M.\]</span> Then, <span class="math inline">\(\displaystyle\lim_{x \rightarrow a} f(x) \pm g(x) = L \pm M\)</span>.</p>
+</div>
+<div style="color: blue;">
+<p><strong>Proof:</strong> Let <span class="math inline">\(\varepsilon &gt; 0\)</span> be given. Since <span class="math inline">\(\displaystyle\lim_{x \rightarrow a} f(x) = L\)</span>, there exists <span class="math inline">\(\delta_1&gt;0\)</span> such that <span class="math display">\[|f(x) - L| &lt; \varepsilon/2 \text{ whenever }|x-a| &lt; \delta_1.\]</span> Since <span class="math inline">\(\displaystyle\lim_{x \rightarrow a} g(x) = M\)</span>, there exists <span class="math inline">\(\delta_2 &gt;0\)</span> such that <span class="math display">\[|g(x) - M| &lt; \varepsilon/2 \text{ whenever } |x-a| &lt; \delta_2.\]</span></p>
+<p>Select <span class="math inline">\(\delta = \min(\delta_1, \delta_2)\)</span>. Take <span class="math inline">\(|x-a| &lt; \delta\)</span>. In this case, both of the conditions above hold. Then,
+<span class="math display">\[\begin{align*}
+    |(f(x) \pm g(x)) - (L \pm M)| &amp;= |(f(x) - L) \pm (g(x) - M)|\\
+    &amp;\leq |f(x) - L| + |\pm g(x) - \pm M|\\
+    &amp;\leq \varepsilon/2 + \varepsilon/2\\
+    &amp;= \varepsilon.
+\end{align*}\]</span>
+So, by the precise definition of a limit, we have <span class="math inline">\(\displaystyle\lim_{x \rightarrow a} f(x) \pm g(x) = L \pm M\)</span>.</p>
+</div>
+<div style="color: blue;">
+<p><strong>Theorem (Constant Coefficient Law):</strong> Let <span class="math inline">\(a \in \mathbb{R}\)</span> and <span class="math inline">\(\displaystyle\lim_{x \rightarrow a} f(x) = L\)</span>. Then, <span class="math display">\[\displaystyle\lim_{x \rightarrow a} cf(x) = c \displaystyle\lim_{x \rightarrow a} f(x) = cL.\]</span></p>
+</div>
+<div style="color: blue;">
+<p><strong>Proof:</strong> If <span class="math inline">\(c = 0\)</span>, the result follows from the Constant Law.</p>
+<p>Let <span class="math inline">\(\varepsilon &gt; 0\)</span> be given and take <span class="math inline">\(c \in \mathbb{R}\)</span> with (<span class="math inline">\(c \not = 0\)</span>). Since <span class="math inline">\(\displaystyle\lim_{x \rightarrow a} f(x) = L\)</span>, there exists <span class="math inline">\(\delta&gt;0\)</span> such that <span class="math display">\[|f(x) - L| &lt; \varepsilon/c \text{ whenever }|x-a| &lt; \delta.\]</span> Take <span class="math inline">\(|x-a| &lt; \delta\)</span>. Then,
+<span class="math display">\[\begin{align*}
+    |cf(x) - cL| &amp;= |c(f(x) - L)|\\
+    &amp;= c|f(x) - L|\\
+    &amp;\leq c \varepsilon/c\\
+    &amp;= \varepsilon.
+\end{align*}\]</span>
+So, by the precise definition of a limit, we have <span class="math inline">\(\displaystyle\lim_{x \rightarrow a} cf(x) = c \displaystyle\lim_{x \rightarrow a} f(x) = cL\)</span>.</p>
+</div>
+<div style="color: blue;">
+<p><strong>Theorem (Multiplication Law):</strong> Let <span class="math inline">\(a \in \mathbb{R}\)</span> and <span class="math display">\[\displaystyle\lim_{x \rightarrow a} f(x) = L \; \text{and} \; \displaystyle\lim_{x \rightarrow a} g(x) = M.\]</span> Then, <span class="math display">\[\displaystyle\lim_{x \rightarrow a} f(x) \cdot g(x) = \displaystyle\lim_{x \rightarrow a} f(x) \cdot \displaystyle\lim_{x \rightarrow a} g(x) = L \cdot M.\]</span></p>
+</div>
+<div style="color: blue;">
+<p><strong>Proof:</strong> Let <span class="math inline">\(\varepsilon &gt; 0\)</span> be given. Since <span class="math inline">\(\displaystyle\lim_{x \rightarrow a} f(x) = L\)</span>, there exists a <span class="math inline">\(\delta_1 &gt; 0\)</span> such that <span class="math display">\[|f(x) - L| &lt; \sqrt{\varepsilon} \; \text{ whenever} \; |x-a| &lt; \delta_1.\]</span> Moreover, since <span class="math inline">\(\displaystyle\lim_{x \rightarrow a} g(x) = M\)</span>, there exists a <span class="math inline">\(\delta_2 &gt; 0\)</span> such that <span class="math display">\[|g(x) - M| &lt; \sqrt{\varepsilon} \; \text{ whenever} \; |x-a| &lt; \delta_2.\]</span></p>
+<p>Select <span class="math inline">\(\delta = \min(\delta_1, \delta_2)\)</span>. Take <span class="math inline">\(|x-a| &lt; \delta\)</span> and in this case, both of the previous conditions hold. We note that
+<span class="math display">\[\begin{align*}
+    |f(x)g(x) - LM| &amp;= |(f(x) - L)(g(x) - M) - 0|\\
+    &amp;= |f(x) - L||g(x) - M|\\
+    &amp;\leq \sqrt{\varepsilon} \sqrt{\varepsilon}\\
+    &amp;= \varepsilon.
+\end{align*}\]</span>
+Therefore, we have shown that <span class="math inline">\(\displaystyle\lim_{x \rightarrow a}\left[f(x)-L \right] \left[g(x) - M \right] = 0\)</span>.</p>
+<p>We now note that <span class="math display">\[(f(x) - L)(g(x) - M) = f(x)g(x) - Mf(x) - Lg(x) + ML.\]</span> Rearranging, we find that <span class="math display">\[f(x)g(x) = (f(x) - L)(g(x) - M)+ Mf(x) + Lg(x) - ML.\]</span></p>
+<p>We now can proceed with the proof.
+<span class="math display">\[\begin{align*}\mathop {\lim }\limits_{x \to a} f\left( x \right)g\left( x \right)
+&amp; = \mathop {\lim }\limits_{x \to a} \left[ {\left[ {f\left( x \right) - L} \right]\left[ {g\left( x \right) - M} \right] + Mf\left( x \right) + Lg\left( x \right) - LM} \right]\\
+&amp;  = \mathop {\lim }\limits_{x \to a} \left[ {f\left( x \right) - L} \right]\left[ {g\left( x \right) - M} \right] + \mathop {\lim }\limits_{x \to a} Mf\left( x \right) + \mathop {\lim }\limits_{x \to a} Lg\left( x \right) - \mathop {\lim }\limits_{x \to a} LM\\
+&amp;  = 0 + \mathop {\lim }\limits_{x \to a} Mf\left( x \right) + \mathop {\lim }\limits_{x \to a} Lg\left( x \right) - \mathop {\lim }\limits_{x \to a} LM\hspace{0.5in}\hspace{0.5in}\\
+&amp;  = LM + LM - LM\\
+&amp;  = LM.
+\end{align*}\]</span>
+So, by the precise definition of a limit, we have <span class="math display">\[\displaystyle\lim_{x \rightarrow a} f(x) \cdot g(x) = \displaystyle\lim_{x \rightarrow a} f(x) \cdot \displaystyle\lim_{x \rightarrow a} g(x) = L \cdot M.\]</span></p>
+</div>
+<div style="color: blue;">
+<p><strong>Theorem (Division Law):</strong> Let <span class="math inline">\(a \in \mathbb{R}\)</span> and <span class="math display">\[\displaystyle\lim_{x \rightarrow a} f(x) = L \; \text{and} \; \displaystyle\lim_{x \rightarrow a} g(x) = M.\]</span> Then, <span class="math display">\[\displaystyle\lim_{x \rightarrow a} \frac{f(x)}{g(x)} = \dfrac{\displaystyle\lim_{x \rightarrow a} f(x)}{\displaystyle\lim_{x \rightarrow a} g(x)} = \dfrac{L}{M}$, with $M \not = 0.\]</span></p>
+</div>
+<div style="color: blue;">
+<p><strong>Proof:</strong> We begin by proving that <span class="math display">\[\displaystyle\lim_{x \rightarrow a} \frac{1}{g(x)} = \dfrac{1}{M}.\]</span> Let <span class="math inline">\(\varepsilon &gt; 0\)</span>. Because <span class="math inline">\(\displaystyle\lim_{x \rightarrow a} g(x) = M\)</span>, there is a <span class="math inline">\(\delta_1 &gt; 0\)</span> such that <span class="math display">\[\left| {g\left( x \right) - M} \right| &lt; \frac{{\left| M \right|}}{2}\hspace{0.5in}{\mbox{whenever}}\hspace{0.5in}0 &lt; \left| {x - a} \right| &lt; {\delta _{\,1}}.\]</span> If <span class="math inline">\(|x-a| &lt; \delta_1\)</span>, we have,
+<span class="math display">\[\begin{align*}
+\left| M \right| &amp; = \left| {M - g\left( x \right) + g\left( x \right)} \right| \\
+&amp;  \le \left| {M - g\left( x \right)} \right| + \left| {g\left( x \right)} \right| \\
+&amp;  = \left| {g\left( x \right) - M} \right| + \left| {g\left( x \right)} \right|\\
+&amp;  &lt; \frac{{\left| M \right|}}{2} + \left| {g\left( x \right)} \right|.\end{align*}\]</span>
+So, we have <span class="math inline">\(\left| M \right| &lt; \frac{{\left| M \right|}}{2} + \left| {g\left( x \right)} \right|\)</span>. Thus, we can bound <span class="math inline">\(g(x)\)</span> by <span class="math inline">\(\frac{{\left| M \right|}}{2} &lt; \left| {g\left( x \right)} \right|\)</span> or that <span class="math display">\[\frac{1}{{\left| {g\left( x \right)} \right|}} &lt; \frac{2}{{\left| M \right|}}.\]</span></p>
+<p>There is also a <span class="math inline">\(\delta_2 &gt; 0\)</span> such that <span class="math display">\[\left| {g\left( x \right) - M} \right| &lt; \frac{{{{\left| M \right|}^2}}}{2}\varepsilon \hspace{0.5in}{\mbox{whenever}}\hspace{0.5in} \left| {x - a} \right| &lt; {\delta _{\,2}}.\]</span></p>
+<p>Now, select <span class="math inline">\(\delta = \min(\delta_1, \delta_2)\)</span>. If <span class="math inline">\(|x-a| &lt; \delta\)</span>, we have
+<span class="math display">\[\begin{align*}\left| {\frac{1}{{g\left( x \right)}} - \frac{1}{M}} \right| &amp; = \left| {\frac{{M - g\left( x \right)}}{{Mg\left( x \right)}}} \right|\\
+&amp;  = \frac{1}{{\left| {Mg\left( x \right)} \right|}}\left| {M - g\left( x \right)} \right|\\
+&amp;  = \frac{1}{{\left| M \right|}}\frac{1}{{\left| {g\left( x \right)} \right|}}\left| {g\left( x \right) - M} \right|\\
+&amp;  &lt; \frac{1}{{\left| M \right|}}\frac{2}{{\left| M \right|}}\left| {g\left( x \right) - M} \right|\\
+&amp;  &lt; \frac{2}{{{{\left| M \right|}^2}}}\frac{{{{\left| M \right|}^2}}}{2}\varepsilon\\
+&amp;  = \varepsilon. \end{align*}\]</span></p>
+<p>Now that we proved that <span class="math inline">\(\mathop {\lim }\limits_{x \to a} \frac{1}{{g\left( x \right)}} = \frac{1}{M}\)</span>, the result follows since
+<span class="math display">\[\begin{align*}\mathop {\lim }\limits_{x \to a} \left[ {\frac{{f\left( x \right)}}{{g\left( x \right)}}} \right] &amp; = \mathop {\lim }\limits_{x \to a} \left[ {f\left( x \right)\frac{1}{{g\left( x \right)}}} \right]\\
+&amp;  = \mathop {\lim }\limits_{x \to a} f\left( x \right)\mathop {\lim }\limits_{x \to a} \frac{1}{{g\left( x \right)}}\\
+&amp;  = L\frac{1}{M}\\
+&amp;  = \frac{L}{M}.\end{align*}\]</span></p>
+</div>
+<p>At this point, we are unable to prove the general version of the power law. Instead, we prove it in the case where <span class="math inline">\(n \in \mathbb{Z}^+\)</span>.</p>
+<div style="color: blue;">
+<p><strong>Theorem (Power Law):</strong> Let <span class="math inline">\(a \in \mathbb{R}\)</span>, <span class="math inline">\(n \in \mathbb{Z}^+\)</span>, and <span class="math display">\[\displaystyle\lim_{x \rightarrow a} f(x) = L.\]</span> Then, <span class="math display">\[\displaystyle\lim_{x \rightarrow a} \left( f(x) \right)^n = \left(\displaystyle\lim_{x \rightarrow a} f(x) \right)^n = L^n.\]</span></p>
+</div>
+<div style="color: blue;">
+<p><strong>Proof:</strong> We prove this law by induction. When <span class="math inline">\(n = 2\)</span>,
+<span class="math display">\[\mathop {\lim }\limits_{x \to a} {\left[ {f\left( x \right)} \right]^2} = \mathop {\lim }\limits_{x \to a} f\left( x \right)f\left( x \right) = \mathop {\lim }\limits_{x \to a} f\left( x \right)\mathop {\lim }\limits_{x \to a} f\left( x \right) = LL = {L^2}.\]</span>
+Assume that this rule holds for some integer <span class="math inline">\(k &gt; 2\)</span>. In this case, we know that <span class="math display">\[\displaystyle\lim_{x \rightarrow a} \left( f(x) \right)^k = \left(\displaystyle\lim_{x \rightarrow a} f(x) \right)^k = L^k.\]</span> We need to show that the property holds for <span class="math inline">\(k+1\)</span>.
+Observe that
+<span class="math display">\[\begin{align*}\mathop {\lim }\limits_{x \to a} {\left[ {f\left( x \right)} \right]^{k+1}} &amp; = \mathop {\lim }\limits_{x \to a} \left( {{{\left[ {f\left( x \right)} \right]}^{k}}f\left( x \right)} \right)\\
+&amp;  = \mathop {\lim }\limits_{x \to a} {\left[ {f\left( x \right)} \right]^{k}}\mathop {\lim }\limits_{x \to a} f\left( x \right)\\
+&amp;  = {L^{k}}L\\
+&amp;  = {L^{k+1}}.\end{align*}\]</span>
+So, by the first principle of mathematical induction, <span class="math display">\[\displaystyle\lim_{x \rightarrow a} \left( f(x) \right)^n = \left(\displaystyle\lim_{x \rightarrow a} f(x) \right)^n = L^n.\]</span></p>
+</div>
+<p>Practice Problems</p>
+<ol style="list-style-type: upper-alpha">
+<li>Prove each of the following results.</li>
+</ol>
+<ul>
+<li><p><span class="math inline">\(\displaystyle\lim_{x \rightarrow a} \sqrt{x} = \sqrt{a}\)</span> for <span class="math inline">\(a &gt; 0\)</span>.</p></li>
+<li><p><span class="math inline">\(\displaystyle\lim_{x \rightarrow a} x^{2/3} = a^{2/3}\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle\lim_{x \rightarrow a} f(x)g(x)h(x) = \displaystyle\lim_{x \rightarrow a} f(x)\displaystyle\lim_{x \rightarrow a} g(x)\displaystyle\lim_{x \rightarrow a} h(x)\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle\lim_{x \rightarrow a} \dfrac{1}{\sqrt{x}}=\dfrac{1}{\sqrt{a}}\)</span>, for <span class="math inline">\(a &gt; 0\)</span></p></li>
+</ul>
+<ol start="2" style="list-style-type: upper-alpha">
+<li>Let <span class="math inline">\(\displaystyle\lim_{x \rightarrow a} f(x) = \infty\)</span> and <span class="math inline">\(\lim_{x \rightarrow a} g(x) = L\)</span> for some real numbers <span class="math inline">\(c\)</span> and <span class="math inline">\(L\)</span>. Prove each of the following properties:</li>
+</ol>
+<ul>
+<li><p><span class="math inline">\(\displaystyle\lim_{x \rightarrow a} f(x) \pm g(x) = \infty\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle\lim_{x \rightarrow a} f(x)g(x) = \infty\)</span>, if <span class="math inline">\(L&gt;0\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle\lim_{x \rightarrow a} f(x)g(x) = -\infty\)</span>, if <span class="math inline">\(L &lt; 0\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle\lim_{x \rightarrow a} \dfrac{g(x)}{f(x)} = 0\)</span></p></li>
+</ul>
+</div>
+<div id="proofs-of-trigonometric-limits" class="section level2 unnumbered hasAnchor">
+<h2>Proofs of Trigonometric Limits<a href="the-precise-definition-of-a-limit.html#proofs-of-trigonometric-limits" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div style="color: blue;">
+<p><strong>Theorem:</strong> <span class="math inline">\(\displaystyle\lim_{\theta \rightarrow 0} \dfrac{\sin \theta}{\theta} = 1\)</span>.</p>
+</div>
+<div style="color: blue;">
+<p><strong>Proof:</strong> Let <span class="math inline">\(\varepsilon &gt; 0\)</span> be given. Select <span class="math inline">\(\delta = \min(2/\varepsilon, 1)\)</span>. Take <span class="math inline">\(|x-0| &lt; \delta\)</span>. We need to show that <span class="math inline">\(|\dfrac{\sin(x)}{x} -1| &lt; \varepsilon\)</span>. Since <span class="math inline">\(|x| &lt; \delta\)</span>, we know that <span class="math inline">\(|x|&lt;1\)</span>. Observe that
+<span class="math display">\[\begin{align*} |\dfrac{\sin(x)}{x} -1| &amp;= |\dfrac{\sin(x) - x}{x}|\\
+&amp;= \dfrac{|\sin(x) - x|}{|x|}\\
+&amp;\leq \dfrac{|\sin(x)|+ |x|}{|x|}\\
+&amp;\leq \dfrac{1 + |x|}{|x|}\\
+&amp;\leq \dfrac{1 + 1}{|x|}\\
+&amp;= \dfrac{2}{|x|}\\
+&amp;\leq \dfrac{2}{\delta}\\
+&amp;\leq \dfrac{2}{2/\varepsilon}\\
+&amp;\leq \varepsilon.
+\end{align*}\]</span>
+Therefore, by the precise definition of a limit, we know <span class="math inline">\(\displaystyle\lim_{\theta \rightarrow 0} \dfrac{\sin \theta}{\theta} = 1\)</span>.</p>
+</div>
+<div style="color: blue;">
+<p><strong>Theorem:</strong> <span class="math inline">\(\displaystyle\lim_{\theta \rightarrow 0} \dfrac{\cos \theta - 1}{\theta} = 0\)</span>.</p>
+</div>
+<div style="color: blue;">
+<p><strong>Proof:</strong> We prove the theorem directly.
+<span class="math display">\[\begin{align*} \displaystyle\lim_{\theta \rightarrow 0} \dfrac{\cos \theta - 1}{\theta} &amp;= \displaystyle\lim_{\theta \rightarrow 0} \dfrac{\cos \theta - 1}{\theta} \times \dfrac{\cos \theta + 1}{\cos \theta + 1}\\
+&amp;= \displaystyle\lim_{\theta \rightarrow 0} \dfrac{\cos^2 \theta - 1}{\theta(\cos \theta + 1)} \\
+&amp;= \displaystyle\lim_{\theta \rightarrow 0} \dfrac{-\sin^2 \theta}{\theta(\cos \theta + 1)} \\
+&amp;= \displaystyle\lim_{\theta \rightarrow 0} \dfrac{\sin \theta}{\theta} \times \dfrac{-\sin \theta}{\cos \theta + 1} \\
+&amp;= \displaystyle\lim_{\theta \rightarrow 0} \dfrac{\sin \theta}{\theta} \times \displaystyle\lim_{\theta \rightarrow 0}\dfrac{-\sin \theta}{\cos \theta + 1} \\
+&amp;= 1 \times \dfrac{-\sin(0)}{\cos(0) + 1} \\
+&amp;= 1 \times \dfrac{0}{1 + 1} \\
+&amp;= 0.
+\end{align*}\]</span>
+Therefore, <span class="math inline">\(\displaystyle\lim_{\theta \rightarrow 0} \dfrac{\cos \theta - 1}{\theta} = 0\)</span>.</p>
+</div>
+</div>
+<div id="limits-at-infinity-by-definition" class="section level2 unnumbered hasAnchor">
+<h2>Limits at Infinity by Definition<a href="the-precise-definition-of-a-limit.html#limits-at-infinity-by-definition" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We have dealt with the precise definition of a limit as it relates to limits as finite values. We now discuss limits of functions at infinity.</p>
+<div style="color: blue;">
+<p><strong>Definition:</strong> Let <span class="math inline">\(f\)</span> be a function defined on the interval <span class="math inline">\((a, \infty)\)</span> for some <span class="math inline">\(a \in \mathbb{R}\)</span>. Then <span class="math display">\[\lim_{x \rightarrow \infty} f(x) = L,\]</span> if for any given <span class="math inline">\(\varepsilon &gt; 0\)</span>, there exists an <span class="math inline">\(M &gt; 0\)</span> such that <span class="math display">\[|f(x) - L| &lt; \varepsilon \;\;\; \text{provided} \;\;\; x &gt; M.\]</span></p>
+</div>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><img src="Pic19.png" /></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<div style="color: blue;">
+<p><strong>Definition:</strong><br />
+Let <span class="math inline">\(f\)</span> be a function defined on the interval <span class="math inline">\((-\infty, b)\)</span> for some <span class="math inline">\(b \in \mathbb{R}\)</span>. Then <span class="math display">\[\lim_{x \rightarrow -\infty} f(x) = L,\]</span> if for any given <span class="math inline">\(\varepsilon &gt; 0\)</span>, there exists an <span class="math inline">\(M &gt; 0\)</span> such that <span class="math display">\[|f(x) - L| &lt; \varepsilon \;\;\; \text{provided} \;\;\; x &lt; M.\]</span></p>
+</div>
+<p>For an infinite limit to exist, the value of the function must be asymptotic to the limit value. This means that as <span class="math inline">\(x\)</span> exceeds some value <span class="math inline">\(M\)</span> (either in the positive or negative direction), the function value must be within <span class="math inline">\(\varepsilon\)</span> units from the limit value for every <span class="math inline">\(x\)</span> beyond <span class="math inline">\(M\)</span>.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><img src="Pic20.png" /></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<div style="color: green;">
+<p><strong>Example:</strong> Use the precise definition of a limit to show that <span class="math inline">\(\displaystyle\lim_{x \rightarrow \infty} \dfrac{1}{x} = 0\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Solution:</strong> Let <span class="math inline">\(\varepsilon &gt; 0\)</span> be given. We need to find an <span class="math inline">\(M &gt; 0\)</span> such that <span class="math display">\[|\dfrac{1}{x} - 0|  = \dfrac{1}{|x|} &lt; \varepsilon,\]</span> provided <span class="math inline">\(x &gt; M\)</span>. Take <span class="math inline">\(M = \dfrac{1}{\varepsilon}\)</span>. Then for any <span class="math inline">\(x &gt; M\)</span>, we have
+<span class="math display">\[\begin{align*} \left|\dfrac{1}{x} - 0 \right| &amp;= \dfrac{1}{|x|}\\
+&amp;&lt; \dfrac{1}{M}\\
+&amp;= \dfrac{1}{1/\varepsilon}\\
+&amp;= \varepsilon. \end{align*}\]</span>
+Since <span class="math inline">\(\left|\dfrac{1}{x} - 0 \right| &lt; \varepsilon\)</span>, we have shown that <span class="math display">\[ \lim_{x \rightarrow \infty} \dfrac{1}{x} = 0.\]</span></p>
+</div>
+<p>Practice Problems</p>
+<ol style="list-style-type: upper-alpha">
+<li>Prove each of the following limits using the precise definition of a limit.</li>
+</ol>
+<ul>
+<li><p><span class="math inline">\(\displaystyle\lim_{x \rightarrow \infty} \dfrac{1}{x} +3 = 3\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle\lim_{x \rightarrow \infty} \dfrac{1}{x^2} = 0\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle\lim_{x \rightarrow -\infty} \dfrac{1}{x} = 0\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle\lim_{x \rightarrow \infty} \dfrac{1}{\sqrt{x}} = 0\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle\lim_{x \rightarrow \infty} \ln(1+1/x) = 0\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle\lim_{x \rightarrow \infty} \dfrac{1}{e^x}=0\)</span></p></li>
+</ul>
+<p>B. If <span class="math inline">\(r\)</span> is a positive rational number and <span class="math inline">\(c\)</span> is any real number, prove <span class="math display">\[\lim_{x \rightarrow \infty} \dfrac{c}{x^r} = 0.\]</span></p>
+<p>C. If <span class="math inline">\(r\)</span> is a positive rational number, <span class="math inline">\(c\)</span> is any real number and <span class="math inline">\(x^r\)</span> is defined for <span class="math inline">\(x &lt; 0\)</span>, prove <span class="math display">\[\lim_{x \rightarrow -\infty} \dfrac{c}{x^r} = 0.\]</span></p>
+<p>D. If <span class="math inline">\(p(x) = a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1x + a_0\)</span> is a polynomial of degree <span class="math inline">\(n\)</span>, prove <span class="math display">\[\lim_{x \rightarrow \infty} p(x) = \lim_{x \rightarrow \infty} a_nx^n.\]</span></p>
+</div>
+<div id="proof-of-direct-substitution-property" class="section level2 unnumbered hasAnchor">
+<h2>Proof of Direct Substitution Property<a href="the-precise-definition-of-a-limit.html#proof-of-direct-substitution-property" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We are now in a position to prove the direct substitution property for polynomials and rational functions.</p>
+<div style="color: blue;">
+<p><strong>Theorem (The Direct Substitution Property for Polynomials):</strong> If <span class="math inline">\(p\)</span> is a polynomial then <span class="math display">\[\lim_{ x \rightarrow a} p(x) = p(a).\]</span></p>
+</div>
+<div style="color: blue;">
+<p><strong>Proof:</strong> Let <span class="math inline">\(p\)</span> be any polynomial. Let <span class="math inline">\(q(x) = p(x) - p(a)\)</span>. The polynomial <span class="math inline">\(q\)</span> has a root at <span class="math inline">\(a\)</span>. Thus, <span class="math inline">\(x-a\)</span> divides <span class="math inline">\(q\)</span>. Set <span class="math display">\[\dfrac{q(x)}{x-a} = b_nx^n + b_{n-1}x^{n-1} + \cdots + b_1x + b_0.\]</span> Let <span class="math inline">\(\varepsilon &gt; 0\)</span> be given. We have two cases depending on whether <span class="math inline">\(a = 0\)</span> or <span class="math inline">\(a \not = 0\)</span>.</p>
+<p>CASE 1: If <span class="math inline">\(a = 0\)</span>, set <span class="math inline">\(\delta = \min(\varepsilon/c,1)\)</span> where <span class="math inline">\(c = \sum_{i=0}^n |b_i|\)</span>. Suppose that <span class="math inline">\(|x| &lt; \delta\)</span>. Since <span class="math inline">\(|x| &lt; 1\)</span>, we know
+<span class="math display">\[\begin{align*}  \left|\dfrac{q(x)}{x-a} \right| &amp;= \left|b_nx^n + b_{n-1}x^{n-1} + \cdots + b_1x + b_0 \right|\\
+&amp;\leq |b_nx^n| + |b_{n-1}x^{n-1}| + \cdots + |b_1x| + |b_0|\\
+&amp;= |b_n||x|^n + |b_{n-1}||x|^{n-1} + \cdots + |b_1||x| + |b_0|\\
+&amp;&lt; |b_n| + |b_{n-1}| + \cdots + |b_1| + |b_0|\\
+&amp;= c
+\end{align*}\]</span>
+Since <span class="math inline">\(|x| &lt; \dfrac{\varepsilon}{c}\)</span>, we have
+<span class="math display">\[\begin{align*} |q(x)| &amp;= |p(x)-p(a)|\\
+&amp;=|x| \cdot |b_nx^n + b_{n-1}x^{n-1} + \cdots + b_1x + b_0|\\
+&amp;\leq \dfrac{\varepsilon}{c} \cdot c\\
+&amp;= \varepsilon.
+\end{align*}\]</span></p>
+<p>CASE 2: If <span class="math inline">\(a \not = 0\)</span>, set <span class="math inline">\(\delta = \min(\varepsilon/c, |a|)\)</span> where <span class="math inline">\(c = \sum_{i=0}^n |b_i||2a|^i\)</span>. Suppose <span class="math inline">\(|x-a| &lt; \delta\)</span>. Since <span class="math inline">\(|x-a| &lt; |a|\)</span>, we have <span class="math inline">\(|x| &lt; 2|a|\)</span> so that
+<span class="math display">\[\begin{align*}  \left|\dfrac{q(x)}{x-a} \right| &amp;= |b_nx^n + b_{n-1}x^{n-1} + \cdots + b_1x + b_0|\\
+&amp;\leq |b_nx^n| + |b_{n-1}x^{n-1}| + \cdots + |b_1x| + |b_0|\\
+&amp;= |b_n||x|^n + |b_{n-1}||x|^{n-1} + \cdots + |b_1||x| + |b_0|\\
+&amp;&lt; |b_n||2a|^n + |b_{n-1}||2a|^{n-1} + \cdots + |b_1||2a| + |b_0|\\
+&amp;= c.
+\end{align*}\]</span>
+Since <span class="math inline">\(|x| &lt; \dfrac{\varepsilon}{c}\)</span>, we have
+<span class="math display">\[\begin{align*} |q(x)| &amp;= |p(x)-p(a)|\\
+&amp;=|x| \cdot |b_nx^n + b_{n-1}x^{n-1} + \cdots + b_1x + b_0|\\
+&amp;\leq \dfrac{\varepsilon}{c} \cdot c\\
+&amp;= \varepsilon.
+\end{align*}\]</span></p>
+</div>
+<div style="color: blue;">
+<p><strong>Corollary (Direct Substitution Property for Rational Functions):</strong> If <span class="math inline">\(f\)</span> is a rational function, and <span class="math inline">\(a\)</span> is in the domain of <span class="math inline">\(f\)</span>, then <span class="math display">\[\lim_{ x \rightarrow a} f(x) = f(a).\]</span></p>
+</div>
+<div style="color: blue;">
+<p><strong>Proof:</strong> This follows directly from the Division Law for limits and the Direct Substitution Property for Polynomials.</p>
+</div>
+<p>Practice Problems</p>
+<p>Prove each of the following functions has the direct substitution property on their domain.</p>
+<ul>
+<li><p><span class="math inline">\(f(x) = \sin(x)\)</span></p></li>
+<li><p><span class="math inline">\(f(x) = \cos(x)\)</span></p></li>
+<li><p><span class="math inline">\(f(x) = \tan(x)\)</span></p></li>
+<li><p><span class="math inline">\(f(x) = \sec(x)\)</span></p></li>
+<li><p><span class="math inline">\(f(x) = \csc(x)\)</span></p></li>
+<li><p><span class="math inline">\(f(x) = \cot(x)\)</span></p></li>
+</ul>
+</div>
+<div id="proof-of-the-squeeze-theorem" class="section level2 unnumbered hasAnchor">
+<h2>Proof of The Squeeze Theorem<a href="the-precise-definition-of-a-limit.html#proof-of-the-squeeze-theorem" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div style="color: blue;">
+<p><strong>Theorem (Squeeze Theorem):</strong> Suppose <span class="math inline">\(f(x) \leq g(x) \leq h(x)\)</span> are defined on some interval <span class="math inline">\(I\)</span> containing <span class="math inline">\(a\)</span> (though possibly not at <span class="math inline">\(a\)</span> itself), and suppose that <span class="math display">\[\displaystyle\lim_{x \rightarrow a} f(x) = \displaystyle\lim_{x \rightarrow a} h(x) = L,\]</span> then <span class="math display">\[\displaystyle\lim_{x \rightarrow a} g(x) = L.\]</span></p>
+</div>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><img src="Pic21.png" /></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<div style="color: blue;">
+<p><strong>Proof:</strong> Let <span class="math inline">\(\varepsilon &gt; 0\)</span> be given. Suppose <span class="math inline">\(\displaystyle\lim_{x \rightarrow a} f(x) = \displaystyle\lim_{x \rightarrow a} h(x) = L\)</span> and that <span class="math inline">\(f(x) \leq g(x) \leq h(x)\)</span>. We need to show that <span class="math display">\[\lim_{x \rightarrow a} g(x) = L.\]</span> Since <span class="math inline">\(\displaystyle\lim_{x \rightarrow a} f(x) = \displaystyle\lim_{x \rightarrow a} h(x) = L\)</span>, we know there exist <span class="math inline">\(\delta_1\)</span> and <span class="math inline">\(\delta_2\)</span> such that <span class="math inline">\(|f(x) - L| &lt; \varepsilon\)</span> and <span class="math inline">\(|h(x) - L| &lt; \varepsilon\)</span> for <span class="math inline">\(|x-a| &lt; \delta_1\)</span> and <span class="math inline">\(|x-a| &lt; \delta_2\)</span>. Define <span class="math inline">\(\delta = \min(\delta_1, \delta_2)\)</span>. Take <span class="math inline">\(|x-a| &lt; \delta\)</span>. Then <span class="math inline">\(L-\varepsilon &lt; f(x)\)</span> and <span class="math inline">\(l+ \varepsilon &gt; h(x)\)</span>. So, for <span class="math inline">\(|x-a| &lt; \delta\)</span>, we have <span class="math display">\[L-\varepsilon &lt; f(x) \leq g(x) \leq h(x) &lt; L+ \varepsilon.\]</span> This implies that <span class="math inline">\(L-\varepsilon &lt; g(x) &lt; L + \varepsilon\)</span> or that <span class="math inline">\(|g(x) - L| &lt; \varepsilon\)</span>. Hence, <span class="math display">\[\displaystyle\lim_{x \rightarrow a} g(x) = L.\]</span></p>
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="calculating-limits-using-the-limit-laws.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="continuity.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook/js/app.min.js"></script>
+<script src="libs/gitbook/js/clipboard.min.js"></script>
+<script src="libs/gitbook/js/plugin-search.js"></script>
+<script src="libs/gitbook/js/plugin-sharing.js"></script>
+<script src="libs/gitbook/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook/js/jquery.highlight.js"></script>
+<script src="libs/gitbook/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/02-LimitsAndDerivatives.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

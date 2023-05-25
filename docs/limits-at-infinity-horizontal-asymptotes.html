@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>2.6 Limits at Infinity; Horizontal Asymptotes | Calculus I</title>
+  <meta name="description" content="2.6 Limits at Infinity; Horizontal Asymptotes | Calculus I" />
+  <meta name="generator" content="bookdown 0.33 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="2.6 Limits at Infinity; Horizontal Asymptotes | Calculus I" />
+  <meta property="og:type" content="book" />
+  <meta property="og:image" content="/Title_Page.png" />
+  
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="2.6 Limits at Infinity; Horizontal Asymptotes | Calculus I" />
+  
+  
+  <meta name="twitter:image" content="/Title_Page.png" />
+
+<meta name="author" content="Differential Calculus" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="continuity.html"/>
+<link rel="next" href="derivatives-and-rates-of-change.html"/>
+<script src="libs/jquery/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Differential Calculus</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>About This Book</a></li>
+<li class="part"><span><b>I Functions and Models</b></span></li>
+<li class="part"><span><b>II Limits and Derivatives</b></span></li>
+<li class="chapter" data-level="" data-path="the-limit-of-a-function.html"><a href="the-limit-of-a-function.html"><i class="fa fa-check"></i>2.2 The Limit of a Function</a>
+<ul>
+<li class="chapter" data-level="" data-path="the-limit-of-a-function.html"><a href="the-limit-of-a-function.html#the-idea-of-a-limit"><i class="fa fa-check"></i>The Idea of a Limit</a></li>
+<li class="chapter" data-level="" data-path="the-limit-of-a-function.html"><a href="the-limit-of-a-function.html#left-and-right-limits"><i class="fa fa-check"></i>Left and Right Limits</a></li>
+<li class="chapter" data-level="" data-path="the-limit-of-a-function.html"><a href="the-limit-of-a-function.html#limits-that-do-not-exist"><i class="fa fa-check"></i>Limits That Do Not Exist</a></li>
+<li class="chapter" data-level="" data-path="the-limit-of-a-function.html"><a href="the-limit-of-a-function.html#infinite-limits-and-vertical-asymptotes"><i class="fa fa-check"></i>Infinite Limits and Vertical Asymptotes</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="calculating-limits-using-the-limit-laws.html"><a href="calculating-limits-using-the-limit-laws.html"><i class="fa fa-check"></i>2.3 Calculating Limits Using the Limit Laws</a>
+<ul>
+<li class="chapter" data-level="" data-path="calculating-limits-using-the-limit-laws.html"><a href="calculating-limits-using-the-limit-laws.html#the-limit-laws"><i class="fa fa-check"></i>The Limit Laws</a></li>
+<li class="chapter" data-level="" data-path="calculating-limits-using-the-limit-laws.html"><a href="calculating-limits-using-the-limit-laws.html#direct-substitution"><i class="fa fa-check"></i>Direct Substitution</a></li>
+<li class="chapter" data-level="" data-path="calculating-limits-using-the-limit-laws.html"><a href="calculating-limits-using-the-limit-laws.html#limits-of-trigonometric-functions"><i class="fa fa-check"></i>Limits of Trigonometric Functions</a></li>
+<li class="chapter" data-level="" data-path="calculating-limits-using-the-limit-laws.html"><a href="calculating-limits-using-the-limit-laws.html#the-squeeze-theorem"><i class="fa fa-check"></i>The Squeeze Theorem</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="the-precise-definition-of-a-limit.html"><a href="the-precise-definition-of-a-limit.html"><i class="fa fa-check"></i>2.4 The Precise Definition of a Limit</a>
+<ul>
+<li class="chapter" data-level="" data-path="the-precise-definition-of-a-limit.html"><a href="the-precise-definition-of-a-limit.html#proof-of-limit-laws"><i class="fa fa-check"></i>Proof of Limit Laws</a></li>
+<li class="chapter" data-level="" data-path="the-precise-definition-of-a-limit.html"><a href="the-precise-definition-of-a-limit.html#proofs-of-trigonometric-limits"><i class="fa fa-check"></i>Proofs of Trigonometric Limits</a></li>
+<li class="chapter" data-level="" data-path="the-precise-definition-of-a-limit.html"><a href="the-precise-definition-of-a-limit.html#limits-at-infinity-by-definition"><i class="fa fa-check"></i>Limits at Infinity by Definition</a></li>
+<li class="chapter" data-level="" data-path="the-precise-definition-of-a-limit.html"><a href="the-precise-definition-of-a-limit.html#proof-of-direct-substitution-property"><i class="fa fa-check"></i>Proof of Direct Substitution Property</a></li>
+<li class="chapter" data-level="" data-path="the-precise-definition-of-a-limit.html"><a href="the-precise-definition-of-a-limit.html#proof-of-the-squeeze-theorem"><i class="fa fa-check"></i>Proof of The Squeeze Theorem</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="continuity.html"><a href="continuity.html"><i class="fa fa-check"></i>2.5 Continuity</a>
+<ul>
+<li class="chapter" data-level="" data-path="continuity.html"><a href="continuity.html#limits-and-continuity"><i class="fa fa-check"></i>Limits and Continuity</a></li>
+<li class="chapter" data-level="" data-path="continuity.html"><a href="continuity.html#types-of-discontinuities"><i class="fa fa-check"></i>Types of Discontinuities</a></li>
+<li class="chapter" data-level="" data-path="continuity.html"><a href="continuity.html#properties-of-continuous-functions"><i class="fa fa-check"></i>Properties of Continuous Functions</a></li>
+<li class="chapter" data-level="" data-path="continuity.html"><a href="continuity.html#proof-of-continuity-laws"><i class="fa fa-check"></i>Proof of Continuity Laws</a></li>
+<li class="chapter" data-level="" data-path="continuity.html"><a href="continuity.html#the-intermediate-value-theorem"><i class="fa fa-check"></i>The Intermediate Value Theorem</a></li>
+<li class="chapter" data-level="" data-path="continuity.html"><a href="continuity.html#proof-of-the-ivt"><i class="fa fa-check"></i>Proof of The IVT</a></li>
+<li class="chapter" data-level="" data-path="continuity.html"><a href="continuity.html#continuity-of-trigonometric-functions"><i class="fa fa-check"></i>Continuity of Trigonometric Functions</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="limits-at-infinity-horizontal-asymptotes.html"><a href="limits-at-infinity-horizontal-asymptotes.html"><i class="fa fa-check"></i>2.6 Limits at Infinity; Horizontal Asymptotes</a>
+<ul>
+<li class="chapter" data-level="" data-path="limits-at-infinity-horizontal-asymptotes.html"><a href="limits-at-infinity-horizontal-asymptotes.html#limits-at-infinity"><i class="fa fa-check"></i>Limits At Infinity</a></li>
+<li class="chapter" data-level="" data-path="limits-at-infinity-horizontal-asymptotes.html"><a href="limits-at-infinity-horizontal-asymptotes.html#limits-at-infinity-by-definition-1"><i class="fa fa-check"></i>Limits at Infinity by Definition</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="derivatives-and-rates-of-change.html"><a href="derivatives-and-rates-of-change.html"><i class="fa fa-check"></i>2.7 Derivatives and Rates of Change</a>
+<ul>
+<li class="chapter" data-level="" data-path="derivatives-and-rates-of-change.html"><a href="derivatives-and-rates-of-change.html#application-tangent-lines"><i class="fa fa-check"></i>Application: Tangent Lines</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="the-derivative-as-a-function.html"><a href="the-derivative-as-a-function.html"><i class="fa fa-check"></i>2.8 The Derivative as a Function</a>
+<ul>
+<li class="chapter" data-level="" data-path="the-derivative-as-a-function.html"><a href="the-derivative-as-a-function.html#differentiability"><i class="fa fa-check"></i>Differentiability</a></li>
+</ul></li>
+<li class="part"><span><b>III Differentiation Rules</b></span></li>
+<li class="part"><span><b>IV Applications of Differentiation</b></span></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Calculus I</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="limits-at-infinity-horizontal-asymptotes" class="section level1 unnumbered hasAnchor">
+<h1>2.6 Limits at Infinity; Horizontal Asymptotes<a href="limits-at-infinity-horizontal-asymptotes.html#limits-at-infinity-horizontal-asymptotes" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="limits-at-infinity" class="section level2 unnumbered hasAnchor">
+<h2>Limits At Infinity<a href="limits-at-infinity-horizontal-asymptotes.html#limits-at-infinity" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>When we talk about limits at infinity, we mean that we would like to evaluate one of these expressions:
+<span class="math display">\[\lim_{x \rightarrow \infty} f(x) \;\;\;\; \text{or} \;\;\;\; \lim_{x \rightarrow -\infty} f(x).\]</span>
+That is to say, we want to learn the value of the function as <span class="math inline">\(x\)</span> gets infinitely large in the positive or negative direction.</p>
+<div style="color: blue;">
+<p><strong>Definition:</strong> Let <span class="math inline">\(f\)</span> be a function defined on some interval <span class="math inline">\((a,\infty)\)</span>. Then <span class="math display">\[\lim_{x \rightarrow \infty} f(x) = L\]</span> means that the values of <span class="math inline">\(f(x)\)</span> can be made arbitrarily close to <span class="math inline">\(L\)</span> by taking <span class="math inline">\(x\)</span> sufficiently large.</p>
+</div>
+<div style="color: blue;">
+<p><strong>Definition:</strong> Let <span class="math inline">\(f\)</span> be a function defined on some interval <span class="math inline">\((-\infty, a)\)</span>. Then <span class="math display">\[\lim_{x \rightarrow -\infty} f(x) = L\]</span> means that the values of <span class="math inline">\(f(x)\)</span> can be made arbitrarily close to <span class="math inline">\(L\)</span> by taking <span class="math inline">\(x\)</span> sufficiently large but negative.</p>
+</div>
+<p>Let’s see how this looks with an example.</p>
+<div style="color: green;">
+<p><strong>Example:</strong> Determine <span class="math inline">\(\displaystyle\lim_{x \rightarrow \infty} \dfrac{1}{x^2}\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Example:</strong> We will take values of <span class="math inline">\(x\)</span> getting increasingly large.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><span class="math inline">\(x\)</span></th>
+<th align="center"><span class="math inline">\(\frac{1}{x^2}\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">1</td>
+<td align="center">1</td>
+</tr>
+<tr class="even">
+<td align="center">10</td>
+<td align="center">0.01</td>
+</tr>
+<tr class="odd">
+<td align="center">100</td>
+<td align="center">0.0001</td>
+</tr>
+<tr class="even">
+<td align="center">1000</td>
+<td align="center">0.000001</td>
+</tr>
+<tr class="odd">
+<td align="center">10000</td>
+<td align="center">0.00000001</td>
+</tr>
+</tbody>
+</table>
+<p>So, it appears that as <span class="math inline">\(x \rightarrow \infty\)</span>, the function <span class="math inline">\(f(x) = \dfrac{1}{x^2} \rightarrow 0\)</span>. Therefore, we say <span class="math display">\[\lim_{x \rightarrow \infty} \dfrac{1}{x^2} = 0.\]</span></p>
+</div>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><img src="Pic12.png" /></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<p>The limit laws from Chapter <span class="math inline">\(\ref{LimitLaws}\)</span> all hold (with the exception of the identity law) if you replace the <span class="math inline">\(x \rightarrow a\)</span> with <span class="math inline">\(x \rightarrow \infty\)</span> or <span class="math inline">\(x \rightarrow -\infty\)</span>. One particular result that follows from these limit laws is below.</p>
+<div style="color: blue;">
+<p><strong>Theorem:</strong> Let <span class="math inline">\(c \in \mathbb{R}\)</span>. If <span class="math inline">\(r &gt; 0\)</span> is a rational number, then <span class="math display">\[\lim_{x \rightarrow \infty} \dfrac{c}{x^r} = 0.\]</span> If <span class="math inline">\(r &gt; 0\)</span> is a rational number such that <span class="math inline">\(x^r\)</span> is defined for all <span class="math inline">\(x&lt;0\)</span>, then <span class="math display">\[\lim_{x \rightarrow -\infty} \dfrac{c}{x^r} = 0.\]</span></p>
+</div>
+<div style="color: green;">
+<p><strong>Example:</strong> Evaluate <span class="math inline">\(\displaystyle\lim_{x \rightarrow \infty} 3x^3 - 5x + 10\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Solution:</strong> Using our limit laws, we find <span class="math display">\[\begin{align*} \lim_{x \rightarrow \infty} 3x^3 - 5x + 10 &amp;= \lim_{x \rightarrow \infty} x^3 \left(3 - \frac{5}{x^2} + \frac{10}{x^3} \right)\\
+&amp;= \lim_{x \rightarrow \infty} x^3 \lim_{x \rightarrow \infty}\left(3 - \frac{5}{x^2} + \frac{10}{x^3} \right)\\
+&amp;= \lim_{x \rightarrow \infty} x^3 \times \left(3 - 0 + 0 \right)\\
+&amp;= \lim_{x \rightarrow \infty} x^3 \times 3\\
+&amp;= \infty.
+\end{align*}\]</span>
+Therefore, <span class="math inline">\(\displaystyle\lim_{x \rightarrow \infty} 3x^3 - 5x + 10 = \infty\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Example:</strong> Evaluate <span class="math inline">\(\displaystyle\lim_{x \rightarrow -\infty} 2x^5 - x^4 + 3x\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Solution:</strong> Using limit laws, <span class="math display">\[\begin{align*} \lim_{x \rightarrow -\infty} 2x^5 - x^4 + 3x &amp;= \lim_{x \rightarrow -\infty} x^5 \left(2 - \frac{1}{x} + \frac{3}{x^4} \right)\\
+&amp;= \lim_{x \rightarrow -\infty} x^5 \lim_{x \rightarrow -\infty}  \left(2 - \frac{1}{x} + \frac{3}{x^4} \right)\\
+&amp;= \lim_{x \rightarrow -\infty} x^5 \times \left(2 - 0 + 0 \right)\\
+&amp;= \lim_{x \rightarrow -\infty} x^5 \times 2\\
+&amp;= -\infty.
+\end{align*}\]</span>
+Therefore, <span class="math inline">\(\displaystyle\lim_{x \rightarrow -\infty} 2x^5 - x^4 + 3x = -\infty\)</span>.</p>
+</div>
+<p>From the previous two examples, it appears that the term that makes the most difference in a limit at infinity is the dominant term.</p>
+<div style="color: blue;">
+<p><strong>Theorem (Infinite Limits of Polynomials):</strong> If <span class="math inline">\(p(x) = a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1x + a_0\)</span> is a polynomial of degree <span class="math inline">\(n\)</span>, then <span class="math display">\[\lim_{x \rightarrow \infty} p(x) = \lim_{x \rightarrow \infty} a_nx^n \;\;\;\; \text{and} \;\;\;\; \lim_{x \rightarrow -\infty} p(x) = \lim_{x \rightarrow -\infty} a_n x^n.\]</span></p>
+</div>
+<div style="color: green;">
+<p><strong>Example:</strong> Evaluate <span class="math inline">\(\displaystyle\lim_{x \rightarrow \infty} \dfrac{2x^4 - x^2 + 19}{-3x^4 + 2x - 1}\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Solution:</strong> Limit laws tell us that <span class="math display">\[\begin{align*} \lim_{x \rightarrow \infty} \dfrac{2x^4 - x^2 + 19}{-3x^4 + 2x - 1} &amp;= \dfrac{\lim_{x \rightarrow \infty} 2x^4 - x^2 + 19}{\lim_{x \rightarrow \infty}-3x^4 + 2x - 1}\\
+&amp;= \dfrac{\lim_{x \rightarrow \infty} 2x^4}{\lim_{x \rightarrow \infty}-3x^4}\\
+&amp;= \lim_{x \rightarrow \infty} \dfrac{2x^4}{-3x^4}\\
+&amp;= \lim_{x \rightarrow \infty} \dfrac{2}{-3}\\
+&amp;= \dfrac{-2}{3}
+\end{align*}\]</span>
+Therefore, <span class="math inline">\(\displaystyle\lim_{x \rightarrow \infty} \dfrac{2x^4 - x^2 + 19}{-3x^4 + 2x - 1} = -2/3\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Example:</strong> Evaluate <span class="math inline">\(\displaystyle\lim_{x \rightarrow \infty} \dfrac{\sqrt{5x^2 - x + 1}}{2x - 5}\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Solution:</strong> From the limit laws, <span class="math display">\[\begin{align*}  \lim_{x \rightarrow \infty} \dfrac{\sqrt{5x^2 - x + 1}}{2x - 5}
+&amp;=  \dfrac{\lim_{x \rightarrow \infty} \sqrt{5x^2 - x + 1}}{\lim_{x \rightarrow \infty} 2x - 5}\\
+&amp;=  \dfrac{ \sqrt{\lim_{x \rightarrow \infty}5x^2 - x + 1}}{\lim_{x \rightarrow \infty} 2x}\\
+&amp;=  \dfrac{ \sqrt{\lim_{x \rightarrow \infty}5x^2}}{\lim_{x \rightarrow \infty} 2x}\\
+&amp;=  \lim_{x \rightarrow \infty}\dfrac{ \sqrt{5x^2}}{2x}\\
+&amp;=  \lim_{x \rightarrow \infty}\dfrac{ \sqrt{5}x}{2x}\\
+&amp;=  \lim_{x \rightarrow \infty}\dfrac{ \sqrt{5}}{2}\\
+&amp;=  \dfrac{ \sqrt{5}}{2}.
+\end{align*}\]</span>
+Therefore, <span class="math inline">\(\displaystyle\lim_{x \rightarrow \infty} \dfrac{\sqrt{5x^2 - x + 1}}{2x - 5} = \dfrac{\sqrt{5}}{2}\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Example:</strong> Evaluate <span class="math inline">\(\displaystyle\lim_{x \rightarrow \infty} \sqrt{4x^4 - 3x + 1} - 2x^2\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Solution:</strong> Using limit laws, <span class="math display">\[\begin{align*}  \lim_{x \rightarrow \infty} \sqrt{4x^4 - 3x + 1} - 2x^2
+&amp;=  \sqrt{\lim_{x \rightarrow \infty}4x^4 - 3x + 1} - \lim_{x \rightarrow \infty} 2x^2\\
+&amp;=  \sqrt{\lim_{x \rightarrow \infty}4x^4} - \lim_{x \rightarrow \infty} 2x^2\\
+&amp;=  \lim_{x \rightarrow \infty}  \sqrt{4x^4} - 2x^2\\
+&amp;=  \lim_{x \rightarrow \infty}  2x^2 - 2x^2\\
+&amp;=  \lim_{x \rightarrow \infty}  0\\
+&amp;=  0.
+\end{align*}\]</span>
+Therefore, <span class="math inline">\(\displaystyle\lim_{x \rightarrow \infty} \sqrt{4x^4 - 3x + 1} - 2x^2 = 0\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Example:</strong> Evaluate <span class="math inline">\(\displaystyle\lim_{x \rightarrow -\infty} \sin(x)\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Solution:</strong> As <span class="math inline">\(x \rightarrow -\infty\)</span>, the function <span class="math inline">\(f(x) = \sin(x)\)</span> oscillates infinitely many times between 1 and <span class="math inline">\(-1\)</span>. Therefore, it never converges to a finite number. Therefore, <span class="math inline">\(\displaystyle\lim_{x \rightarrow -\infty} \sin(x)\)</span> does not exist.</p>
+</div>
+<p>Practice Problems</p>
+<ol style="list-style-type: upper-alpha">
+<li>Determine each of the following limits.</li>
+</ol>
+<ul>
+<li><p><span class="math inline">\(\displaystyle\lim_{x \rightarrow \infty} 5x^4 - 3x^3 + x^2 - 5\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle\lim_{x \rightarrow -\infty} 5x^4 - 3x^3 + x^2 - 5\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle\lim_{x \rightarrow \infty} 7x^3- 2x^2 + x - 10\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle\lim_{x \rightarrow -\infty} 7x^3- 2x^2 + x - 10\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle\lim_{x \rightarrow \infty} \sqrt{x^4 - 3x^2 + x - 1}\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle\lim_{x \rightarrow -\infty} \sqrt{x^6 - x^4 + x^2 + 1}\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle\lim_{x \rightarrow \infty} \dfrac{x^4 - x^3 - x - 1}{3x^4 - 2x^2 + x - 5}\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle\lim_{x \rightarrow -\infty} \dfrac{5x^7 - 2x^5 +2 x - 1}{2x^7 + 3x^4 + 100x +20}\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle\lim_{x \rightarrow \infty} \dfrac{\sqrt[4]{x^4 - x^2 + 1}}{5 - 3x}\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle\lim_{x \rightarrow -\infty} \dfrac{\sqrt{9x^2 - 3x + 2}}{\sqrt[3]{27x^3 + 15x^2 - 4x + 1}}\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle\lim_{x \rightarrow \infty} \dfrac{4-5x}{\sqrt[5]{15+ x^3 - x^4 + 10x^5}}\)</span></p></li>
+</ul>
+<ol start="2" style="list-style-type: upper-alpha">
+<li>Determine each of the following limits.</li>
+</ol>
+<ul>
+<li><p><span class="math inline">\(\displaystyle\lim_{x \rightarrow \infty} \cos(1/x)\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle\lim_{x \rightarrow -\infty} \sqrt{3x^4 - 4x + 1} - \sqrt{3}x^2\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle\lim_{x \rightarrow \infty} \ln(1/x)\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle\lim_{x \rightarrow -\infty} \arctan(-2/x)\)</span></p></li>
+</ul>
+</div>
+<div id="limits-at-infinity-by-definition-1" class="section level2 unnumbered hasAnchor">
+<h2>Limits at Infinity by Definition<a href="limits-at-infinity-horizontal-asymptotes.html#limits-at-infinity-by-definition-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We have dealt with the precise definition of a limit as it relates to limits as finite values. We now discuss limits of functions at infinity.</p>
+<div style="color: blue;">
+<p><strong>Definition:</strong> Let <span class="math inline">\(f\)</span> be a function defined on the interval <span class="math inline">\((a, \infty)\)</span> for some <span class="math inline">\(a \in \mathbb{R}\)</span>. Then <span class="math display">\[\lim_{x \rightarrow \infty} f(x) = L,\]</span> if for any given <span class="math inline">\(\varepsilon &gt; 0\)</span>, there exists an <span class="math inline">\(M &gt; 0\)</span> such that <span class="math display">\[|f(x) - L| &lt; \varepsilon \;\;\; \text{provided} \;\;\; x &gt; M.\]</span></p>
+</div>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><img src="Pic19.png" /></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<div style="color: blue;">
+<p><strong>Definition:</strong><br />
+Let <span class="math inline">\(f\)</span> be a function defined on the interval <span class="math inline">\((-\infty, b)\)</span> for some <span class="math inline">\(b \in \mathbb{R}\)</span>. Then <span class="math display">\[\lim_{x \rightarrow -\infty} f(x) = L,\]</span> if for any given <span class="math inline">\(\varepsilon &gt; 0\)</span>, there exists an <span class="math inline">\(M &gt; 0\)</span> such that <span class="math display">\[|f(x) - L| &lt; \varepsilon \;\;\; \text{provided} \;\;\; x &lt; M.\]</span></p>
+</div>
+<p>For an infinite limit to exist, the value of the function must be asymptotic to the limit value. This means that as <span class="math inline">\(x\)</span> exceeds some value <span class="math inline">\(M\)</span> (either in the positive or negative direction), the function value must be within <span class="math inline">\(\varepsilon\)</span> units from the limit value for every <span class="math inline">\(x\)</span> beyond <span class="math inline">\(M\)</span>.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><img src="Pic20.png" /></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<div style="color: green;">
+<p><strong>Example:</strong> Use the precise definition of a limit to show that <span class="math inline">\(\displaystyle\lim_{x \rightarrow \infty} \dfrac{1}{x} = 0\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Solution:</strong> Let <span class="math inline">\(\varepsilon &gt; 0\)</span> be given. We need to find an <span class="math inline">\(M &gt; 0\)</span> such that <span class="math display">\[|\dfrac{1}{x} - 0|  = \dfrac{1}{|x|} &lt; \varepsilon,\]</span> provided <span class="math inline">\(x &gt; M\)</span>. Take <span class="math inline">\(M = \dfrac{1}{\varepsilon}\)</span>. Then for any <span class="math inline">\(x &gt; M\)</span>, we have
+<span class="math display">\[\begin{align*} \left|\dfrac{1}{x} - 0 \right| &amp;= \dfrac{1}{|x|}\\
+&amp;&lt; \dfrac{1}{M}\\
+&amp;= \dfrac{1}{1/\varepsilon}\\
+&amp;= \varepsilon. \end{align*}\]</span>
+Since <span class="math inline">\(\left|\dfrac{1}{x} - 0 \right| &lt; \varepsilon\)</span>, we have shown that <span class="math display">\[ \lim_{x \rightarrow \infty} \dfrac{1}{x} = 0.\]</span></p>
+</div>
+<p>Practice Problems</p>
+<ol style="list-style-type: upper-alpha">
+<li>Prove each of the following limits using the precise definition of a limit.</li>
+</ol>
+<ul>
+<li><p><span class="math inline">\(\displaystyle\lim_{x \rightarrow \infty} \dfrac{1}{x} +3 = 3\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle\lim_{x \rightarrow \infty} \dfrac{1}{x^2} = 0\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle\lim_{x \rightarrow -\infty} \dfrac{1}{x} = 0\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle\lim_{x \rightarrow \infty} \dfrac{1}{\sqrt{x}} = 0\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle\lim_{x \rightarrow \infty} \ln(1+1/x) = 0\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle\lim_{x \rightarrow \infty} \dfrac{1}{e^x}=0\)</span></p></li>
+</ul>
+<p>B. If <span class="math inline">\(r\)</span> is a positive rational number and <span class="math inline">\(c\)</span> is any real number, prove <span class="math display">\[\lim_{x \rightarrow \infty} \dfrac{c}{x^r} = 0.\]</span></p>
+<p>C. If <span class="math inline">\(r\)</span> is a positive rational number, <span class="math inline">\(c\)</span> is any real number and <span class="math inline">\(x^r\)</span> is defined for <span class="math inline">\(x &lt; 0\)</span>, prove <span class="math display">\[\lim_{x \rightarrow -\infty} \dfrac{c}{x^r} = 0.\]</span></p>
+<p>D. If <span class="math inline">\(p(x) = a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1x + a_0\)</span> is a polynomial of degree <span class="math inline">\(n\)</span>, prove <span class="math display">\[\lim_{x \rightarrow \infty} p(x) = \lim_{x \rightarrow \infty} a_nx^n.\]</span></p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="continuity.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="derivatives-and-rates-of-change.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook/js/app.min.js"></script>
+<script src="libs/gitbook/js/clipboard.min.js"></script>
+<script src="libs/gitbook/js/plugin-search.js"></script>
+<script src="libs/gitbook/js/plugin-sharing.js"></script>
+<script src="libs/gitbook/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook/js/jquery.highlight.js"></script>
+<script src="libs/gitbook/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/02-LimitsAndDerivatives.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
