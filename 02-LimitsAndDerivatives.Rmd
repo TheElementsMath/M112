@@ -1,0 +1,2773 @@
+#  (PART)  Limits and Derivatives {-}
+
+#  2.2 The Limit of a Function {-}
+
+##  The Idea of a Limit {-}
+
+Think about walking along the graph of the function $y = f(x)$ and when you get close to the point on the graph where $x = a$, you ask yourself ``What $y$ value am I standing on?'', that is the basic idea of a limit.
+
+::: {style="color: blue;"}
+**Definition:**  Let $f$ be a function defined on some interval $I$ containing a point $a$ (though possibly not defined at $a$), we say the limit of $f(x)$ as $x$ approaches $a$ is $L$, written \[\displaystyle\lim_{x \rightarrow a} f(x) = L,\] if the value of $f(x)$ gets arbitrarily close to a particular real number $L$ as $x$ gets close to $a$.
+:::
+
+
+We can try to determine the value of a limit by evaluating the function at points ``close'' to $a$ to see what value the function appears to be getting close to.
+
+::: {style="color: green;"}
+**Example:**  Determine the value of $$\displaystyle\lim_{x \rightarrow 2} x^3.$$
+:::
+
+::: {style="color: green;"}
+**Solution:**  The function is $f(x) = x^3$ and $a = 2$ in this example.  So we evaluate $f(x)$ at $x$ values close to 2.
+
+We begin with values of $a$ smaller than 2 (but still close to 2).
+
+|$a$     |$a^3$       |
+|:------:|:-----------:|
+| 1.9    | 6.859       |
+| 1.99   | 7.880599    |
+| 1.999  | 7.988005999 |
+| 1.9999 | 7.99880006  |
+
+We see that the function value is close to 8 (but a little smaller than 8).
+
+Next, we check out values of $a$ larger than 2 (but still close to 2).
+
+
+|$a$     |$a^3$       |
+|:------:|:-----------:|
+| 2.1    | 9.261       |
+| 2.01   | 8.120601    |
+| 2.001  | 8.012006001 |
+| 2.0001 | 8.00120006  |
+
+We see that the function value is close to 8 (but a little larger than 8).  
+
+When we take values of $x$ that are close to $2$ (be they larger than 2 or smaller than 2), it appears that $f(x) = x^3$ gets close to 8.  Therefore, $\displaystyle\lim_{x \rightarrow 2} x^3 = 8$.
+:::
+
+
+::: {style="color: green;"}
+**Example:**  Determine the value of $$\displaystyle\lim_{x \rightarrow 0} \cos(x).$$
+:::
+
+
+::: {style="color: green;"}
+**Solution:**  The function is $f(x) = \cos(x)$ and $a = 0$ in this example.  So we evaluate $f(x)$ at $x$ values close to 0.
+
+We check values of $a$ that are close to 0 (but slightly smaller).
+
+| $a$     | $\cos(a)$      |
+|:-------:|:-----------:|
+| -0.1    | 0.995004165 |
+| -0.01   | 0.99995     |
+| -0.001  | 0.9999995   |
+| -0.0001 | 0.999999995 |
+It appears that the function value gets close to 1.
+
+Next, we check the values of $a$ close to 0 (but larger than 0).
+
+| $a$    | $\cos(a)$      |
+|:------:|:-----------:|
+| 0.1    | 0.995004165 |
+| 0.01   | 0.99995     |
+| 0.001  | 0.99999951  |
+| 0.0001 | 0.999999995 |
+It appears that the function get close to 1 again.
+
+When we take values of $x$ that are close to $0$ (be they larger than 0 or smaller than 0), it appears that $f(x) = \cos(x)$ gets close to 1.  Hence, $\displaystyle\lim_{x \rightarrow 0} \cos(x) = 1$.
+:::
+
+Practice Problems 
+
+*  $\displaystyle\lim_{x \rightarrow 1}  x^2$ 
+
+*  $\displaystyle\lim_{x \rightarrow 2}  x^2 - 3x + 1$ 
+
+*  $\displaystyle\lim_{x \rightarrow -2} 2x + 5$ 
+
+*  $\displaystyle\lim_{x \rightarrow 3} \sqrt{x}$ 
+
+*  $\displaystyle\lim_{x \rightarrow \pi/4} \tan(x)$
+
+*  $\displaystyle\lim_{x \rightarrow -1} e^x$ 
+
+*  $\displaystyle\lim_{x \rightarrow 0} \frac{\sin(x)}{x}$ 
+
+*  $\displaystyle\lim_{x \rightarrow 0} \frac{1 - \cos(x)}{x}$ 
+
+
+##  Left and Right Limits {-}
+
+Left and right limits are similar to the limits discussed in the previous section except they only need to be evaluated from one side.  This makes sense if, for example, we have a function that is not defined for values larger or smaller than $a$.
+
+
+::: {style="color: blue;"}
+**Definition:**  Let $f$ be a function defined on some open interval $I$ with $a$ as the left endpoint, we say the limit of $f(x)$ as $x$ approaches $a$ from the right is $L$, written \[\displaystyle\lim_{x \rightarrow a^+} f(x) = L,\] if the value of $f(x)$ gets arbitrarily close to a particular real number $L$ as $x$ gets close to $a$ using values larger than $a$.
+:::
+
+
+::: {style="color: green;"}
+**Example:**  Determine the value of $$\displaystyle\lim_{x \rightarrow 1^+} 3\sqrt{x-1}.$$
+:::
+
+::: {style="color: green;"}
+**Solution:**  
+
+The function is $f(x) = 3\sqrt{x-1}$ and $a = 1$ in this example.  So we evaluate $f(x)$ at $x$ values close to 1 but larger than 1.
+
+| $a$      | $f(a)$      |
+|:--------:|:-----------:|
+| 1.1      | 0.948683298 |
+| 1.01     | 0.3         |
+| 1.001    | 0.09486833  |
+| 1.0001   | 0.03        |
+| 1.00001  | 0.009486833 |
+| 1.000001 | 0.003       |
+
+When $x$ gets close to $1$ (using values larger than 1), we see that the limit appears to go to 0.
+:::
+
+
+In the previous example, the domain of $f(x) = 3\sqrt{x-1} + 1$ is $[1,\infty)$.  So, it makes little sense to try to evaluate the limit for values less than 1.
+
+
+::: {style="color: green;"}
+**Example:**  Determine the value of $$\displaystyle\lim_{x \rightarrow -3^+} \frac{x^2 -5x -6}{x-3}.$$
+:::
+
+::: {style="color: green;"}
+**Solution:**  The function is $f(x) = \frac{x^2 +5x +6}{x+3}$ and $a = -3$ in this example.  So we evaluate $f(x)$ at $x$ values close to -3 but larger than -3.
+
+| $a$      | $f(a)$   |
+|:--------:|:--------:|
+| -2.9     | -0.9     |
+| -2.99    | -0.99    |
+| -2.999   | -0.999   |
+| -2.9999  | -0.9999  |
+| -2.99999 | -0.99999 |
+
+When $x$ gets close to $-3$ (using values larger than -3), we see that the limit appears to go to -1.
+:::
+
+
+
+::: {style="color: blue;"}
+**Definition:**  Let $f$ be a function defined on some open interval $I$ with $a$ as the right endpoint, we say the limit of $f(x)$ as $x$ approaches $a$ from the left is $L$, written \[\displaystyle\lim_{x \rightarrow a^-} f(x) = L,\] if the value of $f(x)$ gets arbitrarily close to a particular real number $L$ as $x$ gets close to $a$ using values smaller than $a$.
+:::
+
+
+::: {style="color: green;"}
+**Example:**  Determine the value of $$\displaystyle\lim_{x \rightarrow 3^-} |x^2-9|.$$
+:::
+
+
+::: {style="color: green;"}
+**Solution:**  The function is $f(x) = |x^2 - 9|$ and $a = 3$ in this example.  So we evaluate $f(x)$ at $x$ values close to 3 but smaller than 3.
+
+| $a$    | $f(a)$       |
+|:------:|:------------:|
+| 2.9    | 0.0599       |
+| 2.99   | 0.005999     |
+| 2.999  | 0.00059999   |
+| 2.9999 | 0.0000599999 |
+
+When $x$ gets close to $3$ (using values smaller than 3), we see that the limit appears to go to 0.
+:::
+
+
+
+
+::: {style="color: green;"}
+**Example:**  Determine the value of $$\displaystyle\lim_{x \rightarrow -2^-} \sqrt{2x +6}.$$
+:::
+
+
+::: {style="color: green;"}
+**Solution:**  The function is $f(x) = \sqrt{-(2+x)}$ and $a = -2$ in this example.  So we evaluate $f(x)$ at $x$ values close to -2 but smaller than -2.
+
+| $a$      | $f(a)$       |
+|:--------:|:------------:|
+| -2.1     | 0.8944271910 |
+| -2.01    | 0.9899494937 |
+| -2.001   | 0.9989994995 |
+| -2.0001  | 0.9998999950 |
+| -2.00001 | 0.9999899999 |
+
+When $x$ gets close to $-2$ (using values smaller than -2), we see that the limit appears to go to 1.
+:::
+
+
+
+Practice Problems 
+
+Determine the value of each of the following limits by evaluating at points close to the given $a$:
+
+*  $\displaystyle\lim_{x \rightarrow 0^+}  2\sqrt{x} - 5$ 
+
+*  $\displaystyle\lim_{x \rightarrow 2^-}  \sin(x)$ 
+
+*  $\displaystyle\lim_{x \rightarrow \pi^+} \cos(2x)$ 
+
+*  $\displaystyle\lim_{x \rightarrow -2^-} \frac{x^2 - 4}{x+2}$ 
+
+*  $\displaystyle\lim_{x \rightarrow 1^+} \frac{x^3 - 1}{x-1}$ 
+
+*  $\displaystyle\lim_{x \rightarrow -1} \ln(e^x + 1)$ 
+
+
+
+##  Limits That Do Not Exist {-}
+
+A question that one might ask is if we are given a function $f$ and a value of $a$ (and $f$ exists in some interval around $a$), does the limit of $f(x)$ as $x$ approaches $a$ always exist?  The answer is no.  Typically, there are 4 reasons why a limit does not exist:
+
+1.  The one-sided limits are not equal,
+2.  The function does not approach a finite value,
+3.  The function does not approach a particular value - for example, it oscillates,
+4.  The $x$-value is approaching the endpoint of a closed interval.
+
+Here are some examples that illustrate these situations.
+
+
+
+
+
+::: {style="color: green;"}
+**Example:**  Let $f(x)$ be the function in the figure below.  Determine why $\displaystyle\lim_{x \rightarrow 1} f(x)$ does not exist.
+:::
+
+|![](Pic1.png)|
+|:--:|
+
+
+::: {style="color: green;"}
+**Solution:**  The definition of a limit states that $\displaystyle\lim_{x \rightarrow 1} f(x) = L$ if the value of $f(x)$ gets arbitrarily close to $L$ if $x$ is close enough to 1.  We notice on the picture that $$\displaystyle\lim_{x \rightarrow 1^+} f(x) = 3.$$  Moreover, we see that $$\displaystyle\lim_{x \rightarrow 1^-} f(x) = 2.$$  If this limit exists, we need to get arbitrarily close to the limit $L$ (which could be 2, 3 or some other number) as $x$ gets close to 1.  As $x$ approaches 1 from the left, we get arbitrarily close to 2; however, as $x$ approaches 1 from the right, we get arbitrarily close to 3.  If the limit is 2, we can't get any closer than 3 by taking values of $x$ close to 1 on the right.  Similarity, if the limit was 3, we can't get any closer than 2 by taking values of $x$ close to 1 on the left.  We have the same problem if we take $L$ to be any other number.  Since the value of the limit depends on what direction we approach 1 from, the limit does not exist.  So we say $$\displaystyle\lim_{x \rightarrow 1} f(x) \;\; DNE.$$
+:::
+
+
+
+
+
+
+::: {style="color: green;"}
+**Example:**  Let $f(x)$ be the function in the figure below.  Determine why $\displaystyle\lim_{x \rightarrow 3} f(x)$ does not exist.
+:::
+
+|![](Pic2.png)|
+|:--:|
+
+
+
+::: {style="color: green;"}
+**Solution:**   The definition of a limit states that $\displaystyle\lim_{x \rightarrow 3} f(x) = L$ if the value of $f(x)$ gets arbitrarily close to a particular real number $L$ if $x$ is close enough to 3.  In this diagram, we notice that the function gets infinitely large as $x$ approaches 3.  In order for the limit to exist, it must approach a particular real number (and infinity is not actually a real number).  Therefore, we conclude that the limit does not exist.
+:::
+
+
+
+
+::: {style="color: green;"}
+**Example:**  Determine why $\displaystyle\lim_{x \rightarrow 0} \sin(1/x)$ does not exist.  The graph of $\sin(1/x)$ is below.
+:::
+
+|![](Pic3.png)|
+|:--:|
+
+
+::: {style="color: green;"}
+**Solution:**  The definition of a limit states that $\displaystyle\lim_{x \rightarrow 0} f(x) = L$ if the value of $f(x)$ gets arbitrarily close to a particular real number $L$ if $x$ is close enough to 0.  Here, $f(x)$ oscillates between the values of 1 and -1 faster and faster as $x$ approaches 0.  Since it does not converge to a particular real number, we say the limit does not exist.
+:::
+
+
+::: {style="color: green;"}
+**Example:**  Determine why $\displaystyle\lim_{x \rightarrow 0} \sqrt{x}$ does not exist.  The graph of $\sqrt{x}$ is provided below.
+:::
+|![](Pic4.png)|
+|:--:|
+
+::: {style="color: green;"}
+**Solution:**  The function given in this limit, $f(x) = \sqrt{x}$, is only defined on $[0, \infty)$.  So, we cannot approach 0 using $x$-values from the left.  The definition of a limit requires the function to approach the same limit value no matter which direction $x$ comes from.  Here, that is not the case.  Therefore, the limit does not exist.
+:::
+
+
+Practice Problems 
+
+A.  Determine the value of each of the following limits, if they exist, by evaluating at points close to the given $a$:
+*  $\displaystyle\lim_{x \rightarrow 5}  3\sqrt{x-5}$ 
+
+*  $\displaystyle\lim_{x \rightarrow \pi/2}  \tan(x)$ 
+
+*  $\displaystyle\lim_{x \rightarrow 3} \frac{1}{x-3}$
+
+*  $\displaystyle\lim_{x \rightarrow 0} \cos(\pi/(2x))$ 
+
+*  $\displaystyle\lim_{x \rightarrow -6} \frac{|x+6|}{x+6}$ 
+
+*  $\displaystyle\lim_{x \rightarrow -4} \frac{x+4}{x^2 + 8x + 16}$ 
+
+B.  Determine a value $c$ so that each of the following limits exist.
+
+*  $\displaystyle\lim_{x \rightarrow 1} f(x)$ exits if $f(x) = \begin{cases} 2x & x > 1
+4x-c & x < 1 \end{cases}$ 
+
+*  $\displaystyle\lim_{x \rightarrow 0} f(x)$ exists if $f(x) = \begin{cases} x^2 - 3x + c & x > 0\\ \cos(x) & x < 0 \end{cases}$
+
+
+C.  Determine the value of $\displaystyle\lim_{x \rightarrow -3} f(x)$ or determine that it does not exist if \[f(x) = \begin{cases} 2x - 5 & x \not = -3 \\ 1 & x = 3 \end{cases}.\]
+
+
+##    Infinite Limits and Vertical Asymptotes {-}
+
+Let $n \not = 0$.  If we have a limit of the form $$\displaystyle\lim_{x \rightarrow a} f(x) = \dfrac{n}{0},$$ we say that the limit does not exist.  We can determine from the form $\frac{n}{0}$ that the function value becomes infinitely large as either a positive number or negative number.  If the one-sided limits are the same, we say either $$\displaystyle\lim_{x \rightarrow a} f(x) = \infty \;\;\;\; \text{or} \;\;\;\; \displaystyle\lim_{x \rightarrow a} f(x) = -\infty.$$  We can determine if the limit is $\infty$ or $-\infty$ by looking at the sign of $n$ in the fraction $\frac{n}{0}$.
+
+
+|![](Pic9.png)|
+|:--:|
+
+
+::: {style="color: green;"}
+**Example:**  Determine the value of $\displaystyle\lim_{x \rightarrow 0} \frac{1}{x^4}$.
+:::
+
+::: {style="color: green;"}
+**Solution:**  If we substitute 0 into the function, we get a 1/0 form.  So, the limit does not exist.  So, we look for 1 sided limits.  When $x < 0$, the fraction $\frac{1}{x^4} > 0$.  So, $\displaystyle\lim_{x \rightarrow 0^-} \frac{1}{x^4} = \infty$.  Moreover, when $x > 0$, the fraction $\frac{1}{x^4} > 0$ as well.  So, we again have $\displaystyle\lim_{x \rightarrow 0^+} \frac{1}{x^4} = \infty$.  So, to conclude, we see that $$\displaystyle\lim_{x \rightarrow 0} \dfrac{1}{x^4} = \infty.$$
+:::
+
+
+
+
+::: {style="color: green;"}
+**Example:**  Determine $\displaystyle\lim_{x \rightarrow -5} \frac{x}{x+5}$.
+:::
+
+::: {style="color: green;"}
+**Solution:**  By directly substituting $-5$ into the function $f(x) = \frac{x}{x+5}$, we have a fraction of the form $\frac{-5}{0}$.  So, this limit does not exist.  However, we determine the value of the one-sided limits to see if we have an infinite limit.
+
+From the right, we have $x$ values that are a little larger than -5 (for example, -4.9, -4.99, -4.999, etc.).  If we put those into $f(x) = \frac{x}{x+5}$, the numerator is negative while the denominator is positive.  Hence, the fraction will be negative.  So we say $\displaystyle\lim_{x \rightarrow -5^+} \frac{x}{x+5} = -\infty$.
+
+From the left, we have $x$ values that are slightly smaller than -5 (for example, -5.1, -5.01, -5.001, etc.).  If we put those into $f(x) = \frac{x}{x+5}$, the numerator and denominator are both negative.  Thus, the fraction will be positive.  So, $\displaystyle\lim_{x \rightarrow -5^-} \frac{x}{x+5} = \infty$.
+
+Since the one-sided limits are different, the limit does not exist.
+:::
+
+
+|![](Pic10.png)|
+|:--:|
+
+
+::: {style="color: green;"}
+**Example:**  Determine $\displaystyle\lim_{x \rightarrow 3} \frac{x-1}{x^2 - 6x + 9}$.
+:::
+
+::: {style="color: green;"}
+**Solution:**  We substitute $x = 3$ into the function $f(x) = \frac{1-x}{x^2 - 6x + 9}$ and find that we have a function of the form $\frac{-2}{0}$.  So, the limit does not exist.  We look at one-sided limits to determine if we have an infinite limit.
+
+First, we factor $f(x) = \frac{1-x}{x^2 - 6x + 9} = \frac{1-x}{(x-3)^2}$.  Since the denominator is a perfect square, it will always be positive.  The numerator, depending on what values we chose close to 3 will either be slightly larger than -2 (if $x = 2.9, 2.99, 2.999$, etc.) or slightly smaller than -2 (if $x = 3.1, 3.11, 3.111$, etc.).  Either way, the numerator is negative and the denominator is positive.  So, the fraction will be negative for both one-sided limits.
+
+Therefore, $\displaystyle\lim_{x \rightarrow -3} \frac{1-x}{(x-3)^2} = -\infty$.
+:::
+
+
+|![](Pic11.png)|
+|:--:|
+
+
+
+
+In each of the previous examples, the infinite limit represents a \index{vertical asymptote} \label{VerticalAsymptote}\textbf{vertical asymptote}.  The graph of a function $y = f(x)$ has a vertical asymptote at $x = a$ if the $y$ values get infinitely large as $x$ approaches $a$.  More precisely, if $\displaystyle\lim_{x \rightarrow a^-} f(x) = \pm \infty$ and $\displaystyle\lim_{x \rightarrow a^+} f(x) = \pm \infty$, then $f(x)$ has a vertical asymptote at $x = a$.
+
+In order to find vertical asymptotes, look for places where the function is undefined then take right and left limits to determine if they are infinitely large.
+
+
+::: {style="color: green;"}
+**Example:**  Find all vertical asymptotes for $f(x) = \frac{x-3}{x^2 -x - 6}$.
+:::
+
+::: {style="color: green;"}
+**Solution:**  By factoring, we see that the denominator is 0 when $0 = x^2 - x - 6 = (x-3)(x+2)$ or when $x = 3$ or $-2$.  We examine $\displaystyle\lim_{x \rightarrow 3} f(x)$ and $\displaystyle\lim_{x \rightarrow -2} f(x)$ to determine if they are limits that do not exist.
+
+Note that
+\begin{align*} \displaystyle\lim_{x \rightarrow 3} f(x) &= \displaystyle\lim_{x \rightarrow 3} \dfrac{x-3}{x^2 - x - 6}\\
+&= \displaystyle\lim_{x \rightarrow 3} \dfrac{x-3}{(x-3)(x+2)}\\
+&= \displaystyle\lim_{x \rightarrow 3} \dfrac{1}{x+2} \hspace{0.5in} \text{at all values other than 3}\\
+&= \dfrac{1}{5}.\end{align*}
+Since $\displaystyle\lim_{x \rightarrow 3} f(x) = 1/5$, the limit exists and there is no vertical asymptote at 3.  In this case, there is a removable discontinuity at 3.
+
+
+The other possible asymptote is at $x = -2$.
+\begin{align*} \displaystyle\lim_{x \rightarrow -2} f(x) &= \displaystyle\lim_{x \rightarrow -2} \dfrac{x-3}{x^2 - x - 6}\\
+&= \displaystyle\lim_{x \rightarrow -2} \dfrac{x-3}{(x-3)(x+2)}\\
+&= \displaystyle\lim_{x \rightarrow -2} \dfrac{1}{x+2}.\end{align*}
+When we apply the limit, we find a $1/0$ form.  So, we try one sided limits.
+
+With $x$-values slightly smaller than -2, the fraction $\frac{1}{x+2} < 0$ and thus \[\displaystyle\lim_{x \rightarrow -2^-} f(x) = -\infty.\]
+
+For $x$-values slightly larger than -2, the fraction $\frac{1}{x+2} > 0$ and so \[\displaystyle\lim_{x \rightarrow -2^+} f(x) = \infty.\]
+
+Since both limits are infinity, we have a vertical asymptote at $x = -2$.
+:::
+
+
+Practice Problems 
+
+A.  Determine the value of each of the following limits.  If they don't exist, determine if they are an infinite limit.
+
+*  $\displaystyle\lim_{x \rightarrow 5}  \frac{1}{x-5}$ 
+
+*  $\displaystyle\lim_{x \rightarrow 0}  \frac{2x-1}{x}$ 
+
+*  $\displaystyle\lim_{x \rightarrow -3} \frac{x+8}{x^2 - 6x + 9}$ 
+
+*  $\displaystyle\lim_{x \rightarrow -4} \frac{x+1}{x+4}$ 
+
+*  $\displaystyle\lim_{x \rightarrow -6} \frac{x+1}{|x+6|}$ 
+
+*  $\displaystyle\lim_{x \rightarrow 2} \frac{x+4}{x^2 + 4x + 4}$ 
+
+
+B.  Determine any vertical asymptotes for the given functions.
+
+
+*  $f(x) = \dfrac{x-5}{x^2 -25}$
+
+*  $g(x) = \dfrac{x^3 - 8}{x^2 - 4x  + 4}$
+
+*  $h(x) = \dfrac{x^2 + 3x + 2}{x^2 + 2x + 1}$
+
+*  $j(x) = \dfrac{x^3 - 1}{x^3 + 8}$
+
+
+
+
+
+
+
+#  2.3  Calculating Limits Using the Limit Laws {-} 
+
+##  The Limit Laws {-}
+
+It should be clear by now that using a table to calculate a limit is both tedious and potentially inaccurate.  In this section, we will develop some rules that will help us quickly and accurately compute limits.
+
+::: {style="color: blue;"}
+**Theorem (Limit Laws):**  Let $f$ and $g$ be functions, $c$ a constant and $a,n \in \mathbb{R}$.  Suppose $\displaystyle\lim_{x \rightarrow a} f(x) = L$ and $\displaystyle\lim_{x \rightarrow a} g(x) = M$ with $L,M \in \mathbb{R}$.  The following properties hold:
+
+1.   $\displaystyle\lim_{x \rightarrow a} c = c$  (Constant Law)
+2.   $\displaystyle\lim_{x \rightarrow a} x = a$  (Identity Law)
+3.   $\displaystyle\lim_{x \rightarrow a} f(x) \pm g(x) = L \pm M$ (Sum and Difference Laws)
+4.   $\displaystyle\lim_{x \rightarrow a} cf(x) = c \displaystyle\lim_{x \rightarrow a} f(x) = cL$  (Constant Coefficient Law)
+5.   $\displaystyle\lim_{x \rightarrow a} f(x) \cdot g(x) = \displaystyle\lim_{x \rightarrow a} f(x) \cdot \displaystyle\lim_{x \rightarrow a} g(x) = L \cdot M$ (Multiplication Law)
+6.   $\displaystyle\lim_{x \rightarrow a} \frac{f(x)}{g(x)} = \dfrac{\displaystyle\lim_{x \rightarrow a} f(x)}{\displaystyle\lim_{x \rightarrow a} g(x)} = \dfrac{L}{M}$, with $M \not = 0$ (Division Law
+7.   $\displaystyle\lim_{x \rightarrow a} \left( f(x) \right)^n = \left(\displaystyle\lim_{x \rightarrow a} f(x) \right)^n = L^n$ (Power Law)
+:::
+
+We will prove all of these laws in \autoref{chap:PreciseDefinitionOfALimit}.  For now, we will illustrate each law with examples.
+
+The constant law deals with constant functions (horizontal lines). Since $f(x)$ is always equal to $c$, it doesn't matter what $x$ approaches.  The resulting limit is always $c$.
+
+
+|![](Pic5.png)|
+|:--:|
+
+
+
+
+::: {style="color: green;"}
+**Example:**  Evaluate $\displaystyle\lim_{x \rightarrow 3} 10$.
+:::
+
+::: {style="color: green;"}
+**Solution:**  Since 10 is a constant, we can use the Constant Law from the Limit Laws theorem part 1 to see $\displaystyle\lim_{x \rightarrow 3} 10 = 10$.
+:::
+
+
+The Identity Law deals with the function $f(x) = x$. Since the $y$ and $x$ values are the same, whatever value $x$ approaches, $y$ will have to approach the same value.
+
+|![](Pic6.png)|
+|:--:|
+
+
+
+
+::: {style="color: green;"}
+**Example:**  Evaluate $\displaystyle\lim_{x \rightarrow 2} x$.
+:::
+
+::: {style="color: green;"}
+**Solution:**  We recognize this as the Identity Law (from the Limit Laws theorem part 2).  Using that result, we find $\displaystyle\lim_{x \rightarrow 2} x = 2$.
+:::
+
+
+The Sum Law tells us that the limit of a sum is the sum of the individual limits.  That is, to evaluate the limit of a sum, simply deal with each limit individually.
+
+::: {style="color: green;"}
+**Example:**  Evaluate $\displaystyle\lim_{x \rightarrow -2} (x + 5)$.
+:::
+
+::: {style="color: green;"}
+**Solution:**  Both $f(x) = x$ and $g(x) = 5$ are functions.  So, we can use the Sum Law (Limit Laws theorem part 3).  So, \begin{align*} \displaystyle\lim_{x \rightarrow -2} (x + 5) &= \displaystyle\lim_{x \rightarrow -2} x + \displaystyle\lim_{x \rightarrow -2} 5 && \text{Sum Law}\\
+&= -2 + 5 &&\text{Identity and Constant Laws}\\
+&= 3.
+\end{align*}
+:::
+
+
+In essence, the Subtraction Law works the same as the Addition Law (with the obvious change).
+
+::: {style="color: green;"}
+**Example:**  Evaluate $\displaystyle\lim_{x \rightarrow 1} (3 - x)$.
+:::
+
+
+::: {style="color: green;"}
+**Solution:**  Both $f(x) = 3$ and $g(x) = x$ are functions.  So, we can use the Difference Law (Limit Laws theorem part 3).  So, \begin{align*} \displaystyle\lim_{x \rightarrow 1} (3 - x) &= \displaystyle\lim_{x \rightarrow 1} 3 - \displaystyle\lim_{x \rightarrow 1} x && \text{Difference Law}\\
+&= 3 - 1 &&\text{Identity and Constant Laws}\\
+&= 2.
+\end{align*}
+:::
+
+
+
+The Constant Coefficient Law tells us that if we have a constant times a function, we can move the constant outside of the limit and evaluate the limit of the function and then multiply the result by the constant.
+
+::: {style="color: green;"}
+**Example:**  Evaluate $\displaystyle\lim_{x \rightarrow 5} 8x$.
+:::
+
+::: {style="color: green;"}
+**Solution:**  We can use the Constant Coefficient Law (Limit Laws theorem part 4).  So, \begin{align*} \displaystyle\lim_{x \rightarrow 5} 8x &= 8\displaystyle\lim_{x \rightarrow 5} x && \text{Constant Coefficient Law}\\
+&= 8(5) &&\text{Identity Law}\\
+&= 40.
+\end{align*}
+:::
+
+
+
+We now try to put the first 4 laws into use in the same example.  In particular, we can now evaluate limits of linear functions.
+
+::: {style="color: green;"}
+**Example:**  Evaluate $\displaystyle\lim_{x \rightarrow 2} 3x - 7$.
+:::
+
+
+::: {style="color: green;"}
+**Solution:**  Some of these steps can be combined.  We show them all here for clarity.
+\begin{align*} \displaystyle\lim_{x \rightarrow 2} 3x - 7 &= \displaystyle\lim_{x \rightarrow 2} 3x - \displaystyle\lim_{x \rightarrow 2} 7 && \text{Difference Law}\\
+&= 3\displaystyle\lim_{x \rightarrow 2} x - \displaystyle\lim_{x \rightarrow 2} 7 && \text{Constant Coefficient Law}\\
+&= 3(2) - 7 && \mbox{Identity and Constant Laws}\\
+&= 6 - 7\\
+&= -1.
+\end{align*}
+:::
+
+
+
+The Multiplication Law tells us that if we have the limit of a product, we can apply the limit to each of the functions being multiplied together then multiply the result.
+
+::: {style="color: green;"}
+**Example:**  Evaluate $\displaystyle\lim_{x\to 6} x^2$.
+:::
+
+::: {style="color: green;"}
+**Solution:**  Some of these steps can be combined.  We show them all here for clarity.
+\begin{align*}
+\displaystyle\lim_{x\to 6} x^2 & = \displaystyle\lim_{x\to 6} (x\cdot x)\\
+& = \left(\displaystyle\lim_{x\to 6} x\right)\left(\lim_{x\to6} x\right)&& \mbox{Multiplication Law}\\
+& = (6)(6) && \mbox{Identity Law}\\
+& = 36
+\end{align*}
+:::
+
+
+The Power Law says that if we have a limit of a power, we can take the limit of the function inside the power then raise the result to the appropriate power.  Be careful that the limit is non-zero if your power is negative.
+
+::: {style="color: green;"}
+**Example:**  Evaluate $\displaystyle\lim_{x\to -1} (3 + x)^5$.
+:::
+
+::: {style="color: green;"}
+**Solution:**  Some of these steps can be combined.  We show them all here for clarity.
+\begin{align*}
+\displaystyle\lim_{x\to-1} (x+3)^5 & = \left(\displaystyle\lim_{x\to-1} (x+ 3)\right)^5 && \mbox{Power Law}\\
+& = \left(\displaystyle\lim_{x\to-1} x + \displaystyle\lim_{x\to-1} 3\right)^5 && \mbox{Addition Law}\\
+& = ( -1 + 3)^5 && \mbox{Identity and Constant Laws}\\
+& = 2^5\\
+& = 32
+\end{align*}
+:::
+
+
+
+::: {style="color: green;"}
+**Example:**  Evaluate $\displaystyle\lim_{x\to-2} (5 {x}^4 + 6 {x})$.
+:::
+
+
+::: {style="color: green;"}
+**Example:**    Some of these steps can be combined.  We show them all here for clarity.
+\begin{align*}
+\displaystyle\lim_{x\to-2} (5 {x}^4 + 6 {x}) & = \displaystyle\lim_{x\to-2} (5 {x}^4) + \displaystyle\lim_{x\to-2} (6  x) && \mbox{Addition Law}\\
+& = 5\,\displaystyle\lim_{x\to-2} ( {x}^4) + 6\,\displaystyle\lim_{x\to-2}   x && \mbox{Constant Coefficient Law}\\
+& = 5\left( {\displaystyle\lim_{x\to-2} x}\right)^4 + 6\, {\displaystyle\lim_{x\to-2} x} && \mbox{Power Law}\\
+& = 5( {-2})^4 + 6( {-2}) && \mbox{Identity Law}\\
+& = 5(16) - 12\\
+& = 80 - 12\\
+& = 68
+\end{align*}
+:::
+
+
+The Division Law works similar to the Power Law.  Again, we must be careful that the limit of the denominator is non-zero.
+
+::: {style="color: green;"}
+**Example:**  Evaluate $\displaystyle\lim_{x\to -5}\frac{3  x}{  x-10}$.
+:::
+
+::: {style="color: green;"}
+**Example:**    Some of these steps can be combined.  We show them all here for clarity.
+\begin{align*}
+\displaystyle\lim_{x\to -5}\frac{3  x}{  x-10} & = \frac{\displaystyle\lim\limits_{x\to -5} (3   x)}{\displaystyle\lim\limits_{x\to -5} (  x-10)} && \mbox{Division Law}\\[6pt]
+& = \frac{3\,\displaystyle\lim\limits_{x\to-5}   x}{\displaystyle\lim\limits_{x\to-5}(  x- 10)} && \mbox{Constant Coefficient Law}\\[6pt]
+& = \frac{3\, {\displaystyle\lim\limits_{x\to-5} x}}{ {\displaystyle\lim\limits_{x\to-5} x} - \displaystyle\lim\limits_{x\to-5} 10} && \mbox{Subtraction Law}\\[6pt]
+& = \frac{3( {-5})}{ {-5} -10} && \mbox{Identity and Constant Laws}\\[6pt]
+& = \frac{-15}{-15}\\[6pt]
+& = 1
+\end{align*}
+:::
+
+Practice Problems 
+
+Determine the value of each of the following limits.
+
+*  $\displaystyle\lim_{x \rightarrow 5}  \frac{x}{x+5}$ 
+
+*  $\displaystyle\lim_{x \rightarrow 0}  \frac{2x + 1}{x + 5}$ 
+
+*  $\displaystyle\lim_{x \rightarrow -3} x^3 + 2x - 1$ 
+
+*  $\displaystyle\lim_{x \rightarrow -4} x^5 + 3x^3 - x^2 + 20$ 
+
+*  $\displaystyle\lim_{x \rightarrow -6} \left(3x^2 -10 \right)^4$ 
+
+*  $\displaystyle\lim_{x \rightarrow 2} \left(5x - 6 \right)^{-2}$ 
+
+*  $\displaystyle\lim_{x \rightarrow 1} \left(\frac{2x^2 + 1}{3x^3 - x + 1} \right)^2$
+
+*  $\displaystyle\lim_{x \rightarrow 2} \left(\frac{x-1}{4x + 3} \right)^{-3}$
+
+
+##  Direct Substitution {-}
+
+We did the following example in the previous chapter.
+
+
+|![](Pic7.png)|
+|:--:|
+
+
+::: {style="color: green;"}
+**Example:**  Evaluate $\displaystyle\lim_{x\to -5}\frac{3  x}{  x-10}$.
+:::
+
+
+::: {style="color: green;"}
+**Solution:**  Using limit laws, we see  
+\begin{align*}
+\displaystyle\lim_{x\to -5}\frac{3  x}{  x-10} & = \frac{\displaystyle\lim\limits_{x\to -5} (3   x)}{\displaystyle\lim\limits_{x\to -5} (  x-10)} && \mbox{Division Law}\\[6pt]
+& = \frac{3\,\displaystyle\lim\limits_{x\to-5}   x}{\displaystyle\lim\limits_{x\to-5}(  x- 10)} && \mbox{Constant Coefficient Law}\\[6pt]
+& = \frac{3\, {\displaystyle\lim\limits_{x\to-5} x}}{ {\displaystyle\lim\limits_{x\to-5} x} - \displaystyle\lim\limits_{x\to-5} 10} && \mbox{Subtraction Law}\\[6pt]
+& = \frac{3( {-5})}{ {-5} -10} && \mbox{Identity and Constant Laws}\\[6pt]
+& = \frac{-15}{-15}\\[6pt]
+& = 1
+\end{align*}
+:::
+
+If $f(x) = \frac{3  x}{  x-10}$, we can see that $f(-5) = 1$.  There is no coincidence that \[\displaystyle\lim_{x\to -5}\frac{3  x}{  x-10} = f(-5)\] as we see from the following theorem.
+
+::: {style="color: blue;"}
+**Theorem (Direct Substitution Rule):**  If $f$ is a polynomial or rational function, and $a$ is in the domain of $f$, then \[\lim_{ x \rightarrow a} f(x) = f(a).\]
+:::
+
+Any function with the direct substitution property is called \textit{continuous}.  We will see more on this in Chapter \ref{chap:Continuity} and prove Theorem \ref{DirectSubstitutionProperty}.
+
+
+
+
+::: {style="color: green;"}
+**Example:**  Evaluate $\displaystyle\lim_{x\to -5}\frac{3  x}{  x-10}$.
+:::
+
+
+::: {style="color: green;"}
+**Solution:**  Since the domain of $f(x) = \frac{3  x}{  x-10}$ is all reals except $x = 10$ (usually written $\mathbb{R} - \{10\}$) and $x = -5$ is in the domain, we know that \[\displaystyle\lim_{x\to -5}\frac{3  x}{  x-10} = f(-5) = 1,\]
+by the direct substitution property.
+:::
+
+
+Sometimes the direct substitution property does not work quite as easily as the previous example.
+
+
+
+
+::: {style="color: green;"}
+**Example:**  Evaluate $\displaystyle\lim_{x\to -1}\frac{x^3 - 1}{x-1}$.\\
+:::
+
+::: {style="color: green;"}
+**Solution:**  If $f(x) = \frac{x^3 - 1}{x-1}$, then the direct substitution property does not apply since $f(1)$ is undefined.  So, we use some algebra.
+\[ \frac{x^3 - 1}{x-1} = \frac{(x-1)(x^2 + x + 1)}{x-1}.\]
+Since the numerator and denominator have a common factor of $x-1$, we can cancel the common factor provided it is non-zero.  When we take the limit as $x$ approaches 1, we have $x \not = 1$ and therefore $x-1 \not = 0$.  So,
+\begin{align*}  \lim_{x\to -1} \frac{x^3 - 1}{x-1} &= \lim_{x\to -1} \frac{(x-1)(x^2 + x + 1)}{x-1}\\\\
+&= \lim_{x\to -1} x^2 + x + 1\\\\
+&= (-1)^2 + (-1) + 1\\\\
+&= 1.
+\end{align*}
+:::
+
+
+|![](Pic8.png)|
+|:--:|
+
+
+::: {style="color: green;"}
+**Example:**  Evaluate $\displaystyle\lim_{x\to 0}\frac{\sqrt{x^2 + 4} - 2}{x^2}$.
+:::
+
+::: {style="color: green;"}
+**Solution:**  Since 0 is not in the domain of the function, we cannot apply the direct substitution property directly.  We can try to rationalize the numerator.
+\begin{align*}
+\lim_{x\to 0}\frac{\sqrt{x^2 + 4} - 2}{x^2} &= \lim_{x\to 0}\frac{\sqrt{x^2 + 4} - 2}{x^2} \times \frac{\sqrt{x^2 + 4} + 2}{\sqrt{x^2 + 4} + 2}\\\\
+&= \lim_{x\to 0}\frac{(x^2 + 4) -4}{x^2\sqrt{x^2 + 4} + 2}\\\\
+&= \lim_{x\to 0}\frac{x^2}{x^2\sqrt{x^2 + 4} + 2}\\\\
+&= \lim_{x\to 0}\frac{1}{\sqrt{x^2 + 4} + 2}\\\\
+&= \frac{1}{\sqrt{\lim_{x\to 0}(x^2 + 4)} + 2}\\\\
+&= \frac{1}{\sqrt{0^2 + 4} + 2}\\\\
+&= \frac{1}{2 + 2}\\\\
+&= \frac{1}{4}.
+\end{align*}
+:::
+
+Practice Problems 
+
+Determine the value of each of the following limits.
+
+*  $\displaystyle\lim_{x \rightarrow -3} \frac{x^2 - x - 12}{x + 3}$
+
+*  $\displaystyle\lim_{x \rightarrow 1} \frac{x^2 + x - 2}{x -1}$
+
+*  $\displaystyle\lim_{x \rightarrow 2} \frac{x^3 - 8}{x-2}$
+
+*  $\displaystyle\lim_{x \rightarrow -4} \frac{x^3 + 64}{x + 4}$
+
+*  $\displaystyle\lim_{x \rightarrow 2} \frac{\frac{1}{x} - \frac{1}{2}}{x-2}$
+
+*  $\displaystyle\lim_{x \rightarrow 1} \frac{\sqrt{x} - x^2}{1 - \sqrt{x}}$
+
+*  $\displaystyle\lim_{x \rightarrow 0} \frac{x}{\sqrt{1 + 3x} - 1}$
+
+*  $\displaystyle\lim_{x \rightarrow 2} \frac{x - \sqrt{3x - 2}}{x^2-4}$
+
+*  $\displaystyle\lim_{x \rightarrow 9} \frac{x^2 - 81}{\sqrt{x} - 3}$
+
+
+\noindent B.  Find $\displaystyle\lim_{h \rightarrow 0} \dfrac{f(x + h) - f(x)}{h}$ for each of the given functions.
+
+*  $f(x) = 2x - 1$
+
+*  $f(x) = x^2 - 2x$
+
+*  $f(x) = x^3 + x - 1$
+
+*  $f(x) = \sqrt{x}$
+
+*  $f(x) = \frac{1}{x}$
+
+*  $f(x) = \sqrt{x} - 5$
+
+*  $f(x) = \frac{3}{x - 1}$
+
+
+
+## Limits of Trigonometric Functions  {-}
+
+::: {style="color: blue;"}
+**Theorem (Trigonometric Limits):** $\displaystyle\lim_{\theta \rightarrow 0} \dfrac{\sin \theta}{\theta} = 1$ and $\displaystyle\lim_{\theta \rightarrow 0} \dfrac{\cos \theta - 1}{\theta} = 0$.
+:::
+
+The graphs below confirm the result of the theorem.
+
+|![](Pic14.png)|
+|:--:|
+
+
+
+::: {style="color: green;"}
+**Example:**  Evaluate the following limit: $\displaystyle \mathop {\lim }\limits_{x  \to 0} \frac{{\sin x }}{{3x }}$.
+:::
+
+::: {style="color: green;"}
+**Solution:**  Using our limit laws,  \begin{align*}
+\displaystyle \mathop {\lim }\limits_{x  \to 0} \frac{{\sin x }}{{3x }} &= \displaystyle \mathop {\lim }\limits_{x  \to 0} \dfrac{1}{3} \;\; \frac{{\sin x }}{{x }}  \\[6pt]
+&= \displaystyle \mathop {\lim }\limits_{x  \to 0} \dfrac{1}{3} \mathop {\lim }\limits_{x  \to 0} \frac{{\sin x }}{{x }}  \\[6pt]
+&= \displaystyle \dfrac{1}{3} (1)  \\[6pt]
+&= \dfrac{1}{3}.
+\end{align*}
+Therefore, $\displaystyle \mathop {\lim }\limits_{x  \to 0} \frac{{\sin x }}{{3x }} = \dfrac{1}{3}$.
+:::
+
+
+::: {style="color: green;"}
+**Example:**  Evaluate the following limit: $\displaystyle \mathop {\lim }\limits_{\theta  \to 0} \frac{{\sin 4\theta }}{{\theta }}$.
+:::
+
+::: {style="color: green;"}
+**Example:**  By the limit laws, 
+\begin{align*}
+\displaystyle \mathop {\lim }\limits_{\theta  \to 0} \frac{{\sin 4\theta }}{{\theta }} &= \displaystyle \mathop {\lim }\limits_{\theta  \to 0} \dfrac{4}{4} \;\; \frac{{\sin 4\theta }}{{\theta }}  \\[6pt]
+&= \displaystyle \mathop {\lim }\limits_{\theta  \to 0} 4 \mathop {\lim }\limits_{\theta  \to 0} \frac{{\sin 4\theta }}{{4\theta }}  \\[6pt]
+&= \displaystyle 4 (1)  \\[6pt]
+&= 4.
+\end{align*}
+Therefore, $\displaystyle \mathop {\lim }\limits_{\theta  \to 0} \frac{{\sin \theta }}{{3\theta }} = \dfrac{1}{3}$.
+:::
+
+
+::: {style="color: green;"}
+**Example:**  Evaluate the following limit: $\displaystyle \mathop {\lim }\limits_{x  \to 0} \frac{{x }}{{\sin 6x }}$.
+:::
+
+::: {style="color: green;"}
+**Example:**  We can evaluate using the limit laws.  \begin{align*}
+\displaystyle \mathop {\lim }\limits_{x  \to 0} \frac{{x }}{{\sin 6x }} &= \displaystyle \mathop {\lim }\limits_{x  \to 0} \dfrac{1}{\frac{{\sin 6x }}{{x }}}  \\[6pt]
+&= \displaystyle  \dfrac{\mathop {\lim }\limits_{x  \to 0} 1}{\mathop {\lim }\limits_{x  \to 0} \frac{{\sin 6x }}{{x }}}  \\[6pt]
+&= \displaystyle  \dfrac{\mathop {\lim }\limits_{x  \to 0} 1}{\mathop {\lim }\limits_{x  \to 0} \frac{6}{6}\frac{{\sin 6x }}{{x }}}  \\[6pt]
+&= \displaystyle  \dfrac{\mathop {\lim }\limits_{x  \to 0} 1}{\mathop {\lim }\limits_{x  \to 0} 6\frac{{\sin 6x }}{{6x }}}  \\[6pt]
+&= \displaystyle  \dfrac{\mathop {\lim }\limits_{x  \to 0} 1}{\mathop {\lim }\limits_{x  \to 0} 6 \mathop {\lim }\limits_{x  \to 0} \frac{{\sin 6x }}{{6x }}}  \\[6pt]
+&= \displaystyle  \dfrac{1}{ 6(1)}  \\[6pt]
+&= \dfrac{1}{6}.
+\end{align*}
+Therefore, $\displaystyle \mathop {\lim }\limits_{x  \to 0} \frac{{x }}{{\sin 6x }} = \dfrac{1}{6}$.
+:::
+
+
+::: {style="color: green;"}
+**Example:**  Evaluate the following limit: $\displaystyle \mathop {\lim }\limits_{t \to 0} \frac{{\sin \left( {2t} \right)}}{{\sin \left( {9t} \right)}}$.
+:::
+
+
+::: {style="color: green;"}
+**Solution:**  Limit laws give us\begin{align*}
+\displaystyle \mathop {\lim }\limits_{t \to 0} \frac{{\sin \left( {2t} \right)}}{{\sin \left( {9t} \right)}}
+&= \displaystyle \mathop {\lim }\limits_{t \to 0} \frac{{\sin \left( {2t} \right)}}{{\sin \left( {9t} \right)}} \cdot \dfrac{2 \times 9}{2 \times 9}\\
+&= \displaystyle \mathop {\lim }\limits_{t \to 0} \frac{{\sin \left( {2t} \right)}}{2} \cdot \dfrac{9}{{\sin \left( {9t} \right)}} \cdot \dfrac{2}{9}\\
+&=   \dfrac{2}{9}.
+\end{align*}
+Therefore, $\displaystyle \mathop {\lim }\limits_{t \to 0} \frac{{\sin \left( {2t} \right)}}{{\sin \left( {9t} \right)}} =  \dfrac{2}{9}\\$.
+:::
+
+
+::: {style="color: green;"}
+**Example:**  Evaluate the following limit: $\displaystyle \mathop {\lim }\limits_{x \to 3} \frac{{\sin \left( {x - 3} \right)}}{{x - 3}}$.
+:::
+
+
+::: {style="color: green;"}
+**Solution:**    Let $t = x-3$, so as  $x \rightarrow 3$, we have $t \rightarrow 0$. \begin{align*}
+\displaystyle \mathop {\lim }\limits_{x \to 3} \frac{{\sin \left( {x - 3} \right)}}{{x - 3}} 
+&= \displaystyle \mathop {\lim }\limits_{t \to 0} \frac{{\sin \left( {t} \right)}}{{t}}\\
+&= 1.
+\end{align*}
+Therefore, $\displaystyle \mathop {\lim }\limits_{x \to 3} \frac{{\sin \left( {x - 3} \right)}}{{x - 3}} = 1$.
+:::
+
+
+
+
+::: {style="color: green;"}
+**Example:**  Evaluate the following limit: $\displaystyle \mathop {\lim }\limits_{z \to 0} \frac{{\cos \left( {3z} \right) - 1}}{z}$.
+:::
+
+::: {style="color: green;"}
+**Solution:**  We can use limit laws to see that
+\begin{align*} \mathop {\lim }\limits_{z \to 0} \frac{{\cos \left( {3z} \right) - 1}}{z} 
+&= \mathop {\lim }\limits_{z \to 0} \frac{{3\left( {\cos \left( {3z} \right) - 1} \right)}}{{3z}}\\ 
+&= 3\mathop {\lim }\limits_{z \to 0} \frac{{\cos \left( {3z} \right) - 1}}{{3z}}\\ 
+&= 3\left( 0 \right)\\ 
+&= 0 \end{align*}
+Therefore, $\displaystyle \mathop {\lim }\limits_{z \to 0} \frac{{\cos \left( {3z} \right) - 1}}{z} = 0$.
+:::
+
+
+
+Practice Problems 
+
+A.  Determine each of the following limits.
+
+
+*  $\displaystyle \mathop {\lim }\limits_{x \to 0}  \frac{\sin(x)}{4x}$
+
+*  $\displaystyle \mathop {\lim }\limits_{x \to 0} \frac{\sin(7x)}{x}$
+
+*  $\displaystyle \mathop {\lim }\limits_{x \to 0} \frac{x}{\sin(2x)}$
+
+*  $\displaystyle \mathop {\lim }\limits_{x \to 0} \frac{\sin(3x)}{\sin(4x)}$
+
+*  $\displaystyle \mathop {\lim }\limits_{x \to 3} \frac{\sin(x-3)}{x-3}$
+
+*  $\displaystyle \mathop {\lim }\limits_{x \to 6} \frac{\sin(x-6)}{6-x}$
+
+*  $\displaystyle \mathop {\lim }\limits_{x \to 0} \frac{\cos(2x)-1}{x}$
+
+*  $\displaystyle \mathop {\lim }\limits_{x \to 0} \frac{1-\cos(3x)}{x}$
+
+*  $\displaystyle \mathop {\lim }\limits_{x \to 0} \frac{\cos(8x)-1}{5x}$
+
+*  $\displaystyle \mathop {\lim }\limits_{x \to -4} \frac{\sin(x+4)}{3x+12}$
+
+*  $\displaystyle \mathop {\lim }\limits_{x \to 0} \frac{\cos(3x)-1}{1-\cos(5x)}$
+
+*  $\displaystyle \mathop {\lim }\limits_{x \to 0} \frac{\cos(5x)-1}{\sin(2x)}$
+
+*  $\displaystyle \mathop {\lim }\limits_{x \to 0} \frac{\sin(x^2)}{\cos(x^2)-1}$
+
+
+
+
+##  The Squeeze Theorem {-}
+
+The squeeze theorem says, in essence, that if we have a function $f$ and a function $h$ with $f(x) \geq h(x)$ but at a point $a$, the two graphs meet at some $y$-value $L$ (ie, share the same limit at $a$), and if there is a function $g$ that is sandwiched between $f$ and $h$, then it must also have that same limit at $a$.
+
+
+|![](Pic15.png)|
+|:--:|
+
+
+::: {style="color: blue;"}
+**Theorem (Squeeze Theorem):**   Suppose $f(x) \leq g(x) \leq h(x)$ are defined on some interval $I$ containing $a$ (though possibly not at $a$ itself), and suppose that \[\displaystyle\lim_{x \rightarrow a} f(x) = \displaystyle\lim_{x \rightarrow a} h(x) = L,\] then \[\displaystyle\lim_{x \rightarrow a} g(x) = L.\]
+:::
+
+While the Squeeze Theorem seems intuitively obvious, we will prove it formally in \autoref{CH:ProofOfTheSqueezeTheorem}.
+
+
+
+|![](Pic16.png)|
+|:--:|
+
+
+
+
+::: {style="color: green;"}
+**Example:**  Suppose there are three functions such that $f(x) \leq g(x) \leq h(x)$ when $x$ is near 6.  Further, suppose $f(x) = \frac{1}{3}x^3 - 3x^2 + 35$ and $h(x)= -\dfrac{\sin(x-6)}{x-6}$.
+
+Determine $\displaystyle\lim_{x \rightarrow 6} g(x)$.
+:::
+
+
+::: {style="color: green;"}
+**Solution:**  First, we determine $\displaystyle\lim_{x\to 6} f(x)$.
+\begin{align*}
+\displaystyle\lim_{x\to 6} f(x)
+& = \lim_{x\to 6}\left(\frac 1 3 x^3-3x^2+35\right)\\[6pt]
+& = \left(\frac 1 3 (6)^3-3(6)^2+35\right)\\[6pt]
+& = \left(72-108+35\right)\\[6pt]
+& = -1.
+\end{align*}
+
+Next, we find $\displaystyle\lim_{x\to 6} h(x)$.
+\begin{align*}
+\lim_{x\to 6} h(x)
+& = \lim_{x\to 6} -\dfrac{\sin(x-6)}{x-6}\\[6pt]
+& = \lim_{t\to 0} -\dfrac{\sin(t)}{t}\\[6pt]
+& = -1
+\end{align*}
+
+Since $\displaystyle\lim_{x\to 6} f(x) = \displaystyle\lim_{x\to 6} h(x) = -1$ and $f(x) \geq g(x) \geq h(x)$, we know that $\displaystyle\lim_{x\to 6} g(x) = -1$.
+:::
+
+|![](Pic17.png)|
+|:--:|
+
+::: {style="color: green;"}
+**Example:** Determine $\displaystyle\lim_{x \rightarrow 0} x^2\sin(1/x)$.
+:::
+
+::: {style="color: green;"}
+**Solution:** We know that $-1 \leq \sin(t) \leq 1$ for all values of $t$.  Hence, $-1 \leq \sin(1/x) \leq 1$ for all $x \not = 0$.  Therefore, \[-x^2 \leq x^2 \sin(1/x) \leq x^2,\] for all $x$.  We know that
+\begin{align*}
+\lim_{x\to 0} x^2
+& = \lim_{x\to 0} x \cdot \lim_{x\to 0} x\\[6pt]
+& = 0.
+\end{align*}
+And we also know that
+\begin{align*}
+\lim_{x\to 0} -x^2
+& = \lim_{x\to 0} -x \cdot \lim_{x\to 0} x\\[6pt]
+& = 0.
+\end{align*}
+Therefore, by the squeeze theorem \[\lim_{x \rightarrow 0} x^2 \sin(1/x) = 0.\]
+:::
+
+
+
+::: {style="color: green;"}
+**Example:** Without using the Power Rule for limits, show that $\displaystyle\lim_{x \rightarrow a} \sqrt{x} = \sqrt{a}$.
+:::
+
+::: {style="color: green;"}
+**Solution:** First, we note that \[\sqrt{x} - \sqrt{a} = \dfrac{(\sqrt{x} - \sqrt{a})(\sqrt{x} + \sqrt{a})}{\sqrt{x} + \sqrt{a}} = \dfrac{x-a}{\sqrt{x} + \sqrt{a}}.\]  Therefore, it must be true that \[\left|\sqrt{x} - \sqrt{a}\right| = \left|\dfrac{(\sqrt{x} - \sqrt{a})(\sqrt{x} + \sqrt{a})}{\sqrt{x} + \sqrt{a}} \right| \leq \dfrac{x-a}{\sqrt{a}},\] with the last inequality true by the fact that $\sqrt{a} \leq \sqrt{a} + \sqrt{x}$ for any $x \geq 0$.
+
+We therefore know that \[-\dfrac{x-a}{\sqrt{a}} \leq \left| \dfrac{(\sqrt{x} - \sqrt{a})(\sqrt{x} + \sqrt{a})}{\sqrt{x} + \sqrt{a}} \right| \leq \dfrac{x-a}{\sqrt{a}}.\]
+
+Clearly, \[\lim_{x \rightarrow a} -\dfrac{x-a}{\sqrt{a}} = \lim_{x \rightarrow a} \dfrac{x-a}{\sqrt{a}} = 0.\]  (It is OK to evaluate these limits even though they have absolute values since we would simply adjust the sign of the fraction depending on $x$).  Therefore, \[\lim_{x \rightarrow a} \sqrt{x} - \sqrt{a} = 0,\] which means that \[\lim_{x \rightarrow a} \sqrt{x} = \sqrt{a}.\]
+:::
+
+
+
+
+Practice Problems
+
+A.  Determine the value of each of the following limits.
+
+
+*  $\displaystyle\lim_{x \to 0^-} x^3 \cos(2/x)$
+
+*  $\displaystyle\lim_{x \to 0} |x|$
+
+*  $\displaystyle\lim_{x \to 0} x^2 e^{\sin(1/x)}$
+
+*  $\displaystyle\lim_{x \rightarrow 0} \sqrt{x^2 + 3x}\cos(1/x^2)$
+
+
+B.  Show that $\displaystyle\lim_{x \to a} |x| = |a|$.  Hint: Use cases.  Use the result to prove that $\displaystyle\lim_{x \rightarrow 0} \frac{|x|}{x}$ does not exist.
+
+C.  Assume that $\displaystyle\lim_{x \rightarrow -1^+} f(x)$ exists and that \[\dfrac{x^2 + x - 2}{x + 3} \leq \dfrac{f(x)}{x^2} \leq \dfrac{x^2 + 2x - 1}{x + 3}.\]  Find $\displaystyle\lim_{x \rightarrow -1^+} f(x).$
+
+D.  Consider the function \[f(x) = \begin{cases} 1 + x^4 & x \text{ is rational}\\ 1 + 2x^2 & x \text{ is irrational} \end{cases}.\]  Show that $\displaystyle\lim_{x \rightarrow 0} f(x) = 1.$
+
+
+
+#  2.4  The Precise Definition of a Limit {-}
+
+
+So far, we have used a fairly colloquial definition of a limit.  While a mathematician understands what is technically meant by terms like ``close enough'', it is important that we make these sorts of terms clear.  For that reason, we introduce the precise definition of a limit.
+
+::: {style="color: blue;"}
+**Definition:**  The statement $\displaystyle\lim_{x \rightarrow a} f(x) = L$ means given any real number $\varepsilon > 0$, there exists another real number $\delta > 0$ so that if $0 < |x-a| < \delta$, then $|f(x) - L| < \varepsilon$.
+:::
+
+In general, the value of $\delta$ will depend on the value of $\varepsilon$.  In light of that, we begin with $\varepsilon > 0$ and then determine an appropriate value of $\delta > 0$.  Of course, there are infinitely many values of $\delta$ that will work.  In particular, for any $\delta$ that works, all values on $(0,\delta)$ will also work.
+
+While this definition seems abstract, it is actually quite sensible.  The diagram below will help clarify what is going on.
+
+|![](Pic18.png)|
+|:--:|
+
+
+We begin by creating an $\varepsilon$ band around the number $L$ on the vertical axis.  You can think of this as \textit{how close do I need to be to $L$ on the $y$-axis}.  Based on that $\varepsilon$ band, we determine a value of $\delta$ so that a $\delta$ band around the number $a$ on the horizontal axis has corresponding $y$-values which all fall inside the $\varepsilon$ band.  If we can find a $\delta$ band no matter which value of $\varepsilon > 0$ is selected, we have proved that $L$ is the correct limit.  If not, then $L$ is not the limit or the limit does not exist.
+
+
+
+::: {style="color: green;"}
+**Example:**  Prove that $\displaystyle\lim_{x \rightarrow 8} 3x + 2 = 26$.
+:::
+
+
+::: {style="color: green;"}
+**Solution:**  Let $\varepsilon > 0$ be given.  Select $\delta = \varepsilon / 3$.  Let $|x-8| < \delta$.  We need to show that $|(3x+2) - 26| < \varepsilon$.  Observe that
+\begin{align*}  |(3x + 2)-26| &= |3x - 24|\\
+&=|3(x - 8)|\\
+&=|3||x-8|\\
+&< 3\delta\\
+&= 3(\varepsilon/3)\\
+&=\varepsilon.
+\end{align*}
+Therefore, since $|(3x+2)-26| < \varepsilon$ whenever $|x-8| < \delta$, we know $\displaystyle\lim_{x \rightarrow 8} 3x+2 = 26$.
+:::
+
+
+In order to determine the value of $\delta$ above, one needs to reverse engineer the problem.  The logical sequence that allows you to determine $\delta$ is the following:
+\begin{align*}  &&& &\hspace{-4in}|(3x + 2) - 26| &< \varepsilon&&&&&\text{ }\\
+&&\Leftrightarrow & &\|3x -24| &< \varepsilon\\
+&&\Leftrightarrow & &|3(x -8)| &< \varepsilon\\
+&&\Leftrightarrow & &3|x -8| &< \varepsilon\\
+&&\Leftrightarrow & &|x-8| &< \varepsilon/3 = \delta.
+\end{align*}
+By selecting $\delta = \varepsilon/3$, the logic will flow backward so that eventually $|(3x + 2)-26| < \varepsilon$.
+
+
+::: {style="color: green;"}
+**Example:**  Prove that $\displaystyle\lim_{x \rightarrow 1} 5-2x = 3$.
+:::
+
+
+::: {style="color: green;"}
+**Solution:**  Let $\varepsilon > 0$ be given.  Select $\delta = \varepsilon / 2$.  Let $|x-1| < \delta$.  We need to show that $|(5-2x) - 3| < \varepsilon$.  Observe that
+\begin{align*}  |(5-2x)-3| &= |2-2x|\\
+&=|2(1-x)|\\
+&=|2||1-x|\\
+&< 2\delta\\
+&= 2(\varepsilon/2)\\
+&=\varepsilon.
+\end{align*}
+Therefore, since $|(5-2x)-3| < \varepsilon$ whenever $|x-1| < \delta$, we know $\displaystyle\lim_{x \rightarrow 1} 5-2x = 3$.
+:::
+
+
+::: {style="color: green;"}
+**Example:**  Prove that $\displaystyle\lim_{x \rightarrow 3} x^2 + x = 12$.
+:::
+
+
+::: {style="color: green;"}
+**Solution:**  Let $\varepsilon > 0$ be given.  Select $\delta = \min(\varepsilon /8,1)$.  Let $|x-3| < \delta$.  We need to show that $|(x^2 + x) - 12| < \varepsilon$.  Observe that since $\delta \leq 1$, we know that $|x-3| \leq 1$.  So, $-1 \leq x-3 \leq 1$.  Therefore, $|x+4| \leq 8$.  With that in mind,
+\begin{align*}  |(x^2 + x) - 12| &= |x^2 + x - 12|\\
+&= |x^2 + x - 12|\\
+&= |(x+4)(x-3)|\\
+&= |x+4||x-3|\\
+&\leq 8|x-3|\\
+&< 8\delta\\
+&\leq 8 \varepsilon/8\\
+&=\varepsilon.
+\end{align*}
+Therefore, since $|(x^2 + x) - 12| < \varepsilon$ whenever $|x-3| < \delta$, we know $\displaystyle\lim_{x \rightarrow 3} x^2 + x = 12$.
+:::
+
+
+
+
+
+Practice Problems
+
+A.  Prove each of the following limits using an $\varepsilon$-$\delta$ argument.
+
+*  $\displaystyle\lim_{x \rightarrow 2} 7x - 3 = 11$
+
+*  $\displaystyle\lim_{x \rightarrow -1} 4 - 5x = 9$
+
+*  $\displaystyle\lim_{x \rightarrow 4} -5 - 2x = -13$
+
+*  $\displaystyle\lim_{x \rightarrow -2} 3x - 5 = -11$
+
+*  $\displaystyle\lim_{x \rightarrow 2} x^2 + 2 = 6$
+
+*  $\displaystyle\lim_{x \rightarrow -1} 3x^2 + 3 = 6$
+
+
+B.  Let $c$ be a constant, $a,n \in \mathbb{R}$ and $f$ and $g$ functions defined on some open interval containing $a$ (though possibly not at $a$ itself).  Prove each of the following:
+
+
+*  $\displaystyle\lim_{x \rightarrow a} c = c$  (Constant Law)
+
+*  $\displaystyle\lim_{x \rightarrow a} x = a$  (Identity Law)
+
+*  $\displaystyle\lim_{x \rightarrow a} f(x) \pm g(x) = L \pm M$ (Sum and Difference Laws)
+
+*  $\displaystyle\lim_{x \rightarrow a} cf(x) = c \displaystyle\lim_{x \rightarrow a} f(x) = cL$  (Constant Coefficient Law)
+
+*  $\displaystyle\lim_{x \rightarrow a} f(x) \cdot g(x) = \displaystyle\lim_{x \rightarrow a} f(x) \cdot \displaystyle\lim_{x \rightarrow a} g(x) = L \cdot M$ (Multiplication Law)
+
+*  $\displaystyle\lim_{x \rightarrow a} \frac{f(x)}{g(x)} = \dfrac{\displaystyle\lim_{x \rightarrow a} f(x)}{\displaystyle\lim_{x \rightarrow a} g(x)} = \dfrac{L}{M}$ (Division Law)
+
+*  $\displaystyle\lim_{x \rightarrow a} \left( f(x) \right)^n = \left(\displaystyle
+        \lim_{x \rightarrow a} f(x) \right)^n = L^n$ (Power Law)
+
+
+
+##  Proof of Limit Laws {-}
+
+In this section, we will prove the various limit laws using the precise definition of a limit.
+
+::: {style="color: blue;"}
+**Theorem (Limit Laws):**   Let $f$ and $g$ be functions, $c$ a constant and $a,n \in \mathbb{R}$.  Suppose $\displaystyle\lim_{x \rightarrow a} f(x) = L$ and $\displaystyle\lim_{x \rightarrow a} g(x) = M$ with $L,M \in \mathbb{R}$.  The following properties hold:
+
+*  $\displaystyle\lim_{x \rightarrow a} c = c$  (Constant Law)
+*  $\displaystyle\lim_{x \rightarrow a} x = a$  (Identity Law)
+*  $\displaystyle\lim_{x \rightarrow a} f(x) \pm g(x) = L \pm M$ (Sum and Difference Laws)
+*  $\displaystyle\lim_{x \rightarrow a} cf(x) = c \displaystyle\lim_{x \rightarrow a} f(x) = cL$  (Constant Coefficient Law)
+*  $\displaystyle\lim_{x \rightarrow a} f(x) \cdot g(x) = \displaystyle\lim_{x \rightarrow a} f(x) \cdot \displaystyle\lim_{x \rightarrow a} g(x) = L \cdot M$ (Multiplication Law)
+*  $\displaystyle\lim_{x \rightarrow a} \frac{f(x)}{g(x)} = \dfrac{\displaystyle\lim_{x \rightarrow a} f(x)}{\displaystyle\lim_{x \rightarrow a} g(x)} = \dfrac{L}{M}$, with $M \not = 0$ (Division Law)
+*  $\displaystyle\lim_{x \rightarrow a} \left( f(x) \right)^n = \left(\displaystyle\lim_{x \rightarrow a} f(x) \right)^n = L^n$ (Power Law)
+:::
+
+We prove each one of these below.
+
+::: {style="color: blue;"}
+**Theorem (Constant Law):**   Let $a \in \mathbb{R}$ and $c$ a constant.  Then, $\displaystyle\lim_{x \rightarrow a} c = c$. 
+:::
+
+::: {style="color: blue;"}
+**Proof:**   
+Let $\varepsilon > 0$ be given.  Select any $\delta > 0$ and take $|x-a| < \delta$.  In this situation, $f(x) = c$ and $L = c$.  Then $|f(x) - L| = |c - c| = 0 < \varepsilon$.  Therefore, by the precise definition of a limit, we have $\displaystyle\lim_{x \rightarrow a} c = c$.
+:::
+
+
+
+::: {style="color: blue;"}
+**Theorem (Identity Law):**   Let $a \in \mathbb{R}$.  Then, $\displaystyle\lim_{x \rightarrow a} x = a$. 
+:::
+
+::: {style="color: blue;"}
+**Proof:**   Let $\varepsilon > 0$ be given.  Select $\delta = \varepsilon$ and take $|x-a| < \delta$.  In this situation, $f(x) = x$ and $L = x$.  Then $|f(x) - L| = |x - a| < \delta = \varepsilon$.  Therefore, by the precise definition of a limit, we have $\displaystyle\lim_{x \rightarrow a} x = a$.
+:::
+
+
+::: {style="color: blue;"}
+**Theorem (Difference Law):**   Let $a \in \mathbb{R}$ and \[\displaystyle\lim_{x \rightarrow a} f(x) = L \; \text{ and } \; \displaystyle\lim_{x \rightarrow a} g(x) = M.\]  Then, $\displaystyle\lim_{x \rightarrow a} f(x) \pm g(x) = L \pm M$. 
+:::
+
+::: {style="color: blue;"}
+**Proof:**   Let $\varepsilon > 0$ be given.  Since $\displaystyle\lim_{x \rightarrow a} f(x) = L$, there exists $\delta_1>0$ such that \[|f(x) - L| < \varepsilon/2 \text{ whenever }|x-a| < \delta_1.\]  Since $\displaystyle\lim_{x \rightarrow a} g(x) = M$, there exists $\delta_2 >0$ such that \[|g(x) - M| < \varepsilon/2 \text{ whenever } |x-a| < \delta_2.\]
+
+Select $\delta = \min(\delta_1, \delta_2)$.  Take $|x-a| < \delta$.  In this case, both of the conditions above hold.  Then,
+\begin{align*}
+    |(f(x) \pm g(x)) - (L \pm M)| &= |(f(x) - L) \pm (g(x) - M)|\\
+    &\leq |f(x) - L| + |\pm g(x) - \pm M|\\
+    &\leq \varepsilon/2 + \varepsilon/2\\
+    &= \varepsilon.
+\end{align*}
+So, by the precise definition of a limit, we have $\displaystyle\lim_{x \rightarrow a} f(x) \pm g(x) = L \pm M$.
+:::
+
+
+
+
+::: {style="color: blue;"}
+**Theorem (Constant Coefficient Law):**   Let $a \in \mathbb{R}$ and $\displaystyle\lim_{x \rightarrow a} f(x) = L$.  Then, \[\displaystyle\lim_{x \rightarrow a} cf(x) = c \displaystyle\lim_{x \rightarrow a} f(x) = cL.\] 
+:::
+
+
+::: {style="color: blue;"}
+**Proof:**   If $c = 0$, the result follows from the Constant Law.
+
+Let $\varepsilon > 0$ be given and take $c \in \mathbb{R}$ with ($c \not = 0$).  Since $\displaystyle\lim_{x \rightarrow a} f(x) = L$, there exists $\delta>0$ such that \[|f(x) - L| < \varepsilon/c \text{ whenever }|x-a| < \delta.\]  Take $|x-a| < \delta$.  Then,
+\begin{align*}
+    |cf(x) - cL| &= |c(f(x) - L)|\\
+    &= c|f(x) - L|\\
+    &\leq c \varepsilon/c\\
+    &= \varepsilon.
+\end{align*}
+So, by the precise definition of a limit, we have $\displaystyle\lim_{x \rightarrow a} cf(x) = c \displaystyle\lim_{x \rightarrow a} f(x) = cL$.
+:::
+
+
+
+::: {style="color: blue;"}
+**Theorem (Multiplication Law):**   Let $a \in \mathbb{R}$ and \[\displaystyle\lim_{x \rightarrow a} f(x) = L \; \text{and} \; \displaystyle\lim_{x \rightarrow a} g(x) = M.\]  Then, \[\displaystyle\lim_{x \rightarrow a} f(x) \cdot g(x) = \displaystyle\lim_{x \rightarrow a} f(x) \cdot \displaystyle\lim_{x \rightarrow a} g(x) = L \cdot M.\] 
+:::
+
+
+::: {style="color: blue;"}
+**Proof:**   Let $\varepsilon > 0$ be given. Since $\displaystyle\lim_{x \rightarrow a} f(x) = L$, there exists a $\delta_1 > 0$ such that \[|f(x) - L| < \sqrt{\varepsilon} \; \text{ whenever} \; |x-a| < \delta_1.\]  Moreover, since $\displaystyle\lim_{x \rightarrow a} g(x) = M$, there exists a $\delta_2 > 0$ such that \[|g(x) - M| < \sqrt{\varepsilon} \; \text{ whenever} \; |x-a| < \delta_2.\]
+
+Select $\delta = \min(\delta_1, \delta_2)$.  Take $|x-a| < \delta$ and in this case, both of the previous conditions hold.  We note that
+\begin{align*}
+    |f(x)g(x) - LM| &= |(f(x) - L)(g(x) - M) - 0|\\
+    &= |f(x) - L||g(x) - M|\\
+    &\leq \sqrt{\varepsilon} \sqrt{\varepsilon}\\
+    &= \varepsilon.
+\end{align*}
+Therefore, we have shown that $\displaystyle\lim_{x \rightarrow a}\left[f(x)-L \right] \left[g(x) - M \right] = 0$.
+
+We now note that \[(f(x) - L)(g(x) - M) = f(x)g(x) - Mf(x) - Lg(x) + ML.\]  Rearranging, we find that \[f(x)g(x) = (f(x) - L)(g(x) - M)+ Mf(x) + Lg(x) - ML.\]
+
+We now can proceed with the proof.
+\begin{align*}\mathop {\lim }\limits_{x \to a} f\left( x \right)g\left( x \right)
+& = \mathop {\lim }\limits_{x \to a} \left[ {\left[ {f\left( x \right) - L} \right]\left[ {g\left( x \right) - M} \right] + Mf\left( x \right) + Lg\left( x \right) - LM} \right]\\
+&  = \mathop {\lim }\limits_{x \to a} \left[ {f\left( x \right) - L} \right]\left[ {g\left( x \right) - M} \right] + \mathop {\lim }\limits_{x \to a} Mf\left( x \right) + \mathop {\lim }\limits_{x \to a} Lg\left( x \right) - \mathop {\lim }\limits_{x \to a} LM\\
+&  = 0 + \mathop {\lim }\limits_{x \to a} Mf\left( x \right) + \mathop {\lim }\limits_{x \to a} Lg\left( x \right) - \mathop {\lim }\limits_{x \to a} LM\hspace{0.5in}\hspace{0.5in}\\
+&  = LM + LM - LM\\
+&  = LM.
+\end{align*}
+So, by the precise definition of a limit, we have \[\displaystyle\lim_{x \rightarrow a} f(x) \cdot g(x) = \displaystyle\lim_{x \rightarrow a} f(x) \cdot \displaystyle\lim_{x \rightarrow a} g(x) = L \cdot M.\]
+:::
+
+
+
+::: {style="color: blue;"}
+**Theorem (Division Law):**   Let $a \in \mathbb{R}$ and \[\displaystyle\lim_{x \rightarrow a} f(x) = L \; \text{and} \; \displaystyle\lim_{x \rightarrow a} g(x) = M.\]  Then, \[\displaystyle\lim_{x \rightarrow a} \frac{f(x)}{g(x)} = \dfrac{\displaystyle\lim_{x \rightarrow a} f(x)}{\displaystyle\lim_{x \rightarrow a} g(x)} = \dfrac{L}{M}$, with $M \not = 0.\] 
+:::
+
+
+::: {style="color: blue;"}
+**Proof:**   We begin by proving that \[\displaystyle\lim_{x \rightarrow a} \frac{1}{g(x)} = \dfrac{1}{M}.\]  Let $\varepsilon > 0$.  Because $\displaystyle\lim_{x \rightarrow a} g(x) = M$, there is a $\delta_1 > 0$ such that \[\left| {g\left( x \right) - M} \right| < \frac{{\left| M \right|}}{2}\hspace{0.5in}{\mbox{whenever}}\hspace{0.5in}0 < \left| {x - a} \right| < {\delta _{\,1}}.\]  If $|x-a| < \delta_1$, we have,
+\begin{align*}
+\left| M \right| & = \left| {M - g\left( x \right) + g\left( x \right)} \right| \\
+&  \le \left| {M - g\left( x \right)} \right| + \left| {g\left( x \right)} \right| \\
+&  = \left| {g\left( x \right) - M} \right| + \left| {g\left( x \right)} \right|\\
+&  < \frac{{\left| M \right|}}{2} + \left| {g\left( x \right)} \right|.\end{align*}
+So, we have $\left| M \right| < \frac{{\left| M \right|}}{2} + \left| {g\left( x \right)} \right|$.  Thus, we can bound $g(x)$  by $\frac{{\left| M \right|}}{2} < \left| {g\left( x \right)} \right|$ or that \[\frac{1}{{\left| {g\left( x \right)} \right|}} < \frac{2}{{\left| M \right|}}.\]
+
+There is also a $\delta_2 > 0$ such that \[\left| {g\left( x \right) - M} \right| < \frac{{{{\left| M \right|}^2}}}{2}\varepsilon \hspace{0.5in}{\mbox{whenever}}\hspace{0.5in} \left| {x - a} \right| < {\delta _{\,2}}.\]
+
+Now, select $\delta = \min(\delta_1, \delta_2)$.  If $|x-a| < \delta$, we have
+\begin{align*}\left| {\frac{1}{{g\left( x \right)}} - \frac{1}{M}} \right| & = \left| {\frac{{M - g\left( x \right)}}{{Mg\left( x \right)}}} \right|\\
+&  = \frac{1}{{\left| {Mg\left( x \right)} \right|}}\left| {M - g\left( x \right)} \right|\\
+&  = \frac{1}{{\left| M \right|}}\frac{1}{{\left| {g\left( x \right)} \right|}}\left| {g\left( x \right) - M} \right|\\
+&  < \frac{1}{{\left| M \right|}}\frac{2}{{\left| M \right|}}\left| {g\left( x \right) - M} \right|\\
+&  < \frac{2}{{{{\left| M \right|}^2}}}\frac{{{{\left| M \right|}^2}}}{2}\varepsilon\\
+&  = \varepsilon. \end{align*}
+
+Now that we proved that $\mathop {\lim }\limits_{x \to a} \frac{1}{{g\left( x \right)}} = \frac{1}{M}$, the result follows since
+\begin{align*}\mathop {\lim }\limits_{x \to a} \left[ {\frac{{f\left( x \right)}}{{g\left( x \right)}}} \right] & = \mathop {\lim }\limits_{x \to a} \left[ {f\left( x \right)\frac{1}{{g\left( x \right)}}} \right]\\
+&  = \mathop {\lim }\limits_{x \to a} f\left( x \right)\mathop {\lim }\limits_{x \to a} \frac{1}{{g\left( x \right)}}\\
+&  = L\frac{1}{M}\\
+&  = \frac{L}{M}.\end{align*}
+:::
+
+
+At this point, we are unable to prove the general version of the power law.  Instead, we prove it in the case where $n \in \mathbb{Z}^+$.
+
+
+::: {style="color: blue;"}
+**Theorem (Power Law):**   Let $a \in \mathbb{R}$, $n \in \mathbb{Z}^+$, and \[\displaystyle\lim_{x \rightarrow a} f(x) = L.\]  Then, \[\displaystyle\lim_{x \rightarrow a} \left( f(x) \right)^n = \left(\displaystyle\lim_{x \rightarrow a} f(x) \right)^n = L^n.\]
+:::
+
+::: {style="color: blue;"}
+**Proof:**   We prove this law by induction.  When $n = 2$,
+\[\mathop {\lim }\limits_{x \to a} {\left[ {f\left( x \right)} \right]^2} = \mathop {\lim }\limits_{x \to a} f\left( x \right)f\left( x \right) = \mathop {\lim }\limits_{x \to a} f\left( x \right)\mathop {\lim }\limits_{x \to a} f\left( x \right) = LL = {L^2}.\]
+Assume that this rule holds for some integer $k > 2$.  In this case, we know that \[\displaystyle\lim_{x \rightarrow a} \left( f(x) \right)^k = \left(\displaystyle\lim_{x \rightarrow a} f(x) \right)^k = L^k.\]  We need to show that the property holds for $k+1$.
+Observe that
+\begin{align*}\mathop {\lim }\limits_{x \to a} {\left[ {f\left( x \right)} \right]^{k+1}} & = \mathop {\lim }\limits_{x \to a} \left( {{{\left[ {f\left( x \right)} \right]}^{k}}f\left( x \right)} \right)\\
+&  = \mathop {\lim }\limits_{x \to a} {\left[ {f\left( x \right)} \right]^{k}}\mathop {\lim }\limits_{x \to a} f\left( x \right)\\
+&  = {L^{k}}L\\
+&  = {L^{k+1}}.\end{align*}
+So, by the first principle of mathematical induction, \[\displaystyle\lim_{x \rightarrow a} \left( f(x) \right)^n = \left(\displaystyle\lim_{x \rightarrow a} f(x) \right)^n = L^n.\]
+:::
+
+
+
+Practice Problems
+
+A.  Prove each of the following results.
+
+*  $\displaystyle\lim_{x \rightarrow a} \sqrt{x} = \sqrt{a}$ for $a > 0$.
+
+*  $\displaystyle\lim_{x \rightarrow a} x^{2/3} = a^{2/3}$
+
+*  $\displaystyle\lim_{x \rightarrow a} f(x)g(x)h(x) = \displaystyle\lim_{x \rightarrow a} f(x)\displaystyle\lim_{x \rightarrow a} g(x)\displaystyle\lim_{x \rightarrow a} h(x)$
+
+*  $\displaystyle\lim_{x \rightarrow a} \dfrac{1}{\sqrt{x}}=\dfrac{1}{\sqrt{a}}$, for $a > 0$
+
+
+
+B.  Let $\displaystyle\lim_{x \rightarrow a} f(x) = \infty$ and $\lim_{x \rightarrow a} g(x) = L$ for some real numbers $c$ and $L$.  Prove each of the following properties:
+
+
+*  $\displaystyle\lim_{x \rightarrow a} f(x) \pm g(x) = \infty$
+
+*  $\displaystyle\lim_{x \rightarrow a} f(x)g(x) = \infty$, if $L>0$
+
+*  $\displaystyle\lim_{x \rightarrow a} f(x)g(x) = -\infty$, if $L < 0$
+
+*  $\displaystyle\lim_{x \rightarrow a} \dfrac{g(x)}{f(x)} = 0$
+
+
+
+##  Proofs of Trigonometric Limits {-}
+
+::: {style="color: blue;"}
+**Theorem:**   $\displaystyle\lim_{\theta \rightarrow 0} \dfrac{\sin \theta}{\theta} = 1$.
+:::
+
+::: {style="color: blue;"}
+**Proof:**   Let $\varepsilon > 0$ be given.  Select $\delta = \min(2/\varepsilon, 1)$.  Take $|x-0| < \delta$.  We need to show that $|\dfrac{\sin(x)}{x} -1| < \varepsilon$.  Since $|x| < \delta$, we know that $|x|<1$.  Observe that
+\begin{align*} |\dfrac{\sin(x)}{x} -1| &= |\dfrac{\sin(x) - x}{x}|\\
+&= \dfrac{|\sin(x) - x|}{|x|}\\
+&\leq \dfrac{|\sin(x)|+ |x|}{|x|}\\
+&\leq \dfrac{1 + |x|}{|x|}\\
+&\leq \dfrac{1 + 1}{|x|}\\
+&= \dfrac{2}{|x|}\\
+&\leq \dfrac{2}{\delta}\\
+&\leq \dfrac{2}{2/\varepsilon}\\
+&\leq \varepsilon.
+\end{align*}
+Therefore, by the precise definition of a limit, we know $\displaystyle\lim_{\theta \rightarrow 0} \dfrac{\sin \theta}{\theta} = 1$.
+:::
+
+::: {style="color: blue;"}
+**Theorem:**   $\displaystyle\lim_{\theta \rightarrow 0} \dfrac{\cos \theta - 1}{\theta} = 0$.
+:::
+
+::: {style="color: blue;"}
+**Proof:**   We prove the theorem directly.
+\begin{align*} \displaystyle\lim_{\theta \rightarrow 0} \dfrac{\cos \theta - 1}{\theta} &= \displaystyle\lim_{\theta \rightarrow 0} \dfrac{\cos \theta - 1}{\theta} \times \dfrac{\cos \theta + 1}{\cos \theta + 1}\\
+&= \displaystyle\lim_{\theta \rightarrow 0} \dfrac{\cos^2 \theta - 1}{\theta(\cos \theta + 1)} \\
+&= \displaystyle\lim_{\theta \rightarrow 0} \dfrac{-\sin^2 \theta}{\theta(\cos \theta + 1)} \\
+&= \displaystyle\lim_{\theta \rightarrow 0} \dfrac{\sin \theta}{\theta} \times \dfrac{-\sin \theta}{\cos \theta + 1} \\
+&= \displaystyle\lim_{\theta \rightarrow 0} \dfrac{\sin \theta}{\theta} \times \displaystyle\lim_{\theta \rightarrow 0}\dfrac{-\sin \theta}{\cos \theta + 1} \\
+&= 1 \times \dfrac{-\sin(0)}{\cos(0) + 1} \\
+&= 1 \times \dfrac{0}{1 + 1} \\
+&= 0.
+\end{align*}
+Therefore, $\displaystyle\lim_{\theta \rightarrow 0} \dfrac{\cos \theta - 1}{\theta} = 0$.
+:::
+
+
+##  Limits at Infinity by Definition {-}
+
+We have dealt with the precise definition of a limit as it relates to limits as finite values.  We now discuss limits of functions at infinity.
+
+::: {style="color: blue;"}
+**Definition:**  Let $f$ be a function defined on the interval $(a, \infty)$ for some $a \in \mathbb{R}$.  Then \[\lim_{x \rightarrow \infty} f(x) = L,\] if for any given $\varepsilon > 0$, there exists an $M > 0$ such that \[|f(x) - L| < \varepsilon \;\;\; \text{provided} \;\;\; x > M.\]
+:::
+
+
+
+|![](Pic19.png)|
+|:--:|
+
+
+::: {style="color: blue;"}
+**Definition:**  
+Let $f$ be a function defined on the interval $(-\infty, b)$ for some $b \in \mathbb{R}$.  Then \[\lim_{x \rightarrow -\infty} f(x) = L,\] if for any given $\varepsilon > 0$, there exists an $M > 0$ such that \[|f(x) - L| < \varepsilon \;\;\; \text{provided} \;\;\; x < M.\]
+:::
+
+For an infinite limit to exist, the value of the function must be asymptotic to the limit value.  This means that as $x$ exceeds some value $M$ (either in the positive or negative direction), the function value must be within $\varepsilon$ units from the limit value for every $x$ beyond $M$.
+
+
+
+|![](Pic20.png)|
+|:--:|
+
+
+::: {style="color: green;"}
+**Example:** Use the precise definition of a limit to show that $\displaystyle\lim_{x \rightarrow \infty} \dfrac{1}{x} = 0$.
+:::
+
+
+::: {style="color: green;"}
+**Solution:** Let $\varepsilon > 0$ be given. We need to find an $M > 0$ such that \[|\dfrac{1}{x} - 0|  = \dfrac{1}{|x|} < \varepsilon,\] provided $x > M$.  Take $M = \dfrac{1}{\varepsilon}$.  Then for any $x > M$, we have
+\begin{align*} \left|\dfrac{1}{x} - 0 \right| &= \dfrac{1}{|x|}\\
+&< \dfrac{1}{M}\\
+&= \dfrac{1}{1/\varepsilon}\\
+&= \varepsilon. \end{align*}
+Since $\left|\dfrac{1}{x} - 0 \right| < \varepsilon$, we have shown that \[ \lim_{x \rightarrow \infty} \dfrac{1}{x} = 0.\]
+:::
+
+
+Practice Problems 
+
+A.  Prove each of the following limits using the precise definition of a limit.
+
+*  $\displaystyle\lim_{x \rightarrow \infty} \dfrac{1}{x} +3 = 3$
+
+*  $\displaystyle\lim_{x \rightarrow \infty} \dfrac{1}{x^2} = 0$
+
+*  $\displaystyle\lim_{x \rightarrow -\infty} \dfrac{1}{x} = 0$
+
+*  $\displaystyle\lim_{x \rightarrow \infty} \dfrac{1}{\sqrt{x}} = 0$
+
+*  $\displaystyle\lim_{x \rightarrow \infty} \ln(1+1/x) = 0$
+
+*  $\displaystyle\lim_{x \rightarrow \infty} \dfrac{1}{e^x}=0$
+
+
+\noindent B.  If $r$ is a positive rational number and $c$ is any real number, prove \[\lim_{x \rightarrow \infty} \dfrac{c}{x^r} = 0.\]
+
+
+\noindent C.  If $r$ is a positive rational number, $c$ is any real number and $x^r$ is defined for $x < 0$, prove \[\lim_{x \rightarrow -\infty} \dfrac{c}{x^r} = 0.\]
+
+\noindent D.  If $p(x) = a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1x + a_0$ is a polynomial of degree $n$, prove \[\lim_{x \rightarrow \infty} p(x) = \lim_{x \rightarrow \infty} a_nx^n.\]
+
+
+
+
+
+## Proof of Direct Substitution Property {-}
+
+
+We are now in a position to prove the direct substitution property for polynomials and rational functions.
+
+::: {style="color: blue;"}
+**Theorem (The Direct Substitution Property for Polynomials):**   If $p$ is a polynomial then \[\lim_{ x \rightarrow a} p(x) = p(a).\]
+:::
+
+
+::: {style="color: blue;"}
+**Proof:**   Let $p$ be any polynomial.  Let $q(x) = p(x) - p(a)$.  The polynomial $q$ has a root at $a$.  Thus, $x-a$ divides $q$.  Set \[\dfrac{q(x)}{x-a} = b_nx^n + b_{n-1}x^{n-1} + \cdots + b_1x + b_0.\]  Let $\varepsilon > 0$ be given.  We have two cases depending on whether $a = 0$ or $a \not = 0$.
+
+\noindent CASE 1:  If $a = 0$, set $\delta = \min(\varepsilon/c,1)$ where $c = \sum_{i=0}^n |b_i|$.  Suppose that $|x| < \delta$.  Since $|x| < 1$, we know
+\begin{align*}  \left|\dfrac{q(x)}{x-a} \right| &= \left|b_nx^n + b_{n-1}x^{n-1} + \cdots + b_1x + b_0 \right|\\
+&\leq |b_nx^n| + |b_{n-1}x^{n-1}| + \cdots + |b_1x| + |b_0|\\
+&= |b_n||x|^n + |b_{n-1}||x|^{n-1} + \cdots + |b_1||x| + |b_0|\\
+&< |b_n| + |b_{n-1}| + \cdots + |b_1| + |b_0|\\
+&= c
+\end{align*}
+Since $|x| < \dfrac{\varepsilon}{c}$, we have
+\begin{align*} |q(x)| &= |p(x)-p(a)|\\
+&=|x| \cdot |b_nx^n + b_{n-1}x^{n-1} + \cdots + b_1x + b_0|\\
+&\leq \dfrac{\varepsilon}{c} \cdot c\\
+&= \varepsilon.
+\end{align*}
+
+\noindent CASE 2:  If $a \not = 0$, set $\delta = \min(\varepsilon/c, |a|)$ where $c = \sum_{i=0}^n |b_i||2a|^i$.  Suppose $|x-a| < \delta$.  Since $|x-a| < |a|$, we have $|x| < 2|a|$ so that
+\begin{align*}  \left|\dfrac{q(x)}{x-a} \right| &= |b_nx^n + b_{n-1}x^{n-1} + \cdots + b_1x + b_0|\\
+&\leq |b_nx^n| + |b_{n-1}x^{n-1}| + \cdots + |b_1x| + |b_0|\\
+&= |b_n||x|^n + |b_{n-1}||x|^{n-1} + \cdots + |b_1||x| + |b_0|\\
+&< |b_n||2a|^n + |b_{n-1}||2a|^{n-1} + \cdots + |b_1||2a| + |b_0|\\
+&= c.
+\end{align*}
+Since $|x| < \dfrac{\varepsilon}{c}$, we have
+\begin{align*} |q(x)| &= |p(x)-p(a)|\\
+&=|x| \cdot |b_nx^n + b_{n-1}x^{n-1} + \cdots + b_1x + b_0|\\
+&\leq \dfrac{\varepsilon}{c} \cdot c\\
+&= \varepsilon.
+\end{align*}
+:::
+
+
+::: {style="color: blue;"}
+**Corollary (Direct Substitution Property for Rational Functions):**   If $f$ is a rational function, and $a$ is in the domain of $f$, then \[\lim_{ x \rightarrow a} f(x) = f(a).\]
+:::
+
+::: {style="color: blue;"}
+**Proof:**   This follows directly from the Division Law for limits and the Direct Substitution Property for Polynomials.
+:::
+
+
+
+Practice Problems
+
+
+Prove each of the following functions has the direct substitution property on their domain.
+
+*  $f(x) = \sin(x)$
+
+*  $f(x) = \cos(x)$
+
+*  $f(x) = \tan(x)$
+
+*  $f(x) = \sec(x)$
+
+*  $f(x) = \csc(x)$
+
+*  $f(x) = \cot(x)$
+
+
+
+##  Proof of The Squeeze Theorem {-}
+
+::: {style="color: blue;"}
+**Theorem (Squeeze Theorem):**  Suppose $f(x) \leq g(x) \leq h(x)$ are defined on some interval $I$ containing $a$ (though possibly not at $a$ itself), and suppose that \[\displaystyle\lim_{x \rightarrow a} f(x) = \displaystyle\lim_{x \rightarrow a} h(x) = L,\] then \[\displaystyle\lim_{x \rightarrow a} g(x) = L.\]
+:::
+
+
+
+|![](Pic21.png)|
+|:--:|
+
+
+
+
+::: {style="color: blue;"}
+**Proof:** Let $\varepsilon > 0$ be given.  Suppose $\displaystyle\lim_{x \rightarrow a} f(x) = \displaystyle\lim_{x \rightarrow a} h(x) = L$ and that $f(x) \leq g(x) \leq h(x)$.  We need to show that \[\lim_{x \rightarrow a} g(x) = L.\]  Since $\displaystyle\lim_{x \rightarrow a} f(x) = \displaystyle\lim_{x \rightarrow a} h(x) = L$, we know there exist $\delta_1$ and $\delta_2$ such that $|f(x) - L| < \varepsilon$ and $|h(x) - L| < \varepsilon$ for $|x-a| < \delta_1$ and $|x-a| < \delta_2$.  Define $\delta = \min(\delta_1, \delta_2)$.  Take $|x-a| < \delta$.  Then $L-\varepsilon < f(x)$ and $l+ \varepsilon > h(x)$.  So, for $|x-a| < \delta$, we have \[L-\varepsilon < f(x) \leq g(x) \leq h(x) < L+ \varepsilon.\]  This implies that $L-\varepsilon < g(x) < L + \varepsilon$ or that $|g(x) - L| < \varepsilon$.  Hence, \[\displaystyle\lim_{x \rightarrow a} g(x) = L.\]
+:::
+
+
+
+#  2.5  Continuity {-} 
+
+##  Limits and Continuity {-}
+
+Let $f$ be a function defined on some interval $(a,b)$ and $c \in (a,b)$.  We say that $f$ is continuous at $c$ if three things happen:
+
+1.  $f(c)$ exists
+2.  $\displaystyle\lim_{x \rightarrow c} f(x)$ exists
+3.  $\displaystyle\lim_{x \rightarrow c} f(x) = f(c)$.
+
+
+We will see why each of these properties is necessary to ensure continuity.  We define continuity in a more compact version below.
+
+::: {style="color: blue;"}
+**Definition:**  A function $f$ is continuous at a point $c$ if $\displaystyle\lim_{x \rightarrow c} f(x) = f(c)$.
+:::
+
+We say that $f$ is continuous on an open interval $I$ if $f$ is continuous at every point $c \in I$.
+
+Note that each of the three properties listed in the introduction must occur in order for $f$ to satisfy the definition of continuity.
+
+
+
+::: {style="color: green;"}
+**Example:**  Prove that $f(x) = 3x^2 - 5x + 1$ is continuous at 6.
+:::
+
+::: {style="color: green;"}
+**Solution:**  We need to determine three things:
+
+*  Does $f(6)$ exist?
+*  Does $\displaystyle\lim_{x \rightarrow 6} f(x)$ exist?
+*  Is $\displaystyle\lim_{x \rightarrow 6} f(x) = f(6)$?
+
+
+
+First, we know that $f(6) = 3(6)^2 - 5(6) + 1 = 79$.  So, $f(6)$ exists.
+
+Next, we note that $f$ is a polynomial and hence we can use the limit laws to evaluate $\displaystyle\lim_{x \rightarrow 6} f(x)$.
+\begin{align*}
+\lim_{x \rightarrow 6} f(x) &= \lim_{x \rightarrow 6} 3x^2 - 5x + 1  \\[6pt]
+&= \lim_{x \rightarrow 6} 3x^2 -  \lim_{x \rightarrow 6} 5x +  \lim_{x \rightarrow 6} 1  && \mbox{Sum and Difference Laws}\\[6pt]
+&= 3\lim_{x \rightarrow 6} x^2 -  5\lim_{x \rightarrow 6} x +  \lim_{x \rightarrow 6} 1  && \mbox{Constant Coefficient Law}\\[6pt]
+&= 3\left(\lim_{x \rightarrow 6} x \right)^2 -  5\lim_{x \rightarrow 6} x +  \lim_{x \rightarrow 6} 1  && \mbox{Power Law}\\[6pt]
+&= 3\left(6 \right)^2 -  5(6) +  \lim_{x \rightarrow 6} 1  && \mbox{Identity Law}\\[6pt]
+&= 108 - 30 +  1  && \mbox{Constant Law}\\[6pt]
+&= 79.
+\end{align*}  So, $\displaystyle\lim_{x \rightarrow 6} f(x)$ exists.\\
+
+Finally, since $\displaystyle\lim_{x \rightarrow 6} f(x) = 79 = f(6)$, the function $f(x) = 3x^2 - 5x + 1$ is continuous at 6.
+:::
+
+::: {style="color: blue;"}
+**Theorem (Continuity of Polynomials):**   All polynomials are continuous on $\mathbb{R}$.
+:::
+
+::: {style="color: blue;"}
+**Proof:**   All polynomials have the form $$P(x) = c_n x^n + c_{n-1}x^{n-1} + \cdots + c_1 x + c_0.$$  Let $a \in \mathbb{R}$.  Clearly, $P(a) = c_n a^n + c_{n-1}a^{n-1} + \cdots + c_1 a + c_0$.  However, we can also see that \begin{align*}  \lim_{x \rightarrow a} P(x) &= \lim_{x \rightarrow a} c_n x^n + c_{n-1}x^{n-1} + \cdots + c_1 x + c_0  \\[6pt]
+&= \lim_{x \rightarrow a} c_n x^n + \lim_{x \rightarrow a} c_{n-1}x^{n-1} + \cdots + \lim_{x \rightarrow a} c_1 x + \lim_{x \rightarrow a} c_0  && \mbox{Sum and Difference Laws}\\[6pt]
+&= c_n\lim_{x \rightarrow a} x^n + c_{n-1}\lim_{x \rightarrow a} x^{n-1} + \cdots + c_1\lim_{x \rightarrow a} x + \lim_{x \rightarrow a} c_0  && \mbox{Constant Coefficient Law}\\[6pt]
+&= c_n \left(\lim_{x \rightarrow a} x\right)^n + c_{n-1}\left(\lim_{x \rightarrow a} x\right)^{n-1} + \cdots + c_1\lim_{x \rightarrow a} x + \lim_{x \rightarrow a} c_0  && \mbox{Power Law}\\[6pt]
+&= c_n \left( a \right)^n + c_{n-1}\left( a \right)^{n-1} + \cdots + c_1(a) + \lim_{x \rightarrow a} c_0  && \mbox{Identity Law}\\[6pt]
+&= c_n a^n + c_{n-1}a^{n-1} + \cdots + c_1a +  c_0  && \mbox{Constant Law,}
+\end{align*}
+which is exactly $P(a)$.  Hence, $P(x)$ is continuous on $\mathbb{R}$ since $a$ was arbitrarily selected.
+:::
+
+
+::: {style="color: green;"}
+**Example:**  Find a value of $c$ for which the function $f(x) = \begin{cases} 3x^2 - 1 & x \geq 5\\ 2x + c & x < 5 \end{cases}$ is continuous at 5.
+:::
+
+::: {style="color: green;"}
+**Proof:**  First, since both pieces of $f$ are polynomials, we know that $f$ is continuous on $\mathbb{R}$ except possibly at 5.  Since $f(5) = 3(5)^2 - 1 = 74$, we need to find a value $c$ so that $\displaystyle\lim_{x \rightarrow 5} f(x) = 74$.
+
+Evaluating the right side limit,
+\begin{align*}  \lim_{x \rightarrow 5^+} f(x) &= \lim_{x \rightarrow 5^+} 3x^2 - 1 \\
+&= 3(5)^2 - 1  && \mbox{since the polynomial is continuous at 5}\\[6pt]
+&= 74.
+\end{align*}
+
+Evaluating the left side limit,
+\begin{align*}  \lim_{x \rightarrow 5^-} f(x) &= \lim_{x \rightarrow 5^-} 2x + c \\
+&= 2(5) + c  && \mbox{since the polynomial is continuous at 5}\\[6pt]
+&= 10 + c.
+\end{align*}
+
+For the limit to exist the left limit (74) must be the same as the right limit ($10 + c$).  Hence, $74 = 10 + c$ or $c = 64$.  Now, the left limit is the same as the right limit at 5 (both are 74) and the limit is equal to $f(5)$.  Hence, $c = 64$ ensures that $f$ is continuous at 5 and therefore on $\mathbb{R}$.
+:::
+
+
+Practice Problems
+
+A.  Determine if the given functions are continuous at the given value of $a$:
+
+*  $f(x) = 2x^3 - 5x^2 + 1$ at $a = 3$
+
+*  $g(x) = -3x^2 + 5x + 2$ at $a = 1$
+
+*  $f(x) = \sqrt{x - 1} + 5$ at $a = 10$
+
+*  $f(x) = \left(x^2 - x + 1 \right)^3$ at $a = -2$
+
+*  $f(x) = \frac{x^2 - x -6}{x-3}$ at $a = 2$
+
+*  $f(x) = \frac{x^2 - 2x -8}{x-1}$ at $a = 5$
+
+
+B.  Determine a value $c$ so that the given functions are continuous at the given value of $a$:
+
+*  $f(x) = \begin{cases} 3x + 2 & x > 3\\ x-c & x \leq 3 \end{cases}\;\;$ at $a = 3$
+
+*  $g(x) = \begin{cases} x^2 + 2 & x > 1\\ \sqrt{x} - c & x \leq 1 \end{cases}\;\;$ at $a = 1$
+
+*  $f(x) = \begin{cases} |x - 20| & x \geq 10\\ c\sqrt{x-6} + 2 & x < 10 \end{cases}\;\;$ at $a = 10$
+
+*  $f(x) = \begin{cases} x^3 + 2x + c & x \not = -2\\ -11 & x = -2 \end{cases}\;\;$ at $a = -2$
+
+
+
+
+##  Types of Discontinuities {-}
+
+Recall that for a function $f$ to be continuous at $c$, three things must happen:
+
+*  $f(c)$ exists
+*  $\displaystyle\lim_{x \rightarrow c} f(x)$ exists
+*  $\displaystyle\lim_{x \rightarrow c} f(x) = f(c)$.
+
+In this section we will show examples where $f$ fails to have one or more of these properties and what results is a function that is discontinuous.
+
+One way to think about continuity is in terms of drawing a graph.  If you can draw the graph of a function without lifting your pen, the function is continuous.  The graph below is one where $f(c)$ does not exist.  The missing point at $(1,1)$ causes a discontinuity.  Hence, it is important that the function is defined at all points.  This type of discontinuity is called a removable\index{removable discontinuity} discontinuity.
+
+
+
+|![](Pic22.png)|
+|:--:|
+
+
+
+The next two graphs illustrate what may happen if the $\displaystyle\lim_{x \rightarrow c} f(x)$ does not exist.  In the first one, the graph jumps at the point $x = 1$.  This is called a jump\index{jump discontinuity} discontinuity.  
+
+
+
+
+|![](Pic23.png)|
+|:--:|
+
+In the second graph, the limit is infinite as $x$ approaches 1.  This type of discontinuity is called an infinite\index{infinite discontinuity} discontinuity.
+
+|![](Pic24.png)|
+|:--:|
+
+
+Having the function defined at all points and a limit value at every point is still insufficient for continuity.  The graph below is another type of removable discontinuity.  In this case, the limit value is different than the function value.  Hence, part three of our rules is necessary to ensure that the function value is equal to the limit value.
+
+
+
+|![](Pic26.png)|
+|:--:|
+
+
+
+Only when all three properties are satisfied do we get a graph of a continuous function.
+
+
+
+The idea of \textit{one sided continuity}\index{one sided continuity} follows in a natural way.  The graph below is continuous on $[0, \infty)$.  It is continuous at 0 from the right because, rather than taking a two-sided limit, we simply take the limit from the right.
+
+
+|![](Pic25.png)|
+|:--:|
+
+Since continuity is generally a concept for functions on an open interval, we extend the idea to functions on a closed interval by simply restricting the limit requirement to being a one-sided limit for the endpoints.  Hence, a function like $f(x) = \sqrt{x}$ is continuous on $[0,\infty)$ since it is continuous at all points in $(0,\infty)$ and also continuous from the right at 0.
+
+
+Practice Problems
+
+A.  Sketch a graph of a function with the following properties:
+\begin{enumerate}
+
+*  $f$ is defined on $[-3,3)$, there is a jump discontinuity at $x = -2$ and a removable discontinuity at $x = 0$.  The function $f$ is continuous from the right at $x = -3$ and $f(-3) = 5$.
+
+*  $f$ is defined on $[-10,8]$, there is a jump discontinuity at $x = 0$, an infinite discontinuity at $x = -2$, a removable discontinuity at $x = 4$ and $f(4)$ does not exist.  The function $f$ is discontinuous at both endpoints.
+
+*  $f$ is defined on $[-5,5]$, there is a jump discontinuity at $x = -1$, an infinite discontinuity at $x = -3$, a removable discontinuity at $x = 2$ and $f(2) = 1$.  The function $f$ is continuous from the right at $x = -5$ but is not continuous from the left at $x = 5$.
+
+
+
+B.  Determine where the given functions are continuous.
+
+
+*  $f(x) = \begin{cases} 3x - 5, & x \not = 1\\ 2, & x = 1 \end{cases}$
+
+*  $f(x) = \begin{cases} x^2 + 2x, & x \leq -2\\ x^3 - 6x, & x > -2 \end{cases}$
+
+*  $f(x) = \frac{x^3 - 8}{x-2}$
+
+*  $f(x) = \begin{cases} 0, & x =0\\ x^3 \sin(1/x) & x \not = 0 \end{cases}$
+
+
+
+## Properties of Continuous Functions {-}
+
+Once we know that a function is continuous, we can evaluate limits by simply substituting the limit value into the function.  That makes continuity a very powerful property.  We already know that all polynomials are continuous.
+
+
+
+::: {style="color: green;"}
+**Example:**  Determine $\displaystyle\lim_{x \rightarrow 2} x^3 - 5x + 6$.
+:::
+
+::: {style="color: green;"}
+**Solution:**  Since $f(x) = x^3 - 5x + 6$ is a polynomial, it is continuous on $\mathbb{R}$.  Hence, \[\displaystyle\lim_{x \rightarrow 2} f(x) = f(2).\]  Since $f(2) = 2^3 - 5(2) + 6 = 4$, we know that \[\displaystyle\lim_{x \rightarrow 2} x^3 - 5x + 6 = 4.\]
+:::
+
+
+Here we examine some more properties of continuous functions.
+
+::: {style="color: blue;"}
+**Theorem:**   Let $f$ and $g$ be continuous on an open interval $I$ and $c \in \mathbb{R}$.  The following properties hold:
+\begin{enumerate}
+*  $cf(x)$ is continuous.\\
+*  $f(x) \pm g(x)$ is continuous.\\
+*  $f(x)g(x)$ is continuous.\\
+*  $f(x) / g(x)$ is continuous if $g(x) \not = 0$ for $x \in I$.
+\end{enumerate}
+:::
+
+Each of these continuity laws is easy to prove and we will prove them later on.  An easy result of the continuity laws is that rational functions are continuous on their domains.
+
+
+::: {style="color: blue;"}
+**Corollary:**   Any rational function is continuous on its domain.
+:::
+
+::: {style="color: green;"}
+**Example:**  Determine where $f(x) = \dfrac{x^2 - 2x - 8}{x-4}$ is continuous and find $\displaystyle\lim_{x \rightarrow 4} f(x)$.
+:::
+
+::: {style="color: green;"}
+**Solution:**  From the corollary, we know that $\dfrac{x^2 - 2x - 8}{x-2}$ is continuous on its domain (property 4).  Since \[\dfrac{x^2 - 2x - 8}{x-4} = \dfrac{(x-4)(x+2)}{x-4} = x+2, \;\; \text{when } x \not = 4,\] we know that it is continuous on everywhere except $x = 4$ which we write as \[domain(f(x)) = \mathbb{R} - \{4\}.\]
+
+Since $f(x) = \dfrac{x^2 - 2x - 8}{x-4}$ is continuous everywhere except at $x = 4$, and because \[f(x) = \dfrac{x^2 - 2x - 8}{x-4} = x+2\] at all values of $x$ other than $x = 4$, we can evaluate $\displaystyle\lim_{x \rightarrow 4} \dfrac{x^2 - 2x - 8}{x-4}$ as if we were evaluating $\displaystyle\lim_{x \rightarrow 4} x+2$ since we know the function acts identically at all values except $x = 4$ (and a limit never acts at the limit point).  Therefore,
+\begin{align*}  \lim_{x \rightarrow 4} \dfrac{x^2 - 2x - 8}{x-4} &=  \lim_{x \rightarrow 4} \dfrac{(x-4)(x+2)}{x-4}\\
+&=  \lim_{x \rightarrow 4} x+2 \\
+&= 4 + 2\\
+&= 6.
+\end{align*}
+:::
+
+::: {style="color: green;"}
+**Example:**  Determine where $g(x) = \dfrac{(x-1)(x^2 - 3x - 10)}{x^2 - 4x + 3}$ is continuous and find $\displaystyle\lim_{x \rightarrow 1} g(x)$.
+:::
+
+::: {style="color: green;"}
+**Solution:**  From the corollary, we know that $\dfrac{(x-1)(x^2 - 3x - 10)}{x^2 - 4x + 3}$ is continuous on its domain (property 4).  Since \[\dfrac{(x-1)(x^2 - 3x - 10)}{x^2 - 4x + 3} = \dfrac{(x-1)(x+2)(x-5)}{(x-1)(x-3)} = \dfrac{(x+2)(x-5)}{(x-3)}, \;\; \text{when } x \not = 1,\] we know that it is continuous on everywhere except $x = 1$ and $x = 3$ which we write as \[domain(g(x)) = \mathbb{R} - \{1,3\}.\]
+
+
+Since $g(x) = \dfrac{(x-1)(x^2 - 3x - 10)}{x^2 - 4x + 3}$ is continuous everywhere except at $x = 1$ and $3$, and because $g(x) =  \dfrac{(x+2)(x-5)}{(x-3)}$ at all values of $x$ other than $x = 1$ and $3$, we can evaluate $\displaystyle\lim_{x \rightarrow 1} g(x)$ as if we were evaluating $\displaystyle\lim_{x \rightarrow 1}  \dfrac{(x+2)(x-5)}{(x-3)}$ since we know the function acts identically at all values except $x = 1$ and is undefined at 3 (and a limit never acts at the limit point).  Therefore,
+\begin{align*}  \lim_{x \rightarrow 1} \dfrac{(x-1)(x^2 - 3x - 10)}{x^2 - 4x + 3} &=  \lim_{x \rightarrow 1}  \dfrac{(x-1)(x+2)(x-5)}{(x-1)(x-3)}\\
+&=  \lim_{x \rightarrow 1} \dfrac{(x+2)(x-5)}{(x-3)} \\
+&= \dfrac{(1+2)(1-5)}{(1-3)}\\
+&= \dfrac{(3)(-4)}{-2}\\
+&= 6.
+\end{align*}
+:::
+
+Another property that is easy to prove involves continuity for roots.
+
+::: {style="color: blue;"}
+**Theorem:** If $n \in \mathbb{Z}^+$ and is even, then $f(x) = \sqrt[n]{x}$ is continuous on $[0,\infty)$.  If $n \in \mathbb{Z}^+$ is odd, then $f$ is continuous on $(-\infty, \infty)$.
+:::
+
+
+::: {style="color: green;"}
+**Example:**  Determine where $f(x) = x - \sqrt{x-2}$ is continuous.
+:::
+
+::: {style="color: green;"}
+**Solution:**  The function $f$ is the difference of two functions $x$ and $\sqrt{x-2}$.  The domain of $x$ is $\mathbb{R}$ while the domain of $\sqrt{x-2}$ is $x-2 \geq 0$ or $x \geq 2$.  Therefore, $f$ is continuous on its domain $D = \{x | x \geq 2\}$.
+:::
+
+We note that in the previous example we had a difference of functions.  The first function $g(x) = x$ was continuous on $\mathbb{R}$ while the second function $h(x) = \sqrt{x-2}$ was continuous for $x \geq 2$.  The function $f(x) = x - \sqrt{x} = g(x) - h(x)$ (the difference between $g$ and $h$) is continuous where \textbf{both} $g$ and $h$ are continuous.
+
+
+::: {style="color: blue;"}
+**Theorem:**   Let $f$ and $g$ be continuous on intervals $I_1$ and $I_2$ respectively.  Suppose that $g(x) \not = 0$ on $I_3$.  Then
+
+1.  the domain of $cf(x)$ is $I_1$,
+2.  the domain of $f(x) \pm g(x)$ is $I_1 \cap I_2$,
+3.  the domain of $f(x) \cdot g(x)$ is $I_1 \cap I_2$,
+4.  the domain of $f(x)/ g(x)$ is $(I_1 \cap I_2) \cap I_3$,
+
+where $A \cap B$ indicates the values common to both intervals $A$ and $B$.
+:::
+
+
+::: {style="color: green;"}
+**Example:**  Determine where $f(x) = \dfrac{\sqrt[4]{x+3}}{x-5}$ is continuous.
+:::
+
+::: {style="color: green;"}
+**Solution:**  The function $f$ is the quotient of two functions $\sqrt[4]{x+3}$ and $x-5$.  The domain of $\sqrt[4]{x+3}$ is $x+3 \geq 0$ or $x \geq -3$ (from Theorem \ref{thm:ContinuousRootTheorem}) while the domain of $x-5$ is $\mathbb{R}$.  We also note that $x-5 = 0$ when $x = 5$.  Therefore, in this example, $I_1 = \{x|x \geq -3\}$, $I_2 = \mathbb{R}$ and $I_3 = \mathbb{R}-\{5\}$.  We know $f$ is continuous on \begin{align*}
+(I_1 \cap I_2) \cap I_3 &= \left(\{x | x \geq -3\} \cap \mathbb{R} \right) \cap \left(\mathbb{R} - \{5\} \right)\\
+&= \{x | x \geq -3\} \cap \left(\mathbb{R} - \{5\} \right)\\
+&= \{x | x \geq -3, x \not = 5\},
+\end{align*}
+which we can rewrite as $[-3,5) \cup (5,\infty)$.
+:::
+
+
+
+Practice Problems
+
+Determine where the given functions are continuous.
+
+*  $f(x) = x^2 - 5x + 100$
+
+*  $f(x) = \dfrac{1}{x^2 - 10x + 25}$
+
+*  $f(x) = \dfrac{x^3}{x^2 + x -6}$
+
+*  $f(x) = \sqrt[3]{x}$
+
+*  $f(x) = 2x^3 - \sqrt[3](x)$
+
+*  $f(x) = \sqrt{x - 3}$
+
+*  $f(x) = x\sqrt{x - 5}$
+
+*  $f(x) = \sqrt{x} + \sqrt{3-x}$
+
+*  $f(x) = \sqrt[3]{x-5} + \sqrt[4]{x+3}$
+
+*  $f(x) = \dfrac{\sqrt{x + 3}}{\sqrt{10 - x}}$
+
+
+##  Proof of Continuity Laws  {-}
+
+
+In this section, we prove the continuity laws.
+
+::: {style="color: blue;"}
+**Theorem:**   Let $f$ be continuous on an open interval $I$ and $c \in \mathbb{R}$.  Then $cf(x)$ is continuous.
+:::
+
+::: {style="color: blue;"}
+**Proof:**   Let $f$ be continuous on an open interval $I$ and let $a \in I$.    Then \[\lim_{x \rightarrow a} f(x) = f(a).\]  We need to show that \[\lim_{x \rightarrow a} cf(x) = cf(a).\]  Since $f$ is continuous at $a$, we know \begin{align*} \lim_{x \rightarrow a} cf(x) &= c\lim_{x \rightarrow a} f(x)\\
+&= cf(a). \end{align*}
+Therefore, since \[\lim_{x \rightarrow a} cf(x) = cf(a),\] we know that $cf(x)$ is 
+:::
+
+
+::: {style="color: blue;"}
+**Theorem:**   Let $f$ and $g$ be continuous on an open interval $I$.  Then $f(x) \pm g(x)$ is continuous.
+:::
+
+::: {style="color: blue;"} 
+**Proof:**     Let $f$ and $g$ be continuous and $a \in I$.  We need to show that
+\[\displaystyle\lim_{x \rightarrow a} f(x) + g(x) = f(a) + g(a).\]
+
+
+Since we know that $f$ and $g$ are continuous on $I$, we know that \[\lim_{x \rightarrow a} f(x) = f(a) \;\;\; \text{and} \;\;\; \lim_{x \rightarrow a} g(x) = g(a).\]  Therefore, we have
+\begin{align*}  \lim_{x \rightarrow a} f(x) + g(x) &= \lim_{x \rightarrow a} f(x) + \lim_{x \rightarrow a} g(x) && \mbox{Sum Rule for limits}\\[6pt]
+&= f(a) + g(a).
+\end{align*}
+Therefore, the function $f+g$ is continuous.
+:::
+
+
+::: {style="color: blue;"} 
+**Theorem:**    Let $f$ and $g$ be continuous on an open interval $I$.  Then  $f(x)g(x)$ is continuous.
+:::
+
+::: {style="color: blue;"} 
+**Proof:**     Using limit laws (the Multiplication Law), we know that if \[\lim_{x \rightarrow a} f(x) = f(a) = L,\] and if \[\lim_{x \rightarrow a} g(x) = g(a) = M,\] then \[\lim_{x \rightarrow a} f(x)g(x) = LM = f(a)g(a),\] and hence the 
+:::
+
+
+
+::: {style="color: blue;"} 
+**Theorem:**    Let $f$ and $g$ be continuous on an open interval $I$.  Then $f(x) / g(x)$ is continuous if $g(x) \not = 0$ for $x \in I$.
+:::
+
+::: {style="color: blue;"}
+**Proof:**     Using limit laws (the Division Law), we know that if \[\lim_{x \rightarrow a} f(x) = f(a) = L,\] and if \[\lim_{x \rightarrow a} g(x) = g(a) = M \not = 0,\] then \[\lim_{x \rightarrow a} \dfrac{f(x)}{g(x)} = \dfrac{L}{M} = \dfrac{f(a)}{g(a)},\] with $g(a) \not = 0$ and hence the quotient of continuous functions is continuous.
+:::
+
+
+::: {style="color: blue;"}
+**Corollary:**   Any rational function is continuous on its domain.
+:::
+
+::: {style="color: blue;"} 
+**Proof:**     All rational functions have the form \[f(x) = \dfrac{P(x)}{Q(x)},\] with $P$ and $Q$ both polynomials.  Furthermore, the domain of $f$ is given by \[D = \{x | x \in \mathbb{R}, Q(x) \not = 0\}.\] Since $P$ and $Q$ are continuous everywhere, property 4 of the continuity laws guarantees that $f$ is continuous for all $x \in D$.
+:::
+
+We now prove that roots are continuous on their domains.
+
+
+::: {style="color: blue;"} 
+**Theorem (Inversion Theorem):** If $f$ is continuous and one-to-one on an interval $I$, then $f^{-1}$ is also continuous.
+:::
+
+::: {style="color: blue;"} 
+**Proof:**     A continuous function on an interval must be strictly monotonic as if it were not, there would be numbers $a,b$ and $c$ on the interval with $a < b < c$ such that $f(b)$ did not lie between $f(a)$ and $f(c)$.  If $f(a)$ was between $f(b)$ and $f(c)$, then the IVT guarantees a value $x \in (b,c)$ such that $f(x) = f(a)$ (a contradiction to $f$ being one-to-one.  The only other possibility is that $f(c)$ was between $f(a)$ and $f(b)$ which is similar.  Therefore, $f$ must be monotonic.
+
+WLOG, assume $f$ is strictly increasing (the monotonically decreasing case is identical).  Let $x_0$ be in $I$ with $y_0 = f(x_0)$.   It stands to show that $\displaystyle\lim_{y \rightarrow y_0}f^{-1}(y) = x_0$.
+
+Let $\varepsilon > 0$ be given.  Since $x_0 - \varepsilon < x_0 < x_0 + \varepsilon$, we know that $f(x_0- \varepsilon) < f(x_0) < f(x_0 + \varepsilon)$.  Select \[\delta = \min(f(x_0) - f(x_0 - \varepsilon), f(x_0 + \varepsilon) - f(x_0)).\]  Then $f(x_0 + \varepsilon) < f(x_0) - \delta$ and $f(x_0) + \delta < f(x_0 + \varepsilon)$.  That means that if $f(x_0) - \delta < y < f(x_0) + \delta$, then $f(x_0 - \varepsilon) < y < f(x_0 + \varepsilon)$.  Since $f$ is strictly increasing, so too if $f^{-1}$ and therefore $x_0 - \varepsilon < f^{-1}(y) < x_0 + \varepsilon$.  So, we have \[|f^{-1}(y) - f^{-1}(y_0)| < \varepsilon,\] provided $|y-y_0| < \delta$, as required.
+:::
+
+
+::: {style="color: blue;"} 
+**Theorem:**     If $n \in \mathbb{Z}^+$ and is even, then $f(x) = \sqrt[n]{x}$ is continuous on $[0,\infty)$.  If $n \in \mathbb{Z}^+$ is odd, then $f$ is continuous on $(-\infty, \infty)$.
+:::
+
+::: {style="color: blue;"} 
+**Proof:**     Let $f(x) = x^n$.  Then $f$ is monotonic on $[0,\infty)$ if $n$ is even and $(-\infty,\infty)$ if $n$ is odd.  Hence, the result follows from the Inversion Theorem by noting that $g(x) = \sqrt[n]{x}$ is the inverse of $f$.
+:::
+
+
+
+Practice Problems
+
+A.  Find the inverse of $f(x) = x^5$ and sketch both $f$ and $f^{-1}$.
+
+
+ B.  The volume of water in a bottle is a function of the height $H$ of the water.  For example, $V = f(H)$.  Similarly, the height of water is a function of the volume of water in the bottle.  For example, $H = g(V)$.  Show that $f$ and $g$ are inverse functions.
+
+
+C.  Are there functions $f(x) = x^n$ which are their own inverse function?  Which one(s)?
+
+D.  Prove that the sum of two increasing functions is increasing.
+
+E.  Show that the inverse of an increasing function is increasing.  What is the analogy for a decreasing function?
+
+F.  Suppose $f$ is increasing.  Is $f \circ f$ increasing?  If $f$ is decreasing is $f \circ f$ decreasing.
+
+
+
+##  The Intermediate Value Theorem {-}
+
+Suppose we have a continuous function $f$ which is defined on the interval $[a,b]$.  If we know that $f(a) < f(b)$, then for any value $N \in (f(a), f(b))$, there is at least one value $c \in (a,b)$ for which $f(c) = N$.  The continuity of $f$ in the diagram below makes that fact clear.
+
+
+|![](Pic27.png)|
+|:--:|
+
+
+We generalize the intermediate value theorem below.
+
+::: {style="color: blue;"}
+**Theorem (Intermediate Value Theorem):**    Let $f$ be a continuous function on $[a,b]$.  If $f(a) \not = f(b)$, then for any number $N$ between $f(a)$ and $f(b)$, there is a value $c \in (a,b)$ such that $f(c) = N$.
+:::
+
+::: {style="color: green;"}
+**Example:**    Let $f(x) = \sqrt{x} - x + x^4$.  Show that there is a value $c$ so that\\ $f(c) = 0.721$.
+:::
+
+::: {style="color: green;"}
+**Solution:**  First, we note that $f$ is the sum of continuous functions on $\mathbb{R}$, so $f$ is continuous.  Next, we note that $f(0) = 0$ and that $f(1) = 1$.  Thus, by the intermediate value theorem, there must be a value $c \in (0,1)$ so that $f(c) = 0.721$.
+:::
+
+
+We note here that the intermediate value theorem does not specify the value of $c$; but rather, it guarantees the existence of such a number.  Proofs and arguments of this type are called existence proofs.
+
+
+::: {style="color: blue;"}
+**Corollary (Bolzano's Theorem):**   Suppose $f$ is a continuous function on $[a,b]$ and suppose that $f(a)$ and $f(b)$ have opposite signs.  There exists a number $c \in [a,b]$ for which $f(c) = 0$.
+:::
+
+
+|![](Pic28.png)|
+|:--:|
+
+
+
+::: {style="color: green;"}
+**Example:**    Suppose $f(x) = x^3 - x - 1$.  Show that there is a value $N \in \mathbb{R}$ for which $f(N) = 0$.
+:::
+
+::: {style="color: green;"}
+**Solution:**  We note that $f$ is a polynomial and so $f$ is continuous.  We also note that $f(0)= -1$ while $f(2) = 5$.  So, $f(0)$ and $f(2)$ have opposite signs.  Therefore, there is a value $c \in [0,2]$ for which $f(c) = 0$.
+:::
+
+Again, we note that Bolzano's theorem does not tell us the exact value of $c$ but rather proves its existence and shows where we might look for it.  In this case, $c \in [0,2]$.  (Actually, $c \approx 1.3247$).
+
+|![](Pic29.png)|
+|:--:|
+
+
+Practice Problems
+
+A.  For each function below and given $N$, prove that there is a value $c$ for which $f(c) = N$:
+
+*   $f(x) = 3x^3 - 5$, $N = 1.49$ 
+*   $f(x) = \sqrt{x - 5} - x^2$, $N = -10$ 
+*   $f(x) = \sqrt[3]{x} - x + x^2$, $N = 5$ 
+*   $f(x) = \dfrac{x}{(x-3)(x-2)}$, $N = 4.5$ 
+
+B.  Use Bolzano's Theorem to show each of the following functions have a zero:
+
+*   $g(x) = \dfrac{x^3 - x + 7}{\sqrt{x^2 - 5}}$
+*   $g(x) = |x| - x^4 + x^2 - 3$ 
+*   $g(x) = \sqrt{x^3 + 5} - 1 + x$ 
+*   $g(x) = \sqrt{\dfrac{1}{x}} - 4$ 
+
+
+
+##  Proof of The IVT {-}
+
+
+
+
+::: {style="color: blue;"}
+**Theorem (Intermediate Value Theorem):**    Let $f$ be a continuous function on $[a,b]$.  If $f(a) \not = f(b)$, then for any number $c$ between $f(a)$ and $f(b)$, there is a value $x \in (a,b)$ such that $f(x) = c$.
+:::
+
+We note here that the intermediate value theorem does not specify the value of $c$; but rather, it guarantees the existence of such a number.
+
+|![](Pic30.png)|
+|:--:|
+
+
+The proof of the intermediate value theorem takes advantage of the completeness axiom.  An axiom is a statement that is assumed to be true without proof.  To understand the completeness axiom, we need to know something about upper bounds.  A real number $x$ is called a least upper bound for a set $S$ if:
+
+1.    The number $x$ is an upper bound for the set $S$.  That is, if $s \in S$, then $s \leq x$.
+2.    If $y$ is any other upper bound for the set $S$, then $x \leq y$.
+
+We note that there is no requirement that $x$ is a member of $S$.
+
+::: {style="color: blue;"}
+**Theorem (Completeness Axiom):**   If $S$ is a non-empty set of real numbers that is bounded above, then there exists exactly one real number that is the least upper bound of $S$.
+:::
+
+::: {style="color: green;"}
+**Example:**   Consider the set $S = \{1 - 1/x | x \in \mathbb{Z}^+ \}$.  We can write out some of the values in $S$: \[S = \{0, 1/2, 2/3, 3/4, 4/5, 5/6, 6/7, \ldots \}.\]  First, we see that $S$ is non-empty.  Also, notice that there is no value of $S$ that exceeds 1.  So, $S$ is bounded above by 1.  The completeness axiom guarantees that $S$ has a least upper bound.  Since 1 is the smallest of all values that are larger than those in $S$, 1 is the least upper bound for $S$.
+:::
+
+::: {style="color: blue;"}
+**Proof (of the Intermediate Value Theorem):**  We prove the first case, $f(a)<u<f(b)$. The second case (where $f(a) > u > f(b)$) is similar and left as an exercise.
+
+Let $S$ be the set of all $x\in [a,b]$ such that $f(x)\leq u$.  Then $S$ is non-empty since $a \in S$, and $S$ is bounded above by $b$. Hence, by completeness, $S$ has a least upper bound, $c$. That is, $c$ is the lowest number that is greater than or equal to every member of $S$. We claim (and will subsequently prove) that $f(c)=u$.
+
+Let $\varepsilon > 0$ be given. Since $f$ is continuous, there is a $\delta >0$ such that $|f(x)-f(c)| < \varepsilon$ whenever $|x-c|<\delta$. Thus, \[f(x)-\varepsilon  <f(c)<f(x)+\varepsilon,\] whenever $ x \in (c-\delta ,c+\delta )$. By the completeness axiom, there exist $a^{*}\in (c-\delta ,c]$ that is contained in $S$, so that for that $a^{*}$ \[f(c)<f(a^{*})+\varepsilon \leq u+\varepsilon.\]
+Choose $a^{**}\in [c,c+\delta )$ that will obviously not be contained in $S$, so we have \[f(c)>f(a^{**})-\varepsilon \geq u-\varepsilon.\]
+Both inequalities $u-\varepsilon  <f(c)<u+\varepsilon,$ hold for all $\varepsilon > 0$.  Therefore, we deduce $f(c)=u$ as the only possible value, as claimed.
+:::
+
+::: {style="color: blue;"}
+**Theorem (Bolzano's Theorem):**  Suppose $f$ is a continuous function on $[a,b]$ and suppose that $f(a)$ and $f(b)$ have opposite signs.  There exists a number $c \in [a,b]$ for which $f(c) = 0$.
+:::
+
+
+Practice Problems
+
+
+A.  Finish the proof of the intermediate value theorem by showing the second case where $f(a) > u > f(b)$.
+
+B.  Prove Bolzano's theorem.
+
+C.  Show that there is a number $a$ that is one more than it's cube.
+
+D.  Show that it is necessary that $f$ is continuous for the intermediate value theorem to hold.
+
+E.  Show that $f(x) = x^5 - 4x^3 - 1$ has at least 2 real solutions by applying Bolzano's theorem to two different intervals.
+
+F.  A climber leaves base-camp at 8AM and climbs to the top of a hill arriving at 8PM.  He remains there until the next day when, at 8AM he climbs back down the hill along the same path arriving back at the base-camp at 8PM.  Prove that there is a spot on the path that the climber passes at the same time both days.
+
+G.  Let $f:[0,1] \rightarrow [0,1]$ be continuous.  Show that there exists and $a \in [0,1]$ such that $f(a) = a$.
+
+
+
+## Continuity of Trigonometric Functions {-}
+
+When we look at the graphs of $y = \sin x$ and $y = \cos x$, we would suspect that both of those functions are continuous.  If these two functions are continuous (and they are), we can show that $\tan x = \frac{\sin x}{\cos x}$ is also continuous at all real numbers except where $\cos x = 0$.
+
+|![](Pic31.png)|
+|:--:|
+
+
+
+In fact, it turns out that the inverse function of any continuous function is also continuous.  With these facts in mind, we provide the following theorem.
+
+::: {style="color: blue;"}
+**Lemma:**    The sine and cosine functions are continuous at 0.  That is, \[\displaystyle\lim_{\theta \rightarrow 0} \sin(\theta) = 0 \;\;\; \text{ and } \;\;\; \displaystyle\lim_{\theta \rightarrow 0} \cos(\theta) = 1.\]
+:::
+
+::: {style="color: blue;"}
+**Proof:**    Consider the portion of the unit circle in Figure \ref{SineXIsLessThanX} with radius $AB = 1$.  We begin by noting that $-\theta \leq \sin \theta \leq \theta$.
+
+|![](Pic32.png)|
+|:--:|
+
+
+
+The length of the line segment $CB$ corresponds to $\sin \theta$ (by definition).  The length of the arc is $\theta$.  Since $CB$ is shorter than the arc of length $\theta$, we know that $\sin \theta \leq \theta$.  A similar calculation below the axis shows that $-\theta \leq \sin \theta$.  So, $-\theta \leq \sin \theta \leq \theta$.  Since \[\lim_{\theta \rightarrow 0} -\theta = 0 = \lim_{\theta \rightarrow 0} \theta = 0,\] we have $\displaystyle\lim_{\theta \rightarrow 0} \sin \theta = 0$.  So the sine function is continuous at 0.
+
+To show that $\displaystyle\lim_{\theta \rightarrow 0} \cos \theta = \cos 0$, we note that
+\begin{align*} \lim_{\theta \rightarrow 0} \cos(\theta) &= \lim_{\theta \rightarrow 0} 1 - 2\sin^2(\theta/2)\\
+&=  1 - 2 \lim_{\theta \rightarrow 0}\sin(\theta/2)\lim_{\theta \rightarrow 0}\sin(\theta/2)\\
+&= 1.
+\end{align*}  Therefore, both sine and cosine are continuous at 1.
+:::
+
+::: {style="color: blue;"}
+**Theorem:**    All trigonometric functions and inverse trigonometric functions are continuous on their domains.
+:::
+
+::: {style="color: blue;"}
+**Proof:**     We show that $\sin(x)$ and $\cos(x)$ are continuous everywhere.  The continuity of the other trigonometric functions follows from continuity laws.  The continuity of inverse trigonometric functions follows from Theorem \ref{InversionTheorem}.
+
+Observe that \begin{align*} \lim_{\theta \rightarrow \theta_0} \sin(\theta) &= \lim_{\alpha \rightarrow 0} \sin(\alpha + \theta_0)\\
+&= \lim_{\alpha \rightarrow 0} \sin(\alpha)\cos(\theta_0) + \cos(\alpha)\sin(\theta_0)\\
+&= \lim_{\alpha \rightarrow 0} \sin(\alpha)\cos(\theta_0) + \lim_{\alpha \rightarrow 0} \cos(\alpha)\sin(\theta_0)\\
+&= \cos(\theta_0)\lim_{\alpha \rightarrow 0} \sin(\alpha) + \sin(\theta_0)\lim_{\alpha \rightarrow 0} \cos(\alpha)\\
+&= \sin(\theta_0).
+\end{align*}
+
+Next, notice that \begin{align*}  \lim_{\theta \rightarrow \theta_0} \cos(\theta) &= \lim_{\alpha \rightarrow 0} \cos(\alpha + \theta_0)\\
+&= \lim_{\alpha \rightarrow 0} \cos(\alpha + \theta_0)\\
+&= \lim_{\alpha \rightarrow 0} \cos(\alpha)\cos(\theta_0) - \sin(\alpha)\sin(\theta_0)\\
+&= \lim_{\alpha \rightarrow 0} \cos(\alpha)\cos(\theta_0) - \lim_{\alpha \rightarrow 0}\sin(\alpha)\sin(\theta_0)\\
+&= \cos(\theta_0)\lim_{\alpha \rightarrow 0} \cos(\alpha) - \sin(\theta_0)\lim_{\alpha \rightarrow 0}\sin(\alpha)\\
+&= \cos(\theta_0).
+\end{align*}
+Therefore, sine and cosine are continuous on $\mathbb{R}$ and the theorem follows.
+:::
+
+::: {style="color: green;"}
+**Example:**  Determine the value of $\displaystyle\lim_{x \rightarrow 0} 1 + 2\sin x$ and $\displaystyle\lim_{x \rightarrow \pi} 4-\cos x$.
+:::
+
+::: {style="color: green;"}
+**Solution:**  Since all trigonometric functions are continuous, we know \[\displaystyle\lim_{x \rightarrow 0} 1 + 2\sin x = 1 + 2\sin(0) = 1\] and \[\displaystyle\lim_{x \rightarrow 0} 4-\cos x = 4-\cos(0) = 3.\]
+:::
+
+We note here that both the exponential function $y = a^x$ and its inverse $y = \log_a(x)$ are both also continuous on their domains.
+
+::: {style="color: blue;"}
+**Theorem:**   Exponential and logarithmic functions are continuous on their domains.
+:::
+
+|![](Pic33.png)|
+|:--:|
+
+
+
+::: {style="color: blue;"}
+**Proof:**   It is enough to show that $a^x$ is continuous.  The fact that logarithms are continuous follows by Theorem \ref{InversionTheorem} since logs are the inverse of exponential functions.
+
+Let $\varepsilon > 0$ be given, $c \in \mathbb{R}$, $a > 1$ and take $|x-c| < \delta = \log_a(1 + \varepsilon a^{-c})$.  We need to show that $|a^x - a^c| < \varepsilon$.  If $x \geq c$, we know that
+\[x-c < \delta \Leftrightarrow x < c+\delta \Leftrightarrow a^x < a^{c+\delta}.\]
+So, \[0 \leq a^x-a^c < a^c(a^{\delta}-1) < a^c(a^{\log_a(1+\varepsilon a^{-c})}-1) = \varepsilon.\]  A similar argument works if $x \leq c$.  So $a^x$ is continuous if $a > 1$.
+
+The same argument (with signs reversed) works if $a < 1$.  Finally, if $a = 1$, we no longer have an exponential function but rather a linear function which we know is continuous.
+
+Therefore, logarithmic and exponential functions are continuous on their domains.
+:::
+
+
+
+::: {style="color: green;"}
+**Example:**    Determine where $f(x) = \dfrac{\ln(x) + \sin(x)}{x^3 + 1}$ is continuous.
+:::
+
+::: {style="color: green;"}
+**Solution:** We know that $f$ is continuous on its domain since it is the sum and quotient of continuous functions.  The domain of $\sin x$ is $\mathbb{R}$.  The domain of $\ln(x)$ is $(0,\infty)$ and the denominator $x^3 + 1 = (x+1)(x^2 - x + 1)$ is non-zero except when $x = -1$.  Therefore, the domain of $f$ is $(0,\infty)$.
+:::
+
+::: {style="color: green;"}
+**Example:**   Determine where $f(x) = \cos(x^3)$ and $g(x) = \ln(1 + \sin(x))$ are continuous.
+:::
+
+::: {style="color: green;"}
+**Solution:** Since all trigonometric functions are continuous, we know that $f(x) = \cos(x^3)$ is continuous on $\mathbb{R}$ since it is the composition of two functions that are both continuous on $\mathbb{R}$.
+
+For the function $g(x) = \ln(1 + \sin(x))$, we need to determine when $1 + \sin(x) > 0$ since the domain of logarithmic functions is $(0,\infty)$.  We know that $1 + \sin(x) > 0$ except when $\sin(x) = -1$.  The function $\sin(x)$ takes the value of -1 at $3\pi/2$ and every multiple of $2\pi$ before and after.  Therefore, $g(x)$ is continuous except when $x = 3\pi/2 + 2k\pi$ with $k \in \mathbb{Z}$.
+:::
+
+
+
+Practice Problems
+
+A.  For each function below, determine where they are continuous.
+
+*   $y = \sin(x)$
+*   $y = \cos(x)$
+*   $y = \tan(x)$
+*   $y = \csc(x)$
+*   $y = \sec(x)$
+*   $y = \cot(x)$
+*   $y = \arcsin(x)$
+*   $y = \arccos(x)$
+*   $y = \arctan(x)$
+*   $y = \ln(x)$
+*   $y = e^x$
+
+B.  For each function below, determine where they are continuous.
+
+*   $f(x) = \sqrt{\sin(x)}$ 
+*   $f(x) = \tan(x) + \sec(x)$ 
+*   $f(x) = \cos(\ln(x))$ 
+*   $f(x) = e^{\sin(x)}$ 
+*   $f(x) = \sqrt[3]{\tan(x)}$ 
+*   $f(x) = \tan(x) - \ln(x)$ 
+*   $f(x) = \sin(\tan(x))$ 
+*   $f(x) = e^{\ln(x)}$ 
+
+
+C.  Finish the proof of Theorem \ref{thm:LogsandExponentialsAreCts} by (a) completing the details of the argument for $x \leq c$ and $a > 1$, (b) completing the details of the argument for $a < 1$ and (c) showing that logarithms are continuous.
+
+
+
+
+
+
+
+#  2.6  Limits at Infinity; Horizontal Asymptotes {-} 
+
+##  Limits At Infinity {-}
+
+
+When we talk about limits at infinity, we mean that we would like to evaluate one of these expressions:
+\[\lim_{x \rightarrow \infty} f(x) \;\;\;\; \text{or} \;\;\;\; \lim_{x \rightarrow -\infty} f(x).\]
+That is to say, we want to learn the value of the function as $x$ gets infinitely large in the positive or negative direction.
+
+::: {style="color: blue;"}
+**Definition:**  Let $f$ be a function defined on some interval $(a,\infty)$.  Then \[\lim_{x \rightarrow \infty} f(x) = L\] means that the values of $f(x)$ can be made arbitrarily close to $L$ by taking $x$ sufficiently large.
+:::
+
+::: {style="color: blue;"}
+**Definition:**  Let $f$ be a function defined on some interval $(-\infty, a)$.  Then \[\lim_{x \rightarrow -\infty} f(x) = L\] means that the values of $f(x)$ can be made arbitrarily close to $L$ by taking $x$ sufficiently large but negative.
+:::
+
+Let's see how this looks with an example.
+
+::: {style="color: green;"}
+**Example:**  Determine $\displaystyle\lim_{x \rightarrow \infty} \dfrac{1}{x^2}$.
+:::
+
+::: {style="color: green;"}
+**Example:** We will take values of $x$ getting increasingly large.
+
+| $x$   | $\frac{1}{x^2}$ |
+|:-----:|:---------------:|
+| 1     | 1               |
+| 10    | 0.01            |
+| 100   | 0.0001          |
+| 1000  | 0.000001        |
+| 10000 | 0.00000001      |
+
+So, it appears that as $x \rightarrow \infty$, the function $f(x) = \dfrac{1}{x^2} \rightarrow 0$.  Therefore, we say \[\lim_{x \rightarrow \infty} \dfrac{1}{x^2} = 0.\]
+:::
+
+
+|![](Pic12.png)|
+|:--:|
+
+
+The limit laws from Chapter \ref{LimitLaws} all hold (with the exception of the identity law) if you replace the  $x \rightarrow a$ with $x \rightarrow \infty$ or $x \rightarrow -\infty$.  One particular result that follows from these limit laws is below.
+
+::: {style="color: blue;"}
+**Theorem:**  Let $c \in \mathbb{R}$.  If $r > 0$ is a rational number, then \[\lim_{x \rightarrow \infty} \dfrac{c}{x^r} = 0.\]  If $r > 0$ is a rational number such that $x^r$ is defined for all $x<0$, then \[\lim_{x \rightarrow -\infty} \dfrac{c}{x^r} = 0.\]
+:::
+
+::: {style="color: green;"}
+**Example:**  Evaluate $\displaystyle\lim_{x \rightarrow \infty} 3x^3 - 5x + 10$.
+:::
+
+
+::: {style="color: green;"}
+**Solution:**  Using our limit laws, we find \begin{align*} \lim_{x \rightarrow \infty} 3x^3 - 5x + 10 &= \lim_{x \rightarrow \infty} x^3 \left(3 - \frac{5}{x^2} + \frac{10}{x^3} \right)\\
+&= \lim_{x \rightarrow \infty} x^3 \lim_{x \rightarrow \infty}\left(3 - \frac{5}{x^2} + \frac{10}{x^3} \right)\\
+&= \lim_{x \rightarrow \infty} x^3 \times \left(3 - 0 + 0 \right)\\
+&= \lim_{x \rightarrow \infty} x^3 \times 3\\
+&= \infty.
+\end{align*}
+Therefore, $\displaystyle\lim_{x \rightarrow \infty} 3x^3 - 5x + 10 = \infty$.
+:::
+
+
+::: {style="color: green;"}
+**Example:**  Evaluate $\displaystyle\lim_{x \rightarrow -\infty} 2x^5 - x^4 + 3x$.
+:::
+
+::: {style="color: green;"}
+**Solution:**  Using limit laws,  \begin{align*} \lim_{x \rightarrow -\infty} 2x^5 - x^4 + 3x &= \lim_{x \rightarrow -\infty} x^5 \left(2 - \frac{1}{x} + \frac{3}{x^4} \right)\\
+&= \lim_{x \rightarrow -\infty} x^5 \lim_{x \rightarrow -\infty}  \left(2 - \frac{1}{x} + \frac{3}{x^4} \right)\\
+&= \lim_{x \rightarrow -\infty} x^5 \times \left(2 - 0 + 0 \right)\\
+&= \lim_{x \rightarrow -\infty} x^5 \times 2\\
+&= -\infty.
+\end{align*}
+Therefore, $\displaystyle\lim_{x \rightarrow -\infty} 2x^5 - x^4 + 3x = -\infty$.
+:::
+
+From the previous two examples, it appears that the term that makes the most difference in a limit at infinity is the dominant term.
+
+::: {style="color: blue;"}
+**Theorem (Infinite Limits of Polynomials):**  If $p(x) = a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1x + a_0$ is a polynomial of degree $n$, then \[\lim_{x \rightarrow \infty} p(x) = \lim_{x \rightarrow \infty} a_nx^n \;\;\;\; \text{and} \;\;\;\; \lim_{x \rightarrow -\infty} p(x) = \lim_{x \rightarrow -\infty} a_n x^n.\]
+:::
+
+
+::: {style="color: green;"}
+**Example:**  Evaluate $\displaystyle\lim_{x \rightarrow \infty} \dfrac{2x^4 - x^2 + 19}{-3x^4 + 2x - 1}$.
+:::
+
+::: {style="color: green;"}
+**Solution:**  Limit laws tell us that \begin{align*} \lim_{x \rightarrow \infty} \dfrac{2x^4 - x^2 + 19}{-3x^4 + 2x - 1} &= \dfrac{\lim_{x \rightarrow \infty} 2x^4 - x^2 + 19}{\lim_{x \rightarrow \infty}-3x^4 + 2x - 1}\\
+&= \dfrac{\lim_{x \rightarrow \infty} 2x^4}{\lim_{x \rightarrow \infty}-3x^4}\\
+&= \lim_{x \rightarrow \infty} \dfrac{2x^4}{-3x^4}\\
+&= \lim_{x \rightarrow \infty} \dfrac{2}{-3}\\
+&= \dfrac{-2}{3}
+\end{align*}
+Therefore, $\displaystyle\lim_{x \rightarrow \infty} \dfrac{2x^4 - x^2 + 19}{-3x^4 + 2x - 1} = -2/3$.
+:::
+
+
+
+::: {style="color: green;"}
+**Example:**  Evaluate $\displaystyle\lim_{x \rightarrow \infty} \dfrac{\sqrt{5x^2 - x + 1}}{2x - 5}$.
+:::
+
+::: {style="color: green;"}
+**Solution:**  From the limit laws,  \begin{align*}  \lim_{x \rightarrow \infty} \dfrac{\sqrt{5x^2 - x + 1}}{2x - 5}
+&=  \dfrac{\lim_{x \rightarrow \infty} \sqrt{5x^2 - x + 1}}{\lim_{x \rightarrow \infty} 2x - 5}\\
+&=  \dfrac{ \sqrt{\lim_{x \rightarrow \infty}5x^2 - x + 1}}{\lim_{x \rightarrow \infty} 2x}\\
+&=  \dfrac{ \sqrt{\lim_{x \rightarrow \infty}5x^2}}{\lim_{x \rightarrow \infty} 2x}\\
+&=  \lim_{x \rightarrow \infty}\dfrac{ \sqrt{5x^2}}{2x}\\
+&=  \lim_{x \rightarrow \infty}\dfrac{ \sqrt{5}x}{2x}\\
+&=  \lim_{x \rightarrow \infty}\dfrac{ \sqrt{5}}{2}\\
+&=  \dfrac{ \sqrt{5}}{2}.
+\end{align*}
+Therefore, $\displaystyle\lim_{x \rightarrow \infty} \dfrac{\sqrt{5x^2 - x + 1}}{2x - 5} = \dfrac{\sqrt{5}}{2}$.
+:::
+
+
+::: {style="color: green;"}
+**Example:**  Evaluate $\displaystyle\lim_{x \rightarrow \infty} \sqrt{4x^4 - 3x + 1} - 2x^2$.
+:::
+
+::: {style="color: green;"}
+**Solution:**  Using limit laws,  \begin{align*}  \lim_{x \rightarrow \infty} \sqrt{4x^4 - 3x + 1} - 2x^2
+&=  \sqrt{\lim_{x \rightarrow \infty}4x^4 - 3x + 1} - \lim_{x \rightarrow \infty} 2x^2\\
+&=  \sqrt{\lim_{x \rightarrow \infty}4x^4} - \lim_{x \rightarrow \infty} 2x^2\\
+&=  \lim_{x \rightarrow \infty}  \sqrt{4x^4} - 2x^2\\
+&=  \lim_{x \rightarrow \infty}  2x^2 - 2x^2\\
+&=  \lim_{x \rightarrow \infty}  0\\
+&=  0.
+\end{align*}
+Therefore, $\displaystyle\lim_{x \rightarrow \infty} \sqrt{4x^4 - 3x + 1} - 2x^2 = 0$.
+:::
+
+
+
+::: {style="color: green;"}
+**Example:**  Evaluate $\displaystyle\lim_{x \rightarrow -\infty} \sin(x)$.
+:::
+
+
+::: {style="color: green;"}
+**Solution:**  As $x \rightarrow -\infty$, the function $f(x) = \sin(x)$ oscillates infinitely many times between 1 and $-1$.  Therefore, it never converges to a finite number.  Therefore, $\displaystyle\lim_{x \rightarrow -\infty} \sin(x)$ does not exist.
+:::
+
+
+Practice Problems
+
+A.  Determine each of the following limits.
+
+*  $\displaystyle\lim_{x \rightarrow \infty} 5x^4 - 3x^3 + x^2 - 5$ 
+
+*  $\displaystyle\lim_{x \rightarrow -\infty} 5x^4 - 3x^3 + x^2 - 5$ 
+
+*  $\displaystyle\lim_{x \rightarrow \infty} 7x^3- 2x^2  + x - 10$ 
+
+*  $\displaystyle\lim_{x \rightarrow -\infty} 7x^3- 2x^2  + x - 10$ 
+
+*  $\displaystyle\lim_{x \rightarrow \infty} \sqrt{x^4 - 3x^2 + x - 1}$ 
+
+*  $\displaystyle\lim_{x \rightarrow -\infty} \sqrt{x^6 - x^4 + x^2 + 1}$ 
+
+*  $\displaystyle\lim_{x \rightarrow \infty} \dfrac{x^4 - x^3 - x - 1}{3x^4 - 2x^2 + x - 5}$ 
+
+*  $\displaystyle\lim_{x \rightarrow -\infty} \dfrac{5x^7 - 2x^5 +2 x - 1}{2x^7 + 3x^4 + 100x +20}$ 
+
+*  $\displaystyle\lim_{x \rightarrow \infty} \dfrac{\sqrt[4]{x^4 - x^2 + 1}}{5 - 3x}$ 
+
+*  $\displaystyle\lim_{x \rightarrow -\infty} \dfrac{\sqrt{9x^2 - 3x + 2}}{\sqrt[3]{27x^3 + 15x^2 - 4x + 1}}$ 
+
+*  $\displaystyle\lim_{x \rightarrow \infty} \dfrac{4-5x}{\sqrt[5]{15+ x^3 - x^4 + 10x^5}}$ 
+
+
+B.  Determine each of the following limits. 
+
+*    $\displaystyle\lim_{x \rightarrow \infty} \cos(1/x)$
+  
+*    $\displaystyle\lim_{x \rightarrow -\infty} \sqrt{3x^4 - 4x + 1} - \sqrt{3}x^2$
+  
+*    $\displaystyle\lim_{x \rightarrow \infty} \ln(1/x)$
+  
+*    $\displaystyle\lim_{x \rightarrow -\infty} \arctan(-2/x)$
+
+
+
+
+##  Limits at Infinity by Definition  {-}
+
+We have dealt with the precise definition of a limit as it relates to limits as finite values.  We now discuss limits of functions at infinity.
+
+::: {style="color: blue;"}
+**Definition:**  Let $f$ be a function defined on the interval $(a, \infty)$ for some $a \in \mathbb{R}$.  Then \[\lim_{x \rightarrow \infty} f(x) = L,\] if for any given $\varepsilon > 0$, there exists an $M > 0$ such that \[|f(x) - L| < \varepsilon \;\;\; \text{provided} \;\;\; x > M.\]
+:::
+
+
+
+|![](Pic19.png)|
+|:--:|
+
+
+::: {style="color: blue;"}
+**Definition:**  
+Let $f$ be a function defined on the interval $(-\infty, b)$ for some $b \in \mathbb{R}$.  Then \[\lim_{x \rightarrow -\infty} f(x) = L,\] if for any given $\varepsilon > 0$, there exists an $M > 0$ such that \[|f(x) - L| < \varepsilon \;\;\; \text{provided} \;\;\; x < M.\]
+:::
+
+For an infinite limit to exist, the value of the function must be asymptotic to the limit value.  This means that as $x$ exceeds some value $M$ (either in the positive or negative direction), the function value must be within $\varepsilon$ units from the limit value for every $x$ beyond $M$.
+
+
+
+|![](Pic20.png)|
+|:--:|
+
+
+::: {style="color: green;"}
+**Example:** Use the precise definition of a limit to show that $\displaystyle\lim_{x \rightarrow \infty} \dfrac{1}{x} = 0$.
+:::
+
+
+::: {style="color: green;"}
+**Solution:** Let $\varepsilon > 0$ be given. We need to find an $M > 0$ such that \[|\dfrac{1}{x} - 0|  = \dfrac{1}{|x|} < \varepsilon,\] provided $x > M$.  Take $M = \dfrac{1}{\varepsilon}$.  Then for any $x > M$, we have
+\begin{align*} \left|\dfrac{1}{x} - 0 \right| &= \dfrac{1}{|x|}\\
+&< \dfrac{1}{M}\\
+&= \dfrac{1}{1/\varepsilon}\\
+&= \varepsilon. \end{align*}
+Since $\left|\dfrac{1}{x} - 0 \right| < \varepsilon$, we have shown that \[ \lim_{x \rightarrow \infty} \dfrac{1}{x} = 0.\]
+:::
+
+
+Practice Problems 
+
+A.  Prove each of the following limits using the precise definition of a limit.
+
+*  $\displaystyle\lim_{x \rightarrow \infty} \dfrac{1}{x} +3 = 3$
+
+*  $\displaystyle\lim_{x \rightarrow \infty} \dfrac{1}{x^2} = 0$
+
+*  $\displaystyle\lim_{x \rightarrow -\infty} \dfrac{1}{x} = 0$
+
+*  $\displaystyle\lim_{x \rightarrow \infty} \dfrac{1}{\sqrt{x}} = 0$
+
+*  $\displaystyle\lim_{x \rightarrow \infty} \ln(1+1/x) = 0$
+
+*  $\displaystyle\lim_{x \rightarrow \infty} \dfrac{1}{e^x}=0$
+
+
+\noindent B.  If $r$ is a positive rational number and $c$ is any real number, prove \[\lim_{x \rightarrow \infty} \dfrac{c}{x^r} = 0.\]
+
+
+\noindent C.  If $r$ is a positive rational number, $c$ is any real number and $x^r$ is defined for $x < 0$, prove \[\lim_{x \rightarrow -\infty} \dfrac{c}{x^r} = 0.\]
+
+\noindent D.  If $p(x) = a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1x + a_0$ is a polynomial of degree $n$, prove \[\lim_{x \rightarrow \infty} p(x) = \lim_{x \rightarrow \infty} a_nx^n.\]
+
+
+
+
+
+
+
+# 2.7 Derivatives and Rates of Change {-}
+
+
+The slope of a line is given by the formula \[\text{slope} \; = \; \dfrac{\text{rise}}{\text{run}}.\]  Given two points $P(a,b)$ and $Q(c,d)$, the slope of the line that connects the two points is \[\text{slope} = \dfrac{b-d}{c-a}.\]  As the point $Q$ gets close to $P$, the slope of the secant line that connects $P$ and $Q$ becomes the same as a tangent line at $P$.  In order to do this, $c \rightarrow a$.  Given this, we have the following definition of a derivative.
+
+|![](Pic34.png)|
+|:--:|
+
+
+::: {style="color: blue;"}
+**Definition:** The slope of a tangent line (the derivative) of a function $f$ at a point $a$ is given by \[f^{\prime}(a) = \lim_{x \rightarrow a} \dfrac{f(x) - f(a)}{x-a}.\]  The function $f^{\prime}(a)$ is called the derivative of $f$ at $a$.
+:::
+
+
+|![](Pic35.png)|
+|:--:|
+
+
+
+
+::: {style="color: green;"}
+**Example:**    Let $f(x) = x^2 - 5x + 2$.  Find $f^{\prime}(2)$.
+:::
+
+::: {style="color: green;"}
+**Solution:**  We know
+\begin{align*}  f^{\prime}(2) &= \lim_{x \rightarrow 2} \dfrac{f(x) - f(2)}{x-2}\\
+&= \lim_{x \rightarrow 2} \dfrac{x^2 - 5x + 2 - (2^2 - 5(2) + 2)}{x-2}\\
+&= \lim_{x \rightarrow 2} \dfrac{x^2 - 5x + 2 - 4 + 10 - 2}{x-2}\\
+&= \lim_{x \rightarrow 2} \dfrac{x^2 - 5x + 6}{x-2}\\
+&= \lim_{x \rightarrow 2} \dfrac{(x-2)(x-3)}{x-2}\\
+&= \lim_{x \rightarrow 2} x-3\\
+&= -1.
+\end{align*}
+Therefore, $f^{\prime}(2) = -1$.
+:::
+
+|![](Pic36.png)|
+|:--:|
+
+
+
+If we imagine that $x$ is a number close to $a$, we can write $x = a + h$ and take $x \rightarrow a$ by taking $h \rightarrow 0$.  Rewriting definition \ref{defn:derivative}, we see an alternative form of the derivative \[f^{\prime}(a) = \lim_{h \rightarrow 0}  \dfrac{f(a+h) - f(a)}{h}.\]
+
+::: {style="color: blue;"}
+**Definition:**   The derivative of a function $f$ at a point $x$ is the function $f^{\prime}(x)$ and is defined to be \[f^{\prime}(x) = \lim_{h \rightarrow 0} \dfrac{f(x+h) - f(x)}{h}.\]
+:::
+
+The derivative of a function is the slope or rate of change of that function at any point $x$.
+
+::: {style="color: green;"}
+**Example:**   Let $f(x) = x^3 + x - 5$.  Find $f^{\prime}(x)$.
+:::
+
+::: {style="color: green;"}
+**Solution:**  We know
+\begin{align*}  f^{\prime}(x) &= \lim_{h \rightarrow 0} \dfrac{f(x+h) - f(x)}{h}\\
+&= \lim_{h \rightarrow 0} \dfrac{(x+h)^3 + (x+h) - 5 - (x^3 + x - 5)}{h}\\
+&= \lim_{h \rightarrow 0} \dfrac{x^3 + 3x^2h + 3xh^2 + h^3 + x+h - x^3 - x)}{h}\\
+&= \lim_{h \rightarrow 0} \dfrac{3x^2h + 3xh^2 + h^3 +h )}{h}\\
+&= \lim_{h \rightarrow 0} \dfrac{h(3x^2 + 3xh + h^2 +1) )}{h}\\
+&= \lim_{h \rightarrow 0} 3x^2 + 3xh + h^2 +1\\
+&= 3x^2  +1.
+\end{align*}
+Therefore, $f^{\prime}(x) = 3x^2 + 1$.
+:::
+
+
+
+
+Practice Problems
+
+A.  Use definition \ref{defn:derivative} to determine the following derivatives at the given point.
+
+*   $f(x) = 5x^4 - 3x^3 + x^2 - 5$ at $a = 1$
+*   $f(x) = 5x^4 - 3x^3 + x^2 - 5$ at $a = 3$
+*   $f(x) = 7x^3- 2x^2  + x - 10$  at $a = 0$
+*   $f(x) = 7x^3- 2x^2  + x - 10$  at $a = -2$
+*   $f(x) = x^4 - 3x^2 + x - 1$    at $a = 4$
+*   $f(x) = x^6 - x^4 + x^2 + 1$   at $a = -3$
+
+
+B.  Use definition \ref{defn:derivative2} to determine the value of $f^{\prime}(x)$.
+
+*   $f(x) = x^2 - 5x + 1$
+*   $f(x) = 7x^3- 2x^2  + x - 10$
+*   $f(x) = -x^2 + 3x + 10$
+*   $f(x) = 5x^4 - 3x^3 + x^2 - 5$
+*   $f(x) = x^4 - 3x^2 + x - 1$
+*   $f(x) = x^6 - x^4 + x^2 + 1$   
+
+
+
+
+
+##  Application:  Tangent Lines {-}
+
+The derivative of a function $f$ at a point $(a,b)$ is the slope of a tangent line to $f$ at $(a,b)$.  Therefore, we can find the equation of a tangent line to $f$ at $(a,b)$ using the formula \[y-b = f^{\prime}(a)(x-a).\]
+
+
+::: {style="color: green;"}
+**Example:**  Let $f(x) = \dfrac{x}{x+1}$.  Find $f^{\prime}(x)$ and the equation of a tangent line to $f$ at $x=2$.
+:::
+
+::: {style="color: green;"}
+**Solution:**  We know
+\begin{align*}  f^{\prime}(x) &= \lim_{h \rightarrow 0} \dfrac{f(x+h) - f(x)}{h}\\ \\
+&= \lim_{h \rightarrow 0} \dfrac{\frac{x+h}{x+h+1} - \frac{x}{x+1}}{h}\\ \\
+&= \lim_{h \rightarrow 0} \dfrac{\frac{(x+h)(x+1)}{(x+h+1)(x+1)} - \frac{x(x+h+1)}{(x+1)(x + h + 1)}}{h}\\ \\
+&= \lim_{h \rightarrow 0} \dfrac{\frac{(x+h)(x+1)-x(x+h+1)}{(x+h+1)(x+1)}}{h}\\ \\
+&= \lim_{h \rightarrow 0} \dfrac{\frac{x^2 + xh + x + h - x^2 - xh - x}{(x+h+1)(x+1)}}{h}\\ \\
+&= \lim_{h \rightarrow 0} \dfrac{\frac{h}{(x+h+1)(x+1)}}{h}\\ \\
+&= \lim_{h \rightarrow 0} \dfrac{1}{(x+h+1)(x+1)}\\ \\
+&= \dfrac{1}{(x+1)^2}.
+\end{align*}
+Therefore, $f^{\prime}(x) = \dfrac{1}{(x+1)^2}$.
+
+At $x = 2$, we have $y = \dfrac{2}{2+1} = \dfrac{1}{3}$.  The slope of $f$ at $x = 2$ is $f^{\prime}(2) = \dfrac{1}{(2+1)^2} = \dfrac{1}{9}$.  Therefore, the equation of the tangent line to $f$ at $2$ is \[y - \dfrac{2}{3} = \dfrac{1}{9}(x-2).\]
+:::
+
+|![](Pic37.png)|
+|:--:|
+
+
+
+::: {style="color: green;"}
+**Example:** Let $f(x) = \sqrt{x+3}$.  Find $f^{\prime}(x)$ and the equation of a tangent line to $f$ at $x=1$.
+:::
+
+::: {style="color: green;"}
+**Solution:**  We know
+\begin{align*}  f^{\prime}(x) &= \lim_{h \rightarrow 0} \dfrac{f(x+h) - f(x)}{h}\\ \\
+&= \lim_{h \rightarrow 0} \dfrac{\sqrt{x+h+3} - \sqrt{x+3}}{h}\\ \\
+&= \lim_{h \rightarrow 0} \dfrac{\left[\sqrt{x+h+3} - \sqrt{x+3}\right]\left(\sqrt{x+h+3} + \sqrt{x+3}\right)}{h\left(\sqrt{x+h+3} + \sqrt{x+3}\right)}\\ \\
+&= \lim_{h \rightarrow 0} \dfrac{x+h+3 - (x+3)}{h\left(\sqrt{x+h+3} + \sqrt{x+3}\right)}\\ \\
+&= \lim_{h \rightarrow 0} \dfrac{h}{h\left(\sqrt{x+h+3} + \sqrt{x+3}\right)}\\ \\
+&= \lim_{h \rightarrow 0} \dfrac{1}{\sqrt{x+h+3} + \sqrt{x+3}}\\ \\
+&= \dfrac{1}{2\sqrt{x+3}}.
+\end{align*}
+Therefore, $f^{\prime}(x) = \dfrac{1}{2\sqrt{x+3}}$.
+
+At $x = 1$, we have $y = \sqrt{1+3} = 2$.  The slope of $f$ at $x = 1$ is $f^{\prime}(1) = \dfrac{1}{2\sqrt{1+3}} = \dfrac{1}{4}$.  Therefore, the equation of the tangent line to $f$ at $1$ is \[y - 2 = \dfrac{1}{4}(x-1).\]
+:::
+
+|![](Pic38.png)|
+|:--:|
+
+
+
+
+
+
+Practice Problems
+
+Find the equation of the tangent line to the function at the given point.
+
+*   $f(x) = 5x^4 - 3x^3 + x^2 - 5$ at $a = 1$
+*   $f(x) = 7x^3- 2x^2  + x - 10$  at $a = 0$
+*   $f(x) = x^6 - x^4 + x^2 + 1$   at $a = -3$
+*   $f(x) = \sqrt{x+1}$ at $a = 8$
+*   $f(x) = \sqrt{x-5}$ at $a = 9$
+*   $f(x) = \dfrac{1}{x}$ at $a = 1$
+*   $f(x) = \dfrac{3}{x-2}$ at $a = 1$
+*   $f(x) = \sin(x + \pi/2)$ at $a = \pi$
+
+
+# 2.8  The Derivative as a Function {-}
+
+##  Differentiability {-}
+
+
+Not all functions have derivatives.  While most of the functions we have dealt with have had derivatives, it is certainly not the case that they all do.  Any function that has a derivative is called \textbf{differentiable}.
+
+
+
+::: {style="color: blue;"}
+**Definition:**    A function $f$ is called differentiable at $x = a$ if $f^{\prime}(a)$ exist.  A function $f$ is called differentiable on an interval if the derivative exists for each point in that interval.
+:::
+
+Specifically, a function can fail to be differentiable at a point $a$ if there is a vertical tangent line, a discontinuity in the graph or if the graph has a corner.
+
+
+|![](Pic39.png)|
+|:--:|
+
+
+
+
+::: {style="color: green;"}
+**Example:**    Determine $f^{\prime}(0)$ given $g(x) = |x|$.\\
+:::
+
+
+::: {style="color: green;"}
+**Solution:**  We know
+\begin{align*}  f^{\prime}(0) &= \lim_{h \rightarrow 0} \dfrac{f(0+h) - f(0)}{h}\\ \\
+&= \lim_{h \rightarrow 0} \dfrac{|0+h| - |0|}{h}\\ \\
+&= \lim_{h \rightarrow 0} \dfrac{|h|}{h}.
+\end{align*}
+Recall that \[|h| = \begin{cases}h & h \geq 0\\ -h & h < 0 \end{cases}.\]  If we take the limit from the left, $h < 0$.  Therefore,
+\[\lim_{h \rightarrow 0^-} \dfrac{|h|}{h} = \lim_{h \rightarrow 0^{-}} \dfrac{-h}{h} = -1.\]  If we take the limit from the right, $h > 0$.  Therefore, \[\lim_{h \rightarrow 0^+} \dfrac{|h|}{h} = \lim_{h \rightarrow 0^{+}} \dfrac{h}{h} = 1.\]  Now, since the two one-sided limits are different so $\displaystyle\lim_{h \rightarrow 0} \dfrac{|h|}{h}$ does not exist.  Since the limit does not exist, neither does the derivative.
+:::
+
+
+|![](Pic40.png)|
+|:--:|
+
+
+
+
+
+
+
+
+Practice Problems
+
+A.  Determine where the following functions are differentiable.
+
+*   $f(x) = \begin{cases} x+1 & x \geq 0 \\ x-1 & x < 0 \end{cases}$
+*   $f(x) = |x-1|$
+*   $f(x) = \begin{cases} x^2 & x \geq 0 \\ -x& x < 0 \end{cases}$
+*   $f(x) = \dfrac{1}{x^2}$
+*   $f(x) = x^{1/3}$
+*   $f(x) = \dfrac{x}{|x|}$
+*   $f(x) = \sqrt{x}$
+*   $f(x) = \sqrt{x}$
+
+
+B.  For each of the functions in part A, sketch a graph of the derivatives.
