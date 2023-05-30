@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>2.8 The Derivative as a Function | Calculus I</title>
-  <meta name="description" content="2.8 The Derivative as a Function | Calculus I" />
+  <title>3.4 The Chain Rule | Calculus I</title>
+  <meta name="description" content="3.4 The Chain Rule | Calculus I" />
   <meta name="generator" content="bookdown 0.33 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="2.8 The Derivative as a Function | Calculus I" />
+  <meta property="og:title" content="3.4 The Chain Rule | Calculus I" />
   <meta property="og:type" content="book" />
   <meta property="og:image" content="/Title_Page.png" />
   
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="2.8 The Derivative as a Function | Calculus I" />
+  <meta name="twitter:title" content="3.4 The Chain Rule | Calculus I" />
   
   
   <meta name="twitter:image" content="/Title_Page.png" />
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="derivatives-and-rates-of-change.html"/>
-<link rel="next" href="derivatives-of-polynomials-and-exponential-functions.html"/>
+<link rel="prev" href="derivatives-of-trigonometric-functions.html"/>
+<link rel="next" href="implicit-differentiation.html"/>
 <script src="libs/jquery/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook/css/style.css" rel="stylesheet" />
@@ -189,211 +189,118 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="the-derivative-as-a-function" class="section level1 unnumbered hasAnchor">
-<h1>2.8 The Derivative as a Function<a href="the-derivative-as-a-function.html#the-derivative-as-a-function" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="differentiability" class="section level2 unnumbered hasAnchor">
-<h2>Differentiability<a href="the-derivative-as-a-function.html#differentiability" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Not all functions have derivatives. While most of the functions we have dealt with have had derivatives, it is certainly not the case that they all do. Any function that has a derivative is called .</p>
+<div id="the-chain-rule" class="section level1 unnumbered hasAnchor">
+<h1>3.4 The Chain Rule<a href="the-chain-rule.html#the-chain-rule" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>The chain rule is a rule for differentiating composite functions. Colloquially, it says that if you want to differentiate a composite function, you differentiate the ``outside’’ function first while leaving the “inside” function alone and then you multiply that by the derivative of the inside function.</p>
 <div style="color: blue;">
-<p><strong>Definition:</strong> A function <span class="math inline">\(f\)</span> is called differentiable at <span class="math inline">\(x = a\)</span> if <span class="math inline">\(f^{\prime}(a)\)</span> exist. A function <span class="math inline">\(f\)</span> is called differentiable on an interval if the derivative exists for each point in that interval.</p>
-</div>
-<p>Specifically, a function can fail to be differentiable at a point <span class="math inline">\(a\)</span> if there is a vertical tangent line, a discontinuity in the graph or if the graph has a corner.</p>
-<table>
-<thead>
-<tr class="header">
-<th align="center"><img src="Pic39.png" /></th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
-<div style="color: green;">
-<p><strong>Example:</strong> Determine <span class="math inline">\(f^{\prime}(0)\)</span> given <span class="math inline">\(g(x) = |x|\)</span>.\</p>
+<p><strong>Theorem (The Chain Rule):</strong> Suppose <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> are both differentiable functions.</p>
+<ol style="list-style-type: decimal">
+<li>If <span class="math inline">\(F(x) = f(g(x))\)</span>, then the derivative of <span class="math inline">\(F\)</span> is given by <span class="math display">\[F^{\prime}(x) = f^{\prime}(g(x))g^{\prime}(x).\]</span></li>
+<li>If <span class="math inline">\(y = f(u)\)</span> and <span class="math inline">\(u = g(x)\)</span>, then the derivative of <span class="math inline">\(y\)</span> is given by <span class="math display">\[\dfrac{dy}{dx} = \dfrac{dy}{du}\dfrac{du}{dx}.\]</span></li>
+</ol>
 </div>
 <div style="color: green;">
-<p><strong>Solution:</strong> We know
-<span class="math display">\[\begin{align*}  f^{\prime}(0) &amp;= \lim_{h \rightarrow 0} \dfrac{f(0+h) - f(0)}{h}\\ \\
-&amp;= \lim_{h \rightarrow 0} \dfrac{|0+h| - |0|}{h}\\ \\
-&amp;= \lim_{h \rightarrow 0} \dfrac{|h|}{h}.
-\end{align*}\]</span>
-Recall that <span class="math display">\[|h| = \begin{cases}h &amp; h \geq 0\\ -h &amp; h &lt; 0 \end{cases}.\]</span> If we take the limit from the left, <span class="math inline">\(h &lt; 0\)</span>. Therefore,
-<span class="math display">\[\lim_{h \rightarrow 0^-} \dfrac{|h|}{h} = \lim_{h \rightarrow 0^{-}} \dfrac{-h}{h} = -1.\]</span> If we take the limit from the right, <span class="math inline">\(h &gt; 0\)</span>. Therefore, <span class="math display">\[\lim_{h \rightarrow 0^+} \dfrac{|h|}{h} = \lim_{h \rightarrow 0^{+}} \dfrac{h}{h} = 1.\]</span> Now, since the two one-sided limits are different so <span class="math inline">\(\displaystyle\lim_{h \rightarrow 0} \dfrac{|h|}{h}\)</span> does not exist. Since the limit does not exist, neither does the derivative.</p>
+<p><strong>Example:</strong> Find the derivative of <span class="math inline">\(\sqrt{3x + 5}\)</span>.</p>
 </div>
-<table>
-<thead>
-<tr class="header">
-<th align="center"><img src="Pic40.png" /></th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
+<div style="color: green;">
+<p><strong>Solution:</strong> In this example, the outside function is <span class="math inline">\(( )^{1/2}\)</span> while the inside function is <span class="math inline">\(3x + 5\)</span>. One might write <span class="math inline">\(f(x) = x^{1/2}\)</span> and <span class="math inline">\(g(x) = 3x+5\)</span> with a goal of finding the derivative of <span class="math inline">\(F(x) = f(g(x))\)</span>. According to the chain rule, the derivative here would be <span class="math display">\[F^{\prime}(x) = f^{\prime}(g(x))g^{\prime}(x).\]</span> We know that <span class="math inline">\(f^{\prime}(x) = \dfrac{1}{2}x^{-1/2}\)</span> and <span class="math inline">\(g^{\prime}(x) = 3\)</span>. Therefore, by the chin rule, <span class="math display">\[F^{\prime}(x) = \dfrac{1}{2}(3x+5)^{-1/2}(3) = \dfrac{3}{2\sqrt{3x+5}}.\]</span></p>
+</div>
+<p>Notice the pattern of the previous answer. We took the outside function and differentiated it. We left the inside function alone (inside the derivative of the outside function) then multiplied everything by the derivative of the inside function.</p>
+<div style="color: green;">
+<p><strong>Example:</strong> Find the derivative of <span class="math inline">\(\sin(3^x)\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Solution:</strong> Here, the outside function is <span class="math inline">\(f(x) = \sin(x)\)</span> and the inside function is <span class="math inline">\(g(x) = 3^x\)</span>. According to the chain rule, the derivative of <span class="math inline">\(F(x) = f(g(x))\)</span> is <span class="math display">\[F^{\prime}(x) = f^{\prime}(g(x))g^{\prime}(x).\]</span> We know that <span class="math inline">\(f^{\prime}(x) = \cos(x)\)</span> and <span class="math inline">\(g^{\prime}(x) = 3^x\ln3\)</span>. Therefore, by the chin rule, <span class="math display">\[F^{\prime}(x) = \cos(3^x)3^x\ln3.\]</span></p>
+</div>
+<div style="color: green;">
+<p><strong>Example:</strong> Find the derivative of <span class="math inline">\(y = e^{5x}\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Solution:</strong> Using Leibnitz notation, we have <span class="math inline">\(y = f(u) = e^u\)</span> and <span class="math inline">\(u(x) = 5x\)</span>. The derivatives are <span class="math inline">\(\dfrac{dy}{du} = e^u\)</span> and <span class="math inline">\(\dfrac{du}{dx} = 5\)</span>. Therefore, <span class="math display">\[\begin{align*}
+\dfrac{dy}{dx} &amp;= \dfrac{dy}{du}\dfrac{du}{dx}\\
+&amp;=e^u(5)\\
+&amp;=5e^{5x}. \end{align*}\]</span>
+Therefore, the derivative of <span class="math inline">\(y = e^{5x}\)</span> is <span class="math display">\[\dfrac{dy}{dx} = 5e^{5x}.\]</span></p>
+</div>
+<div style="color: green;">
+<p><strong>Example:</strong> Find the derivative of <span class="math inline">\(f(x) = e^{4\tan(x)}\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Solution:</strong> The outside function is <span class="math inline">\(e^x\)</span> while the inside function is <span class="math inline">\(4\tan(x)\)</span>. So, we know that <span class="math display">\[f^{\prime}(x) = e^{4\tan(x)}(4\sec^2(x)).\]</span></p>
+</div>
 <p>Practice Problems</p>
-<ol style="list-style-type: upper-alpha">
-<li>Determine where the following functions are differentiable.</li>
+<ol style="list-style-type: decimal">
+<li>Differentiate.</li>
 </ol>
 <ul>
-<li><span class="math inline">\(f(x) = \begin{cases} x+1 &amp; x \geq 0 \\ x-1 &amp; x &lt; 0 \end{cases}\)</span></li>
-<li><span class="math inline">\(f(x) = |x-1|\)</span></li>
-<li><span class="math inline">\(f(x) = \begin{cases} x^2 &amp; x \geq 0 \\ -x&amp; x &lt; 0 \end{cases}\)</span></li>
-<li><span class="math inline">\(f(x) = \dfrac{1}{x^2}\)</span></li>
-<li><span class="math inline">\(f(x) = x^{1/3}\)</span></li>
-<li><span class="math inline">\(f(x) = \dfrac{x}{|x|}\)</span></li>
-<li><span class="math inline">\(f(x) = \sqrt{x}\)</span></li>
-<li><span class="math inline">\(f(x) = \sqrt{x}\)</span></li>
+<li><span class="math inline">\(y = \cos(2x - 5)\)</span></li>
+<li><span class="math inline">\(y = (3x + 5)^{50}\)</span></li>
+<li><span class="math inline">\(y = e^{4x^2 + 3x + 2}\)</span></li>
+<li><span class="math inline">\(y = \sec(4x - 2)\)</span></li>
+<li><span class="math inline">\(y = \sin^5(x) + \sin(x^5)\)</span></li>
+<li><span class="math inline">\(y = (x^3 + 4x + 1)^{500}\)</span></li>
+<li><span class="math inline">\(y = \sin(4x)\)</span></li>
+<li><span class="math inline">\(y = \dfrac{1}{(3x + 5)^8}\)</span></li>
+<li><span class="math inline">\(y = \csc(1/x^2)\)</span></li>
+<li><span class="math inline">\(y = \sqrt{\sqrt{x} + x}\)</span></li>
+<li><span class="math inline">\(y = e^{\sin(x)}\)</span></li>
+<li><span class="math inline">\(y = 5^{e^x}\)</span></li>
 </ul>
-<ol start="2" style="list-style-type: upper-alpha">
-<li>For each of the functions in part A, sketch a graph of the derivatives.</li>
+<ol start="2" style="list-style-type: decimal">
+<li>Differentiate.</li>
+</ol>
+<ul>
+<li><span class="math inline">\(y = (2x+4)^9\sec(2x+1)\)</span></li>
+<li><span class="math inline">\(y = \cot(4^x)e^{3x}\)</span></li>
+<li><span class="math inline">\(y = (x^3 + 9\sin(x))^5\csc(x)\)</span></li>
+<li><span class="math inline">\(y = (8x^5 + \sin(x)2^x)\cot(5x)\)</span></li>
+<li><span class="math inline">\(y = (7x^2 + x\sin(5x) + 1)\sec(8x)\)</span></li>
+<li><span class="math inline">\(y = e^{4x-1}(\csc(4x) + 6\cot(3x))\)</span></li>
+<li><span class="math inline">\(y = \dfrac{5\sec(x)}{2^{4x+1}}\)</span></li>
+<li><span class="math inline">\(y = \dfrac{x}{4\csc^3(x)}\)</span></li>
+<li><span class="math inline">\(y = \dfrac{4e^x}{\cot^2(x) + \sin(5x)}\)</span></li>
+<li><span class="math inline">\(y = \dfrac{\cos^6(x) + 3x}{\csc(8x)}\)</span></li>
+<li><span class="math inline">\(y = \dfrac{\sin(4x)}{2\cot^3(x) + 1}\)</span></li>
+<li><span class="math inline">\(y = \dfrac{4\sqrt{3^x}}{\sec(5x)}\)</span></li>
+</ul>
+<div id="proof-of-the-chain-rule" class="section level2 unnumbered hasAnchor">
+<h2>Proof of The Chain Rule<a href="the-chain-rule.html#proof-of-the-chain-rule" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In this section, we prove the chain rule.</p>
+<div style="color: blue;">
+<p><strong>Theorem (The Chain Rule):</strong> Suppose <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> are both differentiable functions.</p>
+<ol style="list-style-type: decimal">
+<li>If <span class="math inline">\(F(x) = f(g(x))\)</span>, then the derivative of <span class="math inline">\(F\)</span> is given by <span class="math display">\[F^{\prime}(x) = f^{\prime}(g(x))g^{\prime}(x).\]</span></li>
+<li>If <span class="math inline">\(y = f(u)\)</span> and <span class="math inline">\(u = g(x)\)</span>, then the derivative of <span class="math inline">\(y\)</span> is given by <span class="math display">\[\dfrac{dy}{dx} = \dfrac{dy}{du}\dfrac{du}{dx}.\]</span></li>
 </ol>
 </div>
-<div id="differentiability-continuity" class="section level2 unnumbered hasAnchor">
-<h2>Differentiability &amp; Continuity<a href="the-derivative-as-a-function.html#differentiability-continuity" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Thus far, the functions we have been looking at have almost all been differentiable. Most functions are not differentiable. However, there is a relationship between differentiable and continuous functions.</p>
 <div style="color: blue;">
-<p><strong>Theorem:</strong> If <span class="math inline">\(f\)</span> is differentiable at <span class="math inline">\(a\)</span>, then <span class="math inline">\(f\)</span> is continuous at <span class="math inline">\(a\)</span>.</p>
+<p><strong>Proof:</strong> Define <span class="math inline">\(u = g(x)\)</span>. We need to prove <span class="math display">\[\dfrac{d}{dx} f(u) = f^{\prime}(u)\dfrac{du}{dx}.\]</span> We begin by determining the derivative of <span class="math inline">\(u\)</span>. Since <span class="math inline">\(u = g(x)\)</span>, we know that <span class="math inline">\(u\)</span> is a function of <span class="math inline">\(x\)</span>. So,
+<span class="math display">\[u^{\prime}(x) = \lim_{h \rightarrow 0} \dfrac{u(x+h) - u(x)}{h}.\]</span> We also know that <span class="math display">\[\mathop {\lim }\limits_{h \to 0} \left( {\frac{{u\left( {x + h} \right) - u\left( x \right)}}{h} - u&#39;\left( x \right)} \right) = \mathop {\lim }\limits_{h \to 0} \frac{{u\left( {x + h} \right) - u\left( x \right)}}{h} - \mathop {\lim }\limits_{h \to 0} u&#39;\left( x \right) = u&#39;\left( x \right) - u&#39;\left( x \right) = 0.\]</span>
+Define <span class="math display">\[v\left( h \right) = \left\{ {\begin{array}{*{20}{l}}{\displaystyle \frac{{u\left( {x + h} \right) - u\left( x \right)}}{h} - u&#39;\left( x \right)}&amp;{{\mbox{  if }}h \ne 0}\\0&amp;{{\mbox{  if }}h = 0}\end{array}} \right.\]</span> Note that <span class="math inline">\(\displaystyle\lim_{h \rightarrow 0} v(h) = 0 = v(0)\)</span> so that <span class="math inline">\(v(h)\)</span> is continuous at <span class="math inline">\(h = 0\)</span>.</p>
+<p>If <span class="math inline">\(h \not = 0\)</span>, we can rewrite <span class="math inline">\(v(h)\)</span> to get <span class="math inline">\(u(x+h) = u(x) + h(v(h) + u^{\prime}(x))\)</span>. We note that this expression for <span class="math inline">\(u(x+h)\)</span> is valid even if we allow <span class="math inline">\(h = 0\)</span> and so is valid for all <span class="math inline">\(h\)</span>.</p>
+<p>Now, since <span class="math inline">\(f\)</span> is differentiable, we define <span class="math inline">\(w\)</span> as a function of <span class="math inline">\(k\)</span> in the following way: <span class="math display">\[w\left( k \right) = \left\{ {\begin{array}{*{20}{l}}{\displaystyle \frac{{f\left( {z + k} \right) - f\left( z \right)}}{k} - f&#39;\left( z \right)}&amp;{{\mbox{  if }}k \ne 0}\\0&amp;{{\mbox{  if }}k = 0}\end{array}} \right.\]</span> and a similar argument to the one above shows that <span class="math inline">\(w(k)\)</span> is continuous at <span class="math inline">\(k = 0\)</span> and that <span class="math display">\[f(z+k) = f(z) + k(w(k) + f^{\prime}(z)).\]</span></p>
+<p>At this point, we need to be able to evaluate <span class="math display">\[\dfrac{d}{dx} f(u(x)) = \lim_{h \rightarrow 0} \dfrac{f(u(x+h)) - f(u(x))}{h}.\]</span>
+Using the results above, we note that <span class="math display">\[f(u(x+h)) - f(u(x)) = f(u(x) + h(v(h) + u^{\prime}(x))) - f(u(x)).\]</span> Let <span class="math inline">\(z = u(x)\)</span> and <span class="math inline">\(k = h(v(h) + u^{\prime}(x))\)</span>, our previous result gives us
+<span class="math display">\[\begin{align*}f\left[ {u\left( {x + h} \right)} \right] - f\left[ {u\left( x \right)} \right] &amp; = f\left[ {u\left( x \right) + h\left( {v\left( h \right) + u&#39;\left( x \right)} \right)} \right] - f\left[ {u\left( x \right)} \right]\\ &amp;  = f\left[ {u\left( x \right)} \right] + h\left( {v\left( h \right) + u&#39;\left( x \right)} \right)\left( {w\left( k \right) + f&#39;\left[ {u\left( x \right)} \right]} \right) - f\left[ {u\left( x \right)} \right]\\ &amp;  = h\left( {v\left( h \right) + u&#39;\left( x \right)} \right)\left( {w\left( k \right) + f&#39;\left[ {u\left( x \right)} \right]} \right).\end{align*}\]</span> Thus, we have
+<span class="math display">\[\begin{align*}\frac{d}{{dx}}\left[ {f\left[ {u\left( x \right)} \right]} \right] &amp; = \mathop {\lim }\limits_{h \to 0} \frac{{h\left( {v\left( h \right) + u&#39;\left( x \right)} \right)\left( {w\left( k \right) + f&#39;\left[ {u\left( x \right)} \right]} \right)}}{h}\\ &amp;  = \mathop {\lim }\limits_{h \to 0} \left( {v\left( h \right) + u&#39;\left( x \right)} \right)\left( {w\left( k \right) + f&#39;\left[ {u\left( x \right)} \right]} \right).\end{align*}\]</span> Next, since <span class="math inline">\(k = h(v(x) + u^{\prime}(x))\)</span>, we have <span class="math display">\[\mathop {\lim }\limits_{h \to 0} k = \mathop {\lim }\limits_{h \to 0} h\left( {v\left( h \right) + u&#39;\left( x \right)} \right) = 0.\]</span> So, by the definition of <span class="math inline">\(w\)</span> and the fact that <span class="math inline">\(w\)</span> is continuous for all <span class="math inline">\(k\)</span>, we know that <span class="math display">\[\mathop {\lim }\limits_{h \to 0} w\left( k \right) = w\left( {\mathop {\lim }\limits_{h \to 0} k} \right) = w\left( 0 \right) = 0.\]</span> Moreover, recall that <span class="math inline">\(\displaystyle\lim_{h \rightarrow 0}v(h) = 0\)</span>. Therefore, <span class="math display">\[\begin{align*}\frac{d}{{dx}}\left[ {f\left[ {u\left( x \right)} \right]} \right] &amp; = \mathop {\lim }\limits_{h \to 0} \left( {v\left( h \right) + u&#39;\left( x \right)} \right)\left( {w\left( k \right) + f&#39;\left[ {u\left( x \right)} \right]} \right)\\ &amp;  = u&#39;\left( x \right)f&#39;\left[ {u\left( x \right)} \right]\\ &amp;  = f&#39;\left[ {u\left( x \right)} \right]\frac{{du}}{{dx}},\end{align*}\]</span> which is exactly what we needed to prove.</p>
 </div>
-<div style="color: blue;">
-<p><strong>Proof:</strong> Let <span class="math inline">\(f\)</span> be a differentiable function at a point <span class="math inline">\(x_0\)</span>. Then, we know the derivative exists. That is, <span class="math display">\[f^{\prime}(x) = \lim_{x \rightarrow x_0} \frac{f(x) - f(x_0)}{x-x_0} = a,\]</span> for some <span class="math inline">\(a \in \mathbb{R}\)</span>. To show that <span class="math inline">\(f\)</span> is continuous at <span class="math inline">\(x_0\)</span>, we need to show that <span class="math display">\[\lim_{x \rightarrow x_0} f(x) - f(x_0) = 0.\]</span> Observe that <span class="math display">\[\lim_{x \rightarrow x_0} f(x) - f(x_0) = \lim_{x \rightarrow x_0} \left[ \frac{f(x) - f(x_0)}{x-x_0} \right] \cdot \lim_{x \rightarrow x_0} (x-x_0) = a \cdot \lim_{x \rightarrow x_0} (x-x_0) = 0.\]</span> Therefore, since <span class="math inline">\(\displaystyle\lim_{x \rightarrow x_0} f(x) - f(x_0) = 0\)</span>, we know the function is continuous.</p>
-</div>
-<p>We know that <span class="math inline">\(f(x) = |x|\)</span> is a continuous function on <span class="math inline">\(\mathbb{R}\)</span>. So, we know that the converse of the theorem does not hold since we have seen that <span class="math inline">\(y = |x|\)</span> is not differentiable at 0. Another example worth noting is <span class="math inline">\(y = \sqrt[3]{x}\)</span>. This function is continuous on <span class="math inline">\(\mathbb{R}\)</span> but is not differentiable at 0 since it has a vertical tangent line. The function <span class="math inline">\(y = x^{2/3}\)</span> is again continuous but not differentiable at <span class="math inline">\(0\)</span> since it has a cusp. Remember, not all continuous functions are differentiable - though many are.</p>
-<table>
-<thead>
-<tr class="header">
-<th align="center"><img src="Pic41.png" /></th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
 <p>Practice Problems</p>
-<ol style="list-style-type: upper-alpha">
-<li>Show that the function is continuous but not differentiable at the indicated point:</li>
-</ol>
-<ul>
-<li><span class="math inline">\(f(x) = \sqrt[3]{x}\)</span> at <span class="math inline">\(x = 0\)</span></li>
-<li><span class="math inline">\(f(x) = \sqrt[3]{(x-2)^2}\)</span> at <span class="math inline">\(x = 2\)</span></li>
-<li><span class="math inline">\(f(x) = \begin{cases} x^2 + 1 &amp; x \leq 1 \\ 2x &amp; x &gt;1 \end{cases}\)</span></li>
-</ul>
-<ol start="2" style="list-style-type: upper-alpha">
-<li><p>Suppose that a function <span class="math inline">\(f\)</span> is differentiable at <span class="math inline">\(x_0\)</span>. Define <span class="math inline">\(g(x) = f(mx+b)\)</span> where <span class="math inline">\(m\)</span> and <span class="math inline">\(b\)</span> are constants. Show that if <span class="math inline">\(x_1\)</span> is any point at which <span class="math inline">\(mx_1+b = x_0\)</span>, then <span class="math inline">\(g\)</span> is differentiable and <span class="math inline">\(g^{\prime}(x_1) = mf^{\prime}(x_0)\)</span>.\</p></li>
-<li><p>Draw a graph with the following characteristics:</p></li>
-</ol>
-<ul>
-<li>Exists on <span class="math inline">\([-5,5]\)</span></li>
-<li>Differentiable on <span class="math inline">\([-5,-3)\)</span></li>
-<li>Not continuous at -3</li>
-<li>Differentiable on <span class="math inline">\([-3,2]\)</span></li>
-<li>Continuous at 2</li>
-<li>Not differentiable at 2</li>
-<li>Differentiable on <span class="math inline">\((2,5]\)</span></li>
-</ul>
-<ol start="4" style="list-style-type: upper-alpha">
-<li><p>Find constants <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> so that the following function is continuous and differentiable everywhere <span class="math display">\[f(x) = \begin{cases} ax + b &amp; x \leq 1 \\ 2x^2 &amp; x \geq 1 \end{cases}.\]</span></p></li>
-<li><p>Where is the following function differentiable <span class="math display">\[f(x) = |x-2| + |x+1|.\]</span></p></li>
-<li><p>Explain why <span class="math display">\[f(x) = \begin{cases} x^2 - 1 &amp; x \leq 1 \\ x^2 + 1 &amp; x \geq 1 \end{cases}\]</span> is not differentiable at <span class="math inline">\(x = 1\)</span> even though the derivative of <span class="math inline">\(x^2-1\)</span> and <span class="math inline">\(x^2 + 1\)</span> are the same.</p></li>
+<ol style="list-style-type: decimal">
+<li><p>Let <span class="math inline">\(F(x) = f(g(x))\)</span> with <span class="math inline">\(g(2) = -2\)</span>, <span class="math inline">\(g^{\prime}(2) = 7\)</span> and <span class="math inline">\(f^{\prime}(-2) = 7\)</span>. Find <span class="math inline">\(F^{\prime}(2)\)</span>.</p></li>
+<li><p>Let <span class="math inline">\(F(x) = f(f(x))\)</span> with <span class="math inline">\(f^{\prime}(13) = 11\)</span>, <span class="math inline">\(f^{\prime}(5) = 8\)</span> and <span class="math inline">\(f(5) = 13\)</span>. Find <span class="math inline">\(F^{\prime}(5)\)</span>.</p></li>
+<li><p>Find all values of <span class="math inline">\(x\)</span> on the interval <span class="math inline">\([0,2\pi]\)</span> where the function <span class="math inline">\(f(x) = 2\cos(x) + \sin^2(x)\)</span> has a horizontal tangent line.</p></li>
+<li><p>Let <span class="math inline">\(H\)</span> be a function satisfying <span class="math inline">\(H^{\prime}(x) = \dfrac{2}{x}\)</span> for all <span class="math inline">\(x &gt; 0\)</span>. Find an expression for the derivative of <span class="math inline">\(F(x) = [H(x)]^3\)</span>.</p></li>
+<li><p>Let <span class="math inline">\(H\)</span> be a function satisfying <span class="math inline">\(H^{\prime}(x) = \dfrac{2}{x}\)</span> for all <span class="math inline">\(x &gt; 0\)</span>. Find an expression for the derivative of <span class="math inline">\(F(x) = H(x^3)\)</span>.</p></li>
 </ol>
 </div>
-<div id="notation" class="section level2 unnumbered hasAnchor">
-<h2>Notation<a href="the-derivative-as-a-function.html#notation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>In differential and integral calculus, there is no single uniform notation for differentiation. Over the years, several different notations have emerged. Each notation typically is contextually advantageous in some area. However, no one notation has the benefit of being the most advantageous in all cases.</p>
-<p>The notation that we have used so far is attributed to Lagrange. In Lagrange notation, a prime mark denotes the derivative. For example, <span class="math inline">\(f^{\prime}(x)\)</span>. If we wanted to take the derivative of the derivative (ie, a second derivative), we use a second prime mark, <span class="math inline">\(f^{\prime \prime}(x)\)</span>. When we are taking a derivative higher than four, most authors switch to Arabic numerals in brackets. For example <span class="math inline">\(f^{(6)}(x)\)</span> for a <span class="math inline">\(6^{th}\)</span> derivative. If <span class="math inline">\(y = f(x)\)</span>, many authors will write <span class="math inline">\(y^{\prime}\)</span> to indicate the derivative of <span class="math inline">\(y\)</span> as a short hand for <span class="math inline">\(f^{\prime}(x)\)</span>.</p>
-<table>
-<thead>
-<tr class="header">
-<th><span class="math inline">\(\;\)</span></th>
-<th>Notation</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Function</td>
-<td><span class="math inline">\(f(x), \;\; y\)</span></td>
-</tr>
-<tr class="even">
-<td>Derivative</td>
-<td><span class="math inline">\(f^{\prime}(x), \;\; y^{\prime}\)</span></td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(2^{nd}\)</span> Derivative</td>
-<td><span class="math inline">\(f^{\prime \prime }(x), \;\; y^{\prime \prime}\)</span></td>
-</tr>
-<tr class="even">
-<td>Higher Derivative</td>
-<td><span class="math inline">\(f^{(n)}(x), \;\; y^{(n)}\)</span></td>
-</tr>
-</tbody>
-</table>
-<div style="color: green;">
-<p><strong>Example:</strong> From one of the previous problems, if <span class="math inline">\(f(x) = x^3 + x - 5\)</span>, we have <span class="math inline">\(f^{\prime}(x) = 3x^2 + 1\)</span>. We can also write:
-<span class="math inline">\(y = x^3 + x - 5 \Longrightarrow y^{\prime}(x) = 3x^2 + 1\)</span>.</p>
 </div>
-<p>Leibnitz notation is slightly different. If <span class="math inline">\(y = f(x)\)</span>, we denote the first derivative of <span class="math inline">\(f\)</span> by <span class="math inline">\(\frac{dy}{dx}\)</span>. So here, <span class="math inline">\(f^{\prime}(x) = \frac{dy}{dx}\)</span>. Another way to interpret Leibnitz notation is by writing <span class="math inline">\(\frac{d}{dx} f(x) = \frac{dy}{dx}\)</span>. The notation <span class="math inline">\(\frac{d}{dx} f(x)\)</span> can be interpreted as ``we are about to take the derivative of <span class="math inline">\(f(x)\)</span>’’. For higher derivatives, we can write <span class="math inline">\(\frac{d^2y}{dx^2}\)</span> in place of <span class="math inline">\(f^{\prime \prime}\)</span>.</p>
-<table>
-<colgroup>
-<col width="33%" />
-<col width="33%" />
-<col width="33%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><span class="math inline">\(\;\)</span></th>
-<th>Lagrange Notation</th>
-<th>Leibnitz Notation</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Function</td>
-<td><span class="math inline">\(f(x), \;\; y\)</span></td>
-<td><span class="math inline">\(f(x), \;\; y\)</span></td>
-</tr>
-<tr class="even">
-<td>Derivative</td>
-<td><span class="math inline">\(f^{\prime}(x), \;\; y^{\prime}\)</span></td>
-<td><span class="math inline">\(\frac{df}{dx}, \;\; \frac{dy}{dx}\)</span></td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(2^{nd}\)</span> Derivative</td>
-<td><span class="math inline">\(f^{\prime\prime }(x), \;\; y^{\prime \prime}\)</span></td>
-<td><span class="math inline">\(\frac{d^2f}{dx^2}, \;\; \frac{d^2y}{dx^2}\)</span></td>
-</tr>
-<tr class="even">
-<td>Higher Derivative</td>
-<td><span class="math inline">\(f^{(n)}(x), \;\; y^{(n)}\)</span></td>
-<td><span class="math inline">\(\frac{d^nf}{dx^n}, \;\; \frac{d^ny}{dx^n}\)</span></td>
-</tr>
-</tbody>
-</table>
-<div style="color: green;">
-<p><strong>Example:</strong> From one of the previous problems, if <span class="math inline">\(f(x) = x^3 + x - 5\)</span>, we have <span class="math inline">\(f^{\prime}(x) = 3x^2 + 1\)</span>. We can also write:
-<span class="math display">\[\begin{align*}
-f(x) &amp;= x^3 + x - 5  \Longrightarrow \frac{df}{dx} = 3x^2 + 1\\ \\
-f(x) &amp;= x^3 + x - 5  \Longrightarrow \frac{d}{dx}f(x) = 3x^2 + 1\\ \\
-y &amp;= x^3 + x - 5  \Longrightarrow \frac{dy}{dx} = 3x^2 + 1\\ \\
-&amp;\frac{d}{dx}\left[x^3 + x - 5\right] = 3x^2 + 1
-\end{align*}\]</span></p>
-</div>
-<p>One final notation is Euler’s notation. Here we use <span class="math inline">\(Df\)</span> to mean <span class="math inline">\(f^{\prime}(x)\)</span>. Higher derivatives are written <span class="math inline">\(D^2f\)</span> for <span class="math inline">\(f^{\prime \prime}(x)\)</span>, etc.</p>
-<div style="color: green;">
-<p><strong>Example:</strong> Given a function <span class="math inline">\(y = f(x)\)</span>, all of the following are equivalent and represent the derivative of <span class="math inline">\(f(x)\)</span> with respect to x.
-<span class="math display">\[f^{\prime}(x) = y^{\prime} = \dfrac{d f}{dx} = \dfrac{dy}{dx} = \dfrac{d}{dx}f(x) = \dfrac{d}{dx} y.\]</span>
-If we want to evaluate the derivative at a point <span class="math inline">\(x = a\)</span>, all of the following are equivalent notations:
-<span class="math display">\[f^{\prime}(a) =  y^{\prime} \bigg\rvert_{x=a} =  \dfrac{df}{dx} \bigg\rvert_{x = a} =  \dfrac{dy}{dx} \bigg\rvert_{x = a}.\]</span></p>
-</div>
-<p>The context in which each of these notations is advantageous will be unclear for a while. For now, we will use each one interchangeably.</p>
-
-</div>
-</div>
-
-
-
             </section>
 
           </div>
         </div>
       </div>
-<a href="derivatives-and-rates-of-change.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="derivatives-of-polynomials-and-exponential-functions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="derivatives-of-trigonometric-functions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="implicit-differentiation.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook/js/app.min.js"></script>
@@ -424,7 +331,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/USERNAME/REPO/edit/BRANCH/02-LimitsAndDerivatives.Rmd",
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/03-DifferentiationRules.Rmd",
 "text": "Edit"
 },
 "history": {

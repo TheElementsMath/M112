@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>4.1 Maximum and Minimum Values | Calculus I</title>
+  <meta name="description" content="4.1 Maximum and Minimum Values | Calculus I" />
+  <meta name="generator" content="bookdown 0.33 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="4.1 Maximum and Minimum Values | Calculus I" />
+  <meta property="og:type" content="book" />
+  <meta property="og:image" content="/Title_Page.png" />
+  
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="4.1 Maximum and Minimum Values | Calculus I" />
+  
+  
+  <meta name="twitter:image" content="/Title_Page.png" />
+
+<meta name="author" content="Differential Calculus" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="linear-approximations-and-differentials.html"/>
+
+<script src="libs/jquery/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Differential Calculus</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>About This Book</a></li>
+<li class="part"><span><b>I Functions and Models</b></span></li>
+<li class="part"><span><b>II Limits and Derivatives</b></span></li>
+<li class="chapter" data-level="" data-path="the-limit-of-a-function.html"><a href="the-limit-of-a-function.html"><i class="fa fa-check"></i>2.2 The Limit of a Function</a>
+<ul>
+<li class="chapter" data-level="" data-path="the-limit-of-a-function.html"><a href="the-limit-of-a-function.html#the-idea-of-a-limit"><i class="fa fa-check"></i>The Idea of a Limit</a></li>
+<li class="chapter" data-level="" data-path="the-limit-of-a-function.html"><a href="the-limit-of-a-function.html#left-and-right-limits"><i class="fa fa-check"></i>Left and Right Limits</a></li>
+<li class="chapter" data-level="" data-path="the-limit-of-a-function.html"><a href="the-limit-of-a-function.html#limits-that-do-not-exist"><i class="fa fa-check"></i>Limits That Do Not Exist</a></li>
+<li class="chapter" data-level="" data-path="the-limit-of-a-function.html"><a href="the-limit-of-a-function.html#infinite-limits-and-vertical-asymptotes"><i class="fa fa-check"></i>Infinite Limits and Vertical Asymptotes</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="calculating-limits-using-the-limit-laws.html"><a href="calculating-limits-using-the-limit-laws.html"><i class="fa fa-check"></i>2.3 Calculating Limits Using the Limit Laws</a>
+<ul>
+<li class="chapter" data-level="" data-path="calculating-limits-using-the-limit-laws.html"><a href="calculating-limits-using-the-limit-laws.html#the-limit-laws"><i class="fa fa-check"></i>The Limit Laws</a></li>
+<li class="chapter" data-level="" data-path="calculating-limits-using-the-limit-laws.html"><a href="calculating-limits-using-the-limit-laws.html#direct-substitution"><i class="fa fa-check"></i>Direct Substitution</a></li>
+<li class="chapter" data-level="" data-path="calculating-limits-using-the-limit-laws.html"><a href="calculating-limits-using-the-limit-laws.html#limits-of-trigonometric-functions"><i class="fa fa-check"></i>Limits of Trigonometric Functions</a></li>
+<li class="chapter" data-level="" data-path="calculating-limits-using-the-limit-laws.html"><a href="calculating-limits-using-the-limit-laws.html#the-squeeze-theorem"><i class="fa fa-check"></i>The Squeeze Theorem</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="the-precise-definition-of-a-limit.html"><a href="the-precise-definition-of-a-limit.html"><i class="fa fa-check"></i>2.4 The Precise Definition of a Limit</a>
+<ul>
+<li class="chapter" data-level="" data-path="the-precise-definition-of-a-limit.html"><a href="the-precise-definition-of-a-limit.html#proof-of-limit-laws"><i class="fa fa-check"></i>Proof of Limit Laws</a></li>
+<li class="chapter" data-level="" data-path="the-precise-definition-of-a-limit.html"><a href="the-precise-definition-of-a-limit.html#proofs-of-trigonometric-limits"><i class="fa fa-check"></i>Proofs of Trigonometric Limits</a></li>
+<li class="chapter" data-level="" data-path="the-precise-definition-of-a-limit.html"><a href="the-precise-definition-of-a-limit.html#limits-at-infinity-by-definition"><i class="fa fa-check"></i>Limits at Infinity by Definition</a></li>
+<li class="chapter" data-level="" data-path="the-precise-definition-of-a-limit.html"><a href="the-precise-definition-of-a-limit.html#proof-of-direct-substitution-property"><i class="fa fa-check"></i>Proof of Direct Substitution Property</a></li>
+<li class="chapter" data-level="" data-path="the-precise-definition-of-a-limit.html"><a href="the-precise-definition-of-a-limit.html#proof-of-the-squeeze-theorem"><i class="fa fa-check"></i>Proof of The Squeeze Theorem</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="continuity.html"><a href="continuity.html"><i class="fa fa-check"></i>2.5 Continuity</a>
+<ul>
+<li class="chapter" data-level="" data-path="continuity.html"><a href="continuity.html#limits-and-continuity"><i class="fa fa-check"></i>Limits and Continuity</a></li>
+<li class="chapter" data-level="" data-path="continuity.html"><a href="continuity.html#types-of-discontinuities"><i class="fa fa-check"></i>Types of Discontinuities</a></li>
+<li class="chapter" data-level="" data-path="continuity.html"><a href="continuity.html#properties-of-continuous-functions"><i class="fa fa-check"></i>Properties of Continuous Functions</a></li>
+<li class="chapter" data-level="" data-path="continuity.html"><a href="continuity.html#proof-of-continuity-laws"><i class="fa fa-check"></i>Proof of Continuity Laws</a></li>
+<li class="chapter" data-level="" data-path="continuity.html"><a href="continuity.html#the-intermediate-value-theorem"><i class="fa fa-check"></i>The Intermediate Value Theorem</a></li>
+<li class="chapter" data-level="" data-path="continuity.html"><a href="continuity.html#proof-of-the-ivt"><i class="fa fa-check"></i>Proof of The IVT</a></li>
+<li class="chapter" data-level="" data-path="continuity.html"><a href="continuity.html#continuity-of-trigonometric-functions"><i class="fa fa-check"></i>Continuity of Trigonometric Functions</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="limits-at-infinity-horizontal-asymptotes.html"><a href="limits-at-infinity-horizontal-asymptotes.html"><i class="fa fa-check"></i>2.6 Limits at Infinity; Horizontal Asymptotes</a>
+<ul>
+<li class="chapter" data-level="" data-path="limits-at-infinity-horizontal-asymptotes.html"><a href="limits-at-infinity-horizontal-asymptotes.html#limits-at-infinity"><i class="fa fa-check"></i>Limits At Infinity</a></li>
+<li class="chapter" data-level="" data-path="limits-at-infinity-horizontal-asymptotes.html"><a href="limits-at-infinity-horizontal-asymptotes.html#limits-at-infinity-by-definition-1"><i class="fa fa-check"></i>Limits at Infinity by Definition</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="derivatives-and-rates-of-change.html"><a href="derivatives-and-rates-of-change.html"><i class="fa fa-check"></i>2.7 Derivatives and Rates of Change</a>
+<ul>
+<li class="chapter" data-level="" data-path="derivatives-and-rates-of-change.html"><a href="derivatives-and-rates-of-change.html#application-tangent-lines"><i class="fa fa-check"></i>Application: Tangent Lines</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="the-derivative-as-a-function.html"><a href="the-derivative-as-a-function.html"><i class="fa fa-check"></i>2.8 The Derivative as a Function</a>
+<ul>
+<li class="chapter" data-level="" data-path="the-derivative-as-a-function.html"><a href="the-derivative-as-a-function.html#differentiability"><i class="fa fa-check"></i>Differentiability</a></li>
+<li class="chapter" data-level="" data-path="the-derivative-as-a-function.html"><a href="the-derivative-as-a-function.html#differentiability-continuity"><i class="fa fa-check"></i>Differentiability &amp; Continuity</a></li>
+<li class="chapter" data-level="" data-path="the-derivative-as-a-function.html"><a href="the-derivative-as-a-function.html#notation"><i class="fa fa-check"></i>Notation</a></li>
+</ul></li>
+<li class="part"><span><b>III Differentiation Rules</b></span></li>
+<li class="chapter" data-level="" data-path="derivatives-of-polynomials-and-exponential-functions.html"><a href="derivatives-of-polynomials-and-exponential-functions.html"><i class="fa fa-check"></i>3.1 Derivatives of Polynomials and Exponential Functions</a>
+<ul>
+<li class="chapter" data-level="" data-path="derivatives-of-polynomials-and-exponential-functions.html"><a href="derivatives-of-polynomials-and-exponential-functions.html#power-functions"><i class="fa fa-check"></i>Power Functions</a></li>
+<li class="chapter" data-level="" data-path="derivatives-of-polynomials-and-exponential-functions.html"><a href="derivatives-of-polynomials-and-exponential-functions.html#proof-of-differentiation-rules"><i class="fa fa-check"></i>Proof of Differentiation Rules</a></li>
+<li class="chapter" data-level="" data-path="derivatives-of-polynomials-and-exponential-functions.html"><a href="derivatives-of-polynomials-and-exponential-functions.html#derivatives-of-exponential-functions"><i class="fa fa-check"></i>Derivatives of Exponential Functions</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="the-product-and-the-quotient-rule.html"><a href="the-product-and-the-quotient-rule.html"><i class="fa fa-check"></i>3.2 The Product and the Quotient Rule</a>
+<ul>
+<li class="chapter" data-level="" data-path="the-product-and-the-quotient-rule.html"><a href="the-product-and-the-quotient-rule.html#the-product-rule"><i class="fa fa-check"></i>The Product Rule</a></li>
+<li class="chapter" data-level="" data-path="the-product-and-the-quotient-rule.html"><a href="the-product-and-the-quotient-rule.html#proof-of-the-product-rule"><i class="fa fa-check"></i>Proof of the Product Rule</a></li>
+<li class="chapter" data-level="" data-path="the-product-and-the-quotient-rule.html"><a href="the-product-and-the-quotient-rule.html#the-quotient-rule"><i class="fa fa-check"></i>The Quotient Rule</a></li>
+<li class="chapter" data-level="" data-path="the-product-and-the-quotient-rule.html"><a href="the-product-and-the-quotient-rule.html#proof-of-the-quotient-rule"><i class="fa fa-check"></i>Proof of the Quotient Rule</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="derivatives-of-trigonometric-functions.html"><a href="derivatives-of-trigonometric-functions.html"><i class="fa fa-check"></i>3.3 Derivatives of Trigonometric Functions</a>
+<ul>
+<li class="chapter" data-level="" data-path="derivatives-of-trigonometric-functions.html"><a href="derivatives-of-trigonometric-functions.html#derivative-of-sinx-and-cosx"><i class="fa fa-check"></i>Derivative of <span class="math inline">\(\sin(x)\)</span> and <span class="math inline">\(\cos(x)\)</span></a></li>
+<li class="chapter" data-level="" data-path="derivatives-of-trigonometric-functions.html"><a href="derivatives-of-trigonometric-functions.html#other-trigonometric-derivatives"><i class="fa fa-check"></i>Other Trigonometric Derivatives</a></li>
+<li class="chapter" data-level="" data-path="derivatives-of-trigonometric-functions.html"><a href="derivatives-of-trigonometric-functions.html#proofs-of-trigonometric-derivatives"><i class="fa fa-check"></i>Proofs of Trigonometric Derivatives</a></li>
+<li class="chapter" data-level="" data-path="derivatives-of-trigonometric-functions.html"><a href="derivatives-of-trigonometric-functions.html#higher-derivatives"><i class="fa fa-check"></i>Higher Derivatives</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="the-chain-rule.html"><a href="the-chain-rule.html"><i class="fa fa-check"></i>3.4 The Chain Rule</a>
+<ul>
+<li class="chapter" data-level="" data-path="the-chain-rule.html"><a href="the-chain-rule.html#proof-of-the-chain-rule"><i class="fa fa-check"></i>Proof of The Chain Rule</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="implicit-differentiation.html"><a href="implicit-differentiation.html"><i class="fa fa-check"></i>3.5 Implicit Differentiation</a>
+<ul>
+<li class="chapter" data-level="" data-path="implicit-differentiation.html"><a href="implicit-differentiation.html#derivatives-of-inverse-trigonometric-functions"><i class="fa fa-check"></i>Derivatives of Inverse Trigonometric Functions</a></li>
+<li class="chapter" data-level="" data-path="implicit-differentiation.html"><a href="implicit-differentiation.html#proof-of-inverse-trig-derivative-laws"><i class="fa fa-check"></i>Proof of Inverse Trig Derivative Laws</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="derivatives-of-logarithmic-and-inverse-trigonometricfunctions.html"><a href="derivatives-of-logarithmic-and-inverse-trigonometricfunctions.html"><i class="fa fa-check"></i>3.6 Derivatives of Logarithmic and Inverse TrigonometricFunctions</a>
+<ul>
+<li class="chapter" data-level="" data-path="derivatives-of-logarithmic-and-inverse-trigonometricfunctions.html"><a href="derivatives-of-logarithmic-and-inverse-trigonometricfunctions.html#logarithmic-derivatives"><i class="fa fa-check"></i>Logarithmic Derivatives</a></li>
+<li class="chapter" data-level="" data-path="derivatives-of-logarithmic-and-inverse-trigonometricfunctions.html"><a href="derivatives-of-logarithmic-and-inverse-trigonometricfunctions.html#proof-of-logarithmic-derivative-laws"><i class="fa fa-check"></i>Proof of Logarithmic Derivative Laws</a></li>
+<li class="chapter" data-level="" data-path="derivatives-of-logarithmic-and-inverse-trigonometricfunctions.html"><a href="derivatives-of-logarithmic-and-inverse-trigonometricfunctions.html#logarithmic-differentiation"><i class="fa fa-check"></i>Logarithmic Differentiation</a></li>
+<li class="chapter" data-level="" data-path="derivatives-of-logarithmic-and-inverse-trigonometricfunctions.html"><a href="derivatives-of-logarithmic-and-inverse-trigonometricfunctions.html#proof-of-the-power-rule"><i class="fa fa-check"></i>Proof of the Power Rule</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="related-rates.html"><a href="related-rates.html"><i class="fa fa-check"></i>3.9 Related Rates</a></li>
+<li class="chapter" data-level="" data-path="linear-approximations-and-differentials.html"><a href="linear-approximations-and-differentials.html"><i class="fa fa-check"></i>3.10 Linear Approximations and Differentials</a>
+<ul>
+<li class="chapter" data-level="" data-path="linear-approximations-and-differentials.html"><a href="linear-approximations-and-differentials.html#linear-approximation"><i class="fa fa-check"></i>Linear Approximation</a></li>
+<li class="chapter" data-level="" data-path="linear-approximations-and-differentials.html"><a href="linear-approximations-and-differentials.html#differentials"><i class="fa fa-check"></i>Differentials</a></li>
+</ul></li>
+<li class="part"><span><b>IV Applications of Differentiation</b></span></li>
+<li class="chapter" data-level="" data-path="maximum-and-minimum-values.html"><a href="maximum-and-minimum-values.html"><i class="fa fa-check"></i>4.1 Maximum and Minimum Values</a>
+<ul>
+<li class="chapter" data-level="" data-path="maximum-and-minimum-values.html"><a href="maximum-and-minimum-values.html#critical-points"><i class="fa fa-check"></i>Critical Points</a></li>
+<li class="chapter" data-level="" data-path="maximum-and-minimum-values.html"><a href="maximum-and-minimum-values.html#maximum-and-minimum-values-1"><i class="fa fa-check"></i>Maximum and Minimum Values</a></li>
+<li class="chapter" data-level="" data-path="maximum-and-minimum-values.html"><a href="maximum-and-minimum-values.html#proof-of-the-extreme-value-theorem"><i class="fa fa-check"></i>Proof of the Extreme Value Theorem</a></li>
+<li class="chapter" data-level="" data-path="maximum-and-minimum-values.html"><a href="maximum-and-minimum-values.html#finding-absolute-extrema"><i class="fa fa-check"></i>Finding Absolute Extrema</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Calculus I</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="maximum-and-minimum-values" class="section level1 unnumbered hasAnchor">
+<h1>4.1 Maximum and Minimum Values<a href="maximum-and-minimum-values.html#maximum-and-minimum-values" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="critical-points" class="section level2 unnumbered hasAnchor">
+<h2>Critical Points<a href="maximum-and-minimum-values.html#critical-points" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In this section, we examine the idea of critical points.</p>
+<div style="color: blue;">
+<p><strong>Definition:</strong> A point <span class="math inline">\(x = c\)</span> is called a critica point of a function <span class="math inline">\(f\)</span> if <span class="math inline">\(f(c)\)</span> exists and either <span class="math display">\[f^{\prime}(c) = 0 \hspace{1in} \text{or} \hspace{1in} f^{\prime}(c) \text{does not exist}.\]</span></p>
+</div>
+<p>The fact that <span class="math inline">\(f(c)\)</span> exists means that <span class="math inline">\(x=c\)</span> is in the domain of the function and is therefore an actual point.</p>
+<div style="color: green;">
+<p><strong>Example:</strong> Determine the critical points of <span class="math inline">\(f(x) = \dfrac{3}{20}x^{4/3}(2x^2-5)\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Solution:</strong> We begin by differentiating <span class="math inline">\(f\)</span> using the product rule. Let <span class="math inline">\(u = \dfrac{3}{20}x^{4/3}\)</span> and <span class="math inline">\(v = 2x^2-5\)</span>. Then <span class="math inline">\(u^{\prime} = \dfrac{1}{5}x^{1/3}\)</span> and <span class="math inline">\(v^{\prime} = 4x\)</span>. So,
+<span class="math display">\[\begin{align*} f^{\prime}(x) &amp;= u^{\prime}v + v^{\prime}u\\
+&amp;= \dfrac{1}{5}x^{1/3}(2x^2-5) + 4x\left(\dfrac{3}{20}x^{4/3} \right)\\
+&amp;= \dfrac{1}{5}x^{1/3}\left(2x^2-5 + 3x^2\right)\\
+&amp;= \dfrac{1}{5}x^{1/3}\left(5x^2-5\right)\\
+&amp;= x^{1/3}\left(x^2-1\right). \end{align*}\]</span>
+So, <span class="math display">\[f^{\prime}(x) = \sqrt[3]{x}(x^2-1).\]</span> We find that <span class="math inline">\(f^{\prime}(x) = 0\)</span> when <span class="math inline">\(x = 0, \pm 1\)</span>. All three of those values are in the domain of <span class="math inline">\(f\)</span>, so all three of those values are critical points. We also note that <span class="math inline">\(f^{\prime}(x)\)</span> exists everywhere, so there are no critical points where <span class="math inline">\(f^{\prime}(x)\)</span> does not exist.</p>
+</div>
+<div style="color: green;">
+<p><strong>Example:</strong> Determine the critical points of <span class="math inline">\(f(x) = \dfrac{1}{5} \left(2\ln(x-3) + 3\ln(x+2) \right)\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Solution:</strong> We begin by differentiating <span class="math inline">\(f\)</span> .
+<span class="math display">\[\begin{align*} f^{\prime}(x) &amp;= \dfrac{1}{5} \left(\dfrac{2}{x-3} + \dfrac{3}{x+2} \right)\\
+&amp;= \dfrac{1}{5} \left(\dfrac{2(x+2)}{x-3} + \dfrac{3(x-3)}{x+2} \right)\\
+&amp;= \dfrac{2x+4+3x-9}{5(x+2)(x-3)} \\
+&amp;= \dfrac{5x-5}{5(x+2)(x-3)} \\
+&amp;= \dfrac{x-1}{(x+2)(x-3)}. \end{align*}\]</span>
+So, <span class="math display">\[f^{\prime}(x) = \dfrac{x-1}{(x+2)(x-3)}.\]</span> We find that <span class="math inline">\(f^{\prime}(x) = 0\)</span> when <span class="math inline">\(x = 1\)</span> and that <span class="math inline">\(f^{\prime}(x)\)</span> does not exist when <span class="math inline">\(x = -2\)</span> and <span class="math inline">\(x=3\)</span>. These are the three possible critical points of <span class="math inline">\(f\)</span>. However, we note that none of these points are in the domain of <span class="math inline">\(f\)</span> and therefore none are critical points. Therefore, <span class="math inline">\(f\)</span> has no critical points.</p>
+</div>
+<div style="color: green;">
+<p><strong>Example:</strong> Determine the critical points of <span class="math inline">\(f(x) = 3x - 2\cos(3x)\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Solution:</strong> We begin by differentiating <span class="math inline">\(f\)</span>. <span class="math display">\[f^{\prime}(x) = 3 +6\sin(3x) = 3(1+2\sin(3x)).\]</span> So, <span class="math inline">\(f^{\prime}(x) = 0\)</span> when <span class="math inline">\(1 + 2\sin(3x) = 0\)</span> or when <span class="math inline">\(\sin(3x) = -\dfrac{1}{2}\)</span>. Of course, this happens when <span class="math inline">\(3x = -\pi/6 + 2k\pi\)</span> for <span class="math inline">\(k \in \mathbb{Z}\)</span>. Simplifying, we see that <span class="math inline">\(x = -\pi/18 + 2/3 k \pi\)</span> for <span class="math inline">\(k \in \mathbb{Z}\)</span>. There are no points where <span class="math inline">\(f^{\prime}(x)\)</span> is undefined. Since <span class="math inline">\(f\)</span> is defined for all <span class="math inline">\(x \in \mathbb{R}\)</span>, the set of critical points for <span class="math inline">\(f\)</span> is <span class="math inline">\(x = -\pi/18 + 2/3 k \pi\)</span>, with <span class="math inline">\(k \in \mathbb{Z}\)</span>.</p>
+</div>
+<p>Practice Problems</p>
+<ol style="list-style-type: decimal">
+<li>Determine the critical points for each of the following functions.</li>
+</ol>
+<ul>
+<li><span class="math inline">\(f\left( x \right) = 2{x^5} + 11{x^4} - 10{x^3} + 23\)</span></li>
+<li><span class="math inline">\(f\left( x \right) = \dfrac{x^2+1}{x^2-x-6}\)</span></li>
+<li><span class="math inline">\(f\left( x \right) = 2xe^{8-x^2}\)</span></li>
+<li><span class="math inline">\(f\left( x \right) = x^3\ln(2x)\)</span></li>
+<li><span class="math inline">\(f\left( x \right) = 4\cos(x) - x\)</span></li>
+<li><span class="math inline">\(f\left( x \right) = \sin^2(x) - \sin^4(x)\)</span></li>
+</ul>
+<ol start="2" style="list-style-type: decimal">
+<li>Identify the critical points on the graph below.</li>
+</ol>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><img src="Pic48.png" /></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<ol start="3" style="list-style-type: decimal">
+<li>Identify the critical points on the graph below.</li>
+</ol>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><img src="Pic49.png" /></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+</div>
+<div id="maximum-and-minimum-values-1" class="section level2 unnumbered hasAnchor">
+<h2>Maximum and Minimum Values<a href="maximum-and-minimum-values.html#maximum-and-minimum-values-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Although it is fairly simple to identify maximum and minimum values on a graph, a more rigorous definition is required.</p>
+<div style="color: blue;">
+<p><strong>Definition:</strong></p>
+<ul>
+<li>We say that <span class="math inline">\(f(x)\)</span> has an global (or absolute) maximum at <span class="math inline">\(x=c\)</span> if <span class="math inline">\(f(x) \leq f(c)\)</span> for every <span class="math inline">\(x\)</span> in the domain on which we are working.</li>
+<li>We say that <span class="math inline">\(f(x)\)</span> has a local (or relative) maximum at <span class="math inline">\(x=c\)</span> if <span class="math inline">\(f(x) \leq f(c)\)</span> for every <span class="math inline">\(x\)</span> in some open interval around <span class="math inline">\(x= c\)</span>.</li>
+<li>We say that <span class="math inline">\(f(x)\)</span> has an global (or absolute) minimum at <span class="math inline">\(x=c\)</span> if <span class="math inline">\(f(x) \geq f(c)\)</span> for every <span class="math inline">\(x\)</span> in the domain on which we are working.</li>
+<li>We say that <span class="math inline">\(f(x)\)</span> has a relative (or local) minimum at <span class="math inline">\(x=c\)</span> if <span class="math inline">\(f(x) \geq f(c)\)</span> for every <span class="math inline">\(x\)</span> in some open interval around <span class="math inline">\(x= c\)</span>.</li>
+</ul>
+</div>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><img src="Pic50.png" /></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<p>Alternatively, we call maximum and minimum points of a function where local extrema refer to local maximum and minimum values and global extrema refer to global maximum and minimum values.</p>
+<p>Another important note is that for a point <span class="math inline">\(x=c\)</span> to be a relative extrema, there must be <span class="math inline">\(x\)</span>-values to the left and right of <span class="math inline">\(c\)</span>. For example, a relative minimum cannot occur at the endpoint of an interval.</p>
+<div style="color: green;">
+<p><strong>Example:</strong> Identify the local and global extrema of $ y = x^2$ on <span class="math inline">\([-2,3]\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Solution:</strong> We plot <span class="math inline">\(y = x^2\)</span> and see that <span class="math inline">\((0,0)\)</span> is the local and global minimum values and <span class="math inline">\((3,9)\)</span> is the global maximum value. Note that there is no local maximum value.</p>
+</div>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><img src="Pic51.png" /></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<p>If we change the interval for <span class="math inline">\(y = x^2\)</span>, then the maximum and minimum values may also change. For example, if the interval for <span class="math inline">\(y = x^2\)</span> is <span class="math inline">\([-3,3]\)</span>, there are two global maximum values - one at -3 and one at 3. If the interval for <span class="math inline">\(y=x^2\)</span> is <span class="math inline">\(\mathbb{R}\)</span> or another open interval, there is no maximum value. Of course, if we examined a function like <span class="math inline">\(y = x\)</span> on <span class="math inline">\(\mathbb{R}\)</span> or on an open interval, we get no maximum or minimum values. These observations lead us to the following theorem.</p>
+<div style="color: blue;">
+<p><strong>Theorem (Extreme Value Theorem):</strong> If <span class="math inline">\(f\)</span> is continuous on the closed interval <span class="math inline">\([a,b]\)</span>, there are two numbers <span class="math inline">\(c\)</span> and <span class="math inline">\(d\)</span> with <span class="math inline">\(a \leq c, d \leq b\)</span> so that <span class="math inline">\(f(c)\)</span> is an absolute maximum for <span class="math inline">\(f\)</span> and <span class="math inline">\(f(d)\)</span> is an absolute minimum for <span class="math inline">\(f\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Example:</strong> Find the extreme values of <span class="math inline">\(y = -(x-3)^3\)</span> on <span class="math inline">\([-1,5]\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Solution:</strong> We sketch the graph of <span class="math inline">\(y\)</span> and notice that the extreme values are a maximum at <span class="math inline">\(x=-1\)</span> and a minimum value at <span class="math inline">\(x = 5\)</span>.</p>
+</div>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><img src="Pic52.png" /></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<p>It is worth noting that if a function is not continuous at a point on <span class="math inline">\([a,b]\)</span>, it does not mean that the function does not have extrema.</p>
+<p>There is a link between local extrema and critical points.</p>
+<div style="color: blue;">
+<p><strong>Theorem (Fermat’s Theorem):</strong> If <span class="math inline">\(f\)</span> has a local extrema at <span class="math inline">\(x = c\)</span> and <span class="math inline">\(f^{\prime}(c)\)</span> exists, then <span class="math inline">\(x = c\)</span> is a critical point of <span class="math inline">\(f(x)\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Example:</strong> Use Fermat’s theorem to find the extrema of <span class="math inline">\(y = x^2 - 4x\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Solution:</strong> We differentiate <span class="math inline">\(y\)</span> to find <span class="math display">\[y^{\prime} = 2x - 4.\]</span> Critical points occur where <span class="math inline">\(y^{\prime} = 0\)</span> or where <span class="math inline">\(x = 2\)</span> in this case. Therefore, <span class="math inline">\(x = 2\)</span> is the only extreme value. Since the <span class="math inline">\(y\)</span>-value here is -4 and <span class="math inline">\(y\)</span>-values close to <span class="math inline">\(x=2\)</span> are larger (ie, at <span class="math inline">\(x=1\)</span>, we have <span class="math inline">\(y = -2\)</span>), we see that <span class="math inline">\(x = 2\)</span> is a local minimum.</p>
+</div>
+<p>Practice Problems</p>
+<ol style="list-style-type: decimal">
+<li>Determine the extreme values for the following graphs on the given interval.</li>
+</ol>
+<ul>
+<li><span class="math inline">\(f(x) = 5 - 2x\)</span> on <span class="math inline">\([-2,2]\)</span></li>
+<li><span class="math inline">\(f(x) = (x-3)^2\)</span> on <span class="math inline">\([-1,4]\)</span></li>
+<li><span class="math inline">\(f(x) = e^{x-3}\)</span> on <span class="math inline">\([-3,5]\)</span></li>
+<li><span class="math inline">\(f(x) = \sin(x)\)</span> on <span class="math inline">\([-\pi,\pi]\)</span></li>
+</ul>
+<ol start="2" style="list-style-type: decimal">
+<li>Identify the critical points on the graph below.</li>
+</ol>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><img src="Pic53.png" /></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<p>. Identify the critical points on the graph below.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><img src="Pic54.png" /></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+</div>
+<div id="proof-of-the-extreme-value-theorem" class="section level2 unnumbered hasAnchor">
+<h2>Proof of the Extreme Value Theorem<a href="maximum-and-minimum-values.html#proof-of-the-extreme-value-theorem" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In this section, we prove the Extreme Value Theorem and Fermat’s Theorem. Prior to these proofs, we prove a preliminary result.</p>
+<div style="color: blue;">
+<p><strong>Theorem (Boundedness Theorem):</strong> If <span class="math inline">\(f\)</span> is continuous on <span class="math inline">\([a,b]\)</span>, then it is bounded on <span class="math inline">\([a,b]\)</span>.</p>
+</div>
+<div style="color: blue;">
+<p><strong>Proof:</strong> Consider the set <span class="math inline">\(B\)</span> of points <span class="math inline">\(x in [a,b]\)</span> such that <span class="math inline">\(f(x)\)</span> is bounded on <span class="math inline">\([a,x]\)</span>. We note that <span class="math inline">\(a\)</span> is one such point, for <span class="math inline">\(f(x)\)</span> is bounded on <span class="math inline">\([a,a]\)</span> by the value <span class="math inline">\(f(a)\)</span>. If <span class="math inline">\(e&gt;a\)</span> is another point, then all points between <span class="math inline">\(a\)</span> and <span class="math inline">\(e\)</span> also belong to <span class="math inline">\(B\)</span>. In other words <span class="math inline">\(B\)</span> is an interval closed at its left end by <span class="math inline">\(a\)</span>.</p>
+<p>Now <span class="math inline">\(f\)</span> is continuous on the right at <span class="math inline">\(a\)</span>, hence there exists <span class="math inline">\(\delta &gt;0\)</span> such that <span class="math inline">\(|f(x)-f(a)|&lt;1\)</span> for all <span class="math inline">\(x \in [a,a+\delta ]\)</span>. Thus <span class="math inline">\(f\)</span> is bounded by <span class="math inline">\(f(a)-1\)</span> and <span class="math inline">\(f(a)+1\)</span> on the interval<span class="math inline">\([a,a+\delta ]\)</span> so that all these points belong to <span class="math inline">\(B\)</span>.</p>
+<p>So far, we know that <span class="math inline">\(B\)</span> is an interval of non-zero length, closed at its left end by <span class="math inline">\(a\)</span>.</p>
+<p>Next,<span class="math inline">\(B\)</span> is bounded above by <span class="math inline">\(b\)</span>. Hence the set <span class="math inline">\(B\)</span> has a supremum in <span class="math inline">\([a,b]\)</span>; let us call it <span class="math inline">\(s\)</span>. From the non-zero length of <span class="math inline">\(B\)</span> we can deduce that <span class="math inline">\(s&gt;a\)</span>.</p>
+<p>Suppose <span class="math inline">\(s&lt;b\)</span>. Now <span class="math inline">\(f\)</span> is continuous at <span class="math inline">\(s\)</span>, hence there exists <span class="math inline">\(\delta &gt;0\)</span> such that <span class="math inline">\(|f(x)-f(s)|&lt;1\)</span> for all <span class="math inline">\(x \in [s-\delta ,s+\delta ]\)</span> so that <span class="math inline">\(f\)</span> is bounded on this interval. But it follows from the supremacy of <span class="math inline">\(s\)</span> that there exists a point belonging to <span class="math inline">\(B\)</span>, <span class="math inline">\(e\)</span> say, which is greater than <span class="math inline">\(s-\delta /2\)</span>. Thus <span class="math inline">\(f\)</span> is bounded on <span class="math inline">\([a,e]\)</span> which overlaps <span class="math inline">\([s-\delta ,s+\delta ]\)</span> so that <span class="math inline">\(f\)</span> is bounded on <span class="math inline">\([a,s+\delta ]\)</span>. This however contradicts the supremacy of <span class="math inline">\(s\)</span>.</p>
+<p>We must therefore have <span class="math inline">\(s=b\)</span>. Now <span class="math inline">\(f\)</span> is continuous on the left at <span class="math inline">\(s\)</span>, hence there exists <span class="math inline">\(\delta &gt;0\)</span> such that <span class="math inline">\(|f(x)-f(s)|&lt;1\)</span> for all <span class="math inline">\(x \in [s-\delta ,s]\)</span> so that <span class="math inline">\(f\)</span> is bounded on this interval. But it follows from the supremacy of <span class="math inline">\(s\)</span> that that there exists a point belonging to <span class="math inline">\(B\)</span>, $ e$ say, which is greater than <span class="math inline">\(s-\delta /2\)</span>. Thus <span class="math inline">\(f\)</span> is bounded on <span class="math inline">\([a,e]\)</span> which overlaps <span class="math inline">\([s-\delta ,s]\)</span> so that <span class="math inline">\(f\)</span> is bounded on <span class="math inline">\([a,s]\)</span>.</p>
+</div>
+<div style="color: blue;">
+<p><strong>Theorem (Extreme Value Theorem):</strong> If <span class="math inline">\(f\)</span> is continuous on the closed interval <span class="math inline">\([a,b]\)</span>, there are two numbers <span class="math inline">\(c\)</span> and <span class="math inline">\(d\)</span> with <span class="math inline">\(a \leq c, d \leq b\)</span> so that <span class="math inline">\(f(c)\)</span> is an absolute maximum for <span class="math inline">\(f\)</span> and <span class="math inline">\(f(d)\)</span> is an absolute minimum for <span class="math inline">\(f\)</span>.</p>
+</div>
+<div style="color: blue;">
+<p><strong>Proof:</strong> The set <span class="math inline">\(\{y \in R : y = f(x) \text{ for some } x \in [a,b]\}\)</span> is a bounded set. Hence, its least upper bound exists by least upper bound property of the real numbers. Let <span class="math inline">\(M = \sup(f(x))\)</span> on <span class="math inline">\([a, b]\)</span>. If there is no point <span class="math inline">\(x\)</span> on <span class="math inline">\([a, b]\)</span> so that <span class="math inline">\(f(x) = M\)</span> then <span class="math inline">\(f(x) &lt; M\)</span> on <span class="math inline">\([a, b]\)</span>. Therefore, <span class="math inline">\(1/(M - f(x))\)</span> is continuous on <span class="math inline">\([a, b]\)</span>.</p>
+<p>However, to every positive number <span class="math inline">\(\varepsilon\)</span>, there is always some <span class="math inline">\(x \in [a, b]\)</span> such that <span class="math inline">\(M - f(x) &lt; \varepsilon\)</span> because <span class="math inline">\(M\)</span> is the least upper bound. Hence, <span class="math inline">\(1/(M - f(x)) &gt; 1/\varepsilon\)</span>, which means that <span class="math inline">\(1/(M - f(x))\)</span> is not bounded. Since every continuous function on a <span class="math inline">\([a, b]\)</span> is bounded, this contradicts the conclusion that <span class="math inline">\(1/(M - f(x))\)</span> was continuous on <span class="math inline">\([a, b]\)</span>. Therefore, there must be a point <span class="math inline">\(x \in [a, b]\)</span> such that <span class="math inline">\(f(x) = M\)</span>.</p>
+</div>
+<div style="color: blue;">
+<p><strong>Theorem (Fermat’s Theorem):</strong> If <span class="math inline">\(f\)</span> has a local extrema at <span class="math inline">\(x = c\)</span> and <span class="math inline">\(f^{\prime}(c)\)</span> exists, then <span class="math inline">\(x = c\)</span> is a critical point of <span class="math inline">\(f(x)\)</span>.</p>
+</div>
+<div style="color: blue;">
+<p><strong>Proof:</strong> Without loss of generality, assume that <span class="math inline">\(f(x)\)</span> has a relative maximum at <span class="math inline">\(x = c\)</span>. We know that <span class="math inline">\(f(c) \geq f(x)\)</span> for all <span class="math inline">\(x\)</span> sufficiently close to <span class="math inline">\(x = c\)</span>. In particular for all <span class="math inline">\(h\)</span> that are sufficiently close to zero (positive or negative) we must have, <span class="math display">\[f(c) \geq f(c+h),\]</span> or <span class="math display">\[f(c+h) - f(c) \leq 0.\]</span></p>
+<p>Now, at this point, assume <span class="math inline">\(h&gt;0\)</span>. Then <span class="math display">\[\dfrac{f(c+h)-f(c)}{h} \leq 0.\]</span> Since <span class="math inline">\(h &gt; 0\)</span>, we can take the right-hand limit of both sides and find <span class="math display">\[\lim_{h \rightarrow 0^+} \dfrac{f(c+h)-f(c)}{h} \leq \lim_{h\rightarrow 0^+} 0 = 0.\]</span> Since <span class="math inline">\(f^{\prime}(c)\)</span> exists, it must be true that <span class="math inline">\(f^{\prime}(c) \leq 0\)</span>.</p>
+<p>If <span class="math inline">\(h &lt; 0\)</span>, <span class="math display">\[\dfrac{f(c+h)-f(c)}{h} \geq 0.\]</span> For the same reason as earlier, we find that <span class="math display">\[f^{\prime}(c) = \lim_{h \rightarrow 0} \dfrac{f(c+h)-f(c)}{h}= \lim_{h \rightarrow 0^-} \dfrac{f(c+h)-f(c)}{h} \geq \lim_{h \rightarrow 0^-} 0 = 0.\]</span> Since <span class="math inline">\(f^{\prime}(c) \geq 0\)</span> and <span class="math inline">\(f^{\prime}(c) \leq 0\)</span>, it must be true that <span class="math inline">\(f^{\prime}(c) = 0\)</span> and so <span class="math inline">\(c\)</span> is a critical point.</p>
+<p>The proof for a relative minimum is similar.</p>
+</div>
+<p>Practice Problems</p>
+<ol style="list-style-type: decimal">
+<li><p>Sketch the graph of some function on the interval <span class="math inline">\([1,6]\)</span> that has an absolute maximum at <span class="math inline">\(x=6\)</span> and an absolute minimum at <span class="math inline">\(x=3\)</span>.</p></li>
+<li><p>Sketch the graph of some function on the interval <span class="math inline">\([-4,3]\)</span> that has an absolute maximum at <span class="math inline">\(x=-3\)</span> and an absolute minimum at <span class="math inline">\(x=2\)</span>.</p></li>
+<li><p>Sketch the graph of some function that meets the following conditions:</p></li>
+</ol>
+<ul>
+<li>The function is continuous.</li>
+<li>Has two relative minimums.</li>
+<li>One of relative minimums is also an absolute minimum and the other relative minimum is not an absolute minimum.</li>
+<li>Has one relative maximum.</li>
+<li>Has no absolute maximum.</li>
+</ul>
+<ol start="4" style="list-style-type: decimal">
+<li>Sketch the graph of some function that meets the following conditions:</li>
+</ol>
+<ul>
+<li>Graphed on the interval <span class="math inline">\([4,10]\)</span>.</li>
+<li>Has no relative extrema.</li>
+<li>Has an absolute maximum at one end point.</li>
+<li>Has an absolute minimum at the other end point.</li>
+</ul>
+<ol start="5" style="list-style-type: decimal">
+<li>Sketch the graph of some function that meets the following conditions:</li>
+</ol>
+<ul>
+<li>Has a discontinuity at some point.</li>
+<li>Has an absolute maximum and an absolute minimum.</li>
+<li>Neither absolute extrema occurs at the discontinuity.</li>
+</ul>
+<ol start="6" style="list-style-type: decimal">
+<li><p>Sketch the graph of a function on the interval <span class="math inline">\((-\infty,\infty)\)</span> that has a relative minimum at <span class="math inline">\(x=4\)</span> and a relative maximum at <span class="math inline">\(x = -2\)</span> and no absolute extrema.</p></li>
+<li><p>Sketch the graph of some function that meets the following conditions:</p></li>
+</ol>
+<ul>
+<li>Has at least one absolute maximum.</li>
+<li>Has one relative minimum.</li>
+<li>Has no absolute minimum.</li>
+</ul>
+</div>
+<div id="finding-absolute-extrema" class="section level2 unnumbered hasAnchor">
+<h2>Finding Absolute Extrema<a href="maximum-and-minimum-values.html#finding-absolute-extrema" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Given a continuous function <span class="math inline">\(f\)</span> on a closed interval <span class="math inline">\([a,b]\)</span>, the extreme value theorem guarantees both a global maximum and global minimum value for <span class="math inline">\(f\)</span>. The process for finding these extrema is quite simple:</p>
+<ul>
+<li>Verify the conditions of the extreme value theorem are met - ie, is <span class="math inline">\(f\)</span> continuous on a closed interval <span class="math inline">\([a,b]\)</span>.</li>
+<li>Find all critical points of <span class="math inline">\(f\)</span> on <span class="math inline">\([a,b]\)</span> - Fermat’s Theorem guarantees that these will be the local extrema.</li>
+<li>Evaluate <span class="math inline">\(f\)</span> at each critical point and at both <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>.</li>
+<li>Determine the global extrema.</li>
+</ul>
+<div style="color: green;">
+<p><strong>Example:</strong> Find the global maximum and minimum for <span class="math inline">\(f(x) = \dfrac{x}{x^2+1}\)</span> on <span class="math inline">\([0,5]\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Example:</strong> First, we note that <span class="math inline">\(f\)</span> is a rational function and is therefore continuous on its domain (in this case <span class="math inline">\(\mathbb{R}\)</span>). The derivative of <span class="math inline">\(f\)</span> is <span class="math display">\[f^{\prime}(x) =\dfrac{x^2+1 - 2x^2}{(x^2+1)^2} = \dfrac{1- x^2}{(x^2+1)^2}.\]</span> Of course, <span class="math inline">\(f^{\prime}(x) = 0\)</span> at <span class="math inline">\(x = \pm 1\)</span>. The only critical point of <span class="math inline">\(f\)</span> on <span class="math inline">\([0,5]\)</span> is <span class="math inline">\(x=1\)</span>. We now evaluate <span class="math inline">\(f\)</span> at the critical point (<span class="math inline">\(x=1\)</span>) and the two end points of the interval (<span class="math inline">\(x = 0,5\)</span>). Since <span class="math display">\[f(0) = 0, \hspace{0.5in} f(1) = 1/2, \hspace{0.5in} f(5) = 5/26,\]</span> the global maximum is at <span class="math inline">\(x=1\)</span> and the global minimum is at <span class="math inline">\(x=0\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Example:</strong> Find the global maximum and minimum for <span class="math inline">\(f(x) = x\sqrt{9-x^2}\)</span> on <span class="math inline">\([-1,3]\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Example:</strong> First, we note that <span class="math inline">\(f\)</span> is continuous on <span class="math inline">\((-\infty,3]\)</span>. The derivative of <span class="math inline">\(f\)</span> is <span class="math display">\[f^{\prime}(x) =\sqrt{9-x^2} + \dfrac{-2x^2}{2\sqrt{9-x^2}} = \dfrac{-2x^2+9}{\sqrt{9-x^2}}.\]</span> Of course, <span class="math inline">\(f^{\prime}(x) = 0\)</span> at <span class="math inline">\(x = \pm 3\sqrt{2}/2\)</span>. The only critical point of <span class="math inline">\(f\)</span> on <span class="math inline">\([-1,3]\)</span> is <span class="math inline">\(x=3\sqrt{2}/2\)</span>. We now evaluate <span class="math inline">\(f\)</span> at the critical point (<span class="math inline">\(x=3\sqrt{2}/2\)</span>) and the two end points of the interval (<span class="math inline">\(x = -1,3\)</span>). Since <span class="math display">\[f(-1) = -2\sqrt{2}, \hspace{0.5in} f(3\sqrt{2}/2) = 9/2, \hspace{0.5in} f(3) = 0,\]</span> the global maximum is at <span class="math inline">\(x=3\sqrt{2}/2\)</span> and the global minimum is at <span class="math inline">\(x=-1\)</span>.</p>
+</div>
+<p>Practice Problems</p>
+<ol style="list-style-type: decimal">
+<li>Determine the extreme values for the following graphs on the given interval.</li>
+</ol>
+<ul>
+<li><span class="math inline">\(f(x) = x^4 - 2x^2 + 4\)</span> on <span class="math inline">\([-2,3]\)</span></li>
+<li><span class="math inline">\(f(x) = x-2\cos(x)\)</span> on <span class="math inline">\([-\pi,\pi]\)</span></li>
+<li><span class="math inline">\(f(x) = x\sqrt{4-x^2}\)</span> on <span class="math inline">\([-1,2]\)</span></li>
+<li><span class="math inline">\(f(x) = \dfrac{3-4x}{x^2+1}\)</span> on <span class="math inline">\([-2,4]\)</span></li>
+<li><span class="math inline">\(f(x) = 8 + 3x + 7{x^2} - {x^3}\)</span> on <span class="math inline">\([-1,5]\)</span></li>
+<li><span class="math inline">\(f(x) = 3\cos \left( {2x} \right) - 5x\)</span> on <span class="math inline">\([0,6]\)</span></li>
+<li><span class="math inline">\(f(x) = 7\cos \left( x \right) + 2x\)</span> on <span class="math inline">\([-5,4]\)</span></li>
+<li><span class="math inline">\(f(x) = e^{5 + 9x} + e^{1 - 3x} + 6\)</span> on <span class="math inline">\([-1,0]\)</span></li>
+</ul>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="linear-approximations-and-differentials.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook/js/app.min.js"></script>
+<script src="libs/gitbook/js/clipboard.min.js"></script>
+<script src="libs/gitbook/js/plugin-search.js"></script>
+<script src="libs/gitbook/js/plugin-sharing.js"></script>
+<script src="libs/gitbook/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook/js/jquery.highlight.js"></script>
+<script src="libs/gitbook/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/04-ApplicationsOfDifferentiation.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

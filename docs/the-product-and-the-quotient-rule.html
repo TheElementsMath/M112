@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>3.2 The Product and the Quotient Rule | Calculus I</title>
+  <meta name="description" content="3.2 The Product and the Quotient Rule | Calculus I" />
+  <meta name="generator" content="bookdown 0.33 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="3.2 The Product and the Quotient Rule | Calculus I" />
+  <meta property="og:type" content="book" />
+  <meta property="og:image" content="/Title_Page.png" />
+  
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="3.2 The Product and the Quotient Rule | Calculus I" />
+  
+  
+  <meta name="twitter:image" content="/Title_Page.png" />
+
+<meta name="author" content="Differential Calculus" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="derivatives-of-polynomials-and-exponential-functions.html"/>
+<link rel="next" href="derivatives-of-trigonometric-functions.html"/>
+<script src="libs/jquery/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Differential Calculus</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>About This Book</a></li>
+<li class="part"><span><b>I Functions and Models</b></span></li>
+<li class="part"><span><b>II Limits and Derivatives</b></span></li>
+<li class="chapter" data-level="" data-path="the-limit-of-a-function.html"><a href="the-limit-of-a-function.html"><i class="fa fa-check"></i>2.2 The Limit of a Function</a>
+<ul>
+<li class="chapter" data-level="" data-path="the-limit-of-a-function.html"><a href="the-limit-of-a-function.html#the-idea-of-a-limit"><i class="fa fa-check"></i>The Idea of a Limit</a></li>
+<li class="chapter" data-level="" data-path="the-limit-of-a-function.html"><a href="the-limit-of-a-function.html#left-and-right-limits"><i class="fa fa-check"></i>Left and Right Limits</a></li>
+<li class="chapter" data-level="" data-path="the-limit-of-a-function.html"><a href="the-limit-of-a-function.html#limits-that-do-not-exist"><i class="fa fa-check"></i>Limits That Do Not Exist</a></li>
+<li class="chapter" data-level="" data-path="the-limit-of-a-function.html"><a href="the-limit-of-a-function.html#infinite-limits-and-vertical-asymptotes"><i class="fa fa-check"></i>Infinite Limits and Vertical Asymptotes</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="calculating-limits-using-the-limit-laws.html"><a href="calculating-limits-using-the-limit-laws.html"><i class="fa fa-check"></i>2.3 Calculating Limits Using the Limit Laws</a>
+<ul>
+<li class="chapter" data-level="" data-path="calculating-limits-using-the-limit-laws.html"><a href="calculating-limits-using-the-limit-laws.html#the-limit-laws"><i class="fa fa-check"></i>The Limit Laws</a></li>
+<li class="chapter" data-level="" data-path="calculating-limits-using-the-limit-laws.html"><a href="calculating-limits-using-the-limit-laws.html#direct-substitution"><i class="fa fa-check"></i>Direct Substitution</a></li>
+<li class="chapter" data-level="" data-path="calculating-limits-using-the-limit-laws.html"><a href="calculating-limits-using-the-limit-laws.html#limits-of-trigonometric-functions"><i class="fa fa-check"></i>Limits of Trigonometric Functions</a></li>
+<li class="chapter" data-level="" data-path="calculating-limits-using-the-limit-laws.html"><a href="calculating-limits-using-the-limit-laws.html#the-squeeze-theorem"><i class="fa fa-check"></i>The Squeeze Theorem</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="the-precise-definition-of-a-limit.html"><a href="the-precise-definition-of-a-limit.html"><i class="fa fa-check"></i>2.4 The Precise Definition of a Limit</a>
+<ul>
+<li class="chapter" data-level="" data-path="the-precise-definition-of-a-limit.html"><a href="the-precise-definition-of-a-limit.html#proof-of-limit-laws"><i class="fa fa-check"></i>Proof of Limit Laws</a></li>
+<li class="chapter" data-level="" data-path="the-precise-definition-of-a-limit.html"><a href="the-precise-definition-of-a-limit.html#proofs-of-trigonometric-limits"><i class="fa fa-check"></i>Proofs of Trigonometric Limits</a></li>
+<li class="chapter" data-level="" data-path="the-precise-definition-of-a-limit.html"><a href="the-precise-definition-of-a-limit.html#limits-at-infinity-by-definition"><i class="fa fa-check"></i>Limits at Infinity by Definition</a></li>
+<li class="chapter" data-level="" data-path="the-precise-definition-of-a-limit.html"><a href="the-precise-definition-of-a-limit.html#proof-of-direct-substitution-property"><i class="fa fa-check"></i>Proof of Direct Substitution Property</a></li>
+<li class="chapter" data-level="" data-path="the-precise-definition-of-a-limit.html"><a href="the-precise-definition-of-a-limit.html#proof-of-the-squeeze-theorem"><i class="fa fa-check"></i>Proof of The Squeeze Theorem</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="continuity.html"><a href="continuity.html"><i class="fa fa-check"></i>2.5 Continuity</a>
+<ul>
+<li class="chapter" data-level="" data-path="continuity.html"><a href="continuity.html#limits-and-continuity"><i class="fa fa-check"></i>Limits and Continuity</a></li>
+<li class="chapter" data-level="" data-path="continuity.html"><a href="continuity.html#types-of-discontinuities"><i class="fa fa-check"></i>Types of Discontinuities</a></li>
+<li class="chapter" data-level="" data-path="continuity.html"><a href="continuity.html#properties-of-continuous-functions"><i class="fa fa-check"></i>Properties of Continuous Functions</a></li>
+<li class="chapter" data-level="" data-path="continuity.html"><a href="continuity.html#proof-of-continuity-laws"><i class="fa fa-check"></i>Proof of Continuity Laws</a></li>
+<li class="chapter" data-level="" data-path="continuity.html"><a href="continuity.html#the-intermediate-value-theorem"><i class="fa fa-check"></i>The Intermediate Value Theorem</a></li>
+<li class="chapter" data-level="" data-path="continuity.html"><a href="continuity.html#proof-of-the-ivt"><i class="fa fa-check"></i>Proof of The IVT</a></li>
+<li class="chapter" data-level="" data-path="continuity.html"><a href="continuity.html#continuity-of-trigonometric-functions"><i class="fa fa-check"></i>Continuity of Trigonometric Functions</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="limits-at-infinity-horizontal-asymptotes.html"><a href="limits-at-infinity-horizontal-asymptotes.html"><i class="fa fa-check"></i>2.6 Limits at Infinity; Horizontal Asymptotes</a>
+<ul>
+<li class="chapter" data-level="" data-path="limits-at-infinity-horizontal-asymptotes.html"><a href="limits-at-infinity-horizontal-asymptotes.html#limits-at-infinity"><i class="fa fa-check"></i>Limits At Infinity</a></li>
+<li class="chapter" data-level="" data-path="limits-at-infinity-horizontal-asymptotes.html"><a href="limits-at-infinity-horizontal-asymptotes.html#limits-at-infinity-by-definition-1"><i class="fa fa-check"></i>Limits at Infinity by Definition</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="derivatives-and-rates-of-change.html"><a href="derivatives-and-rates-of-change.html"><i class="fa fa-check"></i>2.7 Derivatives and Rates of Change</a>
+<ul>
+<li class="chapter" data-level="" data-path="derivatives-and-rates-of-change.html"><a href="derivatives-and-rates-of-change.html#application-tangent-lines"><i class="fa fa-check"></i>Application: Tangent Lines</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="the-derivative-as-a-function.html"><a href="the-derivative-as-a-function.html"><i class="fa fa-check"></i>2.8 The Derivative as a Function</a>
+<ul>
+<li class="chapter" data-level="" data-path="the-derivative-as-a-function.html"><a href="the-derivative-as-a-function.html#differentiability"><i class="fa fa-check"></i>Differentiability</a></li>
+<li class="chapter" data-level="" data-path="the-derivative-as-a-function.html"><a href="the-derivative-as-a-function.html#differentiability-continuity"><i class="fa fa-check"></i>Differentiability &amp; Continuity</a></li>
+<li class="chapter" data-level="" data-path="the-derivative-as-a-function.html"><a href="the-derivative-as-a-function.html#notation"><i class="fa fa-check"></i>Notation</a></li>
+</ul></li>
+<li class="part"><span><b>III Differentiation Rules</b></span></li>
+<li class="chapter" data-level="" data-path="derivatives-of-polynomials-and-exponential-functions.html"><a href="derivatives-of-polynomials-and-exponential-functions.html"><i class="fa fa-check"></i>3.1 Derivatives of Polynomials and Exponential Functions</a>
+<ul>
+<li class="chapter" data-level="" data-path="derivatives-of-polynomials-and-exponential-functions.html"><a href="derivatives-of-polynomials-and-exponential-functions.html#power-functions"><i class="fa fa-check"></i>Power Functions</a></li>
+<li class="chapter" data-level="" data-path="derivatives-of-polynomials-and-exponential-functions.html"><a href="derivatives-of-polynomials-and-exponential-functions.html#proof-of-differentiation-rules"><i class="fa fa-check"></i>Proof of Differentiation Rules</a></li>
+<li class="chapter" data-level="" data-path="derivatives-of-polynomials-and-exponential-functions.html"><a href="derivatives-of-polynomials-and-exponential-functions.html#derivatives-of-exponential-functions"><i class="fa fa-check"></i>Derivatives of Exponential Functions</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="the-product-and-the-quotient-rule.html"><a href="the-product-and-the-quotient-rule.html"><i class="fa fa-check"></i>3.2 The Product and the Quotient Rule</a>
+<ul>
+<li class="chapter" data-level="" data-path="the-product-and-the-quotient-rule.html"><a href="the-product-and-the-quotient-rule.html#the-product-rule"><i class="fa fa-check"></i>The Product Rule</a></li>
+<li class="chapter" data-level="" data-path="the-product-and-the-quotient-rule.html"><a href="the-product-and-the-quotient-rule.html#proof-of-the-product-rule"><i class="fa fa-check"></i>Proof of the Product Rule</a></li>
+<li class="chapter" data-level="" data-path="the-product-and-the-quotient-rule.html"><a href="the-product-and-the-quotient-rule.html#the-quotient-rule"><i class="fa fa-check"></i>The Quotient Rule</a></li>
+<li class="chapter" data-level="" data-path="the-product-and-the-quotient-rule.html"><a href="the-product-and-the-quotient-rule.html#proof-of-the-quotient-rule"><i class="fa fa-check"></i>Proof of the Quotient Rule</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="derivatives-of-trigonometric-functions.html"><a href="derivatives-of-trigonometric-functions.html"><i class="fa fa-check"></i>3.3 Derivatives of Trigonometric Functions</a>
+<ul>
+<li class="chapter" data-level="" data-path="derivatives-of-trigonometric-functions.html"><a href="derivatives-of-trigonometric-functions.html#derivative-of-sinx-and-cosx"><i class="fa fa-check"></i>Derivative of <span class="math inline">\(\sin(x)\)</span> and <span class="math inline">\(\cos(x)\)</span></a></li>
+<li class="chapter" data-level="" data-path="derivatives-of-trigonometric-functions.html"><a href="derivatives-of-trigonometric-functions.html#other-trigonometric-derivatives"><i class="fa fa-check"></i>Other Trigonometric Derivatives</a></li>
+<li class="chapter" data-level="" data-path="derivatives-of-trigonometric-functions.html"><a href="derivatives-of-trigonometric-functions.html#proofs-of-trigonometric-derivatives"><i class="fa fa-check"></i>Proofs of Trigonometric Derivatives</a></li>
+<li class="chapter" data-level="" data-path="derivatives-of-trigonometric-functions.html"><a href="derivatives-of-trigonometric-functions.html#higher-derivatives"><i class="fa fa-check"></i>Higher Derivatives</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="the-chain-rule.html"><a href="the-chain-rule.html"><i class="fa fa-check"></i>3.4 The Chain Rule</a>
+<ul>
+<li class="chapter" data-level="" data-path="the-chain-rule.html"><a href="the-chain-rule.html#proof-of-the-chain-rule"><i class="fa fa-check"></i>Proof of The Chain Rule</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="implicit-differentiation.html"><a href="implicit-differentiation.html"><i class="fa fa-check"></i>3.5 Implicit Differentiation</a>
+<ul>
+<li class="chapter" data-level="" data-path="implicit-differentiation.html"><a href="implicit-differentiation.html#derivatives-of-inverse-trigonometric-functions"><i class="fa fa-check"></i>Derivatives of Inverse Trigonometric Functions</a></li>
+<li class="chapter" data-level="" data-path="implicit-differentiation.html"><a href="implicit-differentiation.html#proof-of-inverse-trig-derivative-laws"><i class="fa fa-check"></i>Proof of Inverse Trig Derivative Laws</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="derivatives-of-logarithmic-and-inverse-trigonometricfunctions.html"><a href="derivatives-of-logarithmic-and-inverse-trigonometricfunctions.html"><i class="fa fa-check"></i>3.6 Derivatives of Logarithmic and Inverse TrigonometricFunctions</a>
+<ul>
+<li class="chapter" data-level="" data-path="derivatives-of-logarithmic-and-inverse-trigonometricfunctions.html"><a href="derivatives-of-logarithmic-and-inverse-trigonometricfunctions.html#logarithmic-derivatives"><i class="fa fa-check"></i>Logarithmic Derivatives</a></li>
+<li class="chapter" data-level="" data-path="derivatives-of-logarithmic-and-inverse-trigonometricfunctions.html"><a href="derivatives-of-logarithmic-and-inverse-trigonometricfunctions.html#proof-of-logarithmic-derivative-laws"><i class="fa fa-check"></i>Proof of Logarithmic Derivative Laws</a></li>
+<li class="chapter" data-level="" data-path="derivatives-of-logarithmic-and-inverse-trigonometricfunctions.html"><a href="derivatives-of-logarithmic-and-inverse-trigonometricfunctions.html#logarithmic-differentiation"><i class="fa fa-check"></i>Logarithmic Differentiation</a></li>
+<li class="chapter" data-level="" data-path="derivatives-of-logarithmic-and-inverse-trigonometricfunctions.html"><a href="derivatives-of-logarithmic-and-inverse-trigonometricfunctions.html#proof-of-the-power-rule"><i class="fa fa-check"></i>Proof of the Power Rule</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="related-rates.html"><a href="related-rates.html"><i class="fa fa-check"></i>3.9 Related Rates</a></li>
+<li class="chapter" data-level="" data-path="linear-approximations-and-differentials.html"><a href="linear-approximations-and-differentials.html"><i class="fa fa-check"></i>3.10 Linear Approximations and Differentials</a>
+<ul>
+<li class="chapter" data-level="" data-path="linear-approximations-and-differentials.html"><a href="linear-approximations-and-differentials.html#linear-approximation"><i class="fa fa-check"></i>Linear Approximation</a></li>
+<li class="chapter" data-level="" data-path="linear-approximations-and-differentials.html"><a href="linear-approximations-and-differentials.html#differentials"><i class="fa fa-check"></i>Differentials</a></li>
+</ul></li>
+<li class="part"><span><b>IV Applications of Differentiation</b></span></li>
+<li class="chapter" data-level="" data-path="maximum-and-minimum-values.html"><a href="maximum-and-minimum-values.html"><i class="fa fa-check"></i>4.1 Maximum and Minimum Values</a>
+<ul>
+<li class="chapter" data-level="" data-path="maximum-and-minimum-values.html"><a href="maximum-and-minimum-values.html#critical-points"><i class="fa fa-check"></i>Critical Points</a></li>
+<li class="chapter" data-level="" data-path="maximum-and-minimum-values.html"><a href="maximum-and-minimum-values.html#maximum-and-minimum-values-1"><i class="fa fa-check"></i>Maximum and Minimum Values</a></li>
+<li class="chapter" data-level="" data-path="maximum-and-minimum-values.html"><a href="maximum-and-minimum-values.html#proof-of-the-extreme-value-theorem"><i class="fa fa-check"></i>Proof of the Extreme Value Theorem</a></li>
+<li class="chapter" data-level="" data-path="maximum-and-minimum-values.html"><a href="maximum-and-minimum-values.html#finding-absolute-extrema"><i class="fa fa-check"></i>Finding Absolute Extrema</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Calculus I</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="the-product-and-the-quotient-rule" class="section level1 unnumbered hasAnchor">
+<h1>3.2 The Product and the Quotient Rule<a href="the-product-and-the-quotient-rule.html#the-product-and-the-quotient-rule" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="the-product-rule" class="section level2 unnumbered hasAnchor">
+<h2>The Product Rule<a href="the-product-and-the-quotient-rule.html#the-product-rule" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In this section, we deal with finding the derivative of a product of functions.</p>
+<div style="color: blue;">
+<p><strong>Theorem (Product Rule):</strong> Let <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> be differentiable function. Then <span class="math display">\[\dfrac{d}{dx}(f(x)g(x)) = g(x)\dfrac{d}{dx}f(x) + f(x) \dfrac{d}{dx} g(x).\]</span></p>
+</div>
+<p>Essentially, if you are taking the derivative of a product of two functions, you differentiate the first function, multiply that by the second function, take the derivative of the second function, multiply that by the first function then add the two products together. In other words, <span class="math display">\[(uv)^{\prime} = u^{\prime}v+ v^{\prime}u.\]</span></p>
+<div style="color: green;">
+<p><strong>Example:</strong> Differentiate <span class="math inline">\(y = x^2e^x\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Solution:</strong> Let <span class="math inline">\(u = x^2\)</span> and <span class="math inline">\(v = e^x\)</span>. Then, <span class="math inline">\(u^{\prime} = 2x\)</span> and <span class="math inline">\(v^{\prime} = e^x\)</span>. By the product rule,
+<span class="math display">\[\begin{align*}  \dfrac{d}{dx} x^2e^x &amp;= \dfrac{d}{dx} uv\\
+&amp;= u^{\prime} v + v^{\prime} u\\
+&amp;= 2x(e^x) + e^x(x^2).
+\end{align*}\]</span>
+Therefore, <span class="math inline">\(y^{\prime} = 2x(e^x) + e^x(x^2)\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Example:</strong> Find the derivative of <span class="math inline">\(f(x) = (x^4 + 5x^3 + 4x^3 + 2x + 1)2^x\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Solution:</strong> Let <span class="math inline">\(u = x^4 + 5x^3 + 4x^3 + 2x + 1\)</span> and <span class="math inline">\(v = 2^x\)</span>. Then, <span class="math inline">\(u^{\prime} = 4x^3 + 15x^2 + 12x^2 + 2\)</span> and <span class="math inline">\(v^{\prime} = 2^x\ln 2\)</span>. By the product rule,
+<span class="math display">\[\begin{align*}  \dfrac{d}{dx} (x^4 + 5x^3 + &amp;4x^3 + 2x + 1)2^x\\
+&amp;= \dfrac{d}{dx} uv\\
+&amp;= u^{\prime} v + v^{\prime} u\\
+&amp;= 4x^3 + 15x^2 + 12x^2 + 2(2^x) + 2^x\ln 2(x^4 + 5x^3 + 4x^3 + 2x + 1).
+\end{align*}\]</span>
+So, <span class="math inline">\(f^{\prime}(x) = 4x^3 + 15x^2 + 12x^2 + 2(2^x) + 2^x\ln 2(x^4 + 5x^3 + 4x^3 + 2x + 1)\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Example:</strong> Find <span class="math inline">\(f^{\prime}(x)\)</span> given <span class="math inline">\(f(x) = 2^xe^{x-1}\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Solution:</strong> First, note that <span class="math inline">\(e^{x-1} = e^x/e = \frac{1}{e}e^x\)</span>. So, <span class="math inline">\(f(x) = \frac{1}{e} 2^xe^x\)</span>. Now, let <span class="math inline">\(u = 2^x\)</span> and <span class="math inline">\(v = e^x\)</span>. Then, <span class="math inline">\(u^{\prime} = 2^x\ln 2\)</span> and <span class="math inline">\(v^{\prime} = e^x\)</span>. By the product rule,
+<span class="math display">\[\begin{align*}  \dfrac{d}{dx} \dfrac{1}{e}2^xe^x &amp;= \dfrac{1}{e} \dfrac{d}{dx} uv\\
+&amp;= \dfrac{1}{e} \left(u^{\prime} v + v^{\prime} u \right)\\
+&amp;= \dfrac{1}{e}\left(2^x\ln 2 e^x + 2^xe^x \right).
+\end{align*}\]</span>
+Therefore, <span class="math inline">\(f^{\prime}(x) = \dfrac{1}{e}\left(2^x\ln 2 e^x + 2^xe^x \right)\)</span>.</p>
+</div>
+<p>Practice Problems</p>
+<ol style="list-style-type: decimal">
+<li>Differentiate.</li>
+</ol>
+<ul>
+<li><span class="math inline">\(y = x^3e^x\)</span></li>
+<li><span class="math inline">\(y = x 2^x\)</span></li>
+<li><span class="math inline">\(y = (x^2 + x + 1)e^x\)</span></li>
+<li><span class="math inline">\(y = 2^x(e^x + e^x)\)</span></li>
+<li><span class="math inline">\(y = \ln(5)(x^2 + 1)3^x\)</span></li>
+<li><span class="math inline">\(y = 2^x \left(\dfrac{x^2 + 3x+2}{x+1}\right)\)</span></li>
+<li><span class="math inline">\(y = e^x\sqrt{x}\)</span></li>
+<li><span class="math inline">\(y = \ln(2)e^{x+2} 4^{2x}\)</span></li>
+<li><span class="math inline">\(y = (x^2 + 3x + 1)\sqrt{x}\)</span></li>
+<li><span class="math inline">\(y = x^{-2}(4+5x^{-3}\)</span></li>
+</ul>
+<ol start="2" style="list-style-type: decimal">
+<li><p>If <span class="math inline">\(f(2) = -8\)</span>, <span class="math inline">\(f^{\prime}(2) = 5\)</span>, <span class="math inline">\(g(2) = 15\)</span> and <span class="math inline">\(g^{\prime}(2) = -3\)</span>, find <span class="math inline">\((fg)^{\prime}(2)\)</span>.</p></li>
+<li><p>If <span class="math inline">\(f(x) = x^3g(x)\)</span>, <span class="math inline">\(g(7) = 2\)</span> and <span class="math inline">\(g^{\prime}(7) = -9\)</span>, find <span class="math inline">\(f^{\prime}(7)\)</span>.</p></li>
+<li><p>Find the equation of the tangent line to each of the following functions at the indicated point.</p></li>
+</ol>
+<ul>
+<li><span class="math inline">\(y = 2xe^x + 3\)</span> at <span class="math inline">\(a = 0\)</span></li>
+<li><span class="math inline">\(y = x^22^x\)</span> at <span class="math inline">\(a = 1\)</span></li>
+<li><span class="math inline">\(y = \sqrt{x}e^x\)</span> at <span class="math inline">\(a = 1\)</span></li>
+<li><span class="math inline">\(y = (1 + 5\sqrt{x})(4-2x)\)</span> at <span class="math inline">\(a = 9\)</span>.</li>
+</ul>
+</div>
+<div id="proof-of-the-product-rule" class="section level2 unnumbered hasAnchor">
+<h2>Proof of the Product Rule<a href="the-product-and-the-quotient-rule.html#proof-of-the-product-rule" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div style="color: blue;">
+<p><strong>Theorem (Product Rule):</strong> Let <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> be differentiable function. Then <span class="math display">\[\dfrac{d}{dx}(f(x)g(x)) = g(x)\dfrac{d}{dx}f(x) + f(x) \dfrac{d}{dx} g(x).\]</span></p>
+</div>
+<div style="color: blue;">
+<p><strong>Proof:</strong> Let <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> be differentiable functions. We need to show that <span class="math display">\[\dfrac{d}{dx}(f(x)g(x)) = \lim_{h \rightarrow 0} \dfrac{f(x + h)g(x+h) - f(x)g(x)}{h} =  g(x)\dfrac{d}{dx}f(x) + f(x) \dfrac{d}{dx} g(x).\]</span> Since <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> are differentiable, we know that <span class="math display">\[\dfrac{d}{dx} f(x) = \lim_{h \rightarrow 0} \dfrac{f(x+h) - f(x)}{h} \;\;\; \text{ and } \;\;\; \dfrac{d}{dx} g(x) = \lim_{h \rightarrow 0} \dfrac{g(x+h) - g(x)}{h}\]</span> both exist. Observe that,
+<span class="math display">\[\begin{align*}
+\dfrac{d}{dx}(f(x)g(x)) &amp;= \lim_{h \rightarrow 0} \dfrac{f(x + h)g(x+h) - f(x)g(x)}{h}\\
+&amp;=  \mathop {\lim }\limits_{h \to 0} \frac{{f\left( {x + h} \right)g\left( {x + h} \right) - g\left( {x + h} \right)f\left( x \right) + g\left( {x + h} \right)f\left( x \right) - f\left( x \right)g\left( x \right)}}{h}\\
+&amp;= \mathop {\lim }\limits_{h \to 0} \frac{{g\left( {x + h} \right)\left( {f\left( {x + h} \right) - f\left( x \right)} \right)}}{h} + \mathop {\lim }\limits_{h \to 0} \frac{{f\left( x \right)\left( {g\left( {x + h} \right) - g\left( x \right)} \right)}}{h}\\
+&amp; = \mathop {\lim }\limits_{h \to 0} g\left( {x + h} \right)\frac{{f\left( {x + h} \right) - f\left( x \right)}}{h} + \mathop {\lim }\limits_{h \to 0} f\left( x \right)\frac{{g\left( {x + h} \right) - g\left( x \right)}}{h}\\
+&amp; = \mathop {\lim }\limits_{h \to 0} g\left( {x + h} \right) \lim_{h \rightarrow 0}\frac{{f\left( {x + h} \right) - f\left( x \right)}}{h} + \mathop {\lim }\limits_{h \to 0} f\left( x \right) \lim_{h \rightarrow 0} \frac{{g\left( {x + h} \right) - g\left( x \right)}}{h}\\
+&amp;= g(x) \dfrac{d}{dx}f(x) + f(x) \dfrac{d}{dx} g(x).
+\end{align*}\]</span></p>
+</div>
+<p>Practice Problems</p>
+<ol style="list-style-type: decimal">
+<li><p>If <span class="math inline">\(f\)</span>, <span class="math inline">\(g\)</span> and <span class="math inline">\(h\)</span> are all differentiable functions, prove that <span class="math display">\[\dfrac{d}{dx} f(x)g(x)h(x) = g(x)h(x) \dfrac{d}{dx}f(x) + f(x)h(x) \dfrac{d}{dx}g(x) + f(x)g(x) \dfrac{d}{dx}h(x).\]</span></p></li>
+<li><p>Calculate <span class="math inline">\(f^{(n)}(x)\)</span> for <span class="math inline">\(f(x) = x^ne^x\)</span> at <span class="math inline">\(x = 0\)</span>.</p></li>
+</ol>
+</div>
+<div id="the-quotient-rule" class="section level2 unnumbered hasAnchor">
+<h2>The Quotient Rule<a href="the-product-and-the-quotient-rule.html#the-quotient-rule" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The quotient rule is a rule that helps find the derivative of the quotient of two functions.</p>
+<div style="color: blue;">
+<p><strong>Theorem (Quotient Rule):</strong> Let <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> be differentiable function. Then <span class="math display">\[\dfrac{d}{dx}\left(\dfrac{f(x)}{g(x)}\right) = \dfrac{g(x)\dfrac{d}{dx}f(x) - f(x) \dfrac{d}{dx} g(x)}{g(x)^2}.\]</span></p>
+</div>
+<p>If you want to find the derivative of the quotient of two functions, take the function in the denominator square it and put it in the denominator. Take the denominator of the original and put a copy of it in the numerator. Multiply that by the derivative of the numerator and subtract the product of the derivative of the denominator and the original numerator. Essentially, <span class="math display">\[\left( \dfrac{u}{v} \right)^{\prime} = \dfrac{u^{\prime}v - v^{\prime}u}{v^2}.\]</span></p>
+<div style="color: green;">
+<p><strong>Example:</strong> Let <span class="math inline">\(y = \dfrac{x^3}{e^x}\)</span>. Find <span class="math inline">\(y^{\prime}\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Solution:</strong> Let <span class="math inline">\(u = x^3\)</span> and <span class="math inline">\(v = e^x\)</span>. Then, we know that <span class="math inline">\(u^{\prime} = 3x^2\)</span> and <span class="math inline">\(v^{\prime} = e^x\)</span>. By the quotient rule,
+<span class="math display">\[\begin{align*} y^{\prime} &amp;= \dfrac{d}{dx} \dfrac{x^3}{e^x}\\
+&amp;= \dfrac{d}{dx} \dfrac{u}{v}\\
+&amp;= \dfrac{u^{\prime}v - v^{\prime}u}{v^2}\\
+&amp;= \dfrac{3x^2e^x - e^xx^3}{(e^x)^2}\\
+&amp;= \dfrac{e^x(3x^2- x^3)}{(e^x)^2}\\
+&amp;= \dfrac{3x^2- x^3}{e^x}.
+\end{align*}\]</span>
+Therefore, by the quotient rule, we see that <span class="math inline">\(y^{\prime} = \dfrac{3x^2-x^3}{e^x}\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Example:</strong> Let <span class="math inline">\(y = \dfrac{1}{x + 5}\)</span>. Find <span class="math inline">\(\dfrac{dy}{dx}\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Solution:</strong> Let <span class="math inline">\(u = 1\)</span> and <span class="math inline">\(v = x+5\)</span>. Then, we know that <span class="math inline">\(u^{\prime} = 0\)</span> and <span class="math inline">\(v^{\prime} = 1\)</span>. By the quotient rule,
+<span class="math display">\[\begin{align*} \dfrac{dy}{dx} &amp;= \dfrac{d}{dx} \dfrac{1}{x+5}\\
+&amp;= \dfrac{d}{dx} \dfrac{u}{v}\\
+&amp;= \dfrac{u^{\prime}v - v^{\prime}u}{v^2}\\
+&amp;= \dfrac{0(x+5) - 1(1)}{(x+5)^2}\\
+&amp;= \dfrac{1}{(x+5)^2}.
+\end{align*}\]</span>
+Therefore, by the quotient rule, we see that <span class="math inline">\(\dfrac{dy}{dx} = \dfrac{1}{(x+5)^2}\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Example:</strong> Differentiate <span class="math inline">\(\dfrac{x^2}{x^3 + x + 1}\)</span>.</p>
+</div>
+<p> Set <span class="math inline">\(y = \dfrac{x^2}{x^3 + x + 1}\)</span>. Let <span class="math inline">\(u = x^2\)</span> and <span class="math inline">\(v = x^3 + x + 1\)</span>. Then, we know that <span class="math inline">\(u^{\prime} = 2x\)</span> and <span class="math inline">\(v^{\prime} = 3x^2 + 1\)</span>. By the quotient rule,
+<span class="math display">\[\begin{align*} y^{\prime} &amp;= \dfrac{d}{dx} \dfrac{x^2}{x^3 + x + 1}\\
+&amp;= \dfrac{d}{dx} \dfrac{u}{v}\\
+&amp;= \dfrac{u^{\prime}v - v^{\prime}u}{v^2}\\
+&amp;= \dfrac{2x(x^3 + x + 1) - (3x^2 + 1)(x^2)}{(x^3 + x + 1)^2}\\
+&amp;= \dfrac{2x^4 + 2x^2 + 2x - 3x^4-x^2}{(x^3 + x + 1)^2}\\
+&amp;= \dfrac{-x^4 + x^2 + 2x}{(x^3 + x + 1)^2}.
+\end{align*}\]</span>
+Therefore, by the quotient rule, we see that <span class="math inline">\(y^{\prime} = \dfrac{-x^4 + x^2 + 2x}{(x^3 + x + 1)^2}\)</span>.
+:::</p>
+<div style="color: green;">
+<p><strong>Example:</strong> Let <span class="math inline">\(f(x) = \dfrac{2^x}{\sqrt{x}e^x}\)</span>. Find <span class="math inline">\(f^{\prime}(x)\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Solution:</strong> Let <span class="math inline">\(u = 2^x\)</span> and <span class="math inline">\(v = \sqrt{x}e^x\)</span>. Then, we know that <span class="math inline">\(u^{\prime} = 2^x\ln(2)\)</span> and we note that since <span class="math inline">\(v\)</span> is a product of two functions, we need to use the product rule to find the derivative of <span class="math inline">\(v\)</span>. If we let <span class="math inline">\(m = \sqrt{x}\)</span> and <span class="math inline">\(n = e^x\)</span>, then <span class="math inline">\(v = mn\)</span> and <span class="math inline">\(v^{\prime} = m^{\prime}n + n^{\prime}m\)</span>, where <span class="math inline">\(m^{\prime} = (1/2)x^{-1/2}\)</span> and <span class="math inline">\(n^{\prime} = e^x\)</span>. So, <span class="math inline">\(v^{\prime} = (1/2)x^{-1/2}e^x + e^x\sqrt{x}\)</span>. By the quotient rule,
+<span class="math display">\[\begin{align*} f^{\prime}(x) &amp;= \dfrac{d}{dx} \dfrac{2^x}{\sqrt{x}e^x}\\
+&amp;= \dfrac{d}{dx} \dfrac{u}{v}\\
+&amp;= \dfrac{u^{\prime}v - v^{\prime}u}{v^2}\\
+&amp;= \dfrac{2^x\ln(x)(\sqrt{x}e^x) - ((1/2)x^{-1/2}e^x + e^x\sqrt{x})2^x}{(\sqrt{x}e^x)^2}\\
+&amp;= \dfrac{e^x(2^x\ln(x)\sqrt{x} - (1/2)x^{-1/2}2^x - \sqrt{x}2^x)}{x(e^x)^2}\\
+&amp;= \dfrac{2^x\ln(x)\sqrt{x} - (1/2)x^{-1/2}2^x - \sqrt{x}2^x}{xe^x}.
+\end{align*}\]</span>
+Therefore, by the quotient rule, <span class="math inline">\(f^{\prime}(x) = \dfrac{2^x\ln(x)\sqrt{x} - (1/2)x^{-1/2}2^x - \sqrt{x}2^x}{xe^x}\)</span>.</p>
+</div>
+<p>Practice Problems</p>
+<ol style="list-style-type: decimal">
+<li>Differentiate.</li>
+</ol>
+<ul>
+<li><span class="math inline">\(y = \dfrac{x^4}{3e^x}\)</span></li>
+<li><span class="math inline">\(y = \dfrac{x}{2^x}\)</span></li>
+<li><span class="math inline">\(y = \dfrac{e^x}{x^2 + x + 1}\)</span></li>
+<li><span class="math inline">\(y = \dfrac{3^x}{e^x + 2^x}\)</span></li>
+<li><span class="math inline">\(y = \dfrac{\ln(5)4^x}{x^2 + 1}\)</span></li>
+<li><span class="math inline">\(y = \dfrac{\sqrt{x}}{2^x}\)</span></li>
+<li><span class="math inline">\(y = \dfrac{e^x}{\sqrt{x}}\)</span></li>
+<li><span class="math inline">\(y = \dfrac{\ln(2)e^{x+2}}{ 4^{2x}}\)</span></li>
+<li><span class="math inline">\(y = \dfrac{x^2 + 3x + 1}{\sqrt{x}}\)</span></li>
+<li><span class="math inline">\(y = \dfrac{x^{-2}}{4+5x^{-3}}\)</span></li>
+</ul>
+<ol start="2" style="list-style-type: decimal">
+<li>Find the derivative.</li>
+</ol>
+<ul>
+<li><span class="math inline">\(y = 2^x\dfrac{x^2}{5e^x}\)</span></li>
+<li><span class="math inline">\(y = \dfrac{x2^x}{x^3+1}\)</span></li>
+<li><span class="math inline">\(y = \dfrac{xe^x}{x + 1}\)</span></li>
+<li><span class="math inline">\(y = \dfrac{3^x}{x^2e^x}\)</span></li>
+</ul>
+<ol start="3" style="list-style-type: decimal">
+<li>Find the equation of the tangent line to each of the following functions at the indicated point.</li>
+</ol>
+<ul>
+<li><span class="math inline">\(y = \dfrac{2x+1}{e^x}\)</span> at <span class="math inline">\(a = 0\)</span></li>
+<li><span class="math inline">\(y = \dfrac{x^2}{\sqrt{x} + 1}\)</span> at <span class="math inline">\(a = 1\)</span></li>
+<li><span class="math inline">\(y = \dfrac{3\sqrt{x}}{e^x}\)</span> at <span class="math inline">\(a = 1\)</span></li>
+<li><span class="math inline">\(y = \dfrac{(1 + 5\sqrt{x})e^x}{4-2x}\)</span> at <span class="math inline">\(a = 0\)</span>.</li>
+</ul>
+</div>
+<div id="proof-of-the-quotient-rule" class="section level2 unnumbered hasAnchor">
+<h2>Proof of the Quotient Rule<a href="the-product-and-the-quotient-rule.html#proof-of-the-quotient-rule" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div style="color: blue;">
+<p><strong>Theorem (Quotient Rule):</strong> Let <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> be differentiable function. Then <span class="math display">\[\dfrac{d}{dx}(\dfrac{f(x)}{g(x)}) = \dfrac{g(x)\dfrac{d}{dx}f(x) - f(x) \dfrac{d}{dx} g(x)}{g(x)^2}.\]</span></p>
+</div>
+<div style="color: blue;">
+<p><strong>Proof:</strong> Let <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> be differentiable functions. We need to show that <span class="math display">\[\dfrac{d}{dx}(\dfrac{f(x)}{g(x)}) = \lim_{h \rightarrow 0} \dfrac{\frac{f(x + h)}{g(x+h)} - \frac{f(x)}{g(x)}}{h} = \dfrac{g(x)\dfrac{d}{dx}f(x) - f(x) \dfrac{d}{dx} g(x)}{g(x)^2}.\]</span> Since <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> are differentiable, we know that <span class="math display">\[\dfrac{d}{dx} f(x) = \lim_{h \rightarrow 0} \dfrac{f(x+h) - f(x)}{h} \;\;\; \text{ and } \;\;\; \dfrac{d}{dx} g(x) = \lim_{h \rightarrow 0} \dfrac{g(x+h) - g(x)}{h}\]</span> both exist. Observe that,
+<span class="math display">\[\begin{align*}\dfrac{d}{dx}\left(\dfrac{f(x)}{g(x)}\right) &amp;= \mathop {\lim }\limits_{h \to 0} \frac{{\frac{{f\left( {x + h} \right)}}{{g\left( {x + h} \right)}} - \frac{{f\left( x \right)}}{{g\left( x \right)}}}}{h}\\
+&amp;= \mathop {\lim }\limits_{h \to 0} \frac{1}{h}\,\,\frac{{f\left( {x + h} \right)g\left( x \right) - f\left( x \right)g\left( {x + h} \right)}}{{g\left( {x + h} \right)g\left( x \right)}}\\
+&amp;= \mathop {\lim }\limits_{h \to 0} \frac{1}{h}\,\,\frac{{f\left( {x + h} \right)g\left( x \right) - f\left( x \right)g\left( x \right) + f\left( x \right)g\left( x \right) - f\left( x \right)g\left( {x + h} \right)}}{{g\left( {x + h} \right)g\left( x \right)}}\\
+&amp;= \mathop {\lim }\limits_{h \to 0} \frac{1}{{g\left( {x + h} \right)g\left( x \right)}}\,\,\frac{{f\left( {x + h} \right)g\left( x \right) - f\left( x \right)g\left( x \right) + f\left( x \right)g\left( x \right) - f\left( x \right)g\left( {x + h} \right)}}{h}\\
+&amp;= \mathop {\lim }\limits_{h \to 0} \frac{1}{{g\left( {x + h} \right)g\left( x \right)}}\,\,\left( {\frac{{f\left( {x + h} \right)g\left( x \right) - f\left( x \right)g\left( x \right)}}{h} + \frac{{f\left( x \right)g\left( x \right) - f\left( x \right)g\left( {x + h} \right)}}{h}} \right)\\
+&amp;= \mathop {\lim }\limits_{h \to 0} \frac{1}{{g\left( {x + h} \right)g\left( x \right)}}\,\,\left( {g\left( x \right)\frac{{f\left( {x + h} \right) - f\left( x \right)}}{h} - f\left( x \right)\frac{{g\left( {x + h} \right) - g\left( x \right)}}{h}} \right)\\
+&amp; = \frac{1}{{\mathop {\lim }\limits_{h \to 0} g\left( {x + h} \right)\mathop {\lim }\limits_{h \to 0} g\left( x \right)}}\,\left( {\left( {\mathop {\lim }\limits_{h \to 0} g\left( x \right)} \right)\left( {\mathop {\lim }\limits_{h \to 0} \frac{{f\left( {x + h} \right) - f\left( x \right)}}{h}} \right) - } \right.\\
+&amp; \hspace{2.25in}\left. {\left( {\mathop {\lim }\limits_{h \to 0} f\left( x \right)} \right)\left( {\mathop {\lim }\limits_{h \to 0} \frac{{g\left( {x + h} \right) - g\left( x \right)}}{h}} \right)} \right)\\
+&amp; = \frac{1}{{g\left( x \right)g\left( x \right)}}\,\,\left( {g\left( x \right)f&#39;\left( x \right) - f\left( x \right)g&#39;\left( x \right)} \right)\\ &amp;  = \dfrac{g(x)\dfrac{d}{dx}f(x) - f(x) \dfrac{d}{dx} g(x)}{g(x)^2}.
+\end{align*}\]</span></p>
+</div>
+<p>Practice Problems</p>
+<ol style="list-style-type: decimal">
+<li><p>If <span class="math inline">\(g\)</span> is differentiable, find <span class="math inline">\(f^{\prime}(x)\)</span> given <span class="math display">\[f(x) = \dfrac{g(x)}{x^3}.\]</span></p></li>
+<li><p>If <span class="math inline">\(g\)</span> is differentiable, find <span class="math inline">\(f^{\prime}(x)\)</span> given <span class="math display">\[f(x) = \dfrac{1 + x^2g(x)}{x}.\]</span></p></li>
+<li><p>If <span class="math inline">\(g\)</span> is differentiable, find <span class="math inline">\(f^{\prime}(x)\)</span> given <span class="math display">\[f(x) = \dfrac{2 + xg(x)}{\sqrt{x}}.\]</span></p></li>
+<li><p>Calculate <span class="math inline">\(f^{(n)}(x)\)</span> for <span class="math inline">\(f(x) = \dfrac{x^n}{e^x}\)</span> at <span class="math inline">\(x = 0\)</span>.</p></li>
+<li><p>If <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> are differentiable, find <span class="math inline">\(\left(\dfrac{f}{g}\right)^{\prime}(4)\)</span> given <span class="math inline">\(f(4) = 5\)</span>, <span class="math inline">\(f^{\prime}(4) = -3\)</span>, <span class="math inline">\(g(4) = 6\)</span> and <span class="math inline">\(g^{\prime}(4) = 5\)</span>.</p></li>
+<li><p>If <span class="math inline">\(f\)</span>, <span class="math inline">\(g\)</span> and <span class="math inline">\(h\)</span> are differentiable, find <span class="math inline">\(\dfrac{d}{dx} \dfrac{f(x)/g(x)}{h(x)}\)</span> assuming <span class="math inline">\(h(x), g(x) \not = 0\)</span>.</p></li>
+<li><p>Define <span class="math inline">\(\sinh(x) = \dfrac{e^x - e^{-x}}{2}\)</span> as the hyperbolic sine function. Find the derivative of <span class="math inline">\(\sinh(x)\)</span>.</p></li>
+<li><p>Define <span class="math inline">\(\cosh(x) = \dfrac{e^x + e^{-x}}{2}\)</span> as the hyperbolic cosine function. Find the derivative of <span class="math inline">\(\cosh(x)\)</span>.</p></li>
+</ol>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="derivatives-of-polynomials-and-exponential-functions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="derivatives-of-trigonometric-functions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook/js/app.min.js"></script>
+<script src="libs/gitbook/js/clipboard.min.js"></script>
+<script src="libs/gitbook/js/plugin-search.js"></script>
+<script src="libs/gitbook/js/plugin-sharing.js"></script>
+<script src="libs/gitbook/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook/js/jquery.highlight.js"></script>
+<script src="libs/gitbook/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/03-DifferentiationRules.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

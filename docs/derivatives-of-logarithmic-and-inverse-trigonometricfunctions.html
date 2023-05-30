@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>2.8 The Derivative as a Function | Calculus I</title>
-  <meta name="description" content="2.8 The Derivative as a Function | Calculus I" />
+  <title>3.6 Derivatives of Logarithmic and Inverse TrigonometricFunctions | Calculus I</title>
+  <meta name="description" content="3.6 Derivatives of Logarithmic and Inverse TrigonometricFunctions | Calculus I" />
   <meta name="generator" content="bookdown 0.33 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="2.8 The Derivative as a Function | Calculus I" />
+  <meta property="og:title" content="3.6 Derivatives of Logarithmic and Inverse TrigonometricFunctions | Calculus I" />
   <meta property="og:type" content="book" />
   <meta property="og:image" content="/Title_Page.png" />
   
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="2.8 The Derivative as a Function | Calculus I" />
+  <meta name="twitter:title" content="3.6 Derivatives of Logarithmic and Inverse TrigonometricFunctions | Calculus I" />
   
   
   <meta name="twitter:image" content="/Title_Page.png" />
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="derivatives-and-rates-of-change.html"/>
-<link rel="next" href="derivatives-of-polynomials-and-exponential-functions.html"/>
+<link rel="prev" href="implicit-differentiation.html"/>
+<link rel="next" href="related-rates.html"/>
 <script src="libs/jquery/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook/css/style.css" rel="stylesheet" />
@@ -189,211 +189,206 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="the-derivative-as-a-function" class="section level1 unnumbered hasAnchor">
-<h1>2.8 The Derivative as a Function<a href="the-derivative-as-a-function.html#the-derivative-as-a-function" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="differentiability" class="section level2 unnumbered hasAnchor">
-<h2>Differentiability<a href="the-derivative-as-a-function.html#differentiability" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Not all functions have derivatives. While most of the functions we have dealt with have had derivatives, it is certainly not the case that they all do. Any function that has a derivative is called .</p>
+<div id="derivatives-of-logarithmic-and-inverse-trigonometricfunctions" class="section level1 unnumbered hasAnchor">
+<h1>3.6 Derivatives of Logarithmic and Inverse TrigonometricFunctions<a href="derivatives-of-logarithmic-and-inverse-trigonometricfunctions.html#derivatives-of-logarithmic-and-inverse-trigonometricfunctions" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="logarithmic-derivatives" class="section level2 unnumbered hasAnchor">
+<h2>Logarithmic Derivatives<a href="derivatives-of-logarithmic-and-inverse-trigonometricfunctions.html#logarithmic-derivatives" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>So far, we have differentiated polynomials, rational functions, trigonometric functions, and exponential functions. The obvious missing type of function from this list is the logarithmic function. In this chapter, we look at the derivatives of logarithmic functions.</p>
 <div style="color: blue;">
-<p><strong>Definition:</strong> A function <span class="math inline">\(f\)</span> is called differentiable at <span class="math inline">\(x = a\)</span> if <span class="math inline">\(f^{\prime}(a)\)</span> exist. A function <span class="math inline">\(f\)</span> is called differentiable on an interval if the derivative exists for each point in that interval.</p>
+<p><strong>Theorem (Log Derivatives):</strong> Let <span class="math inline">\(x &gt; 0\)</span>. Then <span class="math display">\[\dfrac{d}{dx} \ln(x) = \dfrac{1}{x} \hspace{0.51in} \text{and} \hspace{0.51in} \dfrac{d}{dx} \log_a(x) =\dfrac{1}{x\ln a}.\]</span></p>
 </div>
-<p>Specifically, a function can fail to be differentiable at a point <span class="math inline">\(a\)</span> if there is a vertical tangent line, a discontinuity in the graph or if the graph has a corner.</p>
-<table>
-<thead>
-<tr class="header">
-<th align="center"><img src="Pic39.png" /></th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
+<p>We prove this theorem in the next section. For now, we try a few examples.</p>
 <div style="color: green;">
-<p><strong>Example:</strong> Determine <span class="math inline">\(f^{\prime}(0)\)</span> given <span class="math inline">\(g(x) = |x|\)</span>.\</p>
+<p><strong>Example:</strong> Let <span class="math inline">\(y = \ln(x) + 4\log_3(x)\)</span>. Find the derivative of <span class="math inline">\(y\)</span>.</p>
 </div>
 <div style="color: green;">
-<p><strong>Solution:</strong> We know
-<span class="math display">\[\begin{align*}  f^{\prime}(0) &amp;= \lim_{h \rightarrow 0} \dfrac{f(0+h) - f(0)}{h}\\ \\
-&amp;= \lim_{h \rightarrow 0} \dfrac{|0+h| - |0|}{h}\\ \\
-&amp;= \lim_{h \rightarrow 0} \dfrac{|h|}{h}.
+<p><strong>Solution:</strong> From our log derivatives, we find that <span class="math display">\[y^{\prime} = \dfrac{1}{x} + \dfrac{4}{x\ln(3)}.\]</span></p>
+</div>
+<div style="color: green;">
+<p><strong>Example:</strong> Let <span class="math inline">\(y = \ln(x^2 + 2x + 5)\)</span>. Find the derivative of <span class="math inline">\(y\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Solution:</strong> Here, <span class="math inline">\(\ln(x^2 + 2x + 5)\)</span> is a composite function. So, we use the chain rule and the derivative of <span class="math inline">\(\ln(x)\)</span>. Differentiating, we find that <span class="math display">\[y^{\prime} = \dfrac{1}{x}(2x + 2) =  \dfrac{2x + 2}{x}.\]</span></p>
+</div>
+<div style="color: green;">
+<p><strong>Example:</strong> Let <span class="math inline">\(f(x) = \dfrac{\ln(x)}{e^x\ln(2x + 5)}\)</span>. Find <span class="math inline">\(f^{\prime}(x)\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Solution:</strong> We proceed using the quotient rule. Let <span class="math inline">\(u = \ln(x)\)</span> and <span class="math inline">\(v = e^x\ln(2x+5)\)</span>. Then <span class="math inline">\(u^{\prime} = \dfrac{1}{x}\)</span> and <span class="math inline">\(v^{\prime} = e^x\ln(2x+5) + \dfrac{e^x}{2x+5}(2)\)</span> with the second derivative coming from the product rule. Now,
+<span class="math display">\[\begin{align*}  f^{\prime}(x) &amp;= \dfrac{d}{dx} \dfrac{\ln(x)}{e^x\ln(2x+5)}\\
+&amp;= \dfrac{d}{dx} \dfrac{u}{v}\\
+&amp;= \dfrac{u^{\prime}v - v^{\prime}u}{v^2}\\
+&amp;= \dfrac{\dfrac{1}{x}e^x\ln(2x+5) - (e^x\ln(2x+5) + \dfrac{2e^x}{2x+5}\ln(x)}{(e^x\ln(2x+5))^2}\\
+&amp;= \dfrac{e^x(\dfrac{\ln(2x+5)}{x} - \ln(x)\ln(2x+5) + \dfrac{2\ln(x)}{2x+5})}{(e^x\ln(2x+5))^2}\\
+&amp;= \dfrac{\dfrac{\ln(2x+5)}{x} - \ln(x)\ln(2x+5) + \dfrac{2\ln(x)}{2x+5}}{e^x(\ln(2x+5))^2}.
 \end{align*}\]</span>
-Recall that <span class="math display">\[|h| = \begin{cases}h &amp; h \geq 0\\ -h &amp; h &lt; 0 \end{cases}.\]</span> If we take the limit from the left, <span class="math inline">\(h &lt; 0\)</span>. Therefore,
-<span class="math display">\[\lim_{h \rightarrow 0^-} \dfrac{|h|}{h} = \lim_{h \rightarrow 0^{-}} \dfrac{-h}{h} = -1.\]</span> If we take the limit from the right, <span class="math inline">\(h &gt; 0\)</span>. Therefore, <span class="math display">\[\lim_{h \rightarrow 0^+} \dfrac{|h|}{h} = \lim_{h \rightarrow 0^{+}} \dfrac{h}{h} = 1.\]</span> Now, since the two one-sided limits are different so <span class="math inline">\(\displaystyle\lim_{h \rightarrow 0} \dfrac{|h|}{h}\)</span> does not exist. Since the limit does not exist, neither does the derivative.</p>
+Therefore, <span class="math display">\[f^{\prime}(x) = \dfrac{\dfrac{\ln(2x+5)}{x} - \ln(x)\ln(2x+5) + \dfrac{2\ln(x)}{2x+5}}{e^x(\ln(2x+5))^2}.\]</span></p>
+</div>
+<div style="color: green;">
+<p><strong>Example:</strong> Let <span class="math inline">\(f(x) = \ln(x) + 2x + 5\)</span>. Find the equation of the tangent line at the point <span class="math inline">\(x = 1\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Solution:</strong> We begin by finding the <span class="math inline">\(y\)</span> coordinate of <span class="math inline">\(f\)</span> when <span class="math inline">\(x = 1\)</span>. <span class="math display">\[f(1) = \ln(1) + 2(1) + 5 = 7.\]</span> Now, we find the equation of the tangent line at <span class="math inline">\((1,7)\)</span>. We first find the derivative <span class="math display">\[f^{\prime}(x) = \dfrac{1}{x} + 2.\]</span> So, <span class="math inline">\(f^{\prime}(1) = 3\)</span>. Therefore, the equation of the tangent line at <span class="math inline">\((1,7)\)</span> is <span class="math inline">\(y - 7 = 3(x-1)\)</span>.</p>
 </div>
 <table>
 <thead>
 <tr class="header">
-<th align="center"><img src="Pic40.png" /></th>
+<th align="center"><img src="Pic45.png" /></th>
 </tr>
 </thead>
 <tbody>
 </tbody>
 </table>
 <p>Practice Problems</p>
-<ol style="list-style-type: upper-alpha">
-<li>Determine where the following functions are differentiable.</li>
+<ol style="list-style-type: decimal">
+<li>Find the derivative.</li>
 </ol>
 <ul>
-<li><span class="math inline">\(f(x) = \begin{cases} x+1 &amp; x \geq 0 \\ x-1 &amp; x &lt; 0 \end{cases}\)</span></li>
-<li><span class="math inline">\(f(x) = |x-1|\)</span></li>
-<li><span class="math inline">\(f(x) = \begin{cases} x^2 &amp; x \geq 0 \\ -x&amp; x &lt; 0 \end{cases}\)</span></li>
-<li><span class="math inline">\(f(x) = \dfrac{1}{x^2}\)</span></li>
-<li><span class="math inline">\(f(x) = x^{1/3}\)</span></li>
-<li><span class="math inline">\(f(x) = \dfrac{x}{|x|}\)</span></li>
-<li><span class="math inline">\(f(x) = \sqrt{x}\)</span></li>
-<li><span class="math inline">\(f(x) = \sqrt{x}\)</span></li>
+<li><span class="math inline">\(y = \log_2(x)\)</span></li>
+<li><span class="math inline">\(f(x) = \log_3(4x-5)\)</span></li>
+<li><span class="math inline">\(y = \ln(\sin(x))\)</span></li>
+<li><span class="math inline">\(f(x) = \ln(\sqrt{x^2 + 5})\)</span></li>
+<li><span class="math inline">\(y = \log_{10}(x + \sqrt{6 + x^2})\)</span></li>
+<li><span class="math inline">\(f(x) = \log_6(\log_7(x))\)</span></li>
+<li><span class="math inline">\(y = \ln(\sec(x) + \tan(x))\)</span></li>
+<li><span class="math inline">\(f(x) = \dfrac{e^x}{\ln(2x)}\)</span></li>
+<li><span class="math inline">\(y = \cos(x)\ln(x)\)</span></li>
+<li><span class="math inline">\(f(x)= \dfrac{x}{\log_2(x) + sqrt{x}}\)</span></li>
 </ul>
-<ol start="2" style="list-style-type: upper-alpha">
-<li>For each of the functions in part A, sketch a graph of the derivatives.</li>
+<ol start="2" style="list-style-type: decimal">
+<li>Find the equation of the tangent line at the given point.</li>
 </ol>
+<ul>
+<li><span class="math inline">\(y = \log(x) + 1\)</span> at <span class="math inline">\(a = 1\)</span></li>
+<li><span class="math inline">\(y = \ln(x+e)\sin(x)\)</span> at <span class="math inline">\(a = 0\)</span></li>
+<li><span class="math inline">\(y = \dfrac{e^x}{\ln(-x)}\)</span> at <span class="math inline">\(a = -1\)</span></li>
+<li><span class="math inline">\(y = \ln(\cos(x)) + 2\)</span> at <span class="math inline">\(a = 0\)</span></li>
+</ul>
 </div>
-<div id="differentiability-continuity" class="section level2 unnumbered hasAnchor">
-<h2>Differentiability &amp; Continuity<a href="the-derivative-as-a-function.html#differentiability-continuity" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Thus far, the functions we have been looking at have almost all been differentiable. Most functions are not differentiable. However, there is a relationship between differentiable and continuous functions.</p>
+<div id="proof-of-logarithmic-derivative-laws" class="section level2 unnumbered hasAnchor">
+<h2>Proof of Logarithmic Derivative Laws<a href="derivatives-of-logarithmic-and-inverse-trigonometricfunctions.html#proof-of-logarithmic-derivative-laws" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In this section, we prove <span class="math inline">\(\dfrac{d}{dx} \log_a(x) =\dfrac{1}{x\ln a}\)</span>.</p>
+<p>We begin with a lemma.</p>
 <div style="color: blue;">
-<p><strong>Theorem:</strong> If <span class="math inline">\(f\)</span> is differentiable at <span class="math inline">\(a\)</span>, then <span class="math inline">\(f\)</span> is continuous at <span class="math inline">\(a\)</span>.</p>
+<p><strong>Lemma:</strong> If <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> are differentiable and inverses of each other, then <span class="math display">\[g^{\prime}(x) = \dfrac{1}{f^{\prime}(g(x))}.\]</span></p>
 </div>
 <div style="color: blue;">
-<p><strong>Proof:</strong> Let <span class="math inline">\(f\)</span> be a differentiable function at a point <span class="math inline">\(x_0\)</span>. Then, we know the derivative exists. That is, <span class="math display">\[f^{\prime}(x) = \lim_{x \rightarrow x_0} \frac{f(x) - f(x_0)}{x-x_0} = a,\]</span> for some <span class="math inline">\(a \in \mathbb{R}\)</span>. To show that <span class="math inline">\(f\)</span> is continuous at <span class="math inline">\(x_0\)</span>, we need to show that <span class="math display">\[\lim_{x \rightarrow x_0} f(x) - f(x_0) = 0.\]</span> Observe that <span class="math display">\[\lim_{x \rightarrow x_0} f(x) - f(x_0) = \lim_{x \rightarrow x_0} \left[ \frac{f(x) - f(x_0)}{x-x_0} \right] \cdot \lim_{x \rightarrow x_0} (x-x_0) = a \cdot \lim_{x \rightarrow x_0} (x-x_0) = 0.\]</span> Therefore, since <span class="math inline">\(\displaystyle\lim_{x \rightarrow x_0} f(x) - f(x_0) = 0\)</span>, we know the function is continuous.</p>
+<p><strong>Proof:</strong> Since <span class="math display">\[f(g(x)) = x,\]</span> we use the chain rule to find that
+<span class="math display">\[\dfrac{d}{dx} f(g(x)) = \dfrac{d}{dx} x  \hspace{0.3in} \Longleftrightarrow \hspace{0.3in}
+f^{\prime}(g(x))g^{\prime}(x) = 1.\]</span> Therefore,
+<span class="math display">\[g^{\prime}(x) = \dfrac{1}{f^{\prime}(g(x))},\]</span>
+as required.</p>
 </div>
-<p>We know that <span class="math inline">\(f(x) = |x|\)</span> is a continuous function on <span class="math inline">\(\mathbb{R}\)</span>. So, we know that the converse of the theorem does not hold since we have seen that <span class="math inline">\(y = |x|\)</span> is not differentiable at 0. Another example worth noting is <span class="math inline">\(y = \sqrt[3]{x}\)</span>. This function is continuous on <span class="math inline">\(\mathbb{R}\)</span> but is not differentiable at 0 since it has a vertical tangent line. The function <span class="math inline">\(y = x^{2/3}\)</span> is again continuous but not differentiable at <span class="math inline">\(0\)</span> since it has a cusp. Remember, not all continuous functions are differentiable - though many are.</p>
-<table>
-<thead>
-<tr class="header">
-<th align="center"><img src="Pic41.png" /></th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
-<p>Practice Problems</p>
-<ol style="list-style-type: upper-alpha">
-<li>Show that the function is continuous but not differentiable at the indicated point:</li>
-</ol>
-<ul>
-<li><span class="math inline">\(f(x) = \sqrt[3]{x}\)</span> at <span class="math inline">\(x = 0\)</span></li>
-<li><span class="math inline">\(f(x) = \sqrt[3]{(x-2)^2}\)</span> at <span class="math inline">\(x = 2\)</span></li>
-<li><span class="math inline">\(f(x) = \begin{cases} x^2 + 1 &amp; x \leq 1 \\ 2x &amp; x &gt;1 \end{cases}\)</span></li>
-</ul>
-<ol start="2" style="list-style-type: upper-alpha">
-<li><p>Suppose that a function <span class="math inline">\(f\)</span> is differentiable at <span class="math inline">\(x_0\)</span>. Define <span class="math inline">\(g(x) = f(mx+b)\)</span> where <span class="math inline">\(m\)</span> and <span class="math inline">\(b\)</span> are constants. Show that if <span class="math inline">\(x_1\)</span> is any point at which <span class="math inline">\(mx_1+b = x_0\)</span>, then <span class="math inline">\(g\)</span> is differentiable and <span class="math inline">\(g^{\prime}(x_1) = mf^{\prime}(x_0)\)</span>.\</p></li>
-<li><p>Draw a graph with the following characteristics:</p></li>
-</ol>
-<ul>
-<li>Exists on <span class="math inline">\([-5,5]\)</span></li>
-<li>Differentiable on <span class="math inline">\([-5,-3)\)</span></li>
-<li>Not continuous at -3</li>
-<li>Differentiable on <span class="math inline">\([-3,2]\)</span></li>
-<li>Continuous at 2</li>
-<li>Not differentiable at 2</li>
-<li>Differentiable on <span class="math inline">\((2,5]\)</span></li>
-</ul>
-<ol start="4" style="list-style-type: upper-alpha">
-<li><p>Find constants <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> so that the following function is continuous and differentiable everywhere <span class="math display">\[f(x) = \begin{cases} ax + b &amp; x \leq 1 \\ 2x^2 &amp; x \geq 1 \end{cases}.\]</span></p></li>
-<li><p>Where is the following function differentiable <span class="math display">\[f(x) = |x-2| + |x+1|.\]</span></p></li>
-<li><p>Explain why <span class="math display">\[f(x) = \begin{cases} x^2 - 1 &amp; x \leq 1 \\ x^2 + 1 &amp; x \geq 1 \end{cases}\]</span> is not differentiable at <span class="math inline">\(x = 1\)</span> even though the derivative of <span class="math inline">\(x^2-1\)</span> and <span class="math inline">\(x^2 + 1\)</span> are the same.</p></li>
-</ol>
+<p>We note, as an example, that <span class="math inline">\(f(x) = x^2\)</span> is the inverse of <span class="math inline">\(g(x) = \sqrt{x}\)</span> on <span class="math inline">\([0,\infty)\)</span> and <span class="math inline">\(f^{\prime}(x) = 2x\)</span>. Using the lemma, we find that <span class="math display">\[g^{\prime}(x) = \dfrac{1}{f^{\prime}(g(x))} = \dfrac{1}{2(\sqrt{x})}.\]</span></p>
+<div style="color: blue;">
+<p><strong>Theorem (Derivatives of Log Functions):</strong> Let <span class="math inline">\(x &gt; 0\)</span>. Then <span class="math display">\[\dfrac{d}{dx} \ln(x) = \dfrac{1}{x} \hspace{0.51in} \text{and} \hspace{0.51in} \dfrac{d}{dx} \log_a(x) =\dfrac{1}{x\ln a}.\]</span></p>
 </div>
-<div id="notation" class="section level2 unnumbered hasAnchor">
-<h2>Notation<a href="the-derivative-as-a-function.html#notation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>In differential and integral calculus, there is no single uniform notation for differentiation. Over the years, several different notations have emerged. Each notation typically is contextually advantageous in some area. However, no one notation has the benefit of being the most advantageous in all cases.</p>
-<p>The notation that we have used so far is attributed to Lagrange. In Lagrange notation, a prime mark denotes the derivative. For example, <span class="math inline">\(f^{\prime}(x)\)</span>. If we wanted to take the derivative of the derivative (ie, a second derivative), we use a second prime mark, <span class="math inline">\(f^{\prime \prime}(x)\)</span>. When we are taking a derivative higher than four, most authors switch to Arabic numerals in brackets. For example <span class="math inline">\(f^{(6)}(x)\)</span> for a <span class="math inline">\(6^{th}\)</span> derivative. If <span class="math inline">\(y = f(x)\)</span>, many authors will write <span class="math inline">\(y^{\prime}\)</span> to indicate the derivative of <span class="math inline">\(y\)</span> as a short hand for <span class="math inline">\(f^{\prime}(x)\)</span>.</p>
-<table>
-<thead>
-<tr class="header">
-<th><span class="math inline">\(\;\)</span></th>
-<th>Notation</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Function</td>
-<td><span class="math inline">\(f(x), \;\; y\)</span></td>
-</tr>
-<tr class="even">
-<td>Derivative</td>
-<td><span class="math inline">\(f^{\prime}(x), \;\; y^{\prime}\)</span></td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(2^{nd}\)</span> Derivative</td>
-<td><span class="math inline">\(f^{\prime \prime }(x), \;\; y^{\prime \prime}\)</span></td>
-</tr>
-<tr class="even">
-<td>Higher Derivative</td>
-<td><span class="math inline">\(f^{(n)}(x), \;\; y^{(n)}\)</span></td>
-</tr>
-</tbody>
-</table>
+<div style="color: blue;">
+<p><strong>Proof:</strong> We prove the second part, and note that the first part follows as a special case. If we let <span class="math inline">\(f(x) = a^x\)</span> and <span class="math inline">\(g(x) = \log_a(x)\)</span> are inverses of each other. We note that <span class="math inline">\(f^{\prime}(x) = a^x\ln(a)\)</span>. By the lemma, <span class="math display">\[g^{\prime}(x) = \dfrac{1}{f^{\prime}(g(x))} = \dfrac{1}{a^{\log_1(x)}\ln(a)} = \dfrac{1}{x\ln(a)}.\]</span></p>
+</div>
+</div>
+<div id="logarithmic-differentiation" class="section level2 unnumbered hasAnchor">
+<h2>Logarithmic Differentiation<a href="derivatives-of-logarithmic-and-inverse-trigonometricfunctions.html#logarithmic-differentiation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In this chapter, we examine some methods of differentiating that involve functions that we do not, as yet, know how to differentiate. In particular, we differentiate functions of the form <span class="math inline">\(f(x)^{g(x)}\)</span>.</p>
 <div style="color: green;">
-<p><strong>Example:</strong> From one of the previous problems, if <span class="math inline">\(f(x) = x^3 + x - 5\)</span>, we have <span class="math inline">\(f^{\prime}(x) = 3x^2 + 1\)</span>. We can also write:
-<span class="math inline">\(y = x^3 + x - 5 \Longrightarrow y^{\prime}(x) = 3x^2 + 1\)</span>.</p>
+<p><strong>Example:</strong> Suppose <span class="math inline">\(y = x^x\)</span>. Find <span class="math inline">\(\dfrac{dy}{dx}\)</span>.</p>
 </div>
-<p>Leibnitz notation is slightly different. If <span class="math inline">\(y = f(x)\)</span>, we denote the first derivative of <span class="math inline">\(f\)</span> by <span class="math inline">\(\frac{dy}{dx}\)</span>. So here, <span class="math inline">\(f^{\prime}(x) = \frac{dy}{dx}\)</span>. Another way to interpret Leibnitz notation is by writing <span class="math inline">\(\frac{d}{dx} f(x) = \frac{dy}{dx}\)</span>. The notation <span class="math inline">\(\frac{d}{dx} f(x)\)</span> can be interpreted as ``we are about to take the derivative of <span class="math inline">\(f(x)\)</span>’’. For higher derivatives, we can write <span class="math inline">\(\frac{d^2y}{dx^2}\)</span> in place of <span class="math inline">\(f^{\prime \prime}\)</span>.</p>
-<table>
-<colgroup>
-<col width="33%" />
-<col width="33%" />
-<col width="33%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><span class="math inline">\(\;\)</span></th>
-<th>Lagrange Notation</th>
-<th>Leibnitz Notation</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Function</td>
-<td><span class="math inline">\(f(x), \;\; y\)</span></td>
-<td><span class="math inline">\(f(x), \;\; y\)</span></td>
-</tr>
-<tr class="even">
-<td>Derivative</td>
-<td><span class="math inline">\(f^{\prime}(x), \;\; y^{\prime}\)</span></td>
-<td><span class="math inline">\(\frac{df}{dx}, \;\; \frac{dy}{dx}\)</span></td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(2^{nd}\)</span> Derivative</td>
-<td><span class="math inline">\(f^{\prime\prime }(x), \;\; y^{\prime \prime}\)</span></td>
-<td><span class="math inline">\(\frac{d^2f}{dx^2}, \;\; \frac{d^2y}{dx^2}\)</span></td>
-</tr>
-<tr class="even">
-<td>Higher Derivative</td>
-<td><span class="math inline">\(f^{(n)}(x), \;\; y^{(n)}\)</span></td>
-<td><span class="math inline">\(\frac{d^nf}{dx^n}, \;\; \frac{d^ny}{dx^n}\)</span></td>
-</tr>
-</tbody>
-</table>
 <div style="color: green;">
-<p><strong>Example:</strong> From one of the previous problems, if <span class="math inline">\(f(x) = x^3 + x - 5\)</span>, we have <span class="math inline">\(f^{\prime}(x) = 3x^2 + 1\)</span>. We can also write:
+<p><strong>Solution:</strong> We do not have a formula for the derivative of <span class="math inline">\(x^x\)</span>. However, we can turn the problem into one that we can solve by taking logs on both sides.
+<span class="math display">\[\begin{align*}  y &amp;= x^x\\
+\ln(y) &amp;= \ln(x^x)\\
+\ln(y) &amp;= x\ln(x).
+\end{align*}\]</span>
+Now, from here, we can differentiate both sides implicitly using the product rule on the right side of the equation.
 <span class="math display">\[\begin{align*}
-f(x) &amp;= x^3 + x - 5  \Longrightarrow \frac{df}{dx} = 3x^2 + 1\\ \\
-f(x) &amp;= x^3 + x - 5  \Longrightarrow \frac{d}{dx}f(x) = 3x^2 + 1\\ \\
-y &amp;= x^3 + x - 5  \Longrightarrow \frac{dy}{dx} = 3x^2 + 1\\ \\
-&amp;\frac{d}{dx}\left[x^3 + x - 5\right] = 3x^2 + 1
-\end{align*}\]</span></p>
+\ln(y) &amp;= x\ln(x)\\
+\dfrac{1}{y} \dfrac{dy}{dx} &amp;= \ln(x) + \dfrac{1}{x} x\\
+\dfrac{dy}{dx} &amp;= y\left(\ln(x) + 1\right)\\
+\dfrac{dy}{dx} &amp;= x^x\left(\ln(x) + 1\right),
+\end{align*}\]</span>
+with the final step resulting from <span class="math inline">\(y = x^x\)</span>. Therefore, <span class="math display">\[\dfrac{dy}{dx} = x^x(\ln(x) + 1).\]</span></p>
 </div>
-<p>One final notation is Euler’s notation. Here we use <span class="math inline">\(Df\)</span> to mean <span class="math inline">\(f^{\prime}(x)\)</span>. Higher derivatives are written <span class="math inline">\(D^2f\)</span> for <span class="math inline">\(f^{\prime \prime}(x)\)</span>, etc.</p>
 <div style="color: green;">
-<p><strong>Example:</strong> Given a function <span class="math inline">\(y = f(x)\)</span>, all of the following are equivalent and represent the derivative of <span class="math inline">\(f(x)\)</span> with respect to x.
-<span class="math display">\[f^{\prime}(x) = y^{\prime} = \dfrac{d f}{dx} = \dfrac{dy}{dx} = \dfrac{d}{dx}f(x) = \dfrac{d}{dx} y.\]</span>
-If we want to evaluate the derivative at a point <span class="math inline">\(x = a\)</span>, all of the following are equivalent notations:
-<span class="math display">\[f^{\prime}(a) =  y^{\prime} \bigg\rvert_{x=a} =  \dfrac{df}{dx} \bigg\rvert_{x = a} =  \dfrac{dy}{dx} \bigg\rvert_{x = a}.\]</span></p>
+<p><strong>Example:</strong> Suppose <span class="math inline">\(y = (x^2 + 1)^{\sin(x)}\)</span>. Find <span class="math inline">\(\dfrac{dy}{dx}\)</span>.</p>
 </div>
-<p>The context in which each of these notations is advantageous will be unclear for a while. For now, we will use each one interchangeably.</p>
-
+<div style="color: green;">
+<p><strong>Solution:</strong> We can again use the trick of taking logarithms on both sides.
+<span class="math display">\[\begin{align*}  y &amp;= (x^2 + 1)^{\sin(x)}\\
+\ln(y) &amp;= \ln((x^2 + 1)^{\sin(x)})\\
+\ln(y) &amp;= \sin(x)\ln(x^2 + 1).
+\end{align*}\]</span>
+Now, from here, we can differentiate both sides implicitly using the product rule on the right side of the equation.
+<span class="math display">\[\begin{align*}
+\ln(y) &amp;= \sin(x)\ln(x^2 + 1).\\
+\dfrac{1}{y} \dfrac{dy}{dx} &amp;= \cos(x)\ln(x^2+1) + \dfrac{2x}{x^2+1}\sin(x)\\
+\dfrac{dy}{dx} &amp;= y\left(\cos(x)\ln(x^2+1) + \dfrac{2x}{x^2+1}\sin(x)\right)\\
+\dfrac{dy}{dx} &amp;= \sin(x)\ln(x^2+1)\left(\cos(x)\ln(x^2+1) + \dfrac{2x}{x^2+1}\sin(x)\right).
+\end{align*}\]</span>
+Therefore, <span class="math display">\[\dfrac{dy}{dx} = \sin(x)\ln(x^2+1)\left(\cos(x)\ln(x^2+1) + \dfrac{2x}{x^2+1}\sin(x)\right).\]</span></p>
+</div>
+<p>One final example shows how we can use logarithmic differentiation to simplify complicated product or quotient rules.</p>
+<div style="color: green;">
+<p><strong>Example:</strong> Suppose <span class="math inline">\(y = \dfrac{e^x}{\sqrt{2x+1}\ln(x)}\)</span>. Find <span class="math inline">\(\dfrac{dy}{dx}\)</span></p>
+</div>
+<div style="color: green;">
+<p><strong>Solution:</strong> Clearly, we have a quotient rule problem with the denominator being a product of two functions (and therefore, when we differentiate it, we will also need the product rule). We simplify by taking logs on both sides.
+<span class="math display">\[\begin{align*}  y &amp;= \dfrac{e^x}{\sqrt{2x+1}\ln(x)}\\
+\ln(y) &amp;= \ln(\dfrac{e^x}{\sqrt{2x+1}\ln(x)})\\
+\ln(y) &amp;= \ln(e^x) - \ln(\sqrt{2x+1}) - \ln(\ln(x))\\
+\ln(y) &amp;= x - \dfrac{1}{2}\ln(2x+1) - \ln(\ln(x)).
+\end{align*}\]</span>
+Now, from here, we can differentiate both sides implicitly.
+<span class="math display">\[\begin{align*}
+\ln(y) &amp;= x - \dfrac{1}{2}\ln(2x+1) - \ln(\ln(x))\\
+\dfrac{1}{y} \dfrac{dy}{dx} &amp;= 1 - \dfrac{1}{2}\dfrac{2}{2x+1} - \dfrac{1}{\ln(x)}\dfrac{1}{x}\\
+\dfrac{dy}{dx} &amp;= y\left(1 - \dfrac{1}{2x+1} - \dfrac{1}{x\ln(x)}\right)\\
+\dfrac{dy}{dx} &amp;= \dfrac{e^x}{\sqrt{2x+1}\ln(x)}\left(1 - \dfrac{1}{2x+1} - \dfrac{1}{x\ln(x)}\right)\\
+\dfrac{dy}{dx} &amp;= \dfrac{e^x(2x^2\ln(x) - 2x - 1)}{(2x+1)^{3/2}x\ln(x)^2}.
+\end{align*}\]</span>
+Therefore, <span class="math display">\[\dfrac{dy}{dx} = \dfrac{e^x(2x^2\ln(x) - 2x - 1)}{(2x+1)^{3/2}x\ln(x)^2}.\]</span></p>
+</div>
+<p>One should verify that this is exactly the same result that you would get by using the quotient rule.</p>
+<p>Practice Problems</p>
+<ol style="list-style-type: decimal">
+<li>Find <span class="math inline">\(\dfrac{dy}{dx}\)</span>.</li>
+</ol>
+<ul>
+<li><span class="math inline">\(y = (4x^2 + 1)^{3x +1}\)</span></li>
+<li><span class="math inline">\(y = x^{\tan(2x+1)}\)</span></li>
+<li><span class="math inline">\(y = (2x + e^{3x})^{\cos(x)}\)</span></li>
+<li><span class="math inline">\(y = x^{\ln(x)}\)</span></li>
+<li><span class="math inline">\(y = (\sin(2x+1)^{6x}\)</span></li>
+<li><span class="math inline">\(y = x^2(4-2x)^{1-x^2}\)</span></li>
+<li><span class="math inline">\(y = (3x - 5)^7\sqrt{3x^2 + 2x + 1}\)</span></li>
+<li><span class="math inline">\(y = \dfrac{\sin(2x^2 + 4x)}{(6-x^3)^4}\)</span></li>
+<li><span class="math inline">\(y = \dfrac{\sqrt{5x-3}\sqrt[3]{1-3\cot(4x)}}{\sqrt[4]{x^2 + 4x}}\)</span></li>
+<li><span class="math inline">\(y = \displaystyle \frac{{\sqrt {1 + \sin \left( {2x} \right)} }}{{2x - \tan \left( x \right)}}\)</span></li>
+</ul>
+</div>
+<div id="proof-of-the-power-rule" class="section level2 unnumbered hasAnchor">
+<h2>Proof of the Power Rule<a href="derivatives-of-logarithmic-and-inverse-trigonometricfunctions.html#proof-of-the-power-rule" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In this section, we prove <span class="math display">\[\dfrac{d}{dx}x^n = nx^{n-1},\]</span> for any <span class="math inline">\(n \in \mathbb{R}\)</span>. Thus far, we have only been able to prove the property if <span class="math inline">\(n \in \mathbb{Z}^+\)</span>.</p>
+<div style="color: blue;">
+<p><strong>Theorem (General Power Rule):</strong> Let <span class="math inline">\(y = x^n\)</span> for <span class="math inline">\(n \in \mathbb{R}\)</span>. Then <span class="math display">\[\dfrac{dy}{dx} = nx^{n-1}.\]</span></p>
+</div>
+<div style="color: blue;">
+<p><strong>Proof:</strong> Let <span class="math inline">\(y = x^n\)</span>. Then <span class="math inline">\(\ln(y) = \ln(x^n)\)</span> or that <span class="math inline">\(\ln(y) = n\ln(x)\)</span>. If we implicitly differentiate each side, we find that <span class="math display">\[\dfrac{1}{y} \dfrac{dy}{dx} = \dfrac{n}{x}.\]</span> The right side derivative follows since <span class="math inline">\(n\)</span> is constant. Therefore, <span class="math display">\[\dfrac{dy}{dx} = y\dfrac{n}{x} = \dfrac{nx^n}{x} = nx^{n-1}.\]</span></p>
+</div>
+<p>Practice Problems</p>
+<ol style="list-style-type: decimal">
+<li><p>Use logarithmic differentiation to prove the product rule.</p></li>
+<li><p>Use logarithmic differentiation to prove the quotient rule.</p></li>
+<li><p>Differentiate <span class="math inline">\(x^{x^x}\)</span> and <span class="math inline">\(x^{x^{x^x}}\)</span>.</p></li>
+</ol>
 </div>
 </div>
-
-
-
             </section>
 
           </div>
         </div>
       </div>
-<a href="derivatives-and-rates-of-change.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="derivatives-of-polynomials-and-exponential-functions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="implicit-differentiation.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="related-rates.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook/js/app.min.js"></script>
@@ -424,7 +419,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/USERNAME/REPO/edit/BRANCH/02-LimitsAndDerivatives.Rmd",
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/03-DifferentiationRules.Rmd",
 "text": "Edit"
 },
 "history": {

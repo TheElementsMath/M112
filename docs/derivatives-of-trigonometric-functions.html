@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>3.3 Derivatives of Trigonometric Functions | Calculus I</title>
+  <meta name="description" content="3.3 Derivatives of Trigonometric Functions | Calculus I" />
+  <meta name="generator" content="bookdown 0.33 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="3.3 Derivatives of Trigonometric Functions | Calculus I" />
+  <meta property="og:type" content="book" />
+  <meta property="og:image" content="/Title_Page.png" />
+  
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="3.3 Derivatives of Trigonometric Functions | Calculus I" />
+  
+  
+  <meta name="twitter:image" content="/Title_Page.png" />
+
+<meta name="author" content="Differential Calculus" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="the-product-and-the-quotient-rule.html"/>
+<link rel="next" href="the-chain-rule.html"/>
+<script src="libs/jquery/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Differential Calculus</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>About This Book</a></li>
+<li class="part"><span><b>I Functions and Models</b></span></li>
+<li class="part"><span><b>II Limits and Derivatives</b></span></li>
+<li class="chapter" data-level="" data-path="the-limit-of-a-function.html"><a href="the-limit-of-a-function.html"><i class="fa fa-check"></i>2.2 The Limit of a Function</a>
+<ul>
+<li class="chapter" data-level="" data-path="the-limit-of-a-function.html"><a href="the-limit-of-a-function.html#the-idea-of-a-limit"><i class="fa fa-check"></i>The Idea of a Limit</a></li>
+<li class="chapter" data-level="" data-path="the-limit-of-a-function.html"><a href="the-limit-of-a-function.html#left-and-right-limits"><i class="fa fa-check"></i>Left and Right Limits</a></li>
+<li class="chapter" data-level="" data-path="the-limit-of-a-function.html"><a href="the-limit-of-a-function.html#limits-that-do-not-exist"><i class="fa fa-check"></i>Limits That Do Not Exist</a></li>
+<li class="chapter" data-level="" data-path="the-limit-of-a-function.html"><a href="the-limit-of-a-function.html#infinite-limits-and-vertical-asymptotes"><i class="fa fa-check"></i>Infinite Limits and Vertical Asymptotes</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="calculating-limits-using-the-limit-laws.html"><a href="calculating-limits-using-the-limit-laws.html"><i class="fa fa-check"></i>2.3 Calculating Limits Using the Limit Laws</a>
+<ul>
+<li class="chapter" data-level="" data-path="calculating-limits-using-the-limit-laws.html"><a href="calculating-limits-using-the-limit-laws.html#the-limit-laws"><i class="fa fa-check"></i>The Limit Laws</a></li>
+<li class="chapter" data-level="" data-path="calculating-limits-using-the-limit-laws.html"><a href="calculating-limits-using-the-limit-laws.html#direct-substitution"><i class="fa fa-check"></i>Direct Substitution</a></li>
+<li class="chapter" data-level="" data-path="calculating-limits-using-the-limit-laws.html"><a href="calculating-limits-using-the-limit-laws.html#limits-of-trigonometric-functions"><i class="fa fa-check"></i>Limits of Trigonometric Functions</a></li>
+<li class="chapter" data-level="" data-path="calculating-limits-using-the-limit-laws.html"><a href="calculating-limits-using-the-limit-laws.html#the-squeeze-theorem"><i class="fa fa-check"></i>The Squeeze Theorem</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="the-precise-definition-of-a-limit.html"><a href="the-precise-definition-of-a-limit.html"><i class="fa fa-check"></i>2.4 The Precise Definition of a Limit</a>
+<ul>
+<li class="chapter" data-level="" data-path="the-precise-definition-of-a-limit.html"><a href="the-precise-definition-of-a-limit.html#proof-of-limit-laws"><i class="fa fa-check"></i>Proof of Limit Laws</a></li>
+<li class="chapter" data-level="" data-path="the-precise-definition-of-a-limit.html"><a href="the-precise-definition-of-a-limit.html#proofs-of-trigonometric-limits"><i class="fa fa-check"></i>Proofs of Trigonometric Limits</a></li>
+<li class="chapter" data-level="" data-path="the-precise-definition-of-a-limit.html"><a href="the-precise-definition-of-a-limit.html#limits-at-infinity-by-definition"><i class="fa fa-check"></i>Limits at Infinity by Definition</a></li>
+<li class="chapter" data-level="" data-path="the-precise-definition-of-a-limit.html"><a href="the-precise-definition-of-a-limit.html#proof-of-direct-substitution-property"><i class="fa fa-check"></i>Proof of Direct Substitution Property</a></li>
+<li class="chapter" data-level="" data-path="the-precise-definition-of-a-limit.html"><a href="the-precise-definition-of-a-limit.html#proof-of-the-squeeze-theorem"><i class="fa fa-check"></i>Proof of The Squeeze Theorem</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="continuity.html"><a href="continuity.html"><i class="fa fa-check"></i>2.5 Continuity</a>
+<ul>
+<li class="chapter" data-level="" data-path="continuity.html"><a href="continuity.html#limits-and-continuity"><i class="fa fa-check"></i>Limits and Continuity</a></li>
+<li class="chapter" data-level="" data-path="continuity.html"><a href="continuity.html#types-of-discontinuities"><i class="fa fa-check"></i>Types of Discontinuities</a></li>
+<li class="chapter" data-level="" data-path="continuity.html"><a href="continuity.html#properties-of-continuous-functions"><i class="fa fa-check"></i>Properties of Continuous Functions</a></li>
+<li class="chapter" data-level="" data-path="continuity.html"><a href="continuity.html#proof-of-continuity-laws"><i class="fa fa-check"></i>Proof of Continuity Laws</a></li>
+<li class="chapter" data-level="" data-path="continuity.html"><a href="continuity.html#the-intermediate-value-theorem"><i class="fa fa-check"></i>The Intermediate Value Theorem</a></li>
+<li class="chapter" data-level="" data-path="continuity.html"><a href="continuity.html#proof-of-the-ivt"><i class="fa fa-check"></i>Proof of The IVT</a></li>
+<li class="chapter" data-level="" data-path="continuity.html"><a href="continuity.html#continuity-of-trigonometric-functions"><i class="fa fa-check"></i>Continuity of Trigonometric Functions</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="limits-at-infinity-horizontal-asymptotes.html"><a href="limits-at-infinity-horizontal-asymptotes.html"><i class="fa fa-check"></i>2.6 Limits at Infinity; Horizontal Asymptotes</a>
+<ul>
+<li class="chapter" data-level="" data-path="limits-at-infinity-horizontal-asymptotes.html"><a href="limits-at-infinity-horizontal-asymptotes.html#limits-at-infinity"><i class="fa fa-check"></i>Limits At Infinity</a></li>
+<li class="chapter" data-level="" data-path="limits-at-infinity-horizontal-asymptotes.html"><a href="limits-at-infinity-horizontal-asymptotes.html#limits-at-infinity-by-definition-1"><i class="fa fa-check"></i>Limits at Infinity by Definition</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="derivatives-and-rates-of-change.html"><a href="derivatives-and-rates-of-change.html"><i class="fa fa-check"></i>2.7 Derivatives and Rates of Change</a>
+<ul>
+<li class="chapter" data-level="" data-path="derivatives-and-rates-of-change.html"><a href="derivatives-and-rates-of-change.html#application-tangent-lines"><i class="fa fa-check"></i>Application: Tangent Lines</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="the-derivative-as-a-function.html"><a href="the-derivative-as-a-function.html"><i class="fa fa-check"></i>2.8 The Derivative as a Function</a>
+<ul>
+<li class="chapter" data-level="" data-path="the-derivative-as-a-function.html"><a href="the-derivative-as-a-function.html#differentiability"><i class="fa fa-check"></i>Differentiability</a></li>
+<li class="chapter" data-level="" data-path="the-derivative-as-a-function.html"><a href="the-derivative-as-a-function.html#differentiability-continuity"><i class="fa fa-check"></i>Differentiability &amp; Continuity</a></li>
+<li class="chapter" data-level="" data-path="the-derivative-as-a-function.html"><a href="the-derivative-as-a-function.html#notation"><i class="fa fa-check"></i>Notation</a></li>
+</ul></li>
+<li class="part"><span><b>III Differentiation Rules</b></span></li>
+<li class="chapter" data-level="" data-path="derivatives-of-polynomials-and-exponential-functions.html"><a href="derivatives-of-polynomials-and-exponential-functions.html"><i class="fa fa-check"></i>3.1 Derivatives of Polynomials and Exponential Functions</a>
+<ul>
+<li class="chapter" data-level="" data-path="derivatives-of-polynomials-and-exponential-functions.html"><a href="derivatives-of-polynomials-and-exponential-functions.html#power-functions"><i class="fa fa-check"></i>Power Functions</a></li>
+<li class="chapter" data-level="" data-path="derivatives-of-polynomials-and-exponential-functions.html"><a href="derivatives-of-polynomials-and-exponential-functions.html#proof-of-differentiation-rules"><i class="fa fa-check"></i>Proof of Differentiation Rules</a></li>
+<li class="chapter" data-level="" data-path="derivatives-of-polynomials-and-exponential-functions.html"><a href="derivatives-of-polynomials-and-exponential-functions.html#derivatives-of-exponential-functions"><i class="fa fa-check"></i>Derivatives of Exponential Functions</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="the-product-and-the-quotient-rule.html"><a href="the-product-and-the-quotient-rule.html"><i class="fa fa-check"></i>3.2 The Product and the Quotient Rule</a>
+<ul>
+<li class="chapter" data-level="" data-path="the-product-and-the-quotient-rule.html"><a href="the-product-and-the-quotient-rule.html#the-product-rule"><i class="fa fa-check"></i>The Product Rule</a></li>
+<li class="chapter" data-level="" data-path="the-product-and-the-quotient-rule.html"><a href="the-product-and-the-quotient-rule.html#proof-of-the-product-rule"><i class="fa fa-check"></i>Proof of the Product Rule</a></li>
+<li class="chapter" data-level="" data-path="the-product-and-the-quotient-rule.html"><a href="the-product-and-the-quotient-rule.html#the-quotient-rule"><i class="fa fa-check"></i>The Quotient Rule</a></li>
+<li class="chapter" data-level="" data-path="the-product-and-the-quotient-rule.html"><a href="the-product-and-the-quotient-rule.html#proof-of-the-quotient-rule"><i class="fa fa-check"></i>Proof of the Quotient Rule</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="derivatives-of-trigonometric-functions.html"><a href="derivatives-of-trigonometric-functions.html"><i class="fa fa-check"></i>3.3 Derivatives of Trigonometric Functions</a>
+<ul>
+<li class="chapter" data-level="" data-path="derivatives-of-trigonometric-functions.html"><a href="derivatives-of-trigonometric-functions.html#derivative-of-sinx-and-cosx"><i class="fa fa-check"></i>Derivative of <span class="math inline">\(\sin(x)\)</span> and <span class="math inline">\(\cos(x)\)</span></a></li>
+<li class="chapter" data-level="" data-path="derivatives-of-trigonometric-functions.html"><a href="derivatives-of-trigonometric-functions.html#other-trigonometric-derivatives"><i class="fa fa-check"></i>Other Trigonometric Derivatives</a></li>
+<li class="chapter" data-level="" data-path="derivatives-of-trigonometric-functions.html"><a href="derivatives-of-trigonometric-functions.html#proofs-of-trigonometric-derivatives"><i class="fa fa-check"></i>Proofs of Trigonometric Derivatives</a></li>
+<li class="chapter" data-level="" data-path="derivatives-of-trigonometric-functions.html"><a href="derivatives-of-trigonometric-functions.html#higher-derivatives"><i class="fa fa-check"></i>Higher Derivatives</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="the-chain-rule.html"><a href="the-chain-rule.html"><i class="fa fa-check"></i>3.4 The Chain Rule</a>
+<ul>
+<li class="chapter" data-level="" data-path="the-chain-rule.html"><a href="the-chain-rule.html#proof-of-the-chain-rule"><i class="fa fa-check"></i>Proof of The Chain Rule</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="implicit-differentiation.html"><a href="implicit-differentiation.html"><i class="fa fa-check"></i>3.5 Implicit Differentiation</a>
+<ul>
+<li class="chapter" data-level="" data-path="implicit-differentiation.html"><a href="implicit-differentiation.html#derivatives-of-inverse-trigonometric-functions"><i class="fa fa-check"></i>Derivatives of Inverse Trigonometric Functions</a></li>
+<li class="chapter" data-level="" data-path="implicit-differentiation.html"><a href="implicit-differentiation.html#proof-of-inverse-trig-derivative-laws"><i class="fa fa-check"></i>Proof of Inverse Trig Derivative Laws</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="derivatives-of-logarithmic-and-inverse-trigonometricfunctions.html"><a href="derivatives-of-logarithmic-and-inverse-trigonometricfunctions.html"><i class="fa fa-check"></i>3.6 Derivatives of Logarithmic and Inverse TrigonometricFunctions</a>
+<ul>
+<li class="chapter" data-level="" data-path="derivatives-of-logarithmic-and-inverse-trigonometricfunctions.html"><a href="derivatives-of-logarithmic-and-inverse-trigonometricfunctions.html#logarithmic-derivatives"><i class="fa fa-check"></i>Logarithmic Derivatives</a></li>
+<li class="chapter" data-level="" data-path="derivatives-of-logarithmic-and-inverse-trigonometricfunctions.html"><a href="derivatives-of-logarithmic-and-inverse-trigonometricfunctions.html#proof-of-logarithmic-derivative-laws"><i class="fa fa-check"></i>Proof of Logarithmic Derivative Laws</a></li>
+<li class="chapter" data-level="" data-path="derivatives-of-logarithmic-and-inverse-trigonometricfunctions.html"><a href="derivatives-of-logarithmic-and-inverse-trigonometricfunctions.html#logarithmic-differentiation"><i class="fa fa-check"></i>Logarithmic Differentiation</a></li>
+<li class="chapter" data-level="" data-path="derivatives-of-logarithmic-and-inverse-trigonometricfunctions.html"><a href="derivatives-of-logarithmic-and-inverse-trigonometricfunctions.html#proof-of-the-power-rule"><i class="fa fa-check"></i>Proof of the Power Rule</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="related-rates.html"><a href="related-rates.html"><i class="fa fa-check"></i>3.9 Related Rates</a></li>
+<li class="chapter" data-level="" data-path="linear-approximations-and-differentials.html"><a href="linear-approximations-and-differentials.html"><i class="fa fa-check"></i>3.10 Linear Approximations and Differentials</a>
+<ul>
+<li class="chapter" data-level="" data-path="linear-approximations-and-differentials.html"><a href="linear-approximations-and-differentials.html#linear-approximation"><i class="fa fa-check"></i>Linear Approximation</a></li>
+<li class="chapter" data-level="" data-path="linear-approximations-and-differentials.html"><a href="linear-approximations-and-differentials.html#differentials"><i class="fa fa-check"></i>Differentials</a></li>
+</ul></li>
+<li class="part"><span><b>IV Applications of Differentiation</b></span></li>
+<li class="chapter" data-level="" data-path="maximum-and-minimum-values.html"><a href="maximum-and-minimum-values.html"><i class="fa fa-check"></i>4.1 Maximum and Minimum Values</a>
+<ul>
+<li class="chapter" data-level="" data-path="maximum-and-minimum-values.html"><a href="maximum-and-minimum-values.html#critical-points"><i class="fa fa-check"></i>Critical Points</a></li>
+<li class="chapter" data-level="" data-path="maximum-and-minimum-values.html"><a href="maximum-and-minimum-values.html#maximum-and-minimum-values-1"><i class="fa fa-check"></i>Maximum and Minimum Values</a></li>
+<li class="chapter" data-level="" data-path="maximum-and-minimum-values.html"><a href="maximum-and-minimum-values.html#proof-of-the-extreme-value-theorem"><i class="fa fa-check"></i>Proof of the Extreme Value Theorem</a></li>
+<li class="chapter" data-level="" data-path="maximum-and-minimum-values.html"><a href="maximum-and-minimum-values.html#finding-absolute-extrema"><i class="fa fa-check"></i>Finding Absolute Extrema</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Calculus I</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="derivatives-of-trigonometric-functions" class="section level1 unnumbered hasAnchor">
+<h1>3.3 Derivatives of Trigonometric Functions<a href="derivatives-of-trigonometric-functions.html#derivatives-of-trigonometric-functions" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="derivative-of-sinx-and-cosx" class="section level2 unnumbered hasAnchor">
+<h2>Derivative of <span class="math inline">\(\sin(x)\)</span> and <span class="math inline">\(\cos(x)\)</span><a href="derivatives-of-trigonometric-functions.html#derivative-of-sinx-and-cosx" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In this section, we differentiate <span class="math inline">\(\sin(x)\)</span> and <span class="math inline">\(\cos(x)\)</span>.</p>
+<div style="color: blue;">
+<p><strong>Theorem (Derivative of sine and cosine):</strong> The derivative of <span class="math inline">\(\sin(x)\)</span> is <span class="math inline">\(\cos(x)\)</span> and the derivative of <span class="math inline">\(\cos(x)\)</span> is <span class="math inline">\(-\sin(x)\)</span>. That is, <span class="math display">\[\dfrac{d}{dx}\sin(x) = \cos(x) \hspace{0.5in} \text{and} \hspace{0.5in} \dfrac{d}{dx} \cos(x) = -\sin(x).\]</span></p>
+</div>
+<p>All of the rules that we have studied previously still apply here.</p>
+<div style="color: green;">
+<p><strong>Example:</strong> Let <span class="math inline">\(f(x) = 5x\sin(x)\)</span>. Find <span class="math inline">\(f^{\prime}(x)\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Solution:</strong> The function <span class="math inline">\(5x\sin(x)\)</span> is a constant multiplied by a product of two functions. So, the product rule applies here. Let <span class="math inline">\(u = x\)</span> and <span class="math inline">\(v = \sin(x)\)</span>. Then, we know that <span class="math inline">\(u^{\prime} = 1\)</span> and <span class="math inline">\(v^{\prime} = \cos(x)\)</span>. By the product rule,
+<span class="math display">\[\begin{align*} f^{\prime}(x) &amp;= \dfrac{d}{dx} 5x\sin(x)\\
+&amp;= 5\dfrac{d}{dx} uv\\
+&amp;= 5(u^{\prime}v + v^{\prime}u)\\
+&amp;= 5(1(\sin(x)) + \cos(x)(x))\\
+&amp;= 5\sin(x) + 5x\cos(x).
+\end{align*}\]</span>
+Therefore, by the product rule, <span class="math inline">\(f^{\prime}(x) = 5\sin(x) + 5x\cos(x)\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Example:</strong> Let <span class="math inline">\(y = \dfrac{\cos(x) + x}{3\sin(x)}\)</span>. Find <span class="math inline">\(\dfrac{dy}{dx}\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Solution:</strong> The function <span class="math inline">\(y\)</span> is a quotient of two functions. So, one must use the quotient rule in this example. Let <span class="math inline">\(u = \cos(x) + x\)</span> and <span class="math inline">\(v = 3\sin(x)\)</span>. Then, we know that <span class="math inline">\(u^{\prime} = -\sin(x) + 1\)</span> and <span class="math inline">\(v^{\prime} = 3\cos(x)\)</span>. Using the quotient rule, we find that
+<span class="math display">\[\begin{align*} \dfrac{dy}{dx} &amp;= \dfrac{d}{dx} \dfrac{\cos(x) + x}{3\sin(x)}\\
+&amp;= \dfrac{d}{dx} \dfrac{u}{v}\\
+&amp;= \dfrac{u^{\prime}v - v^{\prime}u}{v^2}\\
+&amp;= \dfrac{(-\sin(x) + 1)(3\sin(x)) - 3\cos(x)(\cos(x) + 1)}{(3\sin(x))^2}\\
+&amp;= \dfrac{-3\sin^2(x) + 3\sin(x) - 3\cos^2(x) - 3\cos(x)}{9\sin^2(x)}\\
+&amp;= \dfrac{-3 + 3\sin(x) - 3\cos(x)}{9\sin^2(x)}\\
+&amp;= \dfrac{-1 + \sin(x) - \cos(x)}{3\sin^2(x)}.
+\end{align*}\]</span>
+Therefore, by the quotient rule, <span class="math inline">\(\dfrac{dy}{dx} =\dfrac{-1 + \sin(x) - \cos(x)}{3\sin^2(x)}\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Example:</strong> Let <span class="math inline">\(y = \sin(x)\cos(x)\)</span>. Find <span class="math inline">\(y^{\prime}\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Solution:</strong> We proceed by the product rule. Let <span class="math inline">\(u = \sin(x)\)</span> and <span class="math inline">\(v = \cos(x)\)</span>. Then, we know that <span class="math inline">\(u^{\prime} = \cos(x)\)</span> and <span class="math inline">\(v^{\prime} = -\sin(x)\)</span>. Using the product rule, we find that
+<span class="math display">\[\begin{align*} y^{\prime} &amp;= \dfrac{d}{dx} \sin(x)cos(x)\\
+&amp;= \dfrac{d}{dx} uv\\
+&amp;= u^{\prime}v + v^{\prime}u\\
+&amp;= \cos(x)\cos(x) + (-\sin(x))\sin(x)\\
+&amp;= \cos^2(x) - \sin^2(x).
+\end{align*}\]</span>
+Therefore, by the product rule, <span class="math inline">\(y^{\prime}=\cos^2(x) - \sin^2(x)\)</span>.</p>
+</div>
+<p>Practice Problems</p>
+<ol style="list-style-type: decimal">
+<li>Differentiate.</li>
+</ol>
+<ul>
+<li><span class="math inline">\(y = 3^x\sin(x)\)</span></li>
+<li><span class="math inline">\(y = \cos(x)e^x\)</span></li>
+<li><span class="math inline">\(y = x^3\sin(x)\)</span></li>
+<li><span class="math inline">\(y = (x^5 + 2^x)\cos(x)\)</span></li>
+<li><span class="math inline">\(y = (x^2 + x + 1)\sin(x)\)</span></li>
+<li><span class="math inline">\(y = e^x(\sin(x) + \cos(x))\)</span></li>
+<li><span class="math inline">\(y = \dfrac{\sin(x)}{2^x}\)</span></li>
+<li><span class="math inline">\(y = \dfrac{x}{\cos(x)}\)</span></li>
+<li><span class="math inline">\(y = \dfrac{e^x}{\sin(x) + x + 1}\)</span></li>
+<li><span class="math inline">\(y = \dfrac{\cos(x) + x}{e^x + 2^x}\)</span></li>
+<li><span class="math inline">\(y = \dfrac{\sin(x)}{x^2 + 1}\)</span></li>
+<li><span class="math inline">\(y = \dfrac{\sqrt{x}}{\cos(x)}\)</span></li>
+</ul>
+<ol start="2" style="list-style-type: decimal">
+<li>Find the equation of the tangent line at the given point.</li>
+</ol>
+<ul>
+<li><span class="math inline">\(y = \sin(x)\)</span> at <span class="math inline">\(a = \pi\)</span></li>
+<li><span class="math inline">\(y = \cos(x)\)</span> at <span class="math inline">\(a = 0\)</span></li>
+<li><span class="math inline">\(y = x^3\sin(x)\)</span> at <span class="math inline">\(a = 0\)</span></li>
+<li><span class="math inline">\(y = e^x\cos(x)\)</span> at <span class="math inline">\(a = \pi\)</span></li>
+</ul>
+</div>
+<div id="other-trigonometric-derivatives" class="section level2 unnumbered hasAnchor">
+<h2>Other Trigonometric Derivatives<a href="derivatives-of-trigonometric-functions.html#other-trigonometric-derivatives" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In this section, we introduce the derivatives of the other four basic trigonometric functions.</p>
+<div style="color: green;">
+<p><strong>Example:</strong> Let <span class="math inline">\(y = \tan(x)\)</span>. Find <span class="math inline">\(y^{\prime}\)</span> for all values <span class="math inline">\(x\)</span> in the domain of <span class="math inline">\(\tan(x)\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Solution:</strong> The function <span class="math inline">\(y = \tan(x) = \dfrac{\sin(x)}{cos(x)}\)</span> is a quotient of two functions. We proceed by the quotient rule. Let <span class="math inline">\(u = \sin(x)\)</span> and <span class="math inline">\(v = \cos(x)\)</span>. Then, we know that <span class="math inline">\(u^{\prime} = \cos(x)\)</span> and <span class="math inline">\(v^{\prime} = -\sin(x)\)</span>. Using the quotient rule, we find that
+<span class="math display">\[\begin{align*} y^{\prime} &amp;= \dfrac{d}{dx} \dfrac{\sin(x)}{\cos(x)}\\
+&amp;= \dfrac{d}{dx} \dfrac{u}{v}\\
+&amp;= \dfrac{u^{\prime}v - v^{\prime}u}{v^2}\\
+&amp;= \dfrac{\cos(x)\cos(x) - (-\sin(x))\sin(x)}{(\cos(x))^2}\\
+&amp;= \dfrac{\cos^2(x)\cos(x) + \sin^2(x)}{\cos^2(x)}\\
+&amp;= \dfrac{1}{\cos^2(x)}\\
+&amp;= \sec^2(x).
+\end{align*}\]</span>
+Therefore, by the quotient rule, <span class="math inline">\(y^{\prime}=\sec^2(x)\)</span>.</p>
+</div>
+<div style="color: blue;">
+<p><strong>Theorem (Derivative of the tangent function):</strong> For all <span class="math inline">\(x\)</span> in the domain of <span class="math inline">\(\tan(x)\)</span>, we have <span class="math display">\[\dfrac{d}{dx} \tan(x) = \sec^2(x).\]</span></p>
+</div>
+<p>Remember that the domain of <span class="math inline">\(\tan(x)\)</span> is <span class="math inline">\(\mathbb{R}-\{x|x = \pi/2 + k\pi, k \in \mathbb{Z}\}\)</span>. Therefore, the derivative of <span class="math inline">\(\tan(x)\)</span> is undefined at these points (since <span class="math inline">\(\tan(x)\)</span> has an infinite discontinuity at these points).</p>
+<div style="color: green;">
+<p><strong>Example:</strong> Let <span class="math inline">\(y = \sec(x)\)</span>. Find <span class="math inline">\(y^{\prime}\)</span> for all values <span class="math inline">\(x\)</span> in the domain of <span class="math inline">\(\sec(x)\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Solution:</strong> The function <span class="math inline">\(y = \sec(x) = \dfrac{1}{\cos(x)}\)</span> is a quotient of two functions. We proceed by the quotient rule. Let <span class="math inline">\(u = 1\)</span> and <span class="math inline">\(v = \cos(x)\)</span>. Then, we know that <span class="math inline">\(u^{\prime} = 0\)</span> and <span class="math inline">\(v^{\prime} = -\sin(x)\)</span>. Using the quotient rule, we find that
+<span class="math display">\[\begin{align*} y^{\prime} &amp;= \dfrac{d}{dx} \dfrac{1}{\cos(x)}\\
+&amp;= \dfrac{d}{dx} \dfrac{u}{v}\\
+&amp;= \dfrac{u^{\prime}v - v^{\prime}u}{v^2}\\
+&amp;= \dfrac{0\cos(x) - (-\sin(x))(1)}{(\cos(x))^2}\\
+&amp;= \dfrac{\sin(x)}{\cos^2(x)}\\
+&amp;= \dfrac{1}{\cos(x)}\dfrac{\sin(x)}{\cos(x)}\\
+&amp;= \sec(x)\tan(x).
+\end{align*}\]</span>
+Therefore, by the quotient rule, <span class="math inline">\(y^{\prime}=\sec(x)\tan(x)\)</span>.</p>
+</div>
+<div style="color: blue;">
+<p><strong>Theorem (Derivative of the secant function):</strong> For all <span class="math inline">\(x\)</span> in the domain of <span class="math inline">\(\sec(x)\)</span>, we have <span class="math display">\[\dfrac{d}{dx} \sec(x) = \sec(x)\tan(x).\]</span></p>
+</div>
+<p>Since <span class="math inline">\(\cos(x) = 0\)</span> at <span class="math inline">\(x = \pi/2 + k\pi\)</span> with <span class="math inline">\(k \in \mathbb{Z}\)</span>, we know that the domain of <span class="math inline">\(\sec(x)\)</span> is <span class="math inline">\(\mathbb{R} - \{x | x = \pi/2 + k\pi, k \in \mathbb{Z}\}\)</span>.</p>
+<div style="color: green;">
+<p><strong>Example:</strong> Let <span class="math inline">\(y = \csc(x)\)</span>. Find <span class="math inline">\(y^{\prime}\)</span> for all values <span class="math inline">\(x\)</span> in the domain of <span class="math inline">\(\csc(x)\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Solution:</strong> The function <span class="math inline">\(y = \csc(x) = \dfrac{1}{\sin(x)}\)</span> is a quotient of two functions. We proceed by the quotient rule. Let <span class="math inline">\(u = 1\)</span> and <span class="math inline">\(v = \sin(x)\)</span>. Then, we know that <span class="math inline">\(u^{\prime} = 0\)</span> and <span class="math inline">\(v^{\prime} = \cos(x)\)</span>. Using the quotient rule, we find that
+<span class="math display">\[\begin{align*} y^{\prime} &amp;= \dfrac{d}{dx} \dfrac{1}{\sin(x)}\\
+&amp;= \dfrac{d}{dx} \dfrac{u}{v}\\
+&amp;= \dfrac{u^{\prime}v - v^{\prime}u}{v^2}\\
+&amp;= \dfrac{0\sin(x) - \cos(x)(1)}{(\sin(x))^2}\\
+&amp;= \dfrac{\cos(x)}{\sin^2(x)}\\
+&amp;= \dfrac{1}{\sin(x)}\dfrac{\cos(x)}{\sin(x)}\\
+&amp;= \csc(x)\cot(x).
+\end{align*}\]</span>
+Therefore, by the quotient rule, <span class="math inline">\(y^{\prime}=\csc(x)\cot(x)\)</span>.</p>
+</div>
+<div style="color: blue;">
+<p><strong>Theorem (Derivative of the cosecant function):</strong> For all <span class="math inline">\(x\)</span> in the domain of <span class="math inline">\(\csc(x)\)</span>, we have <span class="math display">\[\dfrac{d}{dx} \csc(x) = \csc(x)\cot(x).\]</span></p>
+</div>
+<p>Since <span class="math inline">\(\sin(x) = 0\)</span> at integer multiples of <span class="math inline">\(\pi\)</span>, we know that the domain of <span class="math inline">\(\csc(x)\)</span> is <span class="math inline">\(\mathbb{R} - \{x | x = k\pi, k \in \mathbb{Z}\}\)</span>.</p>
+<div style="color: green;">
+<p><strong>Example:</strong> Let <span class="math inline">\(y = \cot(x)\)</span>. Find <span class="math inline">\(y^{\prime}\)</span> for all values <span class="math inline">\(x\)</span> in the domain of <span class="math inline">\(\cot(x)\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Solution:</strong> The function <span class="math inline">\(y = \cot(x) = \dfrac{\cos(x)}{\sin(x)}\)</span> is a quotient of two functions. We proceed by the quotient rule. Let <span class="math inline">\(u = \cos(x)\)</span> and <span class="math inline">\(v = \sin(x)\)</span>. Then, we know that <span class="math inline">\(u^{\prime} = -\sin(x)\)</span> and <span class="math inline">\(v^{\prime} = \cos(x)\)</span>. Using the quotient rule, we find that
+<span class="math display">\[\begin{align*} y^{\prime} &amp;= \dfrac{d}{dx} \dfrac{\cos(x)}{\sin(x)}\\
+&amp;= \dfrac{d}{dx} \dfrac{u}{v}\\
+&amp;= \dfrac{u^{\prime}v - v^{\prime}u}{v^2}\\
+&amp;= \dfrac{-\sin(x)\sin(x) - \cos(x)\cos(x)}{(\sin(x))^2}\\
+&amp;= \dfrac{-1}{\sin^2(x)}\\
+&amp;= -\csc^2(x).
+\end{align*}\]</span>
+Therefore, by the quotient rule, <span class="math inline">\(y^{\prime}=-\csc^2(x)\)</span>.</p>
+</div>
+<div style="color: blue;">
+<p><strong>Theorem (Derivative of the cotangent function):</strong> For all <span class="math inline">\(x\)</span> in the domain of <span class="math inline">\(\cot(x)\)</span>, we have <span class="math display">\[\dfrac{d}{dx} \cot(x) = -\csc^2(x).\]</span></p>
+</div>
+<p>Since <span class="math inline">\(\sin(x) = 0\)</span> at integer multiples of <span class="math inline">\(\pi\)</span>, we know that the domain of <span class="math inline">\(\cot(x)\)</span> is <span class="math inline">\(\mathbb{R} - \{x | x = k\pi, k \in \mathbb{Z}\}\)</span>.</p>
+<div style="color: green;">
+<p><strong>Example:</strong> Let <span class="math inline">\(f(x) = \dfrac{\csc(x)e^x}{x^2}\)</span>. Find <span class="math inline">\(f^{\prime}(x)\)</span> for <span class="math inline">\(x \not = 0\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Solution:</strong> The function <span class="math inline">\(f(x) = \dfrac{\csc(x)e^x}{x^2}\)</span> is a quotient of two functions with the numerator a product of two functions. We proceed by the quotient rule. Let <span class="math inline">\(u = \csc(x)e^x\)</span> and <span class="math inline">\(v = x^2\)</span>. Then, we know that <span class="math inline">\(u^{\prime} = \csc(x)\cot(x)e^x + e^x\csc(x)\)</span> (by the product rule) and <span class="math inline">\(v^{\prime} = 2x\)</span>. Using the quotient rule, we find that
+<span class="math display">\[\begin{align*} y^{\prime} &amp;= \dfrac{d}{dx} \dfrac{\csc(x)e^x}{x^2}\\
+&amp;= \dfrac{d}{dx} \dfrac{u}{v}\\
+&amp;= \dfrac{u^{\prime}v - v^{\prime}u}{v^2}\\
+&amp;= \dfrac{(\csc(x)\cot(x)e^x + e^x\csc(x))x^2 - 2x(\csc(x)e^x)}{(x^2)^2}\\
+&amp;= \dfrac{xe^x(x\csc(x)\cot(x) + x\csc(x)  - 2\csc(x))}{x^4}\\
+&amp;= \dfrac{e^x(x\csc(x)\cot(x) + x\csc(x)  - 2\csc(x))}{x^3}.
+\end{align*}\]</span>
+Therefore, by the quotient rule, <span class="math inline">\(f^{\prime}(x)= \dfrac{e^x(x\csc(x)\cot(x) + x\csc(x) - 2\csc(x))}{x^3}\)</span>.</p>
+</div>
+<p>Practice Problems</p>
+<ol style="list-style-type: decimal">
+<li>Differentiate.</li>
+</ol>
+<ul>
+<li><span class="math inline">\(y = x^2\sec(x)\)</span></li>
+<li><span class="math inline">\(y = \cot(x)e^x\)</span></li>
+<li><span class="math inline">\(y = (x^3 + 9\sin(x))\csc(x)\)</span></li>
+<li><span class="math inline">\(y = (8x^5 + \sin(x)2^x)\cot(x)\)</span></li>
+<li><span class="math inline">\(y = (7x^2 + x\sin(x) + 1)\sec(x)\)</span></li>
+<li><span class="math inline">\(y = e^x(\csc(x) + 6\cot(x))\)</span></li>
+<li><span class="math inline">\(y = \dfrac{5\sec(x)}{2^x}\)</span></li>
+<li><span class="math inline">\(y = \dfrac{x}{4\csc(x)}\)</span></li>
+<li><span class="math inline">\(y = \dfrac{e^x}{\cot(x) + \sin(x)}\)</span></li>
+<li><span class="math inline">\(y = \dfrac{\cos(x) + 3x}{\csc(x)}\)</span></li>
+<li><span class="math inline">\(y = \dfrac{\sin(x)}{2\cot(x) + 1}\)</span></li>
+<li><span class="math inline">\(y = \dfrac{4\sqrt{x}}{\sec(x)}\)</span></li>
+</ul>
+<ol start="2" style="list-style-type: decimal">
+<li>Find the equation of the tangent line at the given point.</li>
+</ol>
+<ul>
+<li><span class="math inline">\(y = \csc(x)\)</span> at <span class="math inline">\(a = \pi\)</span></li>
+<li><span class="math inline">\(y = \cot(x)\)</span> at <span class="math inline">\(a = 3\pi/2\)</span></li>
+<li><span class="math inline">\(y = x^3\sec(x)\)</span> at <span class="math inline">\(a = 0\)</span></li>
+<li><span class="math inline">\(y = e^x\cot(x)\)</span> at <span class="math inline">\(a = \pi\)</span></li>
+</ul>
+</div>
+<div id="proofs-of-trigonometric-derivatives" class="section level2 unnumbered hasAnchor">
+<h2>Proofs of Trigonometric Derivatives<a href="derivatives-of-trigonometric-functions.html#proofs-of-trigonometric-derivatives" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The derivatives for <span class="math inline">\(\tan(x)\)</span>, <span class="math inline">\(\sec(x)\)</span>, <span class="math inline">\(\csc(x)\)</span> and <span class="math inline">\(\cot(x)\)</span> were predicated on the derivatives of <span class="math inline">\(\sin(x)\)</span> and <span class="math inline">\(\cos(x)\)</span> being what we claimed. Consequently, we cannot consider these derivative rules proved until we prove the derivative of the sine and cosine functions. In this section, we do just that.</p>
+<div style="color: blue;">
+<p><strong>Theorem (Derivative of the sine and cosine functions):</strong> The derivative of <span class="math inline">\(\sin(x)\)</span> is <span class="math inline">\(\cos(x)\)</span>. That is, <span class="math display">\[\dfrac{d}{dx}\sin(x) = \cos(x).\]</span></p>
+</div>
+<div style="color: blue;">
+<p><strong>Proof:</strong> We use the limit definition of the derivative. Let <span class="math inline">\(f(x) = \sin(x)\)</span>.
+<span class="math display">\[\begin{align*}  \dfrac{d}{dx} \sin(x) &amp;= \lim_{h \rightarrow 0} \dfrac{f(x+h) - f(x)}{h}\\
+&amp;= \lim_{h \rightarrow 0} \dfrac{\sin(x+h) - \sin(x)}{h}\\
+&amp;= \lim_{h \rightarrow 0} \dfrac{\sin(x)\cos(h) + \cos(x)\sin(h) - \sin(x)}{h}\\
+&amp;= \lim_{h \rightarrow 0} \dfrac{\sin(x)(\cos(h) - 1) + \cos(x)\sin(h)}{h}\\
+&amp;= \lim_{h \rightarrow 0} \dfrac{\sin(x)(\cos(h) - 1)}{h} + \lim_{h \rightarrow 0}\dfrac{\cos(x)\sin(h)}{h}\\
+&amp;= \sin(x)\lim_{h \rightarrow 0} \dfrac{\cos(h) - 1}{h} + \cos(x)\lim_{h \rightarrow 0}\dfrac{\sin(h)}{h}\\
+&amp;= \sin(x)(0) + \cos(x)(1)\\
+&amp;= \cos(x).
+\end{align*}\]</span>
+The last two limits were as a result of Theorem <span class="math inline">\(\ref{Thm:TrigLimits}\)</span>.</p>
+</div>
+<div style="color: blue;">
+<p><strong>Theorem (Squeeze Theorem):</strong> The derivative of <span class="math inline">\(\cos(x)\)</span> is <span class="math inline">\(-\sin(x)\)</span>. That is, <span class="math display">\[\dfrac{d}{dx} \cos(x) = -\sin(x).\]</span></p>
+</div>
+<div style="color: blue;">
+<p><strong>Proof:</strong> We use the limit definition of the derivative. Let <span class="math inline">\(f(x) = \cos(x)\)</span>.
+<span class="math display">\[\begin{align*}  \dfrac{d}{dx} \cos(x) &amp;= \lim_{h \rightarrow 0} \dfrac{f(x+h) - f(x)}{h}\\
+&amp;= \lim_{h \rightarrow 0} \dfrac{\cos(x+h) - \cos(x)}{h}\\
+&amp;= \lim_{h \rightarrow 0} \dfrac{\cos(x)\cos(h) - \sin(x)\sin(h) - \cos(x)}{h}\\
+&amp;= \lim_{h \rightarrow 0} \dfrac{\cos(x)(\cos(h) - 1) - \sin(x)\sin(h)}{h}\\
+&amp;= \lim_{h \rightarrow 0} \dfrac{\cos(x)(\cos(h) - 1)}{h} - \lim_{h \rightarrow 0}\dfrac{\sin(x)\sin(h)}{h}\\
+&amp;= \cos(x)\lim_{h \rightarrow 0} \dfrac{\cos(h) - 1}{h} - \sin(x)\lim_{h \rightarrow 0}\dfrac{\sin(h)}{h}\\
+&amp;= \cos(x)(0) - \sin(x)(1)\\
+&amp;=-\sin(x).
+\end{align*}\]</span>
+The final two limits are as a result of Theorem <span class="math inline">\(\ref{Thm:TrigLimits}\)</span>.</p>
+</div>
+<p>Practice Problems</p>
+<ol style="list-style-type: decimal">
+<li><p>Find the derivative of <span class="math inline">\(\sec^3(x)\)</span>.</p></li>
+<li><p>Find the derivative of <span class="math inline">\(\dfrac{\sin^2(x)}{\cos^2(x)}\)</span>.</p></li>
+<li><p>Evaluate <span class="math inline">\(\displaystyle\lim_{h \rightarrow 0} \dfrac{\sin(\pi/3 + h) - \sin(\pi/3)}{h}\)</span>.</p></li>
+<li><p>Find the <span class="math inline">\(3^{rd}\)</span> derivative of <span class="math inline">\(x^2\csc(x)\)</span>.</p></li>
+</ol>
+</div>
+<div id="higher-derivatives" class="section level2 unnumbered hasAnchor">
+<h2>Higher Derivatives<a href="derivatives-of-trigonometric-functions.html#higher-derivatives" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The term higher derivative refers to second, third and, in general, <span class="math inline">\(n^{th}\)</span> derivatives. A function like <span class="math display">\[f(x) = 4x^3 + 5x^2 + 8x + 3\]</span> has first derivative <span class="math display">\[f^{\prime}(x) = 12x^2 + 10x + 8.\]</span> The second derivative of <span class="math inline">\(f\)</span> is <span class="math display">\[f^{\prime \prime}(x) = 24x + 10\]</span> The third derivative is <span class="math display">\[f^{\prime \prime \prime}(x) = 24.\]</span> Of course, the fourth derivative of <span class="math inline">\(f\)</span> is <span class="math display">\[f^{(4)}(x) = 0.\]</span></p>
+<div style="color: blue;">
+<p><strong>Theorem:</strong> If <span class="math inline">\(p(x)\)</span> is a polynomial of degree <span class="math inline">\(n\)</span> then, <span class="math display">\[p^{(k)}(x) = 0,\]</span> for all <span class="math inline">\(k \geq n+1\)</span>.</p>
+</div>
+<div style="color: blue;">
+<p><strong>Proof:</strong> Any derivative of a polynomial reduces the degree of the polynomial by one. Therefore, if <span class="math inline">\(p\)</span> is a polynomial of degree <span class="math inline">\(n\)</span>, the degree of the <span class="math inline">\(n^{th}\)</span> derivative of <span class="math inline">\(p\)</span> will be 0 (ie, a constant). The <span class="math inline">\(n+1^{st}\)</span> derivative and all subsequent derivatives will therefore be 0.</p>
+</div>
+<div style="color: green;">
+<p><strong>Example:</strong> Find the <span class="math inline">\(n^{th}\)</span> derivative of the function <span class="math inline">\(f(x) = \sin(x)\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Solution:</strong> We can find the first few derivatives of <span class="math inline">\(f\)</span> and we can then try to extrapolate a general case.</p>
+<p><span class="math display">\[\begin{align*}
+f(x) &amp;= \sin(x)\\
+f^{\prime}(x) &amp;= \cos(x)\\
+f^{\prime \prime}(x) &amp;= -\sin(x)\\
+f^{\prime \prime \prime}(x) &amp;= -\cos(x)\\
+f^{(4)}(x) &amp;= \sin(x)\\
+f^{(5)}(x) &amp;= \cos(x)\\
+f^{(6)}(x) &amp;= -\sin(x)\\
+f^{(7)}(x) &amp;= -\cos(x)\\
+f^{(8)}(x) &amp;= \sin(x).
+\end{align*}\]</span></p>
+<p>We can see that there is a cyclical pattern for the derivatives. Consider the integer <span class="math inline">\(n\)</span>. It can take the form <span class="math inline">\(n = 4k\)</span>, <span class="math inline">\(n = 4k+1\)</span>, <span class="math inline">\(n = 4k+2\)</span>, or <span class="math inline">\(n = 4k+3\)</span> (where <span class="math inline">\(k\)</span> is an integer). When <span class="math inline">\(n\)</span> has the form <span class="math inline">\(4k\)</span> (as in <span class="math inline">\(f(x)\)</span>, <span class="math inline">\(f^{(4)}(x)\)</span> and <span class="math inline">\(f^{(8)}(x)\)</span>), the <span class="math inline">\(n^{th}\)</span> derivative is <span class="math inline">\(f^{(n)}(x) = \sin(x)\)</span>. When <span class="math inline">\(n\)</span> has the form <span class="math inline">\(4k+1\)</span> (as in <span class="math inline">\(f^{\prime}(x)\)</span> or <span class="math inline">\(f^{(5)}\)</span>), we have <span class="math inline">\(f^{(n)}(x) = \cos(x)\)</span>. If <span class="math inline">\(n = 4k+2\)</span>, <span class="math inline">\(f^{(n)}(x) = -\sin(x)\)</span> and when <span class="math inline">\(n = 4k+3\)</span>, we see that <span class="math inline">\(f^{(n)}(x) = -\cos(x)\)</span>. We can write <span class="math display">\[f^{(n)}(x) = \begin{cases} \sin(x) &amp; n = 4k\\ \cos(x) &amp; n = 4k+1\\ -\sin(x) &amp; n=4k+2\\ -\cos(x) &amp; n = 4k+3 \end{cases}.\]</span></p>
+</div>
+<p>Many times a pattern emerges. In the previous example, it was a result of the cyclical pattern of the derivatives of trigonometric functions. The next example deals with constants that result from the chain rule.</p>
+<div style="color: green;">
+<p><strong>Example:</strong> Find the <span class="math inline">\(n^{th}\)</span> derivative of the function <span class="math inline">\(f(x) = e^{2x}\)</span>.</p>
+</div>
+<div style="color: green;">
+<strong>Solution:</strong> We can find the first few derivatives of <span class="math inline">\(f\)</span> and we can then try to extrapolate a general case.
+<p>We can see that there is again a pattern for the derivatives. The third derivative is <span class="math inline">\(2^3e^{2x}\)</span> and the fourth derivative is <span class="math inline">\(2^4e^{2x}\)</span>. It appears that, in general, we have <span class="math display">\[f^{(n)}(x) = 2^ne^{2x}.\]</span></p>
+</div>
+<p>We can find a higher derivative using implicit differentiation.</p>
+<div style="color: green;">
+<p><strong>Example:</strong> Find the second derivative of the curve <span class="math inline">\(x^2 + y^2 = 2xy\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Solution:</strong> We can find the first few derivatives using implicit differentiation:
+<span class="math display">\[\begin{align*}
+x^2 + y^2 &amp;= 2\\
+2x + 2y \dfrac{dy}{dx} &amp;=0\\
+\dfrac{dy}{dx} &amp;= \dfrac{-x}{y}.
+\end{align*}\]</span>
+We differentiate again.
+<span class="math display">\[\begin{align*}
+\dfrac{dy}{dx} &amp;= \dfrac{-x}{y}\\
+\dfrac{d^2y}{dx^2} &amp;= \dfrac{-y + x\dfrac{dy}{dx}}{y^2}\\
+\dfrac{d^2y}{dx^2} &amp;= \dfrac{-y + x(-x/y)}{y^2}\\
+\dfrac{d^2y}{dx^2} &amp;= \dfrac{-y -x^2/y}{y^2}\\
+\dfrac{d^2y}{dx^2} &amp;= \dfrac{-(y^2 + x^2)}{y^3}\\
+\dfrac{d^2y}{dx^2} &amp;= \dfrac{-2}{y^3}.
+\end{align*}\]</span>
+Therefore, the second derivative of the curve <span class="math inline">\(x^2 + y^2 = 2\)</span> is <span class="math inline">\(\dfrac{d^2y}{dx^2} = \dfrac{-2}{y^3}\)</span>.</p>
+</div>
+<p>Note that in the previous example, we were able to substitute out <span class="math inline">\(dy/dx\)</span> since we had already found that value. We also substituted out <span class="math inline">\(x^2 + y^2\)</span> since we knew that it was equal to 2.</p>
+<p>Practice Problems</p>
+<ol style="list-style-type: decimal">
+<li>Find the second, third and fourth derivatives of each of the following.</li>
+</ol>
+<ul>
+<li><span class="math inline">\(y = e^{4x}\)</span></li>
+<li><span class="math inline">\(f(x) = \sin(2x + 1)\)</span></li>
+<li><span class="math inline">\(y = x^3 + x^2 + x + 1\)</span></li>
+<li><span class="math inline">\(g(x) = \ln(x)\)</span></li>
+<li><span class="math inline">\(h(x) = \tan(x)\)</span></li>
+<li><span class="math inline">\(f(x) = \cos(2x) + e^{3x}\)</span></li>
+</ul>
+<ol start="2" style="list-style-type: decimal">
+<li>Find a general formula for the <span class="math inline">\(n^{th}\)</span> derivative for each of the following.</li>
+</ol>
+<ul>
+<li><span class="math inline">\(y = \cos(x)\)</span></li>
+<li><span class="math inline">\(f(x) = \sec(x)\)</span></li>
+<li><span class="math inline">\(y = e^{3x}\)</span></li>
+<li><span class="math inline">\(g(x) = \sin(2x + 1)\)</span></li>
+<li><span class="math inline">\(f(x) = x^2 + x + 1\)</span></li>
+<li><span class="math inline">\(y = \ln(x)\)</span></li>
+<li><span class="math inline">\(g(x) = \cos(3x - 2)\)</span></li>
+<li><span class="math inline">\(y = \cos(2x) + e^{2x}\)</span></li>
+</ul>
+<ol start="3" style="list-style-type: decimal">
+<li>Find the second derivative of each of the following functions.</li>
+</ol>
+<ul>
+<li><span class="math inline">\(x^2 + y^2 = 5\)</span></li>
+<li><span class="math inline">\(x^2 + 2y = xy\)</span></li>
+<li><span class="math inline">\(x^2y^3 = 3x\)</span></li>
+<li><span class="math inline">\(y = x^x\)</span></li>
+<li><span class="math inline">\(\sin(y) = x\)</span></li>
+<li><span class="math inline">\(e^y - e^x = 1\)</span></li>
+</ul>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="the-product-and-the-quotient-rule.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="the-chain-rule.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook/js/app.min.js"></script>
+<script src="libs/gitbook/js/clipboard.min.js"></script>
+<script src="libs/gitbook/js/plugin-search.js"></script>
+<script src="libs/gitbook/js/plugin-sharing.js"></script>
+<script src="libs/gitbook/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook/js/jquery.highlight.js"></script>
+<script src="libs/gitbook/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/03-DifferentiationRules.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

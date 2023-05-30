@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>2.8 The Derivative as a Function | Calculus I</title>
-  <meta name="description" content="2.8 The Derivative as a Function | Calculus I" />
+  <title>3.9 Related Rates | Calculus I</title>
+  <meta name="description" content="3.9 Related Rates | Calculus I" />
   <meta name="generator" content="bookdown 0.33 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="2.8 The Derivative as a Function | Calculus I" />
+  <meta property="og:title" content="3.9 Related Rates | Calculus I" />
   <meta property="og:type" content="book" />
   <meta property="og:image" content="/Title_Page.png" />
   
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="2.8 The Derivative as a Function | Calculus I" />
+  <meta name="twitter:title" content="3.9 Related Rates | Calculus I" />
   
   
   <meta name="twitter:image" content="/Title_Page.png" />
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="derivatives-and-rates-of-change.html"/>
-<link rel="next" href="derivatives-of-polynomials-and-exponential-functions.html"/>
+<link rel="prev" href="derivatives-of-logarithmic-and-inverse-trigonometricfunctions.html"/>
+<link rel="next" href="linear-approximations-and-differentials.html"/>
 <script src="libs/jquery/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook/css/style.css" rel="stylesheet" />
@@ -189,211 +189,76 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="the-derivative-as-a-function" class="section level1 unnumbered hasAnchor">
-<h1>2.8 The Derivative as a Function<a href="the-derivative-as-a-function.html#the-derivative-as-a-function" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="differentiability" class="section level2 unnumbered hasAnchor">
-<h2>Differentiability<a href="the-derivative-as-a-function.html#differentiability" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Not all functions have derivatives. While most of the functions we have dealt with have had derivatives, it is certainly not the case that they all do. Any function that has a derivative is called .</p>
-<div style="color: blue;">
-<p><strong>Definition:</strong> A function <span class="math inline">\(f\)</span> is called differentiable at <span class="math inline">\(x = a\)</span> if <span class="math inline">\(f^{\prime}(a)\)</span> exist. A function <span class="math inline">\(f\)</span> is called differentiable on an interval if the derivative exists for each point in that interval.</p>
-</div>
-<p>Specifically, a function can fail to be differentiable at a point <span class="math inline">\(a\)</span> if there is a vertical tangent line, a discontinuity in the graph or if the graph has a corner.</p>
-<table>
-<thead>
-<tr class="header">
-<th align="center"><img src="Pic39.png" /></th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
+<div id="related-rates" class="section level1 unnumbered hasAnchor">
+<h1>3.9 Related Rates<a href="related-rates.html#related-rates" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Related rates problems are an application of implicit differentiation. There are four basic steps to solve related rates problems:</p>
+<ol style="list-style-type: decimal">
+<li>Draw a picture of the physical situation. Label any quantities you are given in the question and create a variable for any unknown quantities or quantities that change.</li>
+<li>Write an equation that relates the quantities of interest. Be sure to label as a variable any value that changes as the situation progresses. Do not substitute a number for it yet.</li>
+<li>To develop your equation, you will probably use either a simple geometric fact (ie, the equation of a circle or the Pythagorean theorem), a trigonometric function, the Pythagorean theorem, similar triangles.</li>
+<li>Take the derivative with respect to time of both sides of your equation. Use implicit differentiation. Solve for the unknown quantity.</li>
+</ol>
+<p>The best way to learn how to do related rates problems is to actually do related rates problems.</p>
 <div style="color: green;">
-<p><strong>Example:</strong> Determine <span class="math inline">\(f^{\prime}(0)\)</span> given <span class="math inline">\(g(x) = |x|\)</span>.\</p>
+<p><strong>Example:</strong> Air is being pumped into a spherical balloon at a rate of <span class="math inline">\(4 cm^3/min\)</span>. Determine the rate at which the radius of the balloon is increasing when the diameter of the balloon is <span class="math inline">\(18 cm\)</span>.</p>
 </div>
 <div style="color: green;">
-<p><strong>Solution:</strong> We know
-<span class="math display">\[\begin{align*}  f^{\prime}(0) &amp;= \lim_{h \rightarrow 0} \dfrac{f(0+h) - f(0)}{h}\\ \\
-&amp;= \lim_{h \rightarrow 0} \dfrac{|0+h| - |0|}{h}\\ \\
-&amp;= \lim_{h \rightarrow 0} \dfrac{|h|}{h}.
+<p><strong>Solution:</strong> The value that we need to find is the rate at which the radius of the balloon is increasing. If the radius is <span class="math inline">\(r\)</span>, the rate at which the radius is increasing is <span class="math inline">\(\dfrac{dr}{dt}\)</span>.</p>
+<p>The other things we know from the question is that the air being pumped into the balloon is <span class="math inline">\(4 cm^3/min\)</span>. If <span class="math inline">\(V\)</span> is the volume of the balloon, then this quantity is <span class="math inline">\(\dfrac{dV}{dt} = 4\)</span>.</p>
+<p>One last thing to note is that as time goes on is that the radius is going to changed. That is, the radius <span class="math inline">\(r\)</span> is not fixed. We need to find <span class="math inline">\(\dfrac{dr}{dt}\)</span> when the diameter is <span class="math inline">\(18 cm\)</span> or when <span class="math inline">\(r = 9 cm\)</span>.</p>
+<p>The equation that relates volume of a sphere to the diameter is <span class="math display">\[V = \dfrac{4}{3} \pi r^3.\]</span> Differentiating this equation with respect to time, we find <span class="math display">\[\dfrac{dV}{dt} = \dfrac{4}{3} \pi \left(3r^2 \dfrac{dr}{dt} \right) = 4\pi r^2 \dfrac{dr}{dt}.\]</span> We want to find <span class="math inline">\(\dfrac{dr}{dt}\)</span> at the time when <span class="math inline">\(r = 9\)</span>. Plugging in the value of <span class="math inline">\(r\)</span> and the value of <span class="math inline">\(\dfrac{dV}{dt}\)</span>, we get <span class="math display">\[\begin{align*}
+\dfrac{dV}{dt} &amp;= 4\pi r^2 \dfrac{dr}{dt}\\
+4 &amp;= 4\pi (9)^2 \dfrac{dr}{dt}\\
+\dfrac{1}{81\pi} &amp;= \dfrac{dr}{dt}.
 \end{align*}\]</span>
-Recall that <span class="math display">\[|h| = \begin{cases}h &amp; h \geq 0\\ -h &amp; h &lt; 0 \end{cases}.\]</span> If we take the limit from the left, <span class="math inline">\(h &lt; 0\)</span>. Therefore,
-<span class="math display">\[\lim_{h \rightarrow 0^-} \dfrac{|h|}{h} = \lim_{h \rightarrow 0^{-}} \dfrac{-h}{h} = -1.\]</span> If we take the limit from the right, <span class="math inline">\(h &gt; 0\)</span>. Therefore, <span class="math display">\[\lim_{h \rightarrow 0^+} \dfrac{|h|}{h} = \lim_{h \rightarrow 0^{+}} \dfrac{h}{h} = 1.\]</span> Now, since the two one-sided limits are different so <span class="math inline">\(\displaystyle\lim_{h \rightarrow 0} \dfrac{|h|}{h}\)</span> does not exist. Since the limit does not exist, neither does the derivative.</p>
+Therefore, the rate at which the radius is increasing is <span class="math display">\[\dfrac{dr}{dt} = \dfrac{1}{81\pi}.\]</span></p>
 </div>
-<table>
-<thead>
-<tr class="header">
-<th align="center"><img src="Pic40.png" /></th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
+<div style="color: green;">
+<p><strong>Example:</strong> You are pouring pancake batter onto a hot griddle. If the pancake has is <span class="math inline">\(10 cm\)</span> across and our pour increases the area at a rate of 10 <span class="math inline">\(cm/s\)</span>, how quickly is the pancake widening?</p>
+</div>
+<div style="color: green;">
+<p><strong>Solution:</strong>The value that we need to find is the rate at which the diameter of the pancake is increasing. If the diameter is <span class="math inline">\(d\)</span>, the rate at which the radius is increasing is <span class="math inline">\(\dfrac{dd}{dt}\)</span>.</p>
+<p>The other things we know from the question is that the area of the pancake is increasing at a rate of <span class="math inline">\(10 cm/s\)</span>. If <span class="math inline">\(A\)</span> is the area of the balloon, then this quantity is <span class="math inline">\(\dfrac{dA}{dt} = 10\)</span>.</p>
+<p>One last thing to note is that as time goes on, the area is going to change. That is, the surface area of the pancake, <span class="math inline">\(A\)</span>, is not fixed. We need to find <span class="math inline">\(\dfrac{dd}{dt}\)</span> when the diameter is <span class="math inline">\(10 cm\)</span>..</p>
+<p>The equation that relates area of a circle to the radius is <span class="math display">\[A = \pi r^2.\]</span> Since the radius is half of the diameter (<span class="math inline">\(r = d/2\)</span>), we should actually work with the equation <span class="math display">\[A = \pi (d/2)^2 = \dfrac{\pi}{4} d^2.\]</span> Differentiating this equation with respect to time, we find <span class="math display">\[\dfrac{dA}{dt} = \dfrac{\pi}{4} \left(2d \dfrac{dd}{dt} \right) = \dfrac{\pi}{2} d \dfrac{dd}{dt}.\]</span> We want to find <span class="math inline">\(\dfrac{dd}{dt}\)</span> at the time when <span class="math inline">\(d = 10 cm\)</span>. Plugging in the value of <span class="math inline">\(d\)</span> and the value of <span class="math inline">\(\dfrac{dA}{dt}\)</span>, we get <span class="math display">\[\begin{align*}
+\dfrac{dA}{dt} &amp;= \dfrac{\pi}{2} d \dfrac{dd}{dt}\\
+10 &amp;= \dfrac{\pi}{2} (10) \dfrac{dd}{dt}\\
+\dfrac{2}{\pi} &amp;= \dfrac{dd}{dt}.
+\end{align*}\]</span>
+Therefore, the rate at which the diameter is increasing is <span class="math display">\[\dfrac{dd}{dt} = \dfrac{2}{\pi}.\]</span></p>
+</div>
+<div style="color: green;">
+<p><strong>Example:</strong> The top of a 23 foot ladder, leaning against a vertical wall, is slipping down the wall at a rate of 4 feet per second. How fast is the bottom of the ladder sliding along the ground when the bottom of the ladder is 9 feet away from the base of the wall?</p>
+</div>
+<div style="color: green;">
+<p><strong>Solution:</strong> Let <span class="math inline">\(y\)</span> denote the height of the top of the ladder from the bottom of the wall and <span class="math inline">\(x\)</span> the distance from the bottom of the ladder to the wall. The value that we need to find is the rate at which the bottom of the ladder is sliding away from the wall, <span class="math inline">\(\dfrac{dx}{dt}\)</span>.</p>
+<p>The other things we know from the question is that the length of the ladder is <span class="math inline">\(23\)</span> foot long (<span class="math inline">\(h = 23\)</span>) and that the rate at which the ladder is sliding down the wall is <span class="math inline">\(\dfrac{dy}{dt} = 4\)</span>.</p>
+<p>One last thing to note is that as time goes on, the position of the top and bottom of the latter will change. So, both <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> are variable. However, the length of the latter remains constant. So, <span class="math inline">\(h = 23\)</span> is constant. We need to find <span class="math inline">\(\dfrac{dx}{dt}\)</span> when the <span class="math inline">\(x = 10\)</span>. Using Pythagoras, we know this means that <span class="math inline">\(y = \sqrt{23^2 - 10^2} = 20.71\)</span>.</p>
+<p>The equation that relates the horizontal and vertical parts of a triangle is the Pythagorean theorem <span class="math display">\[x^2 + y^2 = h^2.\]</span> Since <span class="math inline">\(h\)</span> is constant, <span class="math display">\[x^2 + y^2 = 23^2.\]</span> Differentiating this equation with respect to time, we find <span class="math display">\[2x\dfrac{dx}{dt} + 2y \dfrac{dy}{dt} = 0.\]</span> We want to find <span class="math inline">\(\dfrac{dx}{dt}\)</span> at the time when <span class="math inline">\(x = 10\)</span> and <span class="math inline">\(y = 20.17\)</span>. Plugging in these values, we get <span class="math display">\[\begin{align*}
+2x\dfrac{dx}{dt} + 2y \dfrac{dy}{dt} &amp;= 0\\
+2(10)\dfrac{dx}{dt} + 2(20.71) (4) &amp;= 0\\
+\dfrac{dx}{dt} &amp;= 8.284.
+\end{align*}\]</span>
+Therefore, the rate at which the ladder slides away from the wall is <span class="math display">\[\dfrac{dd}{dt} = 8.284 \text{feet per second}.\]</span></p>
+</div>
 <p>Practice Problems</p>
-<ol style="list-style-type: upper-alpha">
-<li>Determine where the following functions are differentiable.</li>
-</ol>
-<ul>
-<li><span class="math inline">\(f(x) = \begin{cases} x+1 &amp; x \geq 0 \\ x-1 &amp; x &lt; 0 \end{cases}\)</span></li>
-<li><span class="math inline">\(f(x) = |x-1|\)</span></li>
-<li><span class="math inline">\(f(x) = \begin{cases} x^2 &amp; x \geq 0 \\ -x&amp; x &lt; 0 \end{cases}\)</span></li>
-<li><span class="math inline">\(f(x) = \dfrac{1}{x^2}\)</span></li>
-<li><span class="math inline">\(f(x) = x^{1/3}\)</span></li>
-<li><span class="math inline">\(f(x) = \dfrac{x}{|x|}\)</span></li>
-<li><span class="math inline">\(f(x) = \sqrt{x}\)</span></li>
-<li><span class="math inline">\(f(x) = \sqrt{x}\)</span></li>
-</ul>
-<ol start="2" style="list-style-type: upper-alpha">
-<li>For each of the functions in part A, sketch a graph of the derivatives.</li>
+<ol style="list-style-type: decimal">
+<li><p>You are blowing air into a spherical balloon at a rate of <span class="math inline">\(5 in^3/s\)</span>. What is the rate of change of the surface area of the balloon at <span class="math inline">\(t=1s\)</span> given that the balloon has a radius of <span class="math inline">\(6 in\)</span>?</p></li>
+<li><p>A boat is pulled into a dock by a rope attached to the bow (front) of the boat and passing through a pulley that is <span class="math inline">\(1 m\)</span> above the bow of the boat. If the rope is pulled at a rate of <span class="math inline">\(1 m/s\)</span>, how fast is the boat approaching the dock when it is <span class="math inline">\(9 m\)</span> from the dock?</p></li>
+<li><p>Gravel is being dumped from a conveyor belt at a rate of <span class="math inline">\(28 ft^3/m\)</span>. The gravel is so coarse so that the pile forms in the shape of a cone whose base diameter and height are always equal. How fast is the height of the pile increasing when the pile is <span class="math inline">\(12 ft\)</span> high? (Hint: the volume of a cone is given by <span class="math inline">\(V=\pi r^2 h/3\)</span> where <span class="math inline">\(r\)</span> is the base radius and <span class="math inline">\(h\)</span> is the height).</p></li>
+<li><p>A <span class="math inline">\(15 ft\)</span> ladder is resting against the wall. The bottom is initially <span class="math inline">\(12 ft\)</span> away from the wall and is being pushed towards the wall at a rate of <span class="math inline">\(0.25 ft/sec\)</span>. How fast is the top of the ladder moving up the wall <span class="math inline">\(10 s\)</span> after we start pushing?</p></li>
+<li><p>Two people are <span class="math inline">\(45 ft\)</span> apart. One of them starts walking north at a rate so that the angle between the starting position of the two people and the current position of the two people is changing at a constant rate of <span class="math inline">\(0.01 rad/min\)</span>. At what rate is distance between the two people changing when <span class="math inline">\(\theta = 0.5 rads\)</span>?</p></li>
+<li><p>A tank of water in the shape of a cone is leaking water at a constant rate of <span class="math inline">\(2ft^3/ hr\)</span>. The base radius of the tank is <span class="math inline">\(5 ft\)</span> and the height of the tank is <span class="math inline">\(14 ft\)</span>. (a) At what rate is the depth of the water in the tank changing when the depth of the water is <span class="math inline">\(6 ft\)</span>? (b) At what rate is the radius of the top of the water in the tank changing when the depth of the water is <span class="math inline">\(6 ft\)</span>?</p></li>
+<li><p>Consider a weight hanging from a rope which stretches up to a pulley 10ft above the floor and then to your hand which is 3ft above the floor and 15ft horizontally to the right of the pulley. If you walk horizontally to the right at 2 ft/s, how fast does the weight rise?</p></li>
 </ol>
 </div>
-<div id="differentiability-continuity" class="section level2 unnumbered hasAnchor">
-<h2>Differentiability &amp; Continuity<a href="the-derivative-as-a-function.html#differentiability-continuity" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Thus far, the functions we have been looking at have almost all been differentiable. Most functions are not differentiable. However, there is a relationship between differentiable and continuous functions.</p>
-<div style="color: blue;">
-<p><strong>Theorem:</strong> If <span class="math inline">\(f\)</span> is differentiable at <span class="math inline">\(a\)</span>, then <span class="math inline">\(f\)</span> is continuous at <span class="math inline">\(a\)</span>.</p>
-</div>
-<div style="color: blue;">
-<p><strong>Proof:</strong> Let <span class="math inline">\(f\)</span> be a differentiable function at a point <span class="math inline">\(x_0\)</span>. Then, we know the derivative exists. That is, <span class="math display">\[f^{\prime}(x) = \lim_{x \rightarrow x_0} \frac{f(x) - f(x_0)}{x-x_0} = a,\]</span> for some <span class="math inline">\(a \in \mathbb{R}\)</span>. To show that <span class="math inline">\(f\)</span> is continuous at <span class="math inline">\(x_0\)</span>, we need to show that <span class="math display">\[\lim_{x \rightarrow x_0} f(x) - f(x_0) = 0.\]</span> Observe that <span class="math display">\[\lim_{x \rightarrow x_0} f(x) - f(x_0) = \lim_{x \rightarrow x_0} \left[ \frac{f(x) - f(x_0)}{x-x_0} \right] \cdot \lim_{x \rightarrow x_0} (x-x_0) = a \cdot \lim_{x \rightarrow x_0} (x-x_0) = 0.\]</span> Therefore, since <span class="math inline">\(\displaystyle\lim_{x \rightarrow x_0} f(x) - f(x_0) = 0\)</span>, we know the function is continuous.</p>
-</div>
-<p>We know that <span class="math inline">\(f(x) = |x|\)</span> is a continuous function on <span class="math inline">\(\mathbb{R}\)</span>. So, we know that the converse of the theorem does not hold since we have seen that <span class="math inline">\(y = |x|\)</span> is not differentiable at 0. Another example worth noting is <span class="math inline">\(y = \sqrt[3]{x}\)</span>. This function is continuous on <span class="math inline">\(\mathbb{R}\)</span> but is not differentiable at 0 since it has a vertical tangent line. The function <span class="math inline">\(y = x^{2/3}\)</span> is again continuous but not differentiable at <span class="math inline">\(0\)</span> since it has a cusp. Remember, not all continuous functions are differentiable - though many are.</p>
-<table>
-<thead>
-<tr class="header">
-<th align="center"><img src="Pic41.png" /></th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
-<p>Practice Problems</p>
-<ol style="list-style-type: upper-alpha">
-<li>Show that the function is continuous but not differentiable at the indicated point:</li>
-</ol>
-<ul>
-<li><span class="math inline">\(f(x) = \sqrt[3]{x}\)</span> at <span class="math inline">\(x = 0\)</span></li>
-<li><span class="math inline">\(f(x) = \sqrt[3]{(x-2)^2}\)</span> at <span class="math inline">\(x = 2\)</span></li>
-<li><span class="math inline">\(f(x) = \begin{cases} x^2 + 1 &amp; x \leq 1 \\ 2x &amp; x &gt;1 \end{cases}\)</span></li>
-</ul>
-<ol start="2" style="list-style-type: upper-alpha">
-<li><p>Suppose that a function <span class="math inline">\(f\)</span> is differentiable at <span class="math inline">\(x_0\)</span>. Define <span class="math inline">\(g(x) = f(mx+b)\)</span> where <span class="math inline">\(m\)</span> and <span class="math inline">\(b\)</span> are constants. Show that if <span class="math inline">\(x_1\)</span> is any point at which <span class="math inline">\(mx_1+b = x_0\)</span>, then <span class="math inline">\(g\)</span> is differentiable and <span class="math inline">\(g^{\prime}(x_1) = mf^{\prime}(x_0)\)</span>.\</p></li>
-<li><p>Draw a graph with the following characteristics:</p></li>
-</ol>
-<ul>
-<li>Exists on <span class="math inline">\([-5,5]\)</span></li>
-<li>Differentiable on <span class="math inline">\([-5,-3)\)</span></li>
-<li>Not continuous at -3</li>
-<li>Differentiable on <span class="math inline">\([-3,2]\)</span></li>
-<li>Continuous at 2</li>
-<li>Not differentiable at 2</li>
-<li>Differentiable on <span class="math inline">\((2,5]\)</span></li>
-</ul>
-<ol start="4" style="list-style-type: upper-alpha">
-<li><p>Find constants <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> so that the following function is continuous and differentiable everywhere <span class="math display">\[f(x) = \begin{cases} ax + b &amp; x \leq 1 \\ 2x^2 &amp; x \geq 1 \end{cases}.\]</span></p></li>
-<li><p>Where is the following function differentiable <span class="math display">\[f(x) = |x-2| + |x+1|.\]</span></p></li>
-<li><p>Explain why <span class="math display">\[f(x) = \begin{cases} x^2 - 1 &amp; x \leq 1 \\ x^2 + 1 &amp; x \geq 1 \end{cases}\]</span> is not differentiable at <span class="math inline">\(x = 1\)</span> even though the derivative of <span class="math inline">\(x^2-1\)</span> and <span class="math inline">\(x^2 + 1\)</span> are the same.</p></li>
-</ol>
-</div>
-<div id="notation" class="section level2 unnumbered hasAnchor">
-<h2>Notation<a href="the-derivative-as-a-function.html#notation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>In differential and integral calculus, there is no single uniform notation for differentiation. Over the years, several different notations have emerged. Each notation typically is contextually advantageous in some area. However, no one notation has the benefit of being the most advantageous in all cases.</p>
-<p>The notation that we have used so far is attributed to Lagrange. In Lagrange notation, a prime mark denotes the derivative. For example, <span class="math inline">\(f^{\prime}(x)\)</span>. If we wanted to take the derivative of the derivative (ie, a second derivative), we use a second prime mark, <span class="math inline">\(f^{\prime \prime}(x)\)</span>. When we are taking a derivative higher than four, most authors switch to Arabic numerals in brackets. For example <span class="math inline">\(f^{(6)}(x)\)</span> for a <span class="math inline">\(6^{th}\)</span> derivative. If <span class="math inline">\(y = f(x)\)</span>, many authors will write <span class="math inline">\(y^{\prime}\)</span> to indicate the derivative of <span class="math inline">\(y\)</span> as a short hand for <span class="math inline">\(f^{\prime}(x)\)</span>.</p>
-<table>
-<thead>
-<tr class="header">
-<th><span class="math inline">\(\;\)</span></th>
-<th>Notation</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Function</td>
-<td><span class="math inline">\(f(x), \;\; y\)</span></td>
-</tr>
-<tr class="even">
-<td>Derivative</td>
-<td><span class="math inline">\(f^{\prime}(x), \;\; y^{\prime}\)</span></td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(2^{nd}\)</span> Derivative</td>
-<td><span class="math inline">\(f^{\prime \prime }(x), \;\; y^{\prime \prime}\)</span></td>
-</tr>
-<tr class="even">
-<td>Higher Derivative</td>
-<td><span class="math inline">\(f^{(n)}(x), \;\; y^{(n)}\)</span></td>
-</tr>
-</tbody>
-</table>
-<div style="color: green;">
-<p><strong>Example:</strong> From one of the previous problems, if <span class="math inline">\(f(x) = x^3 + x - 5\)</span>, we have <span class="math inline">\(f^{\prime}(x) = 3x^2 + 1\)</span>. We can also write:
-<span class="math inline">\(y = x^3 + x - 5 \Longrightarrow y^{\prime}(x) = 3x^2 + 1\)</span>.</p>
-</div>
-<p>Leibnitz notation is slightly different. If <span class="math inline">\(y = f(x)\)</span>, we denote the first derivative of <span class="math inline">\(f\)</span> by <span class="math inline">\(\frac{dy}{dx}\)</span>. So here, <span class="math inline">\(f^{\prime}(x) = \frac{dy}{dx}\)</span>. Another way to interpret Leibnitz notation is by writing <span class="math inline">\(\frac{d}{dx} f(x) = \frac{dy}{dx}\)</span>. The notation <span class="math inline">\(\frac{d}{dx} f(x)\)</span> can be interpreted as ``we are about to take the derivative of <span class="math inline">\(f(x)\)</span>’’. For higher derivatives, we can write <span class="math inline">\(\frac{d^2y}{dx^2}\)</span> in place of <span class="math inline">\(f^{\prime \prime}\)</span>.</p>
-<table>
-<colgroup>
-<col width="33%" />
-<col width="33%" />
-<col width="33%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><span class="math inline">\(\;\)</span></th>
-<th>Lagrange Notation</th>
-<th>Leibnitz Notation</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Function</td>
-<td><span class="math inline">\(f(x), \;\; y\)</span></td>
-<td><span class="math inline">\(f(x), \;\; y\)</span></td>
-</tr>
-<tr class="even">
-<td>Derivative</td>
-<td><span class="math inline">\(f^{\prime}(x), \;\; y^{\prime}\)</span></td>
-<td><span class="math inline">\(\frac{df}{dx}, \;\; \frac{dy}{dx}\)</span></td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(2^{nd}\)</span> Derivative</td>
-<td><span class="math inline">\(f^{\prime\prime }(x), \;\; y^{\prime \prime}\)</span></td>
-<td><span class="math inline">\(\frac{d^2f}{dx^2}, \;\; \frac{d^2y}{dx^2}\)</span></td>
-</tr>
-<tr class="even">
-<td>Higher Derivative</td>
-<td><span class="math inline">\(f^{(n)}(x), \;\; y^{(n)}\)</span></td>
-<td><span class="math inline">\(\frac{d^nf}{dx^n}, \;\; \frac{d^ny}{dx^n}\)</span></td>
-</tr>
-</tbody>
-</table>
-<div style="color: green;">
-<p><strong>Example:</strong> From one of the previous problems, if <span class="math inline">\(f(x) = x^3 + x - 5\)</span>, we have <span class="math inline">\(f^{\prime}(x) = 3x^2 + 1\)</span>. We can also write:
-<span class="math display">\[\begin{align*}
-f(x) &amp;= x^3 + x - 5  \Longrightarrow \frac{df}{dx} = 3x^2 + 1\\ \\
-f(x) &amp;= x^3 + x - 5  \Longrightarrow \frac{d}{dx}f(x) = 3x^2 + 1\\ \\
-y &amp;= x^3 + x - 5  \Longrightarrow \frac{dy}{dx} = 3x^2 + 1\\ \\
-&amp;\frac{d}{dx}\left[x^3 + x - 5\right] = 3x^2 + 1
-\end{align*}\]</span></p>
-</div>
-<p>One final notation is Euler’s notation. Here we use <span class="math inline">\(Df\)</span> to mean <span class="math inline">\(f^{\prime}(x)\)</span>. Higher derivatives are written <span class="math inline">\(D^2f\)</span> for <span class="math inline">\(f^{\prime \prime}(x)\)</span>, etc.</p>
-<div style="color: green;">
-<p><strong>Example:</strong> Given a function <span class="math inline">\(y = f(x)\)</span>, all of the following are equivalent and represent the derivative of <span class="math inline">\(f(x)\)</span> with respect to x.
-<span class="math display">\[f^{\prime}(x) = y^{\prime} = \dfrac{d f}{dx} = \dfrac{dy}{dx} = \dfrac{d}{dx}f(x) = \dfrac{d}{dx} y.\]</span>
-If we want to evaluate the derivative at a point <span class="math inline">\(x = a\)</span>, all of the following are equivalent notations:
-<span class="math display">\[f^{\prime}(a) =  y^{\prime} \bigg\rvert_{x=a} =  \dfrac{df}{dx} \bigg\rvert_{x = a} =  \dfrac{dy}{dx} \bigg\rvert_{x = a}.\]</span></p>
-</div>
-<p>The context in which each of these notations is advantageous will be unclear for a while. For now, we will use each one interchangeably.</p>
-
-</div>
-</div>
-
-
-
             </section>
 
           </div>
         </div>
       </div>
-<a href="derivatives-and-rates-of-change.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="derivatives-of-polynomials-and-exponential-functions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="derivatives-of-logarithmic-and-inverse-trigonometricfunctions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="linear-approximations-and-differentials.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook/js/app.min.js"></script>
@@ -424,7 +289,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/USERNAME/REPO/edit/BRANCH/02-LimitsAndDerivatives.Rmd",
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/03-DifferentiationRules.Rmd",
 "text": "Edit"
 },
 "history": {

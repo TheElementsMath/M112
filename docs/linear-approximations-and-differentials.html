@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>2.8 The Derivative as a Function | Calculus I</title>
-  <meta name="description" content="2.8 The Derivative as a Function | Calculus I" />
+  <title>3.10 Linear Approximations and Differentials | Calculus I</title>
+  <meta name="description" content="3.10 Linear Approximations and Differentials | Calculus I" />
   <meta name="generator" content="bookdown 0.33 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="2.8 The Derivative as a Function | Calculus I" />
+  <meta property="og:title" content="3.10 Linear Approximations and Differentials | Calculus I" />
   <meta property="og:type" content="book" />
   <meta property="og:image" content="/Title_Page.png" />
   
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="2.8 The Derivative as a Function | Calculus I" />
+  <meta name="twitter:title" content="3.10 Linear Approximations and Differentials | Calculus I" />
   
   
   <meta name="twitter:image" content="/Title_Page.png" />
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="derivatives-and-rates-of-change.html"/>
-<link rel="next" href="derivatives-of-polynomials-and-exponential-functions.html"/>
+<link rel="prev" href="related-rates.html"/>
+<link rel="next" href="maximum-and-minimum-values.html"/>
 <script src="libs/jquery/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook/css/style.css" rel="stylesheet" />
@@ -189,198 +189,116 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="the-derivative-as-a-function" class="section level1 unnumbered hasAnchor">
-<h1>2.8 The Derivative as a Function<a href="the-derivative-as-a-function.html#the-derivative-as-a-function" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="differentiability" class="section level2 unnumbered hasAnchor">
-<h2>Differentiability<a href="the-derivative-as-a-function.html#differentiability" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Not all functions have derivatives. While most of the functions we have dealt with have had derivatives, it is certainly not the case that they all do. Any function that has a derivative is called .</p>
-<div style="color: blue;">
-<p><strong>Definition:</strong> A function <span class="math inline">\(f\)</span> is called differentiable at <span class="math inline">\(x = a\)</span> if <span class="math inline">\(f^{\prime}(a)\)</span> exist. A function <span class="math inline">\(f\)</span> is called differentiable on an interval if the derivative exists for each point in that interval.</p>
-</div>
-<p>Specifically, a function can fail to be differentiable at a point <span class="math inline">\(a\)</span> if there is a vertical tangent line, a discontinuity in the graph or if the graph has a corner.</p>
+<div id="linear-approximations-and-differentials" class="section level1 unnumbered hasAnchor">
+<h1>3.10 Linear Approximations and Differentials<a href="linear-approximations-and-differentials.html#linear-approximations-and-differentials" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="linear-approximation" class="section level2 unnumbered hasAnchor">
+<h2>Linear Approximation<a href="linear-approximations-and-differentials.html#linear-approximation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Linear approximation takes advantage of the fact that values of <span class="math inline">\(f(x)\)</span> near <span class="math inline">\(x=a\)</span> lie very close to the tangent line, <span class="math inline">\(T(x)\)</span> of <span class="math inline">\(f(x)\)</span> at <span class="math inline">\(x=a\)</span>. With this in mind, if we have a situation in which <span class="math inline">\(f(a)\)</span> is easy to find and the tangent line to <span class="math inline">\(f\)</span> at <span class="math inline">\(a\)</span> is easy to find but values of <span class="math inline">\(f\)</span> close to <span class="math inline">\(a\)</span> are difficult to find, then we can approximate them by a linear approximation based on the tangent line.</p>
 <table>
 <thead>
 <tr class="header">
-<th align="center"><img src="Pic39.png" /></th>
+<th align="center"><img src="Pic46.png" /></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<p>At <span class="math inline">\(x = a\)</span>, the tangent line for <span class="math inline">\(f(x)\)</span> is given by <span class="math display">\[y = f(a) + f^{\prime}(a)(x-a).\]</span> Therefore, for values of <span class="math inline">\(x\)</span> close <span class="math inline">\(a\)</span>, we know <span class="math display">\[f(x) \approx f(a) + f^{\prime}(a)(x-a).\]</span> We call the value <span class="math display">\[L(x) = f(a) + f^{\prime}(a)(x-a),\]</span> the linear approximation of <span class="math inline">\(f\)</span> near <span class="math inline">\(a\)</span>.</p>
+<div style="color: green;">
+<p><strong>Example:</strong> Find the linear approximation of <span class="math inline">\(\sin(x)\)</span> near <span class="math inline">\(x = 0\)</span> and use it to determine <span class="math inline">\(\sin(0.25)\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Solution:</strong> The linear approximation to <span class="math inline">\(f(x) = \sin(x)\)</span> at <span class="math inline">\(x = 0\)</span> is <span class="math display">\[L(x) = f(0) + f^{\prime}(0)(x-0).\]</span> Therefore, we need to determine <span class="math inline">\(f(0)\)</span> and <span class="math inline">\(f^{\prime}(0)\)</span>. We know that <span class="math display">\[f(0) = \sin(0) = 0,\]</span> and that <span class="math display">\[f^{\prime}(0) = \cos(x) |_{x=0} = \cos(0) = 1.\]</span> So, the linear approximation of <span class="math inline">\(f(x) = \sin(x)\)</span> at <span class="math inline">\(x=0\)</span> is given by
+<span class="math display">\[L(x) = 0 + 1(x-0) = x.\]</span>
+To approximate <span class="math inline">\(\sin(0.25)\)</span>, we evaluate <span class="math inline">\(L(0.25) = 0.25 = 0.25\)</span>. Note that <span class="math inline">\(\sin(0.25)\)</span> is actually around <span class="math inline">\(0.247\)</span> which is quite close.</p>
+</div>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><img src="Pic47.png" /></th>
 </tr>
 </thead>
 <tbody>
 </tbody>
 </table>
 <div style="color: green;">
-<p><strong>Example:</strong> Determine <span class="math inline">\(f^{\prime}(0)\)</span> given <span class="math inline">\(g(x) = |x|\)</span>.\</p>
+<p><strong>Example:</strong> Find the linear approximation of <span class="math inline">\(\sqrt{x-1}\)</span> near <span class="math inline">\(x = 2\)</span> and use it to determine <span class="math inline">\(\sqrt{1.25}\)</span>.</p>
 </div>
 <div style="color: green;">
-<p><strong>Solution:</strong> We know
-<span class="math display">\[\begin{align*}  f^{\prime}(0) &amp;= \lim_{h \rightarrow 0} \dfrac{f(0+h) - f(0)}{h}\\ \\
-&amp;= \lim_{h \rightarrow 0} \dfrac{|0+h| - |0|}{h}\\ \\
-&amp;= \lim_{h \rightarrow 0} \dfrac{|h|}{h}.
-\end{align*}\]</span>
-Recall that <span class="math display">\[|h| = \begin{cases}h &amp; h \geq 0\\ -h &amp; h &lt; 0 \end{cases}.\]</span> If we take the limit from the left, <span class="math inline">\(h &lt; 0\)</span>. Therefore,
-<span class="math display">\[\lim_{h \rightarrow 0^-} \dfrac{|h|}{h} = \lim_{h \rightarrow 0^{-}} \dfrac{-h}{h} = -1.\]</span> If we take the limit from the right, <span class="math inline">\(h &gt; 0\)</span>. Therefore, <span class="math display">\[\lim_{h \rightarrow 0^+} \dfrac{|h|}{h} = \lim_{h \rightarrow 0^{+}} \dfrac{h}{h} = 1.\]</span> Now, since the two one-sided limits are different so <span class="math inline">\(\displaystyle\lim_{h \rightarrow 0} \dfrac{|h|}{h}\)</span> does not exist. Since the limit does not exist, neither does the derivative.</p>
+<p><strong>Solution:</strong> The linear approximation to <span class="math inline">\(f(x) = \sqrt{x-1}\)</span> at <span class="math inline">\(x = 2\)</span> is <span class="math display">\[L(x) = f(2) + f^{\prime}(2)(x-2).\]</span> Therefore, we need to determine <span class="math inline">\(f(2)\)</span> and <span class="math inline">\(f^{\prime}(2)\)</span>. We know that <span class="math display">\[f(2) = \sqrt{2-1} = \sqrt{1} = 1,\]</span> and that <span class="math display">\[f^{\prime}(2) = \dfrac{1}{2\sqrt{x-1}} |_{x=2} = \dfrac{1}{2\sqrt{2-1}} = \dfrac{1}{2}.\]</span> So, the linear approximation of <span class="math inline">\(f(x) = \sqrt{x}\)</span> at <span class="math inline">\(x=2\)</span> is given by
+<span class="math display">\[L(x) = 1 + \dfrac{1}{2}(x-2).\]</span>
+To approximate <span class="math inline">\(\sqrt{1.25}\)</span>, we need to find a close approximation to <span class="math inline">\(f(2.25)\)</span> since <span class="math display">\[f(2.25) = \sqrt{2.25 - 1} = \sqrt{1.25}.\]</span> We therefore evaluate <span class="math display">\[L(2.25) 1 + \dfrac{1}{2}(2.25-2) = 1 + \dfrac{1}{2}(0.25) = 1.125.\]</span> We note that the actual value of <span class="math inline">\(\sqrt{1.25}\)</span> is 1.118, so we are pretty close.</p>
 </div>
-<table>
-<thead>
-<tr class="header">
-<th align="center"><img src="Pic40.png" /></th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
 <p>Practice Problems</p>
-<ol style="list-style-type: upper-alpha">
-<li>Determine where the following functions are differentiable.</li>
+<ol style="list-style-type: decimal">
+<li>Find the linear approximation to the curve at the given point.</li>
 </ol>
 <ul>
-<li><span class="math inline">\(f(x) = \begin{cases} x+1 &amp; x \geq 0 \\ x-1 &amp; x &lt; 0 \end{cases}\)</span></li>
-<li><span class="math inline">\(f(x) = |x-1|\)</span></li>
-<li><span class="math inline">\(f(x) = \begin{cases} x^2 &amp; x \geq 0 \\ -x&amp; x &lt; 0 \end{cases}\)</span></li>
-<li><span class="math inline">\(f(x) = \dfrac{1}{x^2}\)</span></li>
-<li><span class="math inline">\(f(x) = x^{1/3}\)</span></li>
-<li><span class="math inline">\(f(x) = \dfrac{x}{|x|}\)</span></li>
-<li><span class="math inline">\(f(x) = \sqrt{x}\)</span></li>
-<li><span class="math inline">\(f(x) = \sqrt{x}\)</span></li>
+<li><span class="math inline">\(y = e^x\)</span> at <span class="math inline">\(a = 0\)</span></li>
+<li><span class="math inline">\(y = \sqrt{x-2}\)</span> at <span class="math inline">\(a = 6\)</span></li>
+<li><span class="math inline">\(y = \ln(x)\)</span> at <span class="math inline">\(a = e\)</span></li>
+<li><span class="math inline">\(y = \cos(x)\)</span> at <span class="math inline">\(a = \pi\)</span></li>
+<li><span class="math inline">\(y = x^2 + x + 1\)</span> at <span class="math inline">\(a = 2\)</span></li>
+<li><span class="math inline">\(y = e^{x-3}\)</span> at <span class="math inline">\(a = 3\)</span></li>
 </ul>
-<ol start="2" style="list-style-type: upper-alpha">
-<li>For each of the functions in part A, sketch a graph of the derivatives.</li>
+<ol start="2" style="list-style-type: decimal">
+<li>Find the linear approximation to the curve at the given point and use it to approximate the given number.</li>
+</ol>
+<ul>
+<li><span class="math inline">\(y = e^x\)</span> at <span class="math inline">\(a = 0\)</span> approx <span class="math inline">\(\sqrt{e}\)</span></li>
+<li><span class="math inline">\(y = \sqrt{x-2}\)</span> at <span class="math inline">\(a = 6\)</span> approx <span class="math inline">\(\sqrt{3.8}\)</span></li>
+<li><span class="math inline">\(y = \ln(x)\)</span> at <span class="math inline">\(a = e\)</span> approx <span class="math inline">\(\ln(3)\)</span></li>
+<li><span class="math inline">\(y = \cos(x)\)</span> at <span class="math inline">\(a = \pi\)</span> approx <span class="math inline">\(\cos(3.5)\)</span></li>
+<li><span class="math inline">\(p(x) = x^2 + x + 1\)</span> at <span class="math inline">\(a = 2\)</span> approx <span class="math inline">\(p(2.25)\)</span></li>
+<li><span class="math inline">\(y = e^{x-3}\)</span> at <span class="math inline">\(a = 3\)</span> approx <span class="math inline">\(\sqrt{e}\)</span>.</li>
+</ul>
+<ol start="3" style="list-style-type: decimal">
+<li><p>Find the linear approximation to <span class="math inline">\(\sqrt[4]{x}\)</span> at <span class="math inline">\(a = 2\)</span>. Use it to approximate <span class="math inline">\(\sqrt[4]{3}\)</span> and <span class="math inline">\(\sqrt{4}{10}\)</span> and compare to the exact values.\</p></li>
+<li><p>Use a linear approximation to determine the value of <span class="math inline">\(e^{0.1}\)</span> without the use of any computational aid.</p></li>
 </ol>
 </div>
-<div id="differentiability-continuity" class="section level2 unnumbered hasAnchor">
-<h2>Differentiability &amp; Continuity<a href="the-derivative-as-a-function.html#differentiability-continuity" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Thus far, the functions we have been looking at have almost all been differentiable. Most functions are not differentiable. However, there is a relationship between differentiable and continuous functions.</p>
-<div style="color: blue;">
-<p><strong>Theorem:</strong> If <span class="math inline">\(f\)</span> is differentiable at <span class="math inline">\(a\)</span>, then <span class="math inline">\(f\)</span> is continuous at <span class="math inline">\(a\)</span>.</p>
+<div id="differentials" class="section level2 unnumbered hasAnchor">
+<h2>Differentials<a href="linear-approximations-and-differentials.html#differentials" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Given a function <span class="math inline">\(y = f(x)\)</span>, we call <span class="math inline">\(dy\)</span> and <span class="math inline">\(dx\)</span> differentials and we define the relationship between <span class="math inline">\(f\)</span> and the differentials is given by <span class="math display">\[dy = f^{\prime}(x) dx.\]</span> For example, if <span class="math inline">\(y = x^2 + x + 3\)</span>, the differential for <span class="math inline">\(f\)</span> is given by <span class="math display">\[dy = (2x + 1)dx.\]</span></p>
+<p>Geometrically, <span class="math inline">\(dy\)</span> represents the vertical distance between <span class="math inline">\(x\)</span> and <span class="math inline">\(x + \Delta x\)</span> (or <span class="math inline">\(x + dx\)</span>) on the tangent line of <span class="math inline">\(f\)</span> at <span class="math inline">\(x\)</span>. If <span class="math inline">\(\Delta y\)</span> is the actual change in the vertical distance between <span class="math inline">\(f(x)\)</span> and <span class="math inline">\(f(x + \Delta x)\)</span>, then <span class="math inline">\(dy \approx \Delta y\)</span> and as <span class="math inline">\(\Delta x \rightarrow 0\)</span>, this approximation becomes better.</p>
+<div style="color: green;">
+<p><strong>Example:</strong> Find the differential of <span class="math inline">\(y = e^{x^2 - 4}\)</span>.</p>
 </div>
-<div style="color: blue;">
-<p><strong>Proof:</strong> Let <span class="math inline">\(f\)</span> be a differentiable function at a point <span class="math inline">\(x_0\)</span>. Then, we know the derivative exists. That is, <span class="math display">\[f^{\prime}(x) = \lim_{x \rightarrow x_0} \frac{f(x) - f(x_0)}{x-x_0} = a,\]</span> for some <span class="math inline">\(a \in \mathbb{R}\)</span>. To show that <span class="math inline">\(f\)</span> is continuous at <span class="math inline">\(x_0\)</span>, we need to show that <span class="math display">\[\lim_{x \rightarrow x_0} f(x) - f(x_0) = 0.\]</span> Observe that <span class="math display">\[\lim_{x \rightarrow x_0} f(x) - f(x_0) = \lim_{x \rightarrow x_0} \left[ \frac{f(x) - f(x_0)}{x-x_0} \right] \cdot \lim_{x \rightarrow x_0} (x-x_0) = a \cdot \lim_{x \rightarrow x_0} (x-x_0) = 0.\]</span> Therefore, since <span class="math inline">\(\displaystyle\lim_{x \rightarrow x_0} f(x) - f(x_0) = 0\)</span>, we know the function is continuous.</p>
+<div style="color: green;">
+<p><strong>Solution:</strong> The differential has the form <span class="math display">\[dy = y^{\prime} dx.\]</span> Therefore, the differential for <span class="math inline">\(y = e^{x^2 - 4}\)</span> is <span class="math display">\[dy = \left(2xe^{x^2 -4} \right) dx.\]</span></p>
 </div>
-<p>We know that <span class="math inline">\(f(x) = |x|\)</span> is a continuous function on <span class="math inline">\(\mathbb{R}\)</span>. So, we know that the converse of the theorem does not hold since we have seen that <span class="math inline">\(y = |x|\)</span> is not differentiable at 0. Another example worth noting is <span class="math inline">\(y = \sqrt[3]{x}\)</span>. This function is continuous on <span class="math inline">\(\mathbb{R}\)</span> but is not differentiable at 0 since it has a vertical tangent line. The function <span class="math inline">\(y = x^{2/3}\)</span> is again continuous but not differentiable at <span class="math inline">\(0\)</span> since it has a cusp. Remember, not all continuous functions are differentiable - though many are.</p>
-<table>
-<thead>
-<tr class="header">
-<th align="center"><img src="Pic41.png" /></th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
+<div style="color: green;">
+<p><strong>Example:</strong> Compute <span class="math inline">\(dy\)</span> and <span class="math inline">\(\Delta y\)</span> if <span class="math inline">\(y = \sin(2x + 1)\)</span> as <span class="math inline">\(x\)</span> changes from <span class="math inline">\(x=2\)</span> to <span class="math inline">\(x=2.05\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Solution:</strong> The differential has the form <span class="math display">\[dy = y^{\prime} dx.\]</span> Therefore, the differential for <span class="math inline">\(y = \sin(2x+1)\)</span> is <span class="math display">\[dy = \left(2\cos(2x+1) \right) dx.\]</span> So, <span class="math display">\[dy = \left(2\cos(2(2)+1) \right)(2.05-2) = 0.02836621855.\]</span> We can find <span class="math inline">\(\Delta y\)</span> by computing <span class="math display">\[\Delta y = \sin(2(2.05)+1) - \sin(2(2)+1) = 0.03310959.\]</span> So, with a small <span class="math inline">\(\Delta x\)</span>, we have <span class="math inline">\(dy \approx \Delta x\)</span>.</p>
+</div>
+<div style="color: green;">
+<p><strong>Example:</strong> A sphere was measured and its radius was found to be 35 inches with a possible error of no more that 0.01 inches. What is the maximum possible error in the volume if we use this value of the radius?</p>
+</div>
+<div style="color: green;">
+<p><strong>Solution:</strong> The equation of the volume of a sphere is given by <span class="math display">\[V = \dfrac{4}{3} \pi r^3.\]</span> If we begin with <span class="math inline">\(r = 35 in\)</span>, and assume <span class="math inline">\(dr \approx \Delta r = 0.01 in\)</span>, then <span class="math inline">\(\Delta V \approx dV\)</span> should give us the maximum error.</p>
+<p>The differential here is <span class="math display">\[dV = V^{\prime}(r) dr = \left(4 \pi r^2 \right) dr.\]</span> Computing <span class="math inline">\(dV\)</span>, we find <span class="math display">\[dV = \left(4 \pi (35)^2 \right) (0.01) = 49\pi in^3.\]</span> Therefore, the maximum error in the volume is approximately 153.938 cubic inches.</p>
+<p>Note that this is not a large error as when <span class="math inline">\(r = 35\)</span> inches, the volume is <span class="math inline">\(V = 179,594.38\)</span> for a volume comparison of <span class="math display">\[\dfrac{153.938}{179,594.38} \times 100 = 0.0857\%.\]</span></p>
+</div>
 <p>Practice Problems</p>
-<ol style="list-style-type: upper-alpha">
-<li>Show that the function is continuous but not differentiable at the indicated point:</li>
+<ol style="list-style-type: decimal">
+<li>Find the differential for each of the given functions</li>
 </ol>
 <ul>
-<li><span class="math inline">\(f(x) = \sqrt[3]{x}\)</span> at <span class="math inline">\(x = 0\)</span></li>
-<li><span class="math inline">\(f(x) = \sqrt[3]{(x-2)^2}\)</span> at <span class="math inline">\(x = 2\)</span></li>
-<li><span class="math inline">\(f(x) = \begin{cases} x^2 + 1 &amp; x \leq 1 \\ 2x &amp; x &gt;1 \end{cases}\)</span></li>
+<li><span class="math inline">\(y = \sec(x)\)</span></li>
+<li><span class="math inline">\(y = e^{2x^4 + 1}\)</span></li>
+<li><span class="math inline">\(y = 10^x + \ln(x+4)\)</span></li>
+<li><span class="math inline">\(y = \sin(4x^5 + 1)\)</span></li>
+<li><span class="math inline">\(y = \ln(3x)\cos(5x)\)</span></li>
+<li><span class="math inline">\(y = \dfrac{2^x}{\ln(2x)}\)</span></li>
 </ul>
-<ol start="2" style="list-style-type: upper-alpha">
-<li><p>Suppose that a function <span class="math inline">\(f\)</span> is differentiable at <span class="math inline">\(x_0\)</span>. Define <span class="math inline">\(g(x) = f(mx+b)\)</span> where <span class="math inline">\(m\)</span> and <span class="math inline">\(b\)</span> are constants. Show that if <span class="math inline">\(x_1\)</span> is any point at which <span class="math inline">\(mx_1+b = x_0\)</span>, then <span class="math inline">\(g\)</span> is differentiable and <span class="math inline">\(g^{\prime}(x_1) = mf^{\prime}(x_0)\)</span>.\</p></li>
-<li><p>Draw a graph with the following characteristics:</p></li>
+<ol start="2" style="list-style-type: decimal">
+<li><p>Find <span class="math inline">\(dy\)</span> and <span class="math inline">\(\Delta y\)</span> for <span class="math inline">\(y=e^{x^3}\)</span> as <span class="math inline">\(x\)</span> changes from 2 to 2.05.</p></li>
+<li><p>Find <span class="math inline">\(dy\)</span> and <span class="math inline">\(\Delta y\)</span> for <span class="math inline">\(y=\sin(x^3)\)</span> as <span class="math inline">\(x\)</span> changes from 1 to 0.95.</p></li>
+<li><p>The sides of a cube are found to be <span class="math inline">\(5 ft\)</span> in length with a possible error of no more than <span class="math inline">\(1.25 in\)</span>. What is the maximum possible error in the volume of the cube if we use this value of the length of the side to compute the volume?</p></li>
+<li><p>The radius of a sphere is found to be <span class="math inline">\(18 cm\)</span> in length with a possible error of no more than <span class="math inline">\(0.05 cm\)</span>. What is the maximum possible error in the volume of the sphere if we use this value of the radius to compute the volume?</p></li>
 </ol>
-<ul>
-<li>Exists on <span class="math inline">\([-5,5]\)</span></li>
-<li>Differentiable on <span class="math inline">\([-5,-3)\)</span></li>
-<li>Not continuous at -3</li>
-<li>Differentiable on <span class="math inline">\([-3,2]\)</span></li>
-<li>Continuous at 2</li>
-<li>Not differentiable at 2</li>
-<li>Differentiable on <span class="math inline">\((2,5]\)</span></li>
-</ul>
-<ol start="4" style="list-style-type: upper-alpha">
-<li><p>Find constants <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> so that the following function is continuous and differentiable everywhere <span class="math display">\[f(x) = \begin{cases} ax + b &amp; x \leq 1 \\ 2x^2 &amp; x \geq 1 \end{cases}.\]</span></p></li>
-<li><p>Where is the following function differentiable <span class="math display">\[f(x) = |x-2| + |x+1|.\]</span></p></li>
-<li><p>Explain why <span class="math display">\[f(x) = \begin{cases} x^2 - 1 &amp; x \leq 1 \\ x^2 + 1 &amp; x \geq 1 \end{cases}\]</span> is not differentiable at <span class="math inline">\(x = 1\)</span> even though the derivative of <span class="math inline">\(x^2-1\)</span> and <span class="math inline">\(x^2 + 1\)</span> are the same.</p></li>
-</ol>
-</div>
-<div id="notation" class="section level2 unnumbered hasAnchor">
-<h2>Notation<a href="the-derivative-as-a-function.html#notation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>In differential and integral calculus, there is no single uniform notation for differentiation. Over the years, several different notations have emerged. Each notation typically is contextually advantageous in some area. However, no one notation has the benefit of being the most advantageous in all cases.</p>
-<p>The notation that we have used so far is attributed to Lagrange. In Lagrange notation, a prime mark denotes the derivative. For example, <span class="math inline">\(f^{\prime}(x)\)</span>. If we wanted to take the derivative of the derivative (ie, a second derivative), we use a second prime mark, <span class="math inline">\(f^{\prime \prime}(x)\)</span>. When we are taking a derivative higher than four, most authors switch to Arabic numerals in brackets. For example <span class="math inline">\(f^{(6)}(x)\)</span> for a <span class="math inline">\(6^{th}\)</span> derivative. If <span class="math inline">\(y = f(x)\)</span>, many authors will write <span class="math inline">\(y^{\prime}\)</span> to indicate the derivative of <span class="math inline">\(y\)</span> as a short hand for <span class="math inline">\(f^{\prime}(x)\)</span>.</p>
-<table>
-<thead>
-<tr class="header">
-<th><span class="math inline">\(\;\)</span></th>
-<th>Notation</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Function</td>
-<td><span class="math inline">\(f(x), \;\; y\)</span></td>
-</tr>
-<tr class="even">
-<td>Derivative</td>
-<td><span class="math inline">\(f^{\prime}(x), \;\; y^{\prime}\)</span></td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(2^{nd}\)</span> Derivative</td>
-<td><span class="math inline">\(f^{\prime \prime }(x), \;\; y^{\prime \prime}\)</span></td>
-</tr>
-<tr class="even">
-<td>Higher Derivative</td>
-<td><span class="math inline">\(f^{(n)}(x), \;\; y^{(n)}\)</span></td>
-</tr>
-</tbody>
-</table>
-<div style="color: green;">
-<p><strong>Example:</strong> From one of the previous problems, if <span class="math inline">\(f(x) = x^3 + x - 5\)</span>, we have <span class="math inline">\(f^{\prime}(x) = 3x^2 + 1\)</span>. We can also write:
-<span class="math inline">\(y = x^3 + x - 5 \Longrightarrow y^{\prime}(x) = 3x^2 + 1\)</span>.</p>
-</div>
-<p>Leibnitz notation is slightly different. If <span class="math inline">\(y = f(x)\)</span>, we denote the first derivative of <span class="math inline">\(f\)</span> by <span class="math inline">\(\frac{dy}{dx}\)</span>. So here, <span class="math inline">\(f^{\prime}(x) = \frac{dy}{dx}\)</span>. Another way to interpret Leibnitz notation is by writing <span class="math inline">\(\frac{d}{dx} f(x) = \frac{dy}{dx}\)</span>. The notation <span class="math inline">\(\frac{d}{dx} f(x)\)</span> can be interpreted as ``we are about to take the derivative of <span class="math inline">\(f(x)\)</span>’’. For higher derivatives, we can write <span class="math inline">\(\frac{d^2y}{dx^2}\)</span> in place of <span class="math inline">\(f^{\prime \prime}\)</span>.</p>
-<table>
-<colgroup>
-<col width="33%" />
-<col width="33%" />
-<col width="33%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><span class="math inline">\(\;\)</span></th>
-<th>Lagrange Notation</th>
-<th>Leibnitz Notation</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Function</td>
-<td><span class="math inline">\(f(x), \;\; y\)</span></td>
-<td><span class="math inline">\(f(x), \;\; y\)</span></td>
-</tr>
-<tr class="even">
-<td>Derivative</td>
-<td><span class="math inline">\(f^{\prime}(x), \;\; y^{\prime}\)</span></td>
-<td><span class="math inline">\(\frac{df}{dx}, \;\; \frac{dy}{dx}\)</span></td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(2^{nd}\)</span> Derivative</td>
-<td><span class="math inline">\(f^{\prime\prime }(x), \;\; y^{\prime \prime}\)</span></td>
-<td><span class="math inline">\(\frac{d^2f}{dx^2}, \;\; \frac{d^2y}{dx^2}\)</span></td>
-</tr>
-<tr class="even">
-<td>Higher Derivative</td>
-<td><span class="math inline">\(f^{(n)}(x), \;\; y^{(n)}\)</span></td>
-<td><span class="math inline">\(\frac{d^nf}{dx^n}, \;\; \frac{d^ny}{dx^n}\)</span></td>
-</tr>
-</tbody>
-</table>
-<div style="color: green;">
-<p><strong>Example:</strong> From one of the previous problems, if <span class="math inline">\(f(x) = x^3 + x - 5\)</span>, we have <span class="math inline">\(f^{\prime}(x) = 3x^2 + 1\)</span>. We can also write:
-<span class="math display">\[\begin{align*}
-f(x) &amp;= x^3 + x - 5  \Longrightarrow \frac{df}{dx} = 3x^2 + 1\\ \\
-f(x) &amp;= x^3 + x - 5  \Longrightarrow \frac{d}{dx}f(x) = 3x^2 + 1\\ \\
-y &amp;= x^3 + x - 5  \Longrightarrow \frac{dy}{dx} = 3x^2 + 1\\ \\
-&amp;\frac{d}{dx}\left[x^3 + x - 5\right] = 3x^2 + 1
-\end{align*}\]</span></p>
-</div>
-<p>One final notation is Euler’s notation. Here we use <span class="math inline">\(Df\)</span> to mean <span class="math inline">\(f^{\prime}(x)\)</span>. Higher derivatives are written <span class="math inline">\(D^2f\)</span> for <span class="math inline">\(f^{\prime \prime}(x)\)</span>, etc.</p>
-<div style="color: green;">
-<p><strong>Example:</strong> Given a function <span class="math inline">\(y = f(x)\)</span>, all of the following are equivalent and represent the derivative of <span class="math inline">\(f(x)\)</span> with respect to x.
-<span class="math display">\[f^{\prime}(x) = y^{\prime} = \dfrac{d f}{dx} = \dfrac{dy}{dx} = \dfrac{d}{dx}f(x) = \dfrac{d}{dx} y.\]</span>
-If we want to evaluate the derivative at a point <span class="math inline">\(x = a\)</span>, all of the following are equivalent notations:
-<span class="math display">\[f^{\prime}(a) =  y^{\prime} \bigg\rvert_{x=a} =  \dfrac{df}{dx} \bigg\rvert_{x = a} =  \dfrac{dy}{dx} \bigg\rvert_{x = a}.\]</span></p>
-</div>
-<p>The context in which each of these notations is advantageous will be unclear for a while. For now, we will use each one interchangeably.</p>
 
 </div>
 </div>
@@ -392,8 +310,8 @@ If we want to evaluate the derivative at a point <span class="math inline">\(x =
           </div>
         </div>
       </div>
-<a href="derivatives-and-rates-of-change.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="derivatives-of-polynomials-and-exponential-functions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="related-rates.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="maximum-and-minimum-values.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook/js/app.min.js"></script>
@@ -424,7 +342,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/USERNAME/REPO/edit/BRANCH/02-LimitsAndDerivatives.Rmd",
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/03-DifferentiationRules.Rmd",
 "text": "Edit"
 },
 "history": {
