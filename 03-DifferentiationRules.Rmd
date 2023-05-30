@@ -1,3 +1,1814 @@
 #  (PART)  Differentiation Rules {-}
 
 
+
+
+
+#  3.1  Derivatives of Polynomials and Exponential Functions {-}
+
+
+In order to avoid using the limit definition of the derivative each time we want to differentiate a function, we develop some basic rules.
+
+## Power Functions {-}
+
+::: {style="color: blue;"}
+**Theorem (Derivative of a Constant):**
+Let $c \in \mathbb{R}$.  Then $\frac{d}{dx} (c) = 0$.
+:::
+
+
+::: {style="color: blue;"}
+**Theorem (Derivative of a Power):**    Let $n \in \mathbb{R}$ and $f(x) = x^n$.  Then  $f^{\prime}(x) = nx^{n-1}$.
+:::
+
+
+::: {style="color: green;"}
+**Example:**  Let $y = x^6$.  Find $y^{\prime}$.
+:::
+
+::: {style="color: green;"}
+**Solution:**  Using the derivative of a power rule, $$y^{\prime} = 6x^{6-1} = 6x^5.$$
+:::
+
+
+
+::: {style="color: blue;"}
+**Theorem (Sum Rule):**  Let $f(x)$ and $g(x)$ be differentiable functions.  Then \[\frac{d}{dx} \left[ f(x) \pm g(x)\right] = \frac{df}{dx} \pm \frac{dg}{dx}.\]
+:::
+
+::: {style="color: green;"}
+**Example:**    Let $y = x^4 + x^2 - x + 10$.  Find $y^{\prime}$.
+:::
+
+::: {style="color: green;"}
+**Solution:** Using the power rule and the sum rule, \begin{align*} y^{\prime} &= \frac{d}{dx} x^4 + x^2 - x + 10\\
+&= 4x^{4-1} + 2x^{2-1} - 1x^{1-1} + 0\\
+&= 4x^{3} + 2x - 1.
+\end{align*}  Therefore, $y^{\prime} = 4x^{3} + 2x - 1$.
+:::
+
+
+::: {style="color: blue;"}
+**Theorem (Constant Multiple Rule):**  Let $f(x)$ be a differentiable function.  Then $\frac{d}{dx} cf(x)= c\frac{d}{dx} f(x)$.
+:::
+
+
+
+::: {style="color: green;"}
+**Example:**   Let $y = 5x^3 + 2x^{2.5} - 5x^{6/5} + 4 - 3x^{-1/3}$.  Find $\frac{dy}{dx}$.
+:::
+
+::: {style="color: green;"}
+**Solution:** 
+Using our differentiation laws, \begin{align*} \dfrac{dy}{dx} &= \frac{d}{dx}5x^3 + 2x^{2.5} - 5x^{6/5} + 4 - 3x^{-1/3}\\
+&= 5(3)x^{3-1} + 2(2.5)x^{2.5-1} - 5(6/5)x^{6/5-1} + 0 - 3(-1/3)x^{-1/3-1}\\
+&= 15x^{2} + 5x^{1.5} - 6x^{1/5} + x^{-2/3}.
+\end{align*}  Therefore, $\frac{dy}{dx} = 15x^{2} + 5x^{1.5} - 6x^{1/5} + x^{-2/3}$.
+:::
+
+
+::: {style="color: green;"}
+**Example:**   Let $y = \frac{1}{3x^3} - \sqrt{x} + \sqrt[3]{x} + x^{\pi} - e^{\pi}$.  Find $\frac{dy}{dx}$.
+:::
+
+::: {style="color: green;"}
+**Solution:** Using our differentiation laws, \begin{align*} \dfrac{dy}{dx} &= \frac{d}{dx}\frac{1}{3x^3} - \sqrt{x} + \sqrt[3]{x} + x^{\pi} - e^{\pi}\\
+&= \frac{d}{dx} 3x^{-3} -x^{1/2} + x^{1/3} + x^{\pi} - e^{\pi}\\
+&= 3(-3)x^{-3-1} -(1/2)x^{1/2-1} + (1/3)x^{1/3-1} + \pi x^{\pi-1} - 0\\
+&= -9x^{-4} -(1/2)x^{-1/2} + (1/3)x^{-2/3} + \pi x^{\pi-1}.
+\end{align*}  Therefore, $\frac{dy}{dx} = -9x^{-4} -(1/2)x^{-1/2} + (1/3)x^{-2/3} + \pi x^{\pi-1}$.
+:::
+
+
+
+Practice Problems
+
+A.  Find $y^{\prime}$.
+
+  * $y = 4x^3 - 2x^2 + x - 10$
+  * $y = 25x^2 - x^{-3} + x^{-5} + 5$
+  * $y = x^{-1} + x^{-2/3} + x^{-4/3}$
+  * $y = x^{4/5} - 3x^{10/7} + x^{3/5}$
+
+B.  Find $\frac{dy}{dx}$.
+
+  * $y = \sqrt{x} + 4\sqrt[4]{x} - 3\sqrt[5]{x}$
+  * $y = \dfrac{1}{\sqrt{x}} + 4\sqrt{x}$
+  * $y = \dfrac{x^3 + x^2 + x + 1}{x}$
+  * $y = (x^2 + 1)(x^3 - 1)$
+
+
+##  Proof of Differentiation Rules {-}
+
+::: {style="color: blue;"}
+**Theorem (Derivative of a Constant):**    Let $c \in \mathbb{R}$.  Then \[\frac{d}{dx} (c) = 0.\]
+:::
+
+::: {style="color: blue;"}
+**Proof:**   Let $c \in \mathbb{R}$ and $f(x) = c$.  Then
+\begin{align*} \frac{d}{dx} f(x) &= \lim_{h \rightarrow 0} \dfrac{f(x+h) - f(x)}{h}\\
+&= \lim_{h \rightarrow 0} \dfrac{c - c}{h}\\
+&= \lim_{h \rightarrow 0} \dfrac{0}{h}\\
+&= \lim_{h \rightarrow 0} 0\\
+&= 0.
+\end{align*}  Therefore, $\frac{d}{dx} (c) = 0$.
+:::
+
+
+The power rule is true for all $n \in \mathbb{R}$.  At this point, we are unable to prove the general case.  We can prove the power rule for $n \in \mathbb{Z}^+$.
+
+::: {style="color: blue;"}
+**Theorem (Power Rule):**   Let $n \in \mathbb{Z}^+$.  Then \[\frac{d}{dx} x^n = nx^{n-1}.\]
+:::
+
+::: {style="color: blue;"}
+**Proof:**   Let $n \in \mathbb{Z}^+$ and $f(x) = x^n$.  Then
+\begin{align*}
+\frac{d}{dx} f(x) &= \lim_{h \rightarrow 0} \; \dfrac{f(x+h) - f(x)}{h}\\
+&= \lim_{h \rightarrow 0} \; \dfrac{(x+h)^n - x^n}{h}\\
+&= \lim_{h \rightarrow 0} \; \dfrac{x^n + \frac{n(n-1)}{2}x^{n-1}h + \frac{n(n-1)(n-2)}{3!}x^{n-2}h^2 + \cdots + nxh^{n-1} + h^n- x^n}{h}\\
+&= \lim_{h \rightarrow 0} \; \dfrac{nx^{n-1}h + \frac{n(n-1)}{2!}x^{n-2}h^2 + \cdots + nxh^{n-1} + h^{n}}{h}\\
+&= \lim_{h \rightarrow 0} \; \dfrac{h\left[nx^{n-1} + \frac{n(n-1)}{2!}x^{n-2}h + \cdots + nxh^{n-2} + h^{n-1}\right]}{h}\\
+&= \lim_{h \rightarrow 0} \; nx^{n-1} + \frac{n(n-1)}{2!}x^{n-2}h + \cdots + nxh^{n-2} + h^{n-1}\\
+&= nx^{n-1}.
+\end{align*}  Therefore, $\frac{d}{dx} x^n = nx^{n-1}$.
+:::
+
+
+::: {style="color: blue;"}
+**Theorem (Sum Rule):**    Let $f(x)$ and $g(x)$ be differentiable functions.  Then \[\frac{d}{dx} \left[ f(x) \pm g(x)\right] = \frac{df}{dx} \pm \frac{dg}{dx}.\]
+:::
+
+::: {style="color: blue;"}
+**Proof:**   Let $f(x)$ and $g(x)$ be differentiable and take $k(x) = f(x) \pm g(x)$.  Then
+\begin{align*}
+\frac{d}{dx} k(x) &= \lim_{h \rightarrow 0} \; \dfrac{k(x+h) - k(x)}{h}\\
+&= \lim_{h \rightarrow 0} \; \dfrac{f(x+h) \pm g(x+h) - [f(x) \pm g(x)]}{h}\\
+&= \lim_{h \rightarrow 0} \; \dfrac{[f(x+h) - f(x)] \pm [g(x+h) - g(x)]}{h}\\
+&= \lim_{h \rightarrow 0} \; \dfrac{f(x+h) - f(x)}{h} \pm \dfrac{g(x+h) - g(x)}{h}\\
+&= \lim_{h \rightarrow 0} \; \dfrac{f(x+h) - f(x)}{h} \pm \lim_{h \rightarrow 0} \; \dfrac{g(x+h) - g(x)}{h}\\
+&= \dfrac{df}{dx} \pm \dfrac{dg}{dx}.
+\end{align*}  Therefore, $\frac{d}{dx} \left[ f(x) \pm g(x)\right] = \frac{df}{dx} \pm \frac{dg}{dx}$.
+:::
+
+
+
+::: {style="color: blue;"}
+**Theorem (Constant Multiple Rule):**  Let $f(x)$ be a differentiable function.  Then \[\frac{d}{dx} cf(x)= c\frac{d}{dx} f(x).\]
+:::
+
+::: {style="color: blue;"}
+**Proof:**   Let $f(x)$ be differentiable and $c \in \mathbb{R}$.  Then
+\begin{align*}
+\frac{d}{dx} cf(x) &= \lim_{h \rightarrow 0} \; \dfrac{cf(x+h) - cf(x)}{h}\\
+&= \lim_{h \rightarrow 0} \; \dfrac{c\left[f(x+h) - f(x)\right]}{h}\\
+&= \lim_{h \rightarrow 0} \; c\dfrac{f(x+h) - f(x)}{h}\\
+&= c \; \lim_{h \rightarrow 0} \; \dfrac{f(x+h) - f(x)}{h}\\
+&= c \dfrac{d}{dx} f(x).
+\end{align*}  Therefore,  $\frac{d}{dx} cf(x)= c\frac{d}{dx} f(x)$.
+:::
+
+
+
+
+
+
+##  Derivatives of Exponential Functions {-}
+
+::: {style="color: blue;"}
+**Theorem (Derivative of Exponential Functions):**   Let $a \in \mathbb{R}$.  Then \[\dfrac{d}{dx} a^x = a^x \ln(a) \;\;\; \text{ and } \;\;\; \dfrac{d}{dx} e^x = e^x.\]
+:::
+
+We will prove this rule later in the book.
+
+
+
+|![](Pic42.png)|
+|:--:|
+
+
+::: {style="color: green;"}
+**Example:**   Let $y = 5e^x - 10^x$.  Find $\frac{dy}{dx}$.
+:::
+
+::: {style="color: green;"}
+**Solution:** Using our differentiation laws, \begin{align*} \dfrac{dy}{dx} &= \frac{d}{dx}\left(5e^x - 10^x\right)\\
+&=  5\frac{d}{dx}e^x - \frac{d}{dx}10^x\\
+&= 5e^x - 10^x \ln(10).
+\end{align*}  Therefore, $\frac{dy}{dx} = 5e^x - 10^x \ln(10)$.
+:::
+
+::: {style="color: green;"}
+**Example:**    Let $f(x) = 2^x + 2^{2x} + 2^{3x}$.  Find $f^{\prime}(x)$.
+:::
+
+::: {style="color: green;"}
+**Solution:** Using our differentiation laws, \begin{align*} f^{\prime}(x) &= \frac{d}{dx}\left(2^x + 2^{2x} + 2^{3x}\right)\\
+&=  \frac{d}{dx}2^x + \frac{d}{dx}2^{2x} + \frac{d}{dx}2^{3x}\\
+&=  \frac{d}{dx}2^x + \frac{d}{dx}4^{x} + \frac{d}{dx}8^{x}\\
+&=  2^x\ln(2) + 4^{x}\ln(4) + 8^{x}\ln(8).
+\end{align*}  Therefore, $f^{\prime}(x) = 2^x\ln(2) + 4^{x}\ln(4) + 8^{x}\ln(8)$.
+:::
+
+
+
+Practice Problems
+
+1.  Find $y^{\prime}$.
+
+  * $y = e^x + 4^x$
+  * $y = 5 + 3^{3x}$
+  * $y = 2^x + x^2 - 4$
+  * $y = (e^x - e^x)(e^x + e^x)$
+  * $y = e^x + x^e$
+  * $y = 3e^x + \dfrac{2}{x} - \dfrac{5}{x^2}$
+  * $y = \sqrt[4]{x} - 4e^x$
+  * $y = e^{x+1} + 1$
+  * $y = e^{2x}$
+  * $y = e^{nx}$, for $n \not = 0$.
+
+
+2.  Find the equation of the tangent line at the indicated point.  Sketch the graph and the tangent line.
+
+  * $y = e^x$ at $a = 1$
+  * $y = 2 + 3^{x}$ $a = 0$
+  * $y = 2^x - 4$ at $a = 2$
+  * $y = e^x + 2^x$ at $a = 0$
+
+
+
+
+
+# 3.2  The Product and the Quotient Rule {-}
+
+##  The Product Rule {-}
+
+In this section, we deal with finding the derivative of a product of functions.  
+
+
+::: {style="color: blue;"}
+**Theorem (Product Rule):**  Let $f$ and $g$ be differentiable function.  Then \[\dfrac{d}{dx}(f(x)g(x)) = g(x)\dfrac{d}{dx}f(x) + f(x) \dfrac{d}{dx} g(x).\]
+:::
+
+Essentially, if you are taking the derivative of a product of two functions, you differentiate the first function, multiply that by the second function, take the derivative of the second function, multiply that by the first function then add the two products together.  In other words, \[(uv)^{\prime} = u^{\prime}v+ v^{\prime}u.\]
+
+::: {style="color: green;"}
+**Example:**   Differentiate $y = x^2e^x$.
+:::
+
+::: {style="color: green;"}
+**Solution:**  Let $u = x^2$ and $v = e^x$.  Then, $u^{\prime} = 2x$ and $v^{\prime} = e^x$.  By the product rule,
+\begin{align*}  \dfrac{d}{dx} x^2e^x &= \dfrac{d}{dx} uv\\
+&= u^{\prime} v + v^{\prime} u\\
+&= 2x(e^x) + e^x(x^2).
+\end{align*}
+Therefore, $y^{\prime} = 2x(e^x) + e^x(x^2)$.
+:::
+
+::: {style="color: green;"}
+**Example:**   Find the derivative of  $f(x) = (x^4 + 5x^3 + 4x^3 + 2x + 1)2^x$.
+:::
+
+::: {style="color: green;"}
+**Solution:**  Let $u = x^4 + 5x^3 + 4x^3 + 2x + 1$ and $v = 2^x$.  Then, $u^{\prime} = 4x^3 + 15x^2 + 12x^2 + 2$ and $v^{\prime} = 2^x\ln 2$.  By the product rule,
+\begin{align*}  \dfrac{d}{dx} (x^4 + 5x^3 + &4x^3 + 2x + 1)2^x\\
+&= \dfrac{d}{dx} uv\\
+&= u^{\prime} v + v^{\prime} u\\
+&= 4x^3 + 15x^2 + 12x^2 + 2(2^x) + 2^x\ln 2(x^4 + 5x^3 + 4x^3 + 2x + 1).
+\end{align*}
+So, $f^{\prime}(x) = 4x^3 + 15x^2 + 12x^2 + 2(2^x) + 2^x\ln 2(x^4 + 5x^3 + 4x^3 + 2x + 1)$.
+:::
+
+
+::: {style="color: green;"}
+**Example:**   Find $f^{\prime}(x)$ given $f(x) = 2^xe^{x-1}$.
+:::
+
+::: {style="color: green;"}
+**Solution:**   First, note that $e^{x-1} = e^x/e = \frac{1}{e}e^x$.  So, $f(x) = \frac{1}{e} 2^xe^x$.  Now, let $u = 2^x$ and $v = e^x$.  Then, $u^{\prime} = 2^x\ln 2$ and $v^{\prime} = e^x$.  By the product rule,
+\begin{align*}  \dfrac{d}{dx} \dfrac{1}{e}2^xe^x &= \dfrac{1}{e} \dfrac{d}{dx} uv\\
+&= \dfrac{1}{e} \left(u^{\prime} v + v^{\prime} u \right)\\
+&= \dfrac{1}{e}\left(2^x\ln 2 e^x + 2^xe^x \right).
+\end{align*}
+Therefore, $f^{\prime}(x) = \dfrac{1}{e}\left(2^x\ln 2 e^x + 2^xe^x \right)$.
+:::
+
+
+Practice Problems
+
+1.  Differentiate.
+
+  * $y = x^3e^x$
+  * $y = x 2^x$
+  * $y = (x^2 + x + 1)e^x$
+  * $y = 2^x(e^x + e^x)$
+  * $y = \ln(5)(x^2 + 1)3^x$
+  * $y = 2^x \left(\dfrac{x^2 + 3x+2}{x+1}\right)$
+  * $y = e^x\sqrt{x}$
+  * $y = \ln(2)e^{x+2} 4^{2x}$
+  * $y = (x^2 + 3x + 1)\sqrt{x}$
+  * $y = x^{-2}(4+5x^{-3}$
+
+
+2.  If $f(2) = -8$, $f^{\prime}(2) = 5$, $g(2) = 15$ and $g^{\prime}(2) = -3$, find $(fg)^{\prime}(2)$.
+
+3.  If $f(x) = x^3g(x)$, $g(7) = 2$ and $g^{\prime}(7) = -9$, find $f^{\prime}(7)$.
+
+4.  Find the equation of the tangent line to each of the following functions at the indicated point.
+
+  * $y = 2xe^x + 3$ at $a = 0$
+  * $y = x^22^x$ at $a = 1$
+  * $y = \sqrt{x}e^x$ at $a = 1$
+  * $y = (1 + 5\sqrt{x})(4-2x)$ at $a = 9$.
+
+
+##  Proof of the Product Rule {-}
+
+
+
+::: {style="color: blue;"}
+**Theorem (Product Rule):**   Let $f$ and $g$ be differentiable function.  Then \[\dfrac{d}{dx}(f(x)g(x)) = g(x)\dfrac{d}{dx}f(x) + f(x) \dfrac{d}{dx} g(x).\]
+:::
+
+::: {style="color: blue;"}
+**Proof:**  Let $f$ and $g$ be differentiable functions.  We need to show that \[\dfrac{d}{dx}(f(x)g(x)) = \lim_{h \rightarrow 0} \dfrac{f(x + h)g(x+h) - f(x)g(x)}{h} =  g(x)\dfrac{d}{dx}f(x) + f(x) \dfrac{d}{dx} g(x).\]  Since $f$ and $g$ are differentiable, we know that \[\dfrac{d}{dx} f(x) = \lim_{h \rightarrow 0} \dfrac{f(x+h) - f(x)}{h} \;\;\; \text{ and } \;\;\; \dfrac{d}{dx} g(x) = \lim_{h \rightarrow 0} \dfrac{g(x+h) - g(x)}{h}\] both exist. Observe that,
+\begin{align*}
+\dfrac{d}{dx}(f(x)g(x)) &= \lim_{h \rightarrow 0} \dfrac{f(x + h)g(x+h) - f(x)g(x)}{h}\\
+&=  \mathop {\lim }\limits_{h \to 0} \frac{{f\left( {x + h} \right)g\left( {x + h} \right) - g\left( {x + h} \right)f\left( x \right) + g\left( {x + h} \right)f\left( x \right) - f\left( x \right)g\left( x \right)}}{h}\\
+&= \mathop {\lim }\limits_{h \to 0} \frac{{g\left( {x + h} \right)\left( {f\left( {x + h} \right) - f\left( x \right)} \right)}}{h} + \mathop {\lim }\limits_{h \to 0} \frac{{f\left( x \right)\left( {g\left( {x + h} \right) - g\left( x \right)} \right)}}{h}\\
+& = \mathop {\lim }\limits_{h \to 0} g\left( {x + h} \right)\frac{{f\left( {x + h} \right) - f\left( x \right)}}{h} + \mathop {\lim }\limits_{h \to 0} f\left( x \right)\frac{{g\left( {x + h} \right) - g\left( x \right)}}{h}\\
+& = \mathop {\lim }\limits_{h \to 0} g\left( {x + h} \right) \lim_{h \rightarrow 0}\frac{{f\left( {x + h} \right) - f\left( x \right)}}{h} + \mathop {\lim }\limits_{h \to 0} f\left( x \right) \lim_{h \rightarrow 0} \frac{{g\left( {x + h} \right) - g\left( x \right)}}{h}\\
+&= g(x) \dfrac{d}{dx}f(x) + f(x) \dfrac{d}{dx} g(x).
+\end{align*}
+:::
+
+
+Practice Problems
+
+1.  If $f$, $g$ and $h$ are all differentiable functions, prove that \[\dfrac{d}{dx} f(x)g(x)h(x) = g(x)h(x) \dfrac{d}{dx}f(x) + f(x)h(x) \dfrac{d}{dx}g(x) + f(x)g(x) \dfrac{d}{dx}h(x).\]
+
+
+2.  Calculate $f^{(n)}(x)$ for $f(x) = x^ne^x$ at $x = 0$.
+
+
+
+
+##  The Quotient Rule {-}
+
+The quotient rule is a rule that helps find the derivative of the quotient of two functions. 
+
+
+::: {style="color: blue;"}
+**Theorem (Quotient Rule):**   Let $f$ and $g$ be differentiable function.  Then \[\dfrac{d}{dx}\left(\dfrac{f(x)}{g(x)}\right) = \dfrac{g(x)\dfrac{d}{dx}f(x) - f(x) \dfrac{d}{dx} g(x)}{g(x)^2}.\]
+:::
+
+If you want to find the derivative of the quotient of two functions, take the function in the denominator square it and put it in the denominator.  Take the denominator of the original and put a copy of it in the numerator.  Multiply that by the derivative of the numerator and subtract the product of the derivative of the denominator and the original numerator.  Essentially, \[\left( \dfrac{u}{v} \right)^{\prime} = \dfrac{u^{\prime}v - v^{\prime}u}{v^2}.\]
+
+::: {style="color: green;"}
+**Example:**  Let $y = \dfrac{x^3}{e^x}$.  Find $y^{\prime}$.
+:::
+
+::: {style="color: green;"}
+**Solution:**   Let $u = x^3$ and $v = e^x$.  Then, we know that $u^{\prime} = 3x^2$ and $v^{\prime} = e^x$.  By the quotient rule,
+\begin{align*} y^{\prime} &= \dfrac{d}{dx} \dfrac{x^3}{e^x}\\
+&= \dfrac{d}{dx} \dfrac{u}{v}\\
+&= \dfrac{u^{\prime}v - v^{\prime}u}{v^2}\\
+&= \dfrac{3x^2e^x - e^xx^3}{(e^x)^2}\\
+&= \dfrac{e^x(3x^2- x^3)}{(e^x)^2}\\
+&= \dfrac{3x^2- x^3}{e^x}.
+\end{align*}
+Therefore, by the quotient rule, we see that $y^{\prime} = \dfrac{3x^2-x^3}{e^x}$.
+:::
+
+
+::: {style="color: green;"}
+**Example:**   Let $y = \dfrac{1}{x + 5}$.  Find $\dfrac{dy}{dx}$.
+:::
+
+::: {style="color: green;"}
+**Solution:**   Let $u = 1$ and $v = x+5$.  Then, we know that $u^{\prime} = 0$ and $v^{\prime} = 1$.  By the quotient rule,
+\begin{align*} \dfrac{dy}{dx} &= \dfrac{d}{dx} \dfrac{1}{x+5}\\
+&= \dfrac{d}{dx} \dfrac{u}{v}\\
+&= \dfrac{u^{\prime}v - v^{\prime}u}{v^2}\\
+&= \dfrac{0(x+5) - 1(1)}{(x+5)^2}\\
+&= \dfrac{1}{(x+5)^2}.
+\end{align*}
+Therefore, by the quotient rule, we see that $\dfrac{dy}{dx} = \dfrac{1}{(x+5)^2}$.
+:::
+
+::: {style="color: green;"}
+**Example:**   Differentiate $\dfrac{x^2}{x^3 + x + 1}$.
+:::
+
+\noindent\textbf{Solution:}  Set $y = \dfrac{x^2}{x^3 + x + 1}$.  Let $u = x^2$ and $v = x^3 + x + 1$.  Then, we know that $u^{\prime} = 2x$ and $v^{\prime} = 3x^2 + 1$.  By the quotient rule,
+\begin{align*} y^{\prime} &= \dfrac{d}{dx} \dfrac{x^2}{x^3 + x + 1}\\
+&= \dfrac{d}{dx} \dfrac{u}{v}\\
+&= \dfrac{u^{\prime}v - v^{\prime}u}{v^2}\\
+&= \dfrac{2x(x^3 + x + 1) - (3x^2 + 1)(x^2)}{(x^3 + x + 1)^2}\\
+&= \dfrac{2x^4 + 2x^2 + 2x - 3x^4-x^2}{(x^3 + x + 1)^2}\\
+&= \dfrac{-x^4 + x^2 + 2x}{(x^3 + x + 1)^2}.
+\end{align*}
+Therefore, by the quotient rule, we see that $y^{\prime} = \dfrac{-x^4 + x^2 + 2x}{(x^3 + x + 1)^2}$.
+:::
+
+
+::: {style="color: green;"}
+**Example:**  Let $f(x) = \dfrac{2^x}{\sqrt{x}e^x}$.  Find $f^{\prime}(x)$.
+:::
+
+::: {style="color: green;"}
+**Solution:**   Let $u = 2^x$ and $v = \sqrt{x}e^x$.  Then, we know that $u^{\prime} = 2^x\ln(2)$ and we note that since $v$ is a product of two functions, we need to use the product rule to find the derivative of $v$.  If we let $m = \sqrt{x}$ and $n = e^x$, then $v = mn$ and $v^{\prime} = m^{\prime}n + n^{\prime}m$, where $m^{\prime} = (1/2)x^{-1/2}$ and $n^{\prime} = e^x$.  So, $v^{\prime} = (1/2)x^{-1/2}e^x + e^x\sqrt{x}$.  By the quotient rule,
+\begin{align*} f^{\prime}(x) &= \dfrac{d}{dx} \dfrac{2^x}{\sqrt{x}e^x}\\
+&= \dfrac{d}{dx} \dfrac{u}{v}\\
+&= \dfrac{u^{\prime}v - v^{\prime}u}{v^2}\\
+&= \dfrac{2^x\ln(x)(\sqrt{x}e^x) - ((1/2)x^{-1/2}e^x + e^x\sqrt{x})2^x}{(\sqrt{x}e^x)^2}\\
+&= \dfrac{e^x(2^x\ln(x)\sqrt{x} - (1/2)x^{-1/2}2^x - \sqrt{x}2^x)}{x(e^x)^2}\\
+&= \dfrac{2^x\ln(x)\sqrt{x} - (1/2)x^{-1/2}2^x - \sqrt{x}2^x}{xe^x}.
+\end{align*}
+Therefore, by the quotient rule, $f^{\prime}(x) = \dfrac{2^x\ln(x)\sqrt{x} - (1/2)x^{-1/2}2^x - \sqrt{x}2^x}{xe^x}$.
+:::
+
+Practice Problems
+
+1.  Differentiate.
+
+  * $y = \dfrac{x^4}{3e^x}$
+  * $y = \dfrac{x}{2^x}$
+  * $y = \dfrac{e^x}{x^2 + x + 1}$
+  * $y = \dfrac{3^x}{e^x + 2^x}$
+  * $y = \dfrac{\ln(5)4^x}{x^2 + 1}$
+  * $y = \dfrac{\sqrt{x}}{2^x}$
+  * $y = \dfrac{e^x}{\sqrt{x}}$
+  * $y = \dfrac{\ln(2)e^{x+2}}{ 4^{2x}}$
+  * $y = \dfrac{x^2 + 3x + 1}{\sqrt{x}}$
+  * $y = \dfrac{x^{-2}}{4+5x^{-3}}$
+
+
+2.  Find the derivative.
+
+  * $y = 2^x\dfrac{x^2}{5e^x}$
+  * $y = \dfrac{x2^x}{x^3+1}$
+  * $y = \dfrac{xe^x}{x + 1}$
+  * $y = \dfrac{3^x}{x^2e^x}$
+
+
+
+3.  Find the equation of the tangent line to each of the following functions at the indicated point.
+
+  * $y = \dfrac{2x+1}{e^x}$ at $a = 0$
+  * $y = \dfrac{x^2}{\sqrt{x} + 1}$ at $a = 1$
+  * $y = \dfrac{3\sqrt{x}}{e^x}$ at $a = 1$
+  * $y = \dfrac{(1 + 5\sqrt{x})e^x}{4-2x}$ at $a = 0$.
+
+
+
+##  Proof of the Quotient Rule {-}
+
+::: {style="color: blue;"}
+**Theorem (Quotient Rule):**   Let $f$ and $g$ be differentiable function.  Then \[\dfrac{d}{dx}(\dfrac{f(x)}{g(x)}) = \dfrac{g(x)\dfrac{d}{dx}f(x) - f(x) \dfrac{d}{dx} g(x)}{g(x)^2}.\]
+:::
+
+::: {style="color: blue;"}
+**Proof:** Let $f$ and $g$ be differentiable functions.  We need to show that \[\dfrac{d}{dx}(\dfrac{f(x)}{g(x)}) = \lim_{h \rightarrow 0} \dfrac{\frac{f(x + h)}{g(x+h)} - \frac{f(x)}{g(x)}}{h} = \dfrac{g(x)\dfrac{d}{dx}f(x) - f(x) \dfrac{d}{dx} g(x)}{g(x)^2}.\]  Since $f$ and $g$ are differentiable, we know that \[\dfrac{d}{dx} f(x) = \lim_{h \rightarrow 0} \dfrac{f(x+h) - f(x)}{h} \;\;\; \text{ and } \;\;\; \dfrac{d}{dx} g(x) = \lim_{h \rightarrow 0} \dfrac{g(x+h) - g(x)}{h}\] both exist. Observe that,
+\begin{align*}\dfrac{d}{dx}\left(\dfrac{f(x)}{g(x)}\right) &= \mathop {\lim }\limits_{h \to 0} \frac{{\frac{{f\left( {x + h} \right)}}{{g\left( {x + h} \right)}} - \frac{{f\left( x \right)}}{{g\left( x \right)}}}}{h}\\
+&= \mathop {\lim }\limits_{h \to 0} \frac{1}{h}\,\,\frac{{f\left( {x + h} \right)g\left( x \right) - f\left( x \right)g\left( {x + h} \right)}}{{g\left( {x + h} \right)g\left( x \right)}}\\
+&= \mathop {\lim }\limits_{h \to 0} \frac{1}{h}\,\,\frac{{f\left( {x + h} \right)g\left( x \right) - f\left( x \right)g\left( x \right) + f\left( x \right)g\left( x \right) - f\left( x \right)g\left( {x + h} \right)}}{{g\left( {x + h} \right)g\left( x \right)}}\\
+&= \mathop {\lim }\limits_{h \to 0} \frac{1}{{g\left( {x + h} \right)g\left( x \right)}}\,\,\frac{{f\left( {x + h} \right)g\left( x \right) - f\left( x \right)g\left( x \right) + f\left( x \right)g\left( x \right) - f\left( x \right)g\left( {x + h} \right)}}{h}\\
+&= \mathop {\lim }\limits_{h \to 0} \frac{1}{{g\left( {x + h} \right)g\left( x \right)}}\,\,\left( {\frac{{f\left( {x + h} \right)g\left( x \right) - f\left( x \right)g\left( x \right)}}{h} + \frac{{f\left( x \right)g\left( x \right) - f\left( x \right)g\left( {x + h} \right)}}{h}} \right)\\
+&= \mathop {\lim }\limits_{h \to 0} \frac{1}{{g\left( {x + h} \right)g\left( x \right)}}\,\,\left( {g\left( x \right)\frac{{f\left( {x + h} \right) - f\left( x \right)}}{h} - f\left( x \right)\frac{{g\left( {x + h} \right) - g\left( x \right)}}{h}} \right)\\
+& = \frac{1}{{\mathop {\lim }\limits_{h \to 0} g\left( {x + h} \right)\mathop {\lim }\limits_{h \to 0} g\left( x \right)}}\,\left( {\left( {\mathop {\lim }\limits_{h \to 0} g\left( x \right)} \right)\left( {\mathop {\lim }\limits_{h \to 0} \frac{{f\left( {x + h} \right) - f\left( x \right)}}{h}} \right) - } \right.\\
+& \hspace{2.25in}\left. {\left( {\mathop {\lim }\limits_{h \to 0} f\left( x \right)} \right)\left( {\mathop {\lim }\limits_{h \to 0} \frac{{g\left( {x + h} \right) - g\left( x \right)}}{h}} \right)} \right)\\
+& = \frac{1}{{g\left( x \right)g\left( x \right)}}\,\,\left( {g\left( x \right)f'\left( x \right) - f\left( x \right)g'\left( x \right)} \right)\\ &  = \dfrac{g(x)\dfrac{d}{dx}f(x) - f(x) \dfrac{d}{dx} g(x)}{g(x)^2}.
+\end{align*}
+:::
+
+
+Practice Problems
+
+1.  If $g$ is differentiable, find $f^{\prime}(x)$ given \[f(x) = \dfrac{g(x)}{x^3}.\]
+
+2.  If $g$ is differentiable, find $f^{\prime}(x)$ given \[f(x) = \dfrac{1 + x^2g(x)}{x}.\]
+
+3.  If $g$ is differentiable, find $f^{\prime}(x)$ given \[f(x) = \dfrac{2 + xg(x)}{\sqrt{x}}.\]
+
+4.  Calculate $f^{(n)}(x)$ for $f(x) = \dfrac{x^n}{e^x}$ at $x = 0$.
+
+5.  If $f$ and $g$ are differentiable, find $\left(\dfrac{f}{g}\right)^{\prime}(4)$ given $f(4) = 5$, $f^{\prime}(4) = -3$, $g(4) = 6$ and $g^{\prime}(4) = 5$.
+
+6.  If $f$, $g$ and $h$ are differentiable, find $\dfrac{d}{dx} \dfrac{f(x)/g(x)}{h(x)}$ assuming $h(x), g(x) \not = 0$.
+
+7.  Define $\sinh(x) = \dfrac{e^x - e^{-x}}{2}$ as the hyperbolic sine function.  Find the derivative of $\sinh(x)$.
+
+8.  Define $\cosh(x) = \dfrac{e^x + e^{-x}}{2}$ as the hyperbolic cosine function.  Find the derivative of $\cosh(x)$.
+
+
+
+
+
+
+
+
+#  3.3  Derivatives of Trigonometric Functions {-}
+
+##  Derivative of $\sin(x)$ and $\cos(x)$ {-}
+
+In this section, we differentiate $\sin(x)$ and $\cos(x)$.
+
+::: {style="color: blue;"}
+**Theorem (Derivative of sine and cosine):**    The derivative of $\sin(x)$ is $\cos(x)$ and the derivative of $\cos(x)$ is $-\sin(x)$.  That is, \[\dfrac{d}{dx}\sin(x) = \cos(x) \hspace{0.5in} \text{and} \hspace{0.5in} \dfrac{d}{dx} \cos(x) = -\sin(x).\]
+:::
+
+All of the rules that we have studied previously still apply here.
+
+
+::: {style="color: green;"}
+**Example:**   Let $f(x) = 5x\sin(x)$.  Find $f^{\prime}(x)$.
+:::
+
+::: {style="color: green;"}
+**Solution:**  The function $5x\sin(x)$ is a constant multiplied  by a product of two functions.  So, the product rule applies here. Let $u = x$ and $v = \sin(x)$.  Then, we know that $u^{\prime} = 1$ and $v^{\prime} = \cos(x)$.  By the product rule,
+\begin{align*} f^{\prime}(x) &= \dfrac{d}{dx} 5x\sin(x)\\
+&= 5\dfrac{d}{dx} uv\\
+&= 5(u^{\prime}v + v^{\prime}u)\\
+&= 5(1(\sin(x)) + \cos(x)(x))\\
+&= 5\sin(x) + 5x\cos(x).
+\end{align*}
+Therefore, by the product rule, $f^{\prime}(x) = 5\sin(x) + 5x\cos(x)$.
+:::
+
+
+::: {style="color: green;"}
+**Example:**    Let $y = \dfrac{\cos(x) + x}{3\sin(x)}$.  Find $\dfrac{dy}{dx}$.
+:::
+
+::: {style="color: green;"}
+**Solution:**   The function $y$ is a quotient of two functions.  So, one must use the quotient rule in this example. Let $u = \cos(x) + x$ and $v = 3\sin(x)$.  Then, we know that $u^{\prime} = -\sin(x) + 1$ and $v^{\prime} = 3\cos(x)$.  Using the quotient rule, we find that
+\begin{align*} \dfrac{dy}{dx} &= \dfrac{d}{dx} \dfrac{\cos(x) + x}{3\sin(x)}\\
+&= \dfrac{d}{dx} \dfrac{u}{v}\\
+&= \dfrac{u^{\prime}v - v^{\prime}u}{v^2}\\
+&= \dfrac{(-\sin(x) + 1)(3\sin(x)) - 3\cos(x)(\cos(x) + 1)}{(3\sin(x))^2}\\
+&= \dfrac{-3\sin^2(x) + 3\sin(x) - 3\cos^2(x) - 3\cos(x)}{9\sin^2(x)}\\
+&= \dfrac{-3 + 3\sin(x) - 3\cos(x)}{9\sin^2(x)}\\
+&= \dfrac{-1 + \sin(x) - \cos(x)}{3\sin^2(x)}.
+\end{align*}
+Therefore, by the quotient rule, $\dfrac{dy}{dx} =\dfrac{-1 + \sin(x) - \cos(x)}{3\sin^2(x)}$.
+:::
+
+
+::: {style="color: green;"}
+**Example:**   Let $y = \sin(x)\cos(x)$.  Find $y^{\prime}$.
+:::
+
+::: {style="color: green;"}
+**Solution:**    We proceed by the product rule. Let $u = \sin(x)$ and $v = \cos(x)$.  Then, we know that $u^{\prime} = \cos(x)$ and $v^{\prime} = -\sin(x)$.  Using the product rule, we find that
+\begin{align*} y^{\prime} &= \dfrac{d}{dx} \sin(x)cos(x)\\
+&= \dfrac{d}{dx} uv\\
+&= u^{\prime}v + v^{\prime}u\\
+&= \cos(x)\cos(x) + (-\sin(x))\sin(x)\\
+&= \cos^2(x) - \sin^2(x).
+\end{align*}
+Therefore, by the product rule, $y^{\prime}=\cos^2(x) - \sin^2(x)$.
+:::
+
+
+
+
+Practice Problems
+
+1.  Differentiate.
+
+  *  $y = 3^x\sin(x)$
+  *  $y = \cos(x)e^x$
+  *  $y = x^3\sin(x)$
+  *  $y = (x^5 + 2^x)\cos(x)$
+  *  $y = (x^2 + x + 1)\sin(x)$
+  *  $y = e^x(\sin(x) + \cos(x))$
+  *  $y = \dfrac{\sin(x)}{2^x}$
+  *  $y = \dfrac{x}{\cos(x)}$
+  *  $y = \dfrac{e^x}{\sin(x) + x + 1}$
+  *  $y = \dfrac{\cos(x) + x}{e^x + 2^x}$
+  *  $y = \dfrac{\sin(x)}{x^2 + 1}$
+  *  $y = \dfrac{\sqrt{x}}{\cos(x)}$
+
+
+2.  Find the equation of the tangent line at the given point.
+
+  *  $y = \sin(x)$ at $a = \pi$
+  *  $y = \cos(x)$ at $a = 0$
+  *  $y = x^3\sin(x)$ at $a = 0$
+  *  $y = e^x\cos(x)$ at $a = \pi$
+
+
+
+
+##  Other Trigonometric Derivatives {-}
+
+In this section, we introduce the derivatives of the other four basic trigonometric functions.
+
+::: {style="color: green;"}
+**Example:**  Let $y = \tan(x)$.  Find $y^{\prime}$ for all values $x$ in the domain of $\tan(x)$.
+:::
+
+::: {style="color: green;"}
+**Solution:**   The function $y = \tan(x) = \dfrac{\sin(x)}{cos(x)}$ is a quotient of two functions.  We proceed by the quotient rule. Let $u = \sin(x)$ and $v = \cos(x)$.  Then, we know that $u^{\prime} = \cos(x)$ and $v^{\prime} = -\sin(x)$.  Using the quotient rule, we find that
+\begin{align*} y^{\prime} &= \dfrac{d}{dx} \dfrac{\sin(x)}{\cos(x)}\\
+&= \dfrac{d}{dx} \dfrac{u}{v}\\
+&= \dfrac{u^{\prime}v - v^{\prime}u}{v^2}\\
+&= \dfrac{\cos(x)\cos(x) - (-\sin(x))\sin(x)}{(\cos(x))^2}\\
+&= \dfrac{\cos^2(x)\cos(x) + \sin^2(x)}{\cos^2(x)}\\
+&= \dfrac{1}{\cos^2(x)}\\
+&= \sec^2(x).
+\end{align*}
+Therefore, by the quotient rule, $y^{\prime}=\sec^2(x)$.
+:::
+
+::: {style="color: blue;"}
+**Theorem (Derivative of the tangent function):**   For all $x$ in the domain of $\tan(x)$, we have \[\dfrac{d}{dx} \tan(x) = \sec^2(x).\]
+:::
+
+Remember that the domain of $\tan(x)$ is $\mathbb{R}-\{x|x = \pi/2 + k\pi, k \in \mathbb{Z}\}$.  Therefore, the derivative of $\tan(x)$ is undefined at these points (since $\tan(x)$ has an infinite discontinuity at these points).
+
+
+::: {style="color: green;"}
+**Example:**    Let $y = \sec(x)$.  Find $y^{\prime}$ for all values $x$ in the domain of $\sec(x)$.
+:::
+
+::: {style="color: green;"}
+**Solution:**   The function $y = \sec(x) = \dfrac{1}{\cos(x)}$ is a quotient of two functions.  We proceed by the quotient rule. Let $u = 1$ and $v = \cos(x)$.  Then, we know that $u^{\prime} = 0$ and $v^{\prime} = -\sin(x)$.  Using the quotient rule, we find that
+\begin{align*} y^{\prime} &= \dfrac{d}{dx} \dfrac{1}{\cos(x)}\\
+&= \dfrac{d}{dx} \dfrac{u}{v}\\
+&= \dfrac{u^{\prime}v - v^{\prime}u}{v^2}\\
+&= \dfrac{0\cos(x) - (-\sin(x))(1)}{(\cos(x))^2}\\
+&= \dfrac{\sin(x)}{\cos^2(x)}\\
+&= \dfrac{1}{\cos(x)}\dfrac{\sin(x)}{\cos(x)}\\
+&= \sec(x)\tan(x).
+\end{align*}
+Therefore, by the quotient rule, $y^{\prime}=\sec(x)\tan(x)$.
+:::
+
+::: {style="color: blue;"}
+**Theorem (Derivative of the secant function):**   For all $x$ in the domain of $\sec(x)$, we have \[\dfrac{d}{dx} \sec(x) = \sec(x)\tan(x).\]
+:::
+
+Since $\cos(x) = 0$ at $x = \pi/2 + k\pi$ with $k \in \mathbb{Z}$, we know that the domain of $\sec(x)$ is $\mathbb{R} - \{x | x = \pi/2 + k\pi, k \in \mathbb{Z}\}$.
+
+
+::: {style="color: green;"}
+**Example:**   Let $y = \csc(x)$.  Find $y^{\prime}$ for all values $x$ in the domain of $\csc(x)$.
+:::
+
+::: {style="color: green;"}
+**Solution:**   The function $y = \csc(x) = \dfrac{1}{\sin(x)}$ is a quotient of two functions.  We proceed by the quotient rule. Let $u = 1$ and $v = \sin(x)$.  Then, we know that $u^{\prime} = 0$ and $v^{\prime} = \cos(x)$.  Using the quotient rule, we find that
+\begin{align*} y^{\prime} &= \dfrac{d}{dx} \dfrac{1}{\sin(x)}\\
+&= \dfrac{d}{dx} \dfrac{u}{v}\\
+&= \dfrac{u^{\prime}v - v^{\prime}u}{v^2}\\
+&= \dfrac{0\sin(x) - \cos(x)(1)}{(\sin(x))^2}\\
+&= \dfrac{\cos(x)}{\sin^2(x)}\\
+&= \dfrac{1}{\sin(x)}\dfrac{\cos(x)}{\sin(x)}\\
+&= \csc(x)\cot(x).
+\end{align*}
+Therefore, by the quotient rule, $y^{\prime}=\csc(x)\cot(x)$.
+:::
+
+::: {style="color: blue;"}
+**Theorem (Derivative of the cosecant function):**   For all $x$ in the domain of $\csc(x)$, we have \[\dfrac{d}{dx} \csc(x) = \csc(x)\cot(x).\]
+:::
+
+Since $\sin(x) = 0$ at integer multiples of $\pi$, we know that the domain of $\csc(x)$ is $\mathbb{R} - \{x | x = k\pi, k \in \mathbb{Z}\}$.
+
+
+::: {style="color: green;"}
+**Example:**    Let $y = \cot(x)$.  Find $y^{\prime}$ for all values $x$ in the domain of $\cot(x)$.
+:::
+
+::: {style="color: green;"}
+**Solution:**    The function $y = \cot(x) = \dfrac{\cos(x)}{\sin(x)}$ is a quotient of two functions.  We proceed by the quotient rule. Let $u = \cos(x)$ and $v = \sin(x)$.  Then, we know that $u^{\prime} = -\sin(x)$ and $v^{\prime} = \cos(x)$.  Using the quotient rule, we find that
+\begin{align*} y^{\prime} &= \dfrac{d}{dx} \dfrac{\cos(x)}{\sin(x)}\\
+&= \dfrac{d}{dx} \dfrac{u}{v}\\
+&= \dfrac{u^{\prime}v - v^{\prime}u}{v^2}\\
+&= \dfrac{-\sin(x)\sin(x) - \cos(x)\cos(x)}{(\sin(x))^2}\\
+&= \dfrac{-1}{\sin^2(x)}\\
+&= -\csc^2(x).
+\end{align*}
+Therefore, by the quotient rule, $y^{\prime}=-\csc^2(x)$.
+:::
+
+::: {style="color: blue;"}
+**Theorem (Derivative of the cotangent function):**   For all $x$ in the domain of $\cot(x)$, we have \[\dfrac{d}{dx} \cot(x) = -\csc^2(x).\]
+:::
+
+Since $\sin(x) = 0$ at integer multiples of $\pi$, we know that the domain of $\cot(x)$ is $\mathbb{R} - \{x | x = k\pi, k \in \mathbb{Z}\}$.
+
+
+::: {style="color: green;"}
+**Example:**   Let $f(x) = \dfrac{\csc(x)e^x}{x^2}$.  Find $f^{\prime}(x)$ for $x \not = 0$.
+:::
+
+::: {style="color: green;"}
+**Solution:**    The function $f(x) = \dfrac{\csc(x)e^x}{x^2}$ is a quotient of two functions with the numerator a product of two functions.  We proceed by the quotient rule. Let $u = \csc(x)e^x$ and $v = x^2$.  Then, we know that $u^{\prime} = \csc(x)\cot(x)e^x + e^x\csc(x)$ (by the product rule) and $v^{\prime} = 2x$.  Using the quotient rule, we find that
+\begin{align*} y^{\prime} &= \dfrac{d}{dx} \dfrac{\csc(x)e^x}{x^2}\\
+&= \dfrac{d}{dx} \dfrac{u}{v}\\
+&= \dfrac{u^{\prime}v - v^{\prime}u}{v^2}\\
+&= \dfrac{(\csc(x)\cot(x)e^x + e^x\csc(x))x^2 - 2x(\csc(x)e^x)}{(x^2)^2}\\
+&= \dfrac{xe^x(x\csc(x)\cot(x) + x\csc(x)  - 2\csc(x))}{x^4}\\
+&= \dfrac{e^x(x\csc(x)\cot(x) + x\csc(x)  - 2\csc(x))}{x^3}.
+\end{align*}
+Therefore, by the quotient rule, $f^{\prime}(x)= \dfrac{e^x(x\csc(x)\cot(x) + x\csc(x)  - 2\csc(x))}{x^3}$.
+:::
+
+
+
+Practice Problems
+
+1.  Differentiate.
+
+  *  $y = x^2\sec(x)$
+  *  $y = \cot(x)e^x$
+  *  $y = (x^3 + 9\sin(x))\csc(x)$
+  *  $y = (8x^5 + \sin(x)2^x)\cot(x)$
+  *  $y = (7x^2 + x\sin(x) + 1)\sec(x)$
+  *   $y = e^x(\csc(x) + 6\cot(x))$
+  *  $y = \dfrac{5\sec(x)}{2^x}$
+  *  $y = \dfrac{x}{4\csc(x)}$
+  *  $y = \dfrac{e^x}{\cot(x) + \sin(x)}$
+  *  $y = \dfrac{\cos(x) + 3x}{\csc(x)}$
+  *  $y = \dfrac{\sin(x)}{2\cot(x) + 1}$
+  *  $y = \dfrac{4\sqrt{x}}{\sec(x)}$
+
+
+2.  Find the equation of the tangent line at the given point.
+
+  *  $y = \csc(x)$ at $a = \pi$
+  *  $y = \cot(x)$ at $a = 3\pi/2$
+  *  $y = x^3\sec(x)$ at $a = 0$
+  *  $y = e^x\cot(x)$ at $a = \pi$
+
+
+
+##  Proofs of Trigonometric Derivatives {-}
+
+The derivatives for $\tan(x)$, $\sec(x)$, $\csc(x)$ and $\cot(x)$ were predicated on the derivatives of $\sin(x)$ and $\cos(x)$ being what we claimed.  Consequently, we cannot consider these derivative rules proved until we prove the derivative of the sine and cosine functions.  In this section, we do just that.
+
+
+::: {style="color: blue;"}
+**Theorem (Derivative of the sine and cosine functions):** The derivative of $\sin(x)$ is $\cos(x)$.  That is, \[\dfrac{d}{dx}\sin(x) = \cos(x).\]
+:::
+
+::: {style="color: blue;"}
+**Proof:**   We use the limit definition of the derivative.  Let $f(x) = \sin(x)$.
+\begin{align*}  \dfrac{d}{dx} \sin(x) &= \lim_{h \rightarrow 0} \dfrac{f(x+h) - f(x)}{h}\\
+&= \lim_{h \rightarrow 0} \dfrac{\sin(x+h) - \sin(x)}{h}\\
+&= \lim_{h \rightarrow 0} \dfrac{\sin(x)\cos(h) + \cos(x)\sin(h) - \sin(x)}{h}\\
+&= \lim_{h \rightarrow 0} \dfrac{\sin(x)(\cos(h) - 1) + \cos(x)\sin(h)}{h}\\
+&= \lim_{h \rightarrow 0} \dfrac{\sin(x)(\cos(h) - 1)}{h} + \lim_{h \rightarrow 0}\dfrac{\cos(x)\sin(h)}{h}\\
+&= \sin(x)\lim_{h \rightarrow 0} \dfrac{\cos(h) - 1}{h} + \cos(x)\lim_{h \rightarrow 0}\dfrac{\sin(h)}{h}\\
+&= \sin(x)(0) + \cos(x)(1)\\
+&= \cos(x).
+\end{align*}
+The last two limits were as a result of Theorem \ref{Thm:TrigLimits}.
+:::
+
+
+::: {style="color: blue;"}
+**Theorem (Squeeze Theorem):**  The derivative of $\cos(x)$ is $-\sin(x)$.  That is, \[\dfrac{d}{dx} \cos(x) = -\sin(x).\]
+:::
+
+::: {style="color: blue;"}
+**Proof:**   We use the limit definition of the derivative.  Let $f(x) = \cos(x)$.
+\begin{align*}  \dfrac{d}{dx} \cos(x) &= \lim_{h \rightarrow 0} \dfrac{f(x+h) - f(x)}{h}\\
+&= \lim_{h \rightarrow 0} \dfrac{\cos(x+h) - \cos(x)}{h}\\
+&= \lim_{h \rightarrow 0} \dfrac{\cos(x)\cos(h) - \sin(x)\sin(h) - \cos(x)}{h}\\
+&= \lim_{h \rightarrow 0} \dfrac{\cos(x)(\cos(h) - 1) - \sin(x)\sin(h)}{h}\\
+&= \lim_{h \rightarrow 0} \dfrac{\cos(x)(\cos(h) - 1)}{h} - \lim_{h \rightarrow 0}\dfrac{\sin(x)\sin(h)}{h}\\
+&= \cos(x)\lim_{h \rightarrow 0} \dfrac{\cos(h) - 1}{h} - \sin(x)\lim_{h \rightarrow 0}\dfrac{\sin(h)}{h}\\
+&= \cos(x)(0) - \sin(x)(1)\\
+&=-\sin(x).
+\end{align*}
+The final two limits are as a result of Theorem \ref{Thm:TrigLimits}.
+:::
+
+
+
+Practice Problems
+
+1.  Find the derivative of $\sec^3(x)$.
+
+2.  Find the derivative of $\dfrac{\sin^2(x)}{\cos^2(x)}$.
+
+3.  Evaluate $\displaystyle\lim_{h \rightarrow 0} \dfrac{\sin(\pi/3 + h) - \sin(\pi/3)}{h}$.
+
+4.  Find the $3^{rd}$ derivative of $x^2\csc(x)$.
+
+
+
+##  Higher Derivatives {-}
+
+The term higher derivative refers to second, third and, in general, $n^{th}$ derivatives.  A function like \[f(x) = 4x^3 + 5x^2 + 8x + 3\] has first derivative \[f^{\prime}(x) = 12x^2 + 10x + 8.\]  The second derivative of $f$ is \[f^{\prime \prime}(x) = 24x + 10\]  The third derivative is \[f^{\prime \prime \prime}(x) = 24.\]  Of course, the fourth derivative of $f$ is \[f^{(4)}(x) = 0.\]
+
+::: {style="color: blue;"}
+**Theorem:**    If $p(x)$ is a polynomial of degree $n$ then, \[p^{(k)}(x) = 0,\] for all $k \geq n+1$.
+:::
+
+::: {style="color: blue;"}
+**Proof:**   Any derivative of a polynomial reduces the degree of the polynomial by one.  Therefore, if $p$ is a polynomial of degree $n$, the degree of the $n^{th}$ derivative of $p$ will be 0 (ie, a constant).  The $n+1^{st}$ derivative and all subsequent derivatives will therefore be 0.
+:::
+
+
+
+::: {style="color: green;"}
+**Example:**    Find the $n^{th}$ derivative of the function $f(x) = \sin(x)$.
+:::
+
+::: {style="color: green;"}
+**Solution:**   We can find the first few derivatives of $f$ and we can then try to extrapolate a general case.
+
+\begin{align*}
+f(x) &= \sin(x)\\
+f^{\prime}(x) &= \cos(x)\\
+f^{\prime \prime}(x) &= -\sin(x)\\
+f^{\prime \prime \prime}(x) &= -\cos(x)\\
+f^{(4)}(x) &= \sin(x)\\
+f^{(5)}(x) &= \cos(x)\\
+f^{(6)}(x) &= -\sin(x)\\
+f^{(7)}(x) &= -\cos(x)\\
+f^{(8)}(x) &= \sin(x).
+\end{align*}
+
+We can see that there is a cyclical pattern for the derivatives.  Consider the integer $n$.  It can take the form $n = 4k$, $n = 4k+1$, $n = 4k+2$, or $n = 4k+3$ (where $k$ is an integer).  When $n$ has the form $4k$ (as in $f(x)$, $f^{(4)}(x)$ and $f^{(8)}(x)$), the $n^{th}$ derivative is $f^{(n)}(x) = \sin(x)$.  When $n$ has the form $4k+1$ (as in $f^{\prime}(x)$ or $f^{(5)}$), we have $f^{(n)}(x) = \cos(x)$.  If $n = 4k+2$, $f^{(n)}(x) = -\sin(x)$ and when $n = 4k+3$, we see that $f^{(n)}(x) = -\cos(x)$.  We can write \[f^{(n)}(x) = \begin{cases} \sin(x) & n = 4k\\ \cos(x) & n = 4k+1\\ -\sin(x) & n=4k+2\\ -\cos(x) & n = 4k+3 \end{cases}.\]
+:::
+
+Many times a pattern emerges.  In the previous example, it was a result of the cyclical pattern of the derivatives of trigonometric functions.  The next example deals with constants that result from the chain rule.
+
+::: {style="color: green;"}
+**Example:**  Find the $n^{th}$ derivative of the function $f(x) = e^{2x}$.
+:::
+
+::: {style="color: green;"}
+**Solution:**   We can find the first few derivatives of $f$ and we can then try to extrapolate a general case.
+\begin{multicols}{2}
+\begin{align*}
+f(x) &= e^{2x}\\
+f^{\prime}(x) &= 2e^{2x}\\
+f^{\prime \prime}(x) &= 4e^{2x}\\
+f^{\prime \prime \prime}(x) &= 8e^{2x}\\
+f^{(4)}(x) &= 16e^{2x}.
+\end{align*}
+\end{multicols}
+We can see that there is again a pattern for the derivatives.  The third derivative is $2^3e^{2x}$ and the fourth derivative is $2^4e^{2x}$.  It appears that, in general, we have \[f^{(n)}(x) = 2^ne^{2x}.\]
+:::
+
+We can find a higher derivative using implicit differentiation.
+
+
+::: {style="color: green;"}
+**Example:**   Find the second derivative of the curve $x^2 + y^2 = 2xy$.
+:::
+
+::: {style="color: green;"}
+**Solution:**  We can find the first few derivatives using implicit differentiation:
+\begin{align*}
+x^2 + y^2 &= 2\\
+2x + 2y \dfrac{dy}{dx} &=0\\
+\dfrac{dy}{dx} &= \dfrac{-x}{y}.
+\end{align*}
+We differentiate again.
+\begin{align*}
+\dfrac{dy}{dx} &= \dfrac{-x}{y}\\
+\dfrac{d^2y}{dx^2} &= \dfrac{-y + x\dfrac{dy}{dx}}{y^2}\\
+\dfrac{d^2y}{dx^2} &= \dfrac{-y + x(-x/y)}{y^2}\\
+\dfrac{d^2y}{dx^2} &= \dfrac{-y -x^2/y}{y^2}\\
+\dfrac{d^2y}{dx^2} &= \dfrac{-(y^2 + x^2)}{y^3}\\
+\dfrac{d^2y}{dx^2} &= \dfrac{-2}{y^3}.
+\end{align*}
+Therefore, the second derivative of the curve $x^2 + y^2 = 2$ is $\dfrac{d^2y}{dx^2} = \dfrac{-2}{y^3}$.
+:::
+
+Note that in the previous example, we were able to substitute out $dy/dx$ since we had already found that value.  We also substituted out $x^2 + y^2$ since we knew that it was equal to 2.
+
+
+Practice Problems
+
+1.  Find the second, third and fourth derivatives of each of the following.
+
+  *  $y = e^{4x}$
+  *  $f(x) = \sin(2x + 1)$
+  *  $y = x^3 + x^2 + x + 1$
+  *  $g(x) = \ln(x)$
+  *  $h(x) = \tan(x)$
+  *  $f(x) = \cos(2x) + e^{3x}$
+
+
+
+2.  Find a general formula for the $n^{th}$ derivative for each of the following.
+
+  *  $y = \cos(x)$
+  *  $f(x) = \sec(x)$
+  *  $y = e^{3x}$
+  *  $g(x) = \sin(2x + 1)$
+  *  $f(x) = x^2 + x + 1$
+  *  $y = \ln(x)$
+  *  $g(x) = \cos(3x - 2)$
+  *  $y = \cos(2x) + e^{2x}$
+
+
+
+3.  Find the second derivative of each of the following functions.
+
+  *  $x^2 + y^2 = 5$
+  *  $x^2 + 2y = xy$
+  *  $x^2y^3 = 3x$
+  *  $y = x^x$
+  *  $\sin(y) = x$
+  *  $e^y - e^x = 1$
+
+
+
+
+
+#  3.4  The Chain Rule {-}
+
+The chain rule is a rule for differentiating composite functions.  Colloquially, it says that if you want to differentiate a composite function, you differentiate the ``outside'' function first while leaving the "inside" function alone and then you multiply that by the derivative of the inside function.
+
+::: {style="color: blue;"}
+**Theorem (The Chain Rule):**     Suppose $f$ and $g$ are both differentiable functions.
+
+  1.  If $F(x) = f(g(x))$, then the derivative of $F$ is given by \[F^{\prime}(x) = f^{\prime}(g(x))g^{\prime}(x).\]
+  2.  If $y = f(u)$ and $u = g(x)$, then the derivative of $y$ is given by \[\dfrac{dy}{dx} = \dfrac{dy}{du}\dfrac{du}{dx}.\]
+:::
+
+
+::: {style="color: green;"}
+**Example:**   Find the derivative of $\sqrt{3x + 5}$.
+:::
+
+::: {style="color: green;"}
+**Solution:**   In this example, the outside function is $( )^{1/2}$ while the inside function is $3x + 5$.  One might write $f(x) = x^{1/2}$ and $g(x) = 3x+5$ with a goal of finding the derivative of $F(x) = f(g(x))$.  According to the chain rule, the derivative here would be \[F^{\prime}(x) = f^{\prime}(g(x))g^{\prime}(x).\]  We know that $f^{\prime}(x) = \dfrac{1}{2}x^{-1/2}$ and $g^{\prime}(x) = 3$.  Therefore, by the chin rule, \[F^{\prime}(x) = \dfrac{1}{2}(3x+5)^{-1/2}(3) = \dfrac{3}{2\sqrt{3x+5}}.\]
+:::
+
+Notice the pattern of the previous answer.  We took the outside function and differentiated it.  We left the inside function alone (inside the derivative of the outside function) then multiplied everything by the derivative of the inside function.
+
+
+::: {style="color: green;"}
+**Example:**   Find the derivative of $\sin(3^x)$.
+:::
+
+::: {style="color: green;"}
+**Solution:**   Here, the outside function is $f(x) = \sin(x)$ and the inside function is $g(x) = 3^x$.  According to the chain rule, the derivative of $F(x) = f(g(x))$ is \[F^{\prime}(x) = f^{\prime}(g(x))g^{\prime}(x).\]  We know that $f^{\prime}(x) = \cos(x)$ and $g^{\prime}(x) = 3^x\ln3$.  Therefore, by the chin rule, \[F^{\prime}(x) = \cos(3^x)3^x\ln3.\]
+:::
+
+
+
+::: {style="color: green;"}
+**Example:**  Find the derivative of $y = e^{5x}$.
+:::
+
+::: {style="color: green;"}
+**Solution:**    Using Leibnitz notation, we have $y = f(u) = e^u$ and $u(x) = 5x$.  The derivatives are $\dfrac{dy}{du} = e^u$ and $\dfrac{du}{dx} = 5$.  Therefore, \begin{align*}
+\dfrac{dy}{dx} &= \dfrac{dy}{du}\dfrac{du}{dx}\\
+&=e^u(5)\\
+&=5e^{5x}. \end{align*}
+Therefore, the derivative of $y = e^{5x}$ is \[\dfrac{dy}{dx} = 5e^{5x}.\]
+:::
+
+
+::: {style="color: green;"}
+**Example:**    Find the derivative of $f(x) = e^{4\tan(x)}$.
+:::
+
+::: {style="color: green;"}
+**Solution:**    The outside function is $e^x$ while the inside function is $4\tan(x)$.  So, we know that \[f^{\prime}(x) = e^{4\tan(x)}(4\sec^2(x)).\]
+:::
+
+
+Practice Problems
+
+1.  Differentiate.
+
+  *  $y = \cos(2x - 5)$
+  *  $y = (3x + 5)^{50}$
+  *  $y = e^{4x^2 + 3x + 2}$
+  *  $y = \sec(4x - 2)$
+  *  $y = \sin^5(x) + \sin(x^5)$
+  *  $y = (x^3 + 4x + 1)^{500}$
+  *  $y = \sin(4x)$
+  *  $y = \dfrac{1}{(3x + 5)^8}$
+  *  $y = \csc(1/x^2)$
+  *  $y = \sqrt{\sqrt{x} + x}$
+  *  $y = e^{\sin(x)}$
+  *  $y = 5^{e^x}$
+
+
+2.   Differentiate.
+
+  *  $y = (2x+4)^9\sec(2x+1)$
+  *  $y = \cot(4^x)e^{3x}$
+  *  $y = (x^3 + 9\sin(x))^5\csc(x)$
+  *  $y = (8x^5 + \sin(x)2^x)\cot(5x)$
+  *  $y = (7x^2 + x\sin(5x) + 1)\sec(8x)$
+  *  $y = e^{4x-1}(\csc(4x) + 6\cot(3x))$
+  *  $y = \dfrac{5\sec(x)}{2^{4x+1}}$
+  *  $y = \dfrac{x}{4\csc^3(x)}$
+  *  $y = \dfrac{4e^x}{\cot^2(x) + \sin(5x)}$
+  *  $y = \dfrac{\cos^6(x) + 3x}{\csc(8x)}$
+  *  $y = \dfrac{\sin(4x)}{2\cot^3(x) + 1}$
+  *  $y = \dfrac{4\sqrt{3^x}}{\sec(5x)}$
+
+
+
+
+
+##  Proof of The Chain Rule {-}
+
+In this section, we prove the chain rule.
+
+
+::: {style="color: blue;"}
+**Theorem (The Chain Rule):**   Suppose $f$ and $g$ are both differentiable functions.
+
+  1.  If $F(x) = f(g(x))$, then the derivative of $F$ is given by \[F^{\prime}(x) = f^{\prime}(g(x))g^{\prime}(x).\]
+  2.  If $y = f(u)$ and $u = g(x)$, then the derivative of $y$ is given by \[\dfrac{dy}{dx} = \dfrac{dy}{du}\dfrac{du}{dx}.\]
+:::
+
+
+::: {style="color: blue;"}
+**Proof:**    Define $u = g(x)$.  We need to prove  \[\dfrac{d}{dx} f(u) = f^{\prime}(u)\dfrac{du}{dx}.\]  We begin by determining the derivative of $u$.  Since $u = g(x)$, we know that $u$ is a function of $x$.  So,
+\[u^{\prime}(x) = \lim_{h \rightarrow 0} \dfrac{u(x+h) - u(x)}{h}.\]  We also know that \[\mathop {\lim }\limits_{h \to 0} \left( {\frac{{u\left( {x + h} \right) - u\left( x \right)}}{h} - u'\left( x \right)} \right) = \mathop {\lim }\limits_{h \to 0} \frac{{u\left( {x + h} \right) - u\left( x \right)}}{h} - \mathop {\lim }\limits_{h \to 0} u'\left( x \right) = u'\left( x \right) - u'\left( x \right) = 0.\]
+Define \[v\left( h \right) = \left\{ {\begin{array}{*{20}{l}}{\displaystyle \frac{{u\left( {x + h} \right) - u\left( x \right)}}{h} - u'\left( x \right)}&{{\mbox{  if }}h \ne 0}\\0&{{\mbox{  if }}h = 0}\end{array}} \right.\]  Note that $\displaystyle\lim_{h \rightarrow 0} v(h) = 0 = v(0)$ so that $v(h)$ is continuous at $h = 0$.
+
+If $h \not = 0$, we can rewrite $v(h)$ to get $u(x+h) = u(x) + h(v(h) + u^{\prime}(x))$.  We note that this expression for $u(x+h)$ is valid even if we allow $h = 0$ and so is valid for all $h$.
+
+Now, since $f$ is differentiable, we define $w$ as a function of $k$ in the following way: \[w\left( k \right) = \left\{ {\begin{array}{*{20}{l}}{\displaystyle \frac{{f\left( {z + k} \right) - f\left( z \right)}}{k} - f'\left( z \right)}&{{\mbox{  if }}k \ne 0}\\0&{{\mbox{  if }}k = 0}\end{array}} \right.\] and a similar argument to the one above shows that $w(k)$ is continuous at $k = 0$ and that \[f(z+k) = f(z) + k(w(k) + f^{\prime}(z)).\]
+
+At this point, we need to be able to evaluate \[\dfrac{d}{dx} f(u(x)) = \lim_{h \rightarrow 0} \dfrac{f(u(x+h)) - f(u(x))}{h}.\]
+Using the results above, we note that \[f(u(x+h)) - f(u(x)) = f(u(x) + h(v(h) + u^{\prime}(x))) - f(u(x)).\]  Let $z = u(x)$ and $k = h(v(h) + u^{\prime}(x))$, our previous result gives us
+\begin{align*}f\left[ {u\left( {x + h} \right)} \right] - f\left[ {u\left( x \right)} \right] & = f\left[ {u\left( x \right) + h\left( {v\left( h \right) + u'\left( x \right)} \right)} \right] - f\left[ {u\left( x \right)} \right]\\ &  = f\left[ {u\left( x \right)} \right] + h\left( {v\left( h \right) + u'\left( x \right)} \right)\left( {w\left( k \right) + f'\left[ {u\left( x \right)} \right]} \right) - f\left[ {u\left( x \right)} \right]\\ &  = h\left( {v\left( h \right) + u'\left( x \right)} \right)\left( {w\left( k \right) + f'\left[ {u\left( x \right)} \right]} \right).\end{align*}  Thus, we have
+\begin{align*}\frac{d}{{dx}}\left[ {f\left[ {u\left( x \right)} \right]} \right] & = \mathop {\lim }\limits_{h \to 0} \frac{{h\left( {v\left( h \right) + u'\left( x \right)} \right)\left( {w\left( k \right) + f'\left[ {u\left( x \right)} \right]} \right)}}{h}\\ &  = \mathop {\lim }\limits_{h \to 0} \left( {v\left( h \right) + u'\left( x \right)} \right)\left( {w\left( k \right) + f'\left[ {u\left( x \right)} \right]} \right).\end{align*}  Next, since $k = h(v(x) + u^{\prime}(x))$, we have \[\mathop {\lim }\limits_{h \to 0} k = \mathop {\lim }\limits_{h \to 0} h\left( {v\left( h \right) + u'\left( x \right)} \right) = 0.\]  So, by the definition of $w$ and the fact that $w$ is continuous for all $k$, we know that \[\mathop {\lim }\limits_{h \to 0} w\left( k \right) = w\left( {\mathop {\lim }\limits_{h \to 0} k} \right) = w\left( 0 \right) = 0.\]  Moreover, recall that $\displaystyle\lim_{h \rightarrow 0}v(h) = 0$.  Therefore, \begin{align*}\frac{d}{{dx}}\left[ {f\left[ {u\left( x \right)} \right]} \right] & = \mathop {\lim }\limits_{h \to 0} \left( {v\left( h \right) + u'\left( x \right)} \right)\left( {w\left( k \right) + f'\left[ {u\left( x \right)} \right]} \right)\\ &  = u'\left( x \right)f'\left[ {u\left( x \right)} \right]\\ &  = f'\left[ {u\left( x \right)} \right]\frac{{du}}{{dx}},\end{align*} which is exactly what we needed to prove.
+:::
+
+
+Practice Problems
+
+1.  Let $F(x) = f(g(x))$ with $g(2) = -2$, $g^{\prime}(2) = 7$  and $f^{\prime}(-2) = 7$.  Find $F^{\prime}(2)$.
+
+
+2.  Let $F(x) = f(f(x))$ with $f^{\prime}(13) = 11$, $f^{\prime}(5) = 8$ and $f(5) = 13$.  Find $F^{\prime}(5)$.
+
+3.   Find all values of $x$ on the interval $[0,2\pi]$ where the function $f(x) = 2\cos(x) + \sin^2(x)$ has a horizontal tangent line.
+
+
+4.   Let $H$ be a function satisfying $H^{\prime}(x) = \dfrac{2}{x}$ for all $x > 0$.  Find an expression for the derivative of $F(x) = [H(x)]^3$.
+
+5.   Let $H$ be a function satisfying $H^{\prime}(x) = \dfrac{2}{x}$ for all $x > 0$.  Find an expression for the derivative of $F(x) = H(x^3)$.
+
+
+
+
+
+
+#  3.5  Implicit Differentiation {-}
+
+So far, all of the functions that we have differentiated are of the form $y = f(x)$.  Of course, not all curves are functions nor are all curves of the form $y = f(x)$.  That said, if the function is continuous, one may still find the equation of a tangent line at a given point.  In this chapter, we explore differentiating curves of the form $f(x,y) = c$, where $c$ is constant.
+
+
+::: {style="color: green;"}
+**Example:**   Suppose $x^2 + y^2 = 25$.  Find $\dfrac{dy}{dx}$.
+:::
+
+::: {style="color: green;"}
+**Solution:**   If we try to solve this equation for $y$, we end up with 2 different function pieces.  In some examples, we will not be able to solve for $y$.  We can treat $y$ as a function of $x$ and differentiate it as we would any other function.  With this in mind, $y^2$ is a composite function with derivative $2y\frac{dy}{dx}$.  Therefore,
+\begin{align*}  \dfrac{d}{dx} x^2 + y^2 &= \dfrac{d}{dx} 25\\
+2x + 2y\dfrac{dy}{dx} &= 0\\
+2y\dfrac{dy}{dx} &= -2x\\
+\dfrac{dy}{dx} &= -\dfrac{x}{y}. \end{align*}
+Therefore, we see that $\dfrac{dy}{dx} = \dfrac{-x}{y}$.
+:::
+
+
+
+::: {style="color: green;"}
+**Example:**   Suppose $xy  = 1$.  Find $\dfrac{dy}{dx}$.
+:::
+
+::: {style="color: green;"}
+**Solution:**   The function $xy$ is the product of two functions: $x$ and $y = y(x)$.  So,
+\begin{align*}  \dfrac{d}{dx} xy &= \dfrac{d}{dx} 1\\
+(1)y + x\dfrac{dy}{dx} &= 0\\
+x\dfrac{dy}{dx} &= -y\\
+\dfrac{dy}{dx} &= -\dfrac{y}{x}. \end{align*}
+Therefore, we see that $\dfrac{dy}{dx} = \dfrac{-y}{x}$.
+:::
+
+
+::: {style="color: green;"}
+**Example:**   Suppose $e^{x+y} = \sin(y^2)$.  Find $\dfrac{dy}{dx}$.
+:::
+
+::: {style="color: green;"}
+**Solution:**   Both the functions on the left and the right are composite.
+\begin{align*}  \dfrac{d}{dx} e^{x+y}&= \dfrac{d}{dx} \sin(y^2)\\
+e^{x+y}\dfrac{d}{dx} (x+y)&= \cos(y^2)\dfrac{d}{dx} y^2\\
+e^{x+y} \left(1 + \dfrac{dy}{dx} \right)&= \cos(y^2)2y\dfrac{dy}{dx}\\
+e^{x+y}+ \dfrac{dy}{dx}e^{x+y} &= \cos(y^2)2y\dfrac{dy}{dx}\\
+\dfrac{dy}{dx}e^{x+y} - \cos(y^2)2y\dfrac{dy}{dx} &= - e^{x+y} \\
+\dfrac{dy}{dx}\left(e^{x+y} - \cos(y^2)2y \right) &= - e^{x+y} \\
+\dfrac{dy}{dx}&= - \dfrac{e^{x+y}}{e^{x+y} - \cos(y^2)2y}.
+\end{align*}
+Therefore, we see that $\dfrac{dy}{dx} = - \dfrac{e^{x+y}}{e^{x+y} - \cos(y^2)2y}$.
+:::
+
+
+::: {style="color: green;"}
+**Example:**   Suppose $y^2 = x^3 + x + 1$.  Find $\dfrac{dy}{dx}$.
+:::
+
+::: {style="color: green;"}
+**Solution:**    A function like this is called an elliptic curve and is quite important in cryptography.  We differentiate both sides.
+\begin{align*}  \dfrac{d}{dx} y^2&= \dfrac{d}{dx} x^3 + x + 1\\
+2y\dfrac{dy}{dx} &= 3x^2 + 1\\
+\dfrac{dy}{dx}&=\dfrac{3x^2 + 1}{2y}.
+\end{align*}
+Therefore, we see that $\dfrac{dy}{dx} =\dfrac{3x^2 + 1}{2y}$.
+:::
+
+
+|![](Pic43.png)|
+|:--:|
+
+
+
+::: {style="color: green;"}
+**Example:**   Let $x^2 + xy + y^2 = 3$.  Find the equation of the tangent line at $(1,1)$.
+:::
+
+::: {style="color: green;"}
+**Solution:**    We differentiate both sides of the equation.
+\begin{align*}  \dfrac{d}{dx} x^2 + xy + y^2&= \dfrac{d}{dx} 3\\
+2x + (1)y + x\dfrac{dy}{dx} + 2y\dfrac{dy}{dx} &=0\\
+\dfrac{dy}{dx}(x + 2y)&=-2x - y\\
+\dfrac{dy}{dx}&=\dfrac{-2x - y}{x + 2y}.
+\end{align*}
+Therefore, we see that $\dfrac{dy}{dx} =\dfrac{-2x - y}{x + 2y}$.  At $(1,1)$, the slope of the tangent line is $m =-1$.  So, the equation of the tangent line at $(1,1)$ is $y - 1 = -1(x-1)$ or $y = -x + 2$.
+:::
+
+
+|![](Pic44.png)|
+|:--:|
+
+
+
+Practice Problems
+
+1.  Find $\dfrac{dy}{dx}$.
+
+  *  $8x^2 + y^2 = 25$
+  *  $x^4 + y^4 = 2$
+  *  $x^7 + y^7 = 49$
+  *  $\sqrt{y} + \sqrt{x} = 1$
+  *  $\sin(xy) = x\cos(y)$
+  *  $y^5 + x^3y^2 = 2x^2y$
+  *  $x^3y^3 + x\sin(y) = 10$
+  *  $\sqrt{x+y} = \tan(y^2)$
+  *  $\cot(y/x) = x^2 + y$
+  *  $\sec(xy) = \dfrac{y}{1 + x^2}$
+
+
+
+2.  Find the equation of the tangent line at the indicated point.
+
+  *  $x^2 + xy + y^2 = 12$ at $a = (2,2)$
+  *  $3(x^2 + y^2)^2 = 25(x^2 - y^2)$ at $a = (2,1)$
+  *  $x^2 + 2xy + y^2 = 1$ at $a = (0,1)$
+  *  $\cos(xy) + x^2 = \sin(y)$ at $a = (1,\pi/2)$
+  *  $y^2(y^2 - 1) = x^2\tan(y)$ at $a = (0,1)$
+  *  $x^2 + y^2 = 9$ at $a = (2,\sqrt{5})$
+  
+
+##  Derivatives of Inverse Trigonometric Functions {-}
+
+In this chapter, we find the derivatives of the inverse trigonometric functions.
+
+::: {style="color: blue;"}
+**Theorem (Inverse Trig Derivatives):**  The following derivatives hold on their domains:
+
+\[\begin{array}{ll}\displaystyle \frac{d}{{dx}}\left( {{{\sin }^{ - 1}}x} \right) = \frac{1}{{\sqrt {1 - {x^2}} }} & \hspace{1.0in}\displaystyle \frac{d}{{dx}}\left( {{{\cos }^{ - 1}}x} \right) =  - \frac{1}{{\sqrt {1 - {x^2}} }}\\ \displaystyle \frac{d}{{dx}}\left( {{{\tan }^{ - 1}}x} \right) = \frac{1}{{1 + {x^2}}} & \hspace{1.0in}\displaystyle \frac{d}{{dx}}\left( {{{\cot }^{ - 1}}x} \right) =  - \frac{1}{{1 + {x^2}}}\\ \displaystyle \frac{d}{{dx}}\left( {{{\sec }^{ - 1}}x} \right) = \frac{1}{{\left| x \right|\sqrt {{x^2} - 1} }} & \hspace{1.0in}\displaystyle \frac{d}{{dx}}\left( {{{\csc }^{ - 1}}x} \right) =  - \frac{1}{{\left| x \right|\sqrt {{x^2} - 1} }}\end{array}.\]
+$\;$
+:::
+
+We prove this theorem in the next section.
+
+
+::: {style="color: green;"}
+**Example:**   Let $y = \sin^{-1}(x) + 4\tan^{-1}(x)$.  Find the derivative of $y$.
+:::
+
+::: {style="color: green;"}
+**Solution:**   Using the inverse trig derivatives, we find that \[y^{\prime} = \dfrac{1}{\sqrt{1-x^2}} + \dfrac{4}{1+x^2}.\]
+:::
+
+
+::: {style="color: green;"}
+**Example:**   Let $f(x) = \sec^{-1}(3x + 1) + \sqrt{\cot^{-1}(x)}$.  Find $f^{\prime}(x)$.
+:::
+
+::: {style="color: green;"}
+**Solution:**  Using the inverse trig derivatives, we find that \begin{align*} f^{\prime}(x) &= \dfrac{1}{|x|\sqrt{x^2-1}}(3) + \dfrac{1}{2}(\cot^{-1}(x))^{-1/2}\dfrac{-1}{1+x^2}\\
+&= \dfrac{3}{|x|\sqrt{x^2-1}} + \dfrac{-1}{2 \sqrt{\cot^{-1}(x)}(1+x^2)}.\end{align*}
+:::
+
+
+::: {style="color: green;"}
+**Example:**    Differentiate $\sqrt{x}\csc^{-1}(x)$.
+:::
+
+::: {style="color: green;"}
+**Solution:**  Let $f(x) =\sqrt{x}\csc^{-1}(x)$. By the product rule, \[f^{\prime}(x) = \dfrac{1}{2} x^{-1/2}\csc^{-1}(x) + \dfrac{-\sqrt{x}}{|x|\sqrt{x^2-1}}.\]
+:::
+
+
+
+::: {style="color: green;"}
+**Example:**    Differentiate $\dfrac{\arctan(x)}{e^x}$.
+:::
+
+::: {style="color: green;"}
+**Solution:**   Let $f(x) =\dfrac{\arctan(x)}{e^x}$. By the quotient rule, \[f^{\prime}(x) = \dfrac{\dfrac{1}{1+x^2}e^x - e^x\arctan(x)}{e^{2x}} = \dfrac{\dfrac{1}{1+x^2} - \arctan(x)}{e^{x}}.\]
+:::
+
+
+
+
+Practice Problems
+
+1.  Find the derivative.
+
+  *  $y = 2\cos(x) + 4 \cos^{-1}(x)$
+  *  $f(x) = \csc^{-1}(x) - 2\cot^{-1}(x)$
+  *  $y = x^7 \csc^{-1}(x) + \ln(x)\sec^{-1}(x)$
+  *  $g(x) = x^2 + \ln(x)\arctan(x) + \arcsin(x)/x$
+  *  $f(x) = \dfrac{\sin(x)}{\arcsin(x)}$
+  *  $y = \arcsin(e^x) + \cos^{-1}(\ln(x))$
+  *  $y = \arcsin(\arctan(x))$
+  *  $y = \ln(\cos^{-1}(x))$
+  *  $f(x) =  \dfrac{\arcsin(x)}{\arctan(x)}$
+  *  $g(x) = \dfrac{x^4\sec^{-1}(x)}{e^x\arctan(x)}$
+
+
+2.  Find $dy/dx$.
+
+  *  $y^2x = \csc^{-1}(y)$
+  *  $\cos(y) = \arcsin(x)$
+  *  $\dfrac{y}{\arctan(x)} = xy$
+  *   $\sec^{-1}(xy) = xy^2\cos^{-1}(xy^2)$
+
+
+
+3.  Find the equation of the tangent line to $y = \arcsin(x/2)$ at $x = -\sqrt{2}$.
+
+
+4.  Find the equation of the tangent line to $y = \arctan(\ln(x))$ at $x = e$.
+
+
+##  Proof of Inverse Trig Derivative Laws {-}
+
+In this chapter, we prove the derivatives of each inverse trig function using largely implicit differentiation.  We state the theorem below and prove the first 3 derivatives through example.  The final 3 derivatives are similar and left as an exercise.
+
+
+
+::: {style="color: blue;"}
+**Theorem (Inverse Trig Derivatives):**  The following derivatives hold on their domains:
+
+\[\begin{array}{ll}\displaystyle \frac{d}{{dx}}\left( {{{\sin }^{ - 1}}x} \right) = \frac{1}{{\sqrt {1 - {x^2}} }} & \hspace{1.0in}\displaystyle \frac{d}{{dx}}\left( {{{\cos }^{ - 1}}x} \right) =  - \frac{1}{{\sqrt {1 - {x^2}} }}\\ \displaystyle \frac{d}{{dx}}\left( {{{\tan }^{ - 1}}x} \right) = \frac{1}{{1 + {x^2}}} & \hspace{1.0in}\displaystyle \frac{d}{{dx}}\left( {{{\cot }^{ - 1}}x} \right) =  - \frac{1}{{1 + {x^2}}}\\ \displaystyle \frac{d}{{dx}}\left( {{{\sec }^{ - 1}}x} \right) = \frac{1}{{\left| x \right|\sqrt {{x^2} - 1} }} & \hspace{1.0in}\displaystyle \frac{d}{{dx}}\left( {{{\csc }^{ - 1}}x} \right) =  - \frac{1}{{\left| x \right|\sqrt {{x^2} - 1} }}\end{array}.\]
+$\;$
+:::
+
+::: {style="color: green;"}
+**Example:**   Show that $\dfrac{d}{dx} \arcsin(x) = \dfrac{1}{\sqrt{1-x^2}}$.
+:::
+
+::: {style="color: green;"}
+**Solution:**    Let $y = \sin^{-1}(x)$ so that $x = \sin(y)$.  So, $\cos(\sin^{-1}(x)) = \cos(y)$.  Since $\cos^2(y) + \sin^2(y) = 1$, we know that \[\cos(\sin^{-1}(x)) = \cos(y) = \sqrt{1-\sin^2y} = \sqrt{1-x^2}.\]
+
+
+Let $f(x) = \sin(x)$ and $g(x) = \sin^{-1}(x)$. Clearly, $f$ and $g$ are inverses of each other.  As a result, we know that \begin{align*} g^{\prime}(x) &= \dfrac{1}{f^{\prime}(g(x))}\\
+&= \dfrac{1}{\cos(\sin^{-1}(x))}\\
+&= \dfrac{1}{\sqrt{1-x^2}}.
+\end{align*}
+:::
+
+
+
+::: {style="color: green;"}
+**Example:**   Show that $\dfrac{d}{dx} \cos^{-1}(x) = \dfrac{-1}{\sqrt{1-x^2}}$.
+:::
+
+::: {style="color: green;"}
+**Solution:**  Let $y = \cos^{-1}(x)$ so that $x = \cos(y)$.  So, $\sin(\cos^{-1}(x)) = \sin(y)$.  Since $\cos^2(y) + \sin^2(y) = 1$, we know that \[\sin(\cos^{-1}(x)) = \sin(y) = \sqrt{1-\cos^2y} = \sqrt{1-x^2}.\]
+
+Let $f(x) = \cos(x)$ and $g(x) = \cos^{-1}(x)$. Clearly, $f$ and $g$ are inverses of each other.  As a result, we know that \begin{align*} g^{\prime}(x) &= \dfrac{1}{f^{\prime}(g(x))}\\
+&= \dfrac{1}{-\sin(\cos^{-1}(x))}\\
+&= \dfrac{-1}{\sqrt{1-x^2}}.
+\end{align*}
+:::
+
+
+
+::: {style="color: green;"}
+**Example:**   Show that $\dfrac{d}{dx} \tan^{-1}(x) = \dfrac{-1}{1+x^2}$.
+:::
+
+::: {style="color: green;"}
+**Solution:**  Let $y = \tan^{-1}(x)$ so that $x = \tan(y)$.  So, $\sec^2(\tan^{-1}(x)) = \sec^2(y)$.  Since $1 + \tan^2(y) =  \sec^2(y)$, we know that \[\sec^2(\tan^{-1}(x)) = \sec^2(y) = 1 + \tan^2(y) = 1+x^2.\]
+
+Let $f(x) = \tan(x)$ and $g(x) = \tan^{-1}(x)$. Clearly, $f$ and $g$ are inverses of each other.  As a result, we know that \begin{align*} g^{\prime}(x) &= \dfrac{1}{f^{\prime}(g(x))}\\
+&= \dfrac{1}{\sec^2(\tan^{-1}(x))}\\
+&= \dfrac{1}{1 + x^2}.
+\end{align*}
+:::
+
+
+
+
+Practice Problems
+
+1.  Prove $\dfrac{d}{dx}\sec^{-1}(x) = \dfrac{1}{|x|\sqrt{x^2-1}}$.
+
+2.  Prove $\dfrac{d}{dx}\csc^{-1}(x) = \dfrac{-1}{|x|\sqrt{x^2-1}}$.
+
+3.  Prove $\dfrac{d}{dx}\cot^{-1}(x) = \dfrac{-1}{1+x^2}$.
+
+4.  For a continuous function $f(x) = g(x) + h(x)$ and $f^{\prime}(x) = 0$, then $g$ and $h$ differ by a constant.  Let $f(x) = \arcsin(x) + \arccos(x)$.  Show that $f^{\prime}(x) = 0$ and conclude that $\arcsin(x) + \arccos(x) = \dfrac{\pi}{2}$.
+
+5.  For a continuous function $f(x) = g(x) + h(x)$ and $f^{\prime}(x) = 0$, then $g$ and $h$ differ by a constant.  Let $y = \cot^{-1}(1/x) + \arctan(x)$.  What conclusion can you draw about $\cot^{-1}(1/x)$ and $\arctan(x)$?
+
+
+
+
+
+
+#  3.6  Derivatives of Logarithmic and Inverse TrigonometricFunctions {-}
+
+
+##  Logarithmic Derivatives {-}
+
+So far, we have differentiated polynomials, rational functions, trigonometric functions, and exponential functions.  The obvious missing type of function from this list is the logarithmic function.  In this chapter, we  look at the derivatives of logarithmic functions.
+
+::: {style="color: blue;"}
+**Theorem (Log Derivatives):**   Let $x > 0$.  Then \[\dfrac{d}{dx} \ln(x) = \dfrac{1}{x} \hspace{0.51in} \text{and} \hspace{0.51in} \dfrac{d}{dx} \log_a(x) =\dfrac{1}{x\ln a}.\]
+:::
+
+We prove this theorem in the next section.  For now, we try a few examples.
+
+
+::: {style="color: green;"}
+**Example:**    Let $y = \ln(x) + 4\log_3(x)$.  Find the derivative of $y$.
+:::
+
+::: {style="color: green;"}
+**Solution:**   From our log derivatives, we find that \[y^{\prime} = \dfrac{1}{x} + \dfrac{4}{x\ln(3)}.\]
+:::
+
+
+::: {style="color: green;"}
+**Example:**   Let $y = \ln(x^2 + 2x + 5)$.  Find the derivative of $y$.
+:::
+
+::: {style="color: green;"}
+**Solution:**   Here, $\ln(x^2 + 2x + 5)$ is a composite function.  So, we use the chain rule and the derivative of $\ln(x)$.  Differentiating, we find that \[y^{\prime} = \dfrac{1}{x}(2x + 2) =  \dfrac{2x + 2}{x}.\]
+:::
+
+
+::: {style="color: green;"}
+**Example:**  Let $f(x) = \dfrac{\ln(x)}{e^x\ln(2x + 5)}$.  Find  $f^{\prime}(x)$.
+:::
+
+::: {style="color: green;"}
+**Solution:**   We proceed using the quotient rule.  Let $u = \ln(x)$ and $v = e^x\ln(2x+5)$.  Then $u^{\prime} = \dfrac{1}{x}$ and $v^{\prime} = e^x\ln(2x+5) + \dfrac{e^x}{2x+5}(2)$ with the second derivative coming from the product rule.  Now,
+\begin{align*}  f^{\prime}(x) &= \dfrac{d}{dx} \dfrac{\ln(x)}{e^x\ln(2x+5)}\\
+&= \dfrac{d}{dx} \dfrac{u}{v}\\
+&= \dfrac{u^{\prime}v - v^{\prime}u}{v^2}\\
+&= \dfrac{\dfrac{1}{x}e^x\ln(2x+5) - (e^x\ln(2x+5) + \dfrac{2e^x}{2x+5}\ln(x)}{(e^x\ln(2x+5))^2}\\
+&= \dfrac{e^x(\dfrac{\ln(2x+5)}{x} - \ln(x)\ln(2x+5) + \dfrac{2\ln(x)}{2x+5})}{(e^x\ln(2x+5))^2}\\
+&= \dfrac{\dfrac{\ln(2x+5)}{x} - \ln(x)\ln(2x+5) + \dfrac{2\ln(x)}{2x+5}}{e^x(\ln(2x+5))^2}.
+\end{align*}
+Therefore, \[f^{\prime}(x) = \dfrac{\dfrac{\ln(2x+5)}{x} - \ln(x)\ln(2x+5) + \dfrac{2\ln(x)}{2x+5}}{e^x(\ln(2x+5))^2}.\]
+:::
+
+
+
+::: {style="color: green;"}
+**Example:**    Let $f(x) = \ln(x) + 2x + 5$.  Find  the equation of the tangent line at the point $x = 1$.
+:::
+
+::: {style="color: green;"}
+**Solution:**    We begin by finding the $y$ coordinate of $f$ when $x = 1$.  \[f(1) = \ln(1) + 2(1) + 5 = 7.\]  Now, we find the equation of the tangent line at $(1,7)$.  We first find the derivative \[f^{\prime}(x) = \dfrac{1}{x} + 2.\]  So, $f^{\prime}(1) = 3$.  Therefore, the equation of the tangent line at $(1,7)$ is $y - 7 = 3(x-1)$.
+:::
+
+
+
+
+|![](Pic45.png)|
+|:--:|
+
+
+
+Practice Problems
+
+1.  Find the derivative.
+
+  *  $y = \log_2(x)$
+  *  $f(x) = \log_3(4x-5)$
+  *  $y = \ln(\sin(x))$
+  *  $f(x) = \ln(\sqrt{x^2 + 5})$
+  *  $y = \log_{10}(x + \sqrt{6 + x^2})$
+  *  $f(x) = \log_6(\log_7(x))$
+  *  $y = \ln(\sec(x) + \tan(x))$
+  *  $f(x) = \dfrac{e^x}{\ln(2x)}$
+  *  $y = \cos(x)\ln(x)$
+  *  $f(x)= \dfrac{x}{\log_2(x) + sqrt{x}}$
+
+
+
+2.  Find the equation of the tangent line at the given point.
+
+  *  $y = \log(x) + 1$ at $a = 1$
+  *  $y = \ln(x+e)\sin(x)$ at $a = 0$
+  *  $y = \dfrac{e^x}{\ln(-x)}$ at $a = -1$
+  *  $y = \ln(\cos(x)) + 2$ at $a = 0$
+
+
+
+
+
+##  Proof of Logarithmic Derivative Laws {-}
+
+
+In this section, we prove $\dfrac{d}{dx} \log_a(x) =\dfrac{1}{x\ln a}$.
+
+
+We begin with a lemma.
+
+::: {style="color: blue;"}
+**Lemma:**   If $f$ and $g$ are differentiable and inverses of each other, then \[g^{\prime}(x) = \dfrac{1}{f^{\prime}(g(x))}.\]
+:::
+
+::: {style="color: blue;"}
+**Proof:**   Since \[f(g(x)) = x,\] we use the chain rule to find that
+\[\dfrac{d}{dx} f(g(x)) = \dfrac{d}{dx} x  \hspace{0.3in} \Longleftrightarrow \hspace{0.3in}
+f^{\prime}(g(x))g^{\prime}(x) = 1.\]  Therefore,
+\[g^{\prime}(x) = \dfrac{1}{f^{\prime}(g(x))},\]
+as required.
+:::
+
+We note, as an example, that $f(x) = x^2$ is the inverse of $g(x) = \sqrt{x}$ on $[0,\infty)$ and $f^{\prime}(x) = 2x$.  Using the lemma, we find that \[g^{\prime}(x) = \dfrac{1}{f^{\prime}(g(x))} = \dfrac{1}{2(\sqrt{x})}.\]
+
+
+::: {style="color: blue;"}
+**Theorem (Derivatives of Log Functions):**  Let $x > 0$.  Then \[\dfrac{d}{dx} \ln(x) = \dfrac{1}{x} \hspace{0.51in} \text{and} \hspace{0.51in} \dfrac{d}{dx} \log_a(x) =\dfrac{1}{x\ln a}.\]
+:::
+
+::: {style="color: blue;"}
+**Proof:**  We prove the second part, and note that the first part follows as a special case.  If we let $f(x) = a^x$ and $g(x) = \log_a(x)$ are inverses of each other.  We note that $f^{\prime}(x) = a^x\ln(a)$.  By the lemma, \[g^{\prime}(x) = \dfrac{1}{f^{\prime}(g(x))} = \dfrac{1}{a^{\log_1(x)}\ln(a)} = \dfrac{1}{x\ln(a)}.\]
+:::
+
+
+
+##  Logarithmic Differentiation {-}
+
+In this chapter, we examine some methods of differentiating that involve functions that we do not, as yet, know how to differentiate.  In particular, we differentiate functions of the form $f(x)^{g(x)}$.
+
+::: {style="color: green;"}
+**Example:** Suppose $y = x^x$.  Find $\dfrac{dy}{dx}$.
+:::
+
+::: {style="color: green;"}
+**Solution:**  We do not have a formula for the derivative of $x^x$.  However, we can turn the problem into one that we can solve by taking logs on both sides.
+\begin{align*}  y &= x^x\\
+\ln(y) &= \ln(x^x)\\
+\ln(y) &= x\ln(x).
+\end{align*}
+Now, from here, we can differentiate both sides implicitly using the product rule on the right side of the equation.
+\begin{align*}
+\ln(y) &= x\ln(x)\\
+\dfrac{1}{y} \dfrac{dy}{dx} &= \ln(x) + \dfrac{1}{x} x\\
+\dfrac{dy}{dx} &= y\left(\ln(x) + 1\right)\\
+\dfrac{dy}{dx} &= x^x\left(\ln(x) + 1\right),
+\end{align*}
+with the final step resulting from $y = x^x$.  Therefore, \[\dfrac{dy}{dx} = x^x(\ln(x) + 1).\]
+:::
+
+
+::: {style="color: green;"}
+**Example:**    Suppose $y = (x^2 + 1)^{\sin(x)}$.  Find $\dfrac{dy}{dx}$.
+:::
+
+::: {style="color: green;"}
+**Solution:**  We can again use the trick of taking logarithms on both sides.
+\begin{align*}  y &= (x^2 + 1)^{\sin(x)}\\
+\ln(y) &= \ln((x^2 + 1)^{\sin(x)})\\
+\ln(y) &= \sin(x)\ln(x^2 + 1).
+\end{align*}
+Now, from here, we can differentiate both sides implicitly using the product rule on the right side of the equation.
+\begin{align*}
+\ln(y) &= \sin(x)\ln(x^2 + 1).\\
+\dfrac{1}{y} \dfrac{dy}{dx} &= \cos(x)\ln(x^2+1) + \dfrac{2x}{x^2+1}\sin(x)\\
+\dfrac{dy}{dx} &= y\left(\cos(x)\ln(x^2+1) + \dfrac{2x}{x^2+1}\sin(x)\right)\\
+\dfrac{dy}{dx} &= \sin(x)\ln(x^2+1)\left(\cos(x)\ln(x^2+1) + \dfrac{2x}{x^2+1}\sin(x)\right).
+\end{align*}
+Therefore, \[\dfrac{dy}{dx} = \sin(x)\ln(x^2+1)\left(\cos(x)\ln(x^2+1) + \dfrac{2x}{x^2+1}\sin(x)\right).\]
+:::
+
+
+One final example shows how we can use logarithmic differentiation to simplify complicated product or quotient rules.
+
+::: {style="color: green;"}
+**Example:**    Suppose $y = \dfrac{e^x}{\sqrt{2x+1}\ln(x)}$.  Find $\dfrac{dy}{dx}$
+:::
+
+::: {style="color: green;"}
+**Solution:**  Clearly, we have a quotient rule problem with the denominator being a product of two functions (and therefore, when we differentiate it, we will also need the product rule).  We simplify by taking logs on both sides.
+\begin{align*}  y &= \dfrac{e^x}{\sqrt{2x+1}\ln(x)}\\
+\ln(y) &= \ln(\dfrac{e^x}{\sqrt{2x+1}\ln(x)})\\
+\ln(y) &= \ln(e^x) - \ln(\sqrt{2x+1}) - \ln(\ln(x))\\
+\ln(y) &= x - \dfrac{1}{2}\ln(2x+1) - \ln(\ln(x)).
+\end{align*}
+Now, from here, we can differentiate both sides implicitly.
+\begin{align*}
+\ln(y) &= x - \dfrac{1}{2}\ln(2x+1) - \ln(\ln(x))\\
+\dfrac{1}{y} \dfrac{dy}{dx} &= 1 - \dfrac{1}{2}\dfrac{2}{2x+1} - \dfrac{1}{\ln(x)}\dfrac{1}{x}\\
+\dfrac{dy}{dx} &= y\left(1 - \dfrac{1}{2x+1} - \dfrac{1}{x\ln(x)}\right)\\
+\dfrac{dy}{dx} &= \dfrac{e^x}{\sqrt{2x+1}\ln(x)}\left(1 - \dfrac{1}{2x+1} - \dfrac{1}{x\ln(x)}\right)\\
+\dfrac{dy}{dx} &= \dfrac{e^x(2x^2\ln(x) - 2x - 1)}{(2x+1)^{3/2}x\ln(x)^2}.
+\end{align*}
+Therefore, \[\dfrac{dy}{dx} = \dfrac{e^x(2x^2\ln(x) - 2x - 1)}{(2x+1)^{3/2}x\ln(x)^2}.\]
+:::
+
+One should verify that this is exactly the same result that you would get by using the quotient rule.
+
+Practice Problems
+
+1.  Find $\dfrac{dy}{dx}$.
+
+  *  $y = (4x^2 + 1)^{3x +1}$
+  *  $y = x^{\tan(2x+1)}$
+  *  $y = (2x + e^{3x})^{\cos(x)}$
+  *  $y = x^{\ln(x)}$
+  *  $y = (\sin(2x+1)^{6x}$
+  *  $y = x^2(4-2x)^{1-x^2}$
+  *  $y = (3x - 5)^7\sqrt{3x^2 + 2x + 1}$
+  *  $y = \dfrac{\sin(2x^2 + 4x)}{(6-x^3)^4}$
+  *  $y = \dfrac{\sqrt{5x-3}\sqrt[3]{1-3\cot(4x)}}{\sqrt[4]{x^2 + 4x}}$
+  *  $y = \displaystyle \frac{{\sqrt {1 + \sin \left( {2x} \right)} }}{{2x - \tan \left( x \right)}}$
+
+
+
+
+##  Proof of the Power Rule {-}
+
+In this section, we prove \[\dfrac{d}{dx}x^n = nx^{n-1},\] for any $n \in \mathbb{R}$.  Thus far, we have only been able to prove the property if $n \in \mathbb{Z}^+$. 
+
+
+::: {style="color: blue;"}
+**Theorem (General Power Rule):**   Let $y = x^n$ for $n \in \mathbb{R}$.  Then \[\dfrac{dy}{dx} = nx^{n-1}.\]
+:::
+
+::: {style="color: blue;"}
+**Proof:**    Let $y = x^n$.  Then $\ln(y) = \ln(x^n)$ or that $\ln(y) = n\ln(x)$.  If we implicitly differentiate each side, we find that \[\dfrac{1}{y} \dfrac{dy}{dx} = \dfrac{n}{x}.\]  The right side derivative follows since $n$ is constant.  Therefore, \[\dfrac{dy}{dx} = y\dfrac{n}{x} = \dfrac{nx^n}{x} = nx^{n-1}.\]
+:::
+
+
+Practice Problems
+
+1.  Use logarithmic differentiation to prove the product rule.
+
+
+2.  Use logarithmic differentiation to prove the quotient rule.
+
+
+3.  Differentiate $x^{x^x}$ and $x^{x^{x^x}}$.
+
+
+#  3.9  Related Rates {-}
+
+
+
+
+Related rates problems are an application of implicit differentiation.  There are four basic steps to solve related rates problems:
+
+  1.  Draw a picture of the physical situation.  Label any quantities you are given in the question and create a variable for any unknown quantities or quantities that change.
+  2.  Write an equation that relates the quantities of interest.  Be sure to label as a variable any value that changes as the situation progresses.  Do not substitute a number for it yet.
+  3.  To develop your equation, you will probably use either a simple geometric fact (ie, the equation of a circle or the Pythagorean theorem), a trigonometric function, the Pythagorean theorem, similar triangles.
+  4.  Take the derivative with respect to time of both sides of your equation. Use implicit differentiation.  Solve for the unknown quantity.
+
+
+The best way to learn how to do related rates problems is to actually do related rates problems.
+
+
+::: {style="color: green;"}
+**Example:**   Air is being pumped into a spherical balloon at a rate of $4 cm^3/min$. Determine the rate at which the radius of the balloon is increasing when the diameter of the balloon is $18 cm$.
+:::
+
+::: {style="color: green;"}
+**Solution:** The value that we need to find is the rate at which the radius of the balloon is increasing.  If the radius is $r$, the rate at which the radius is increasing is $\dfrac{dr}{dt}$.
+
+The other things we know from the question is that the air being pumped into the balloon is $4 cm^3/min$.  If $V$ is the volume of the balloon, then this quantity is $\dfrac{dV}{dt} = 4$.
+
+One last thing to note is that as time goes on is that the radius is going to changed.  That is, the radius $r$ is not fixed.  We need to find $\dfrac{dr}{dt}$ when the diameter is $18 cm$ or when $r = 9 cm$.
+
+The equation that relates volume of a sphere to the diameter is \[V = \dfrac{4}{3} \pi r^3.\]  Differentiating this equation with respect to time, we find \[\dfrac{dV}{dt} = \dfrac{4}{3} \pi \left(3r^2 \dfrac{dr}{dt} \right) = 4\pi r^2 \dfrac{dr}{dt}.\]  We want to find $\dfrac{dr}{dt}$ at the time when $r = 9$.  Plugging in the value of $r$ and the value of $\dfrac{dV}{dt}$, we get \begin{align*}
+\dfrac{dV}{dt} &= 4\pi r^2 \dfrac{dr}{dt}\\
+4 &= 4\pi (9)^2 \dfrac{dr}{dt}\\
+\dfrac{1}{81\pi} &= \dfrac{dr}{dt}.
+\end{align*}
+Therefore, the rate at which the radius is increasing is \[\dfrac{dr}{dt} = \dfrac{1}{81\pi}.\]
+:::
+
+
+
+
+::: {style="color: green;"}
+**Example:**    You are pouring pancake batter onto a hot griddle. If the pancake has is $10 cm$ across and our pour increases the area at a rate of 10 $cm/s$, how quickly is the pancake widening?
+:::
+
+::: {style="color: green;"}
+**Solution:**The value that we need to find is the rate at which the diameter of the pancake is increasing.  If the diameter is $d$, the rate at which the radius is increasing is $\dfrac{dd}{dt}$.
+
+The other things we know from the question is that the area of the pancake is increasing at a rate of $10 cm/s$.  If $A$ is the area of the balloon, then this quantity is $\dfrac{dA}{dt} = 10$.
+
+One last thing to note is that as time goes on, the area is going to change.  That is, the surface area of the pancake, $A$, is not fixed.  We need to find $\dfrac{dd}{dt}$ when the diameter is $10 cm$..
+
+The equation that relates area of a circle to the radius is \[A = \pi r^2.\]  Since the radius is half of the diameter ($r = d/2$), we should actually work with the equation \[A = \pi (d/2)^2 = \dfrac{\pi}{4} d^2.\]  Differentiating this equation with respect to time, we find \[\dfrac{dA}{dt} = \dfrac{\pi}{4} \left(2d \dfrac{dd}{dt} \right) = \dfrac{\pi}{2} d \dfrac{dd}{dt}.\]  We want to find $\dfrac{dd}{dt}$ at the time when $d = 10 cm$.  Plugging in the value of $d$ and the value of $\dfrac{dA}{dt}$, we get \begin{align*}
+\dfrac{dA}{dt} &= \dfrac{\pi}{2} d \dfrac{dd}{dt}\\
+10 &= \dfrac{\pi}{2} (10) \dfrac{dd}{dt}\\
+\dfrac{2}{\pi} &= \dfrac{dd}{dt}.
+\end{align*}
+Therefore, the rate at which the diameter is increasing is \[\dfrac{dd}{dt} = \dfrac{2}{\pi}.\]
+:::
+
+
+
+::: {style="color: green;"}
+**Example:**    The top of a 23 foot ladder, leaning against a vertical wall, is slipping down the wall at a rate of 4 feet per second. How fast is the bottom of the ladder sliding along the ground when the bottom of the ladder is 9 feet away from the base of the wall?
+:::
+
+::: {style="color: green;"}
+**Solution:** Let $y$ denote the height of the top of the ladder from the bottom of the wall and $x$ the distance from the bottom of the ladder to the wall. The value that we need to find is the rate at which the bottom of the ladder is sliding away from the wall, $\dfrac{dx}{dt}$.
+
+The other things we know from the question is that the length of the ladder is $23$ foot long ($h = 23$) and that the rate at which the ladder is sliding down the wall is $\dfrac{dy}{dt} = 4$.
+
+One last thing to note is that as time goes on, the position of the top and bottom of the latter will change.  So, both $x$ and $y$ are variable.  However, the length of the latter remains constant.  So, $h = 23$ is constant.  We need to find $\dfrac{dx}{dt}$ when the $x = 10$.  Using Pythagoras, we know this means that $y = \sqrt{23^2 - 10^2} = 20.71$.
+
+The equation that relates the horizontal and vertical parts of a triangle is the Pythagorean theorem \[x^2 + y^2 = h^2.\]  Since $h$ is constant, \[x^2 + y^2 = 23^2.\]  Differentiating this equation with respect to time, we find \[2x\dfrac{dx}{dt} + 2y \dfrac{dy}{dt} = 0.\]  We want to find $\dfrac{dx}{dt}$ at the time when $x = 10$ and $y = 20.17$.  Plugging in these values, we get \begin{align*}
+2x\dfrac{dx}{dt} + 2y \dfrac{dy}{dt} &= 0\\
+2(10)\dfrac{dx}{dt} + 2(20.71) (4) &= 0\\
+\dfrac{dx}{dt} &= 8.284.
+\end{align*}
+Therefore, the rate at which the ladder slides away from the wall is \[\dfrac{dd}{dt} = 8.284 \text{feet per second}.\]
+:::
+
+Practice Problems
+
+1.  You are blowing air into a spherical balloon at a rate of $5 in^3/s$. What is the rate of change of the surface area of the balloon at $t=1s$ given that the balloon has a radius of $6 in$?
+
+2.  A boat is pulled into a dock by a rope attached to the bow (front) of the boat and passing through a pulley that is $1 m$ above the bow of the boat. If the rope is pulled at a rate of $1 m/s$, how fast is the boat approaching the dock when it is $9 m$ from the dock?
+
+3.  Gravel is being dumped from a conveyor belt at a rate of $28 ft^3/m$. The gravel is so coarse so that the pile forms in the shape of a cone whose base diameter and height are always equal. How fast is the height of the pile increasing when the pile is $12 ft$ high? (Hint: the volume of a cone is given by $V=\pi r^2 h/3$ where $r$ is the base radius and $h$ is the height).
+
+4.  A $15 ft$ ladder is resting against the wall. The bottom is initially $12 ft$ away from the wall and is being pushed towards the wall at a rate of $0.25  ft/sec$. How fast is the top of the ladder moving up the wall $10 s$ after we start pushing?
+
+5. Two people are $45 ft$ apart. One of them starts walking north at a rate so that the angle between the starting position of the two people and the current position of the two people is changing at a constant rate of $0.01 rad/min$. At what rate is distance between the two people changing when $\theta = 0.5 rads$?
+
+6.  A tank of water in the shape of a cone is leaking water at a constant rate of $2ft^3/ hr$. The base radius of the tank is $5 ft$ and the height of the tank is $14 ft$.  (a)  At what rate is the depth of the water in the tank changing when the depth of the water is $6 ft$?  (b)  At what rate is the radius of the top of the water in the tank changing when the depth of the water is $6 ft$?
+
+7.  Consider a weight hanging from a rope which stretches up to a pulley 10ft above the floor and then to your hand which is 3ft above the floor and 15ft horizontally to the right of the pulley. If you walk horizontally to the right at 2 ft/s, how fast does the weight rise?
+
+
+
+#  3.10  Linear Approximations and Differentials {-}
+
+
+##  Linear Approximation {-}
+
+Linear approximation takes advantage of the fact that values of $f(x)$ near $x=a$ lie very close to the tangent line, $T(x)$ of $f(x)$ at $x=a$.  With this in mind, if we have a situation in which $f(a)$ is easy to find and the tangent line to $f$ at $a$ is easy to find but values of $f$ close to $a$ are difficult to find, then we can approximate them by a linear approximation based on the tangent line.
+
+
+|![](Pic46.png)|
+|:--:|
+
+
+At $x = a$, the tangent line for $f(x)$ is given by \[y = f(a) + f^{\prime}(a)(x-a).\]  Therefore, for values of $x$ close $a$, we know \[f(x) \approx f(a) + f^{\prime}(a)(x-a).\]  We call the value \[L(x) = f(a) + f^{\prime}(a)(x-a),\] the linear approximation of $f$ near $a$.
+
+::: {style="color: green;"}
+**Example:**    Find the linear approximation of $\sin(x)$ near $x = 0$ and use it to determine $\sin(0.25)$.
+:::
+
+::: {style="color: green;"}
+**Solution:**   The linear approximation to $f(x) = \sin(x)$ at $x = 0$ is \[L(x) = f(0) + f^{\prime}(0)(x-0).\]  Therefore, we need to determine $f(0)$ and $f^{\prime}(0)$. We know that \[f(0) = \sin(0) = 0,\] and that \[f^{\prime}(0) = \cos(x) |_{x=0} = \cos(0) = 1.\]  So, the linear approximation of $f(x) = \sin(x)$ at $x=0$ is given by
+\[L(x) = 0 + 1(x-0) = x.\]
+To approximate $\sin(0.25)$, we evaluate $L(0.25) = 0.25 = 0.25$.  Note that $\sin(0.25)$ is actually around $0.247$ which is quite close.
+:::
+
+
+|![](Pic47.png)|
+|:--:|
+
+
+::: {style="color: green;"}
+**Example:**   Find the linear approximation of $\sqrt{x-1}$ near $x = 2$ and use it to determine $\sqrt{1.25}$.
+:::
+
+::: {style="color: green;"}
+**Solution:**   The linear approximation to $f(x) = \sqrt{x-1}$ at $x = 2$ is \[L(x) = f(2) + f^{\prime}(2)(x-2).\]  Therefore, we need to determine $f(2)$ and $f^{\prime}(2)$. We know that \[f(2) = \sqrt{2-1} = \sqrt{1} = 1,\] and that \[f^{\prime}(2) = \dfrac{1}{2\sqrt{x-1}} |_{x=2} = \dfrac{1}{2\sqrt{2-1}} = \dfrac{1}{2}.\]  So, the linear approximation of $f(x) = \sqrt{x}$ at $x=2$ is given by
+\[L(x) = 1 + \dfrac{1}{2}(x-2).\]
+To approximate $\sqrt{1.25}$, we need to find a close approximation to $f(2.25)$ since \[f(2.25) = \sqrt{2.25 - 1} = \sqrt{1.25}.\] We therefore evaluate \[L(2.25) 1 + \dfrac{1}{2}(2.25-2) = 1 + \dfrac{1}{2}(0.25) = 1.125.\]  We note that the actual value of $\sqrt{1.25}$ is 1.118, so we are pretty close.
+:::
+
+
+
+Practice Problems
+
+1.  Find the linear approximation to the curve at the given point.
+
+  *  $y = e^x$ at $a = 0$
+  *  $y = \sqrt{x-2}$ at $a = 6$
+  *  $y = \ln(x)$ at $a = e$
+  *  $y = \cos(x)$ at $a = \pi$
+  *  $y = x^2 + x + 1$ at $a = 2$
+  *  $y = e^{x-3}$ at $a = 3$
+
+
+2.  Find the linear approximation to the curve at the given point and use it to approximate the given number.
+
+  *  $y = e^x$ at $a = 0$ approx $\sqrt{e}$
+  *  $y = \sqrt{x-2}$ at $a = 6$ approx $\sqrt{3.8}$
+  *  $y = \ln(x)$ at $a = e$ approx $\ln(3)$
+  *  $y = \cos(x)$ at $a = \pi$ approx $\cos(3.5)$
+  *  $p(x) = x^2 + x + 1$ at $a = 2$ approx $p(2.25)$
+  *  $y = e^{x-3}$ at $a = 3$ approx $\sqrt{e}$.
+
+
+3.  Find the linear approximation to $\sqrt[4]{x}$ at $a = 2$.  Use it to approximate $\sqrt[4]{3}$ and $\sqrt{4}{10}$ and compare to the exact values.\\
+
+4.  Use a linear approximation to determine the value of $e^{0.1}$ without the use of any computational aid.
+
+
+##  Differentials {-}
+
+Given a function $y = f(x)$, we call $dy$ and $dx$ differentials and we define the relationship between $f$ and the differentials is given by \[dy = f^{\prime}(x) dx.\]  For example, if $y = x^2 + x + 3$, the differential for $f$ is given by \[dy = (2x + 1)dx.\]
+
+Geometrically, $dy$ represents the vertical distance between $x$ and $x + \Delta x$ (or $x + dx$) on the tangent line of $f$ at $x$.  If $\Delta y$ is the actual change in the vertical distance between $f(x)$ and $f(x + \Delta x)$, then $dy \approx \Delta y$ and as $\Delta x \rightarrow 0$, this approximation becomes better.
+
+
+::: {style="color: green;"}
+**Example:**   Find the differential of $y = e^{x^2 - 4}$.
+:::
+
+::: {style="color: green;"}
+**Solution:**  The differential has the form \[dy = y^{\prime} dx.\]  Therefore, the differential for $y = e^{x^2 - 4}$ is \[dy = \left(2xe^{x^2 -4} \right) dx.\]
+:::
+
+
+
+::: {style="color: green;"}
+**Example:**   Compute $dy$ and $\Delta y$ if $y = \sin(2x + 1)$ as $x$ changes from $x=2$ to $x=2.05$.
+:::
+
+::: {style="color: green;"}
+**Solution:** The differential has the form \[dy = y^{\prime} dx.\]  Therefore, the differential for $y = \sin(2x+1)$ is \[dy = \left(2\cos(2x+1) \right) dx.\]  So, \[dy = \left(2\cos(2(2)+1) \right)(2.05-2) = 0.02836621855.\]  We can find $\Delta y$ by computing \[\Delta y = \sin(2(2.05)+1) - \sin(2(2)+1) = 0.03310959.\]  So, with a small $\Delta x$, we have $dy \approx \Delta x$.
+:::
+
+
+::: {style="color: green;"}
+**Example:**   A sphere was measured and its radius was found to be 35 inches with a possible error of no more that 0.01 inches. What is the maximum possible error in the volume if we use this value of the radius?
+:::
+
+::: {style="color: green;"}
+**Solution:**  The equation of the volume of a sphere is given by \[V = \dfrac{4}{3} \pi r^3.\]  If we begin with $r = 35 in$, and assume $dr \approx \Delta r = 0.01 in$, then $\Delta V \approx dV$ should give us the maximum error.
+
+The differential here is \[dV = V^{\prime}(r) dr = \left(4 \pi r^2 \right) dr.\]   Computing $dV$, we find \[dV = \left(4 \pi (35)^2 \right) (0.01) = 49\pi in^3.\]  Therefore, the maximum error in the volume is approximately 153.938 cubic inches.
+
+Note that this is not a large error as when $r = 35$ inches, the volume is $V = 179,594.38$ for a volume comparison of \[\dfrac{153.938}{179,594.38} \times 100 = 0.0857\%.\]
+:::
+
+
+Practice Problems
+
+1.  Find the differential for each of the given functions
+
+  *  $y = \sec(x)$
+  *  $y = e^{2x^4 + 1}$
+  *  $y = 10^x + \ln(x+4)$
+  *  $y = \sin(4x^5 + 1)$
+  *  $y = \ln(3x)\cos(5x)$
+  *  $y = \dfrac{2^x}{\ln(2x)}$
+
+
+2.  Find $dy$ and $\Delta y$ for $y=e^{x^3}$ as $x$ changes from 2 to 2.05.
+
+3.  Find $dy$ and $\Delta y$ for $y=\sin(x^3)$ as $x$ changes from 1 to 0.95.
+
+4.  The sides of a cube are found to be $5 ft$ in length with a possible error of no more than $1.25 in$. What is the maximum possible error in the volume of the cube if we use this value of the length of the side to compute the volume?
+
+5.  The radius of a sphere is found to be $18 cm$ in length with a possible error of no more than $0.05 cm$. What is the maximum possible error in the volume of the sphere if we use this value of the radius to compute the volume?
+  
+
+
