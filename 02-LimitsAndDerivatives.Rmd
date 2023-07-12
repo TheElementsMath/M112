@@ -18,32 +18,7 @@ We can try to determine the value of a limit by evaluating the function at point
 :::
 
 ::: {style="color: green;"}
-**Solution:**  The function is $f(x) = x^3$ and $a = 2$ in this example.  So we evaluate $f(x)$ at $x$ values close to 2.
-
-We begin with values of $a$ smaller than 2 (but still close to 2).
-
-|$a$     |$a^3$       |
-|:------:|:-----------:|
-| 1.9    | 6.859       |
-| 1.99   | 7.880599    |
-| 1.999  | 7.988005999 |
-| 1.9999 | 7.99880006  |
-
-We see that the function value is close to 8 (but a little smaller than 8).
-
-Next, we check out values of $a$ larger than 2 (but still close to 2).
-
-
-|$a$     |$a^3$       |
-|:------:|:-----------:|
-| 2.1    | 9.261       |
-| 2.01   | 8.120601    |
-| 2.001  | 8.012006001 |
-| 2.0001 | 8.00120006  |
-
-We see that the function value is close to 8 (but a little larger than 8).  
-
-When we take values of $x$ that are close to $2$ (be they larger than 2 or smaller than 2), it appears that $f(x) = x^3$ gets close to 8.  Therefore, $\displaystyle\lim_{x \rightarrow 2} x^3 = 8$.
+**Solution:**  [Click here for solution](https://www.youtube.com/watch?v=OaEiCT2amN8)
 :::
 
 
@@ -112,20 +87,7 @@ Left and right limits are similar to the limits discussed in the previous sectio
 :::
 
 ::: {style="color: green;"}
-**Solution:**  
-
-The function is $f(x) = 3\sqrt{x-1}$ and $a = 1$ in this example.  So we evaluate $f(x)$ at $x$ values close to 1 but larger than 1.
-
-| $a$      | $f(a)$      |
-|:--------:|:-----------:|
-| 1.1      | 0.948683298 |
-| 1.01     | 0.3         |
-| 1.001    | 0.09486833  |
-| 1.0001   | 0.03        |
-| 1.00001  | 0.009486833 |
-| 1.000001 | 0.003       |
-
-When $x$ gets close to $1$ (using values larger than 1), we see that the limit appears to go to 0.
+**Solution:**  [Click here for solution](https://www.youtube.com/watch?v=kFxmyolsHrE)
 :::
 
 
@@ -163,16 +125,7 @@ When $x$ gets close to $-3$ (using values larger than -3), we see that the limit
 
 
 ::: {style="color: green;"}
-**Solution:**  The function is $f(x) = |x^2 - 9|$ and $a = 3$ in this example.  So we evaluate $f(x)$ at $x$ values close to 3 but smaller than 3.
-
-| $a$    | $f(a)$       |
-|:------:|:------------:|
-| 2.9    | 0.0599       |
-| 2.99   | 0.005999     |
-| 2.999  | 0.00059999   |
-| 2.9999 | 0.0000599999 |
-
-When $x$ gets close to $3$ (using values smaller than 3), we see that the limit appears to go to 0.
+**Solution:**  [Click here for solution](https://www.youtube.com/watch?v=ARPyHFVqjRA)
 :::
 
 
@@ -240,8 +193,9 @@ Here are some examples that illustrate these situations.
 |:--:|
 
 
+
 ::: {style="color: green;"}
-**Solution:**  The definition of a limit states that $\displaystyle\lim_{x \rightarrow 1} f(x) = L$ if the value of $f(x)$ gets arbitrarily close to $L$ if $x$ is close enough to 1.  We notice on the picture that $$\displaystyle\lim_{x \rightarrow 1^+} f(x) = 3.$$  Moreover, we see that $$\displaystyle\lim_{x \rightarrow 1^-} f(x) = 2.$$  If this limit exists, we need to get arbitrarily close to the limit $L$ (which could be 2, 3 or some other number) as $x$ gets close to 1.  As $x$ approaches 1 from the left, we get arbitrarily close to 2; however, as $x$ approaches 1 from the right, we get arbitrarily close to 3.  If the limit is 2, we can't get any closer than 3 by taking values of $x$ close to 1 on the right.  Similarity, if the limit was 3, we can't get any closer than 2 by taking values of $x$ close to 1 on the left.  We have the same problem if we take $L$ to be any other number.  Since the value of the limit depends on what direction we approach 1 from, the limit does not exist.  So we say $$\displaystyle\lim_{x \rightarrow 1} f(x) \;\; DNE.$$
+**Solution:**  [Click here for solution](https://www.youtube.com/watch?v=Xpq_uDn3QL0)
 :::
 
 
@@ -328,9 +282,11 @@ Let $n \not = 0$.  If we have a limit of the form $$\displaystyle\lim_{x \righta
 **Example:**  Determine the value of $\displaystyle\lim_{x \rightarrow 0} \frac{1}{x^4}$.
 :::
 
+
 ::: {style="color: green;"}
-**Solution:**  If we substitute 0 into the function, we get a 1/0 form.  So, the limit does not exist.  So, we look for 1 sided limits.  When $x < 0$, the fraction $\frac{1}{x^4} > 0$.  So, $\displaystyle\lim_{x \rightarrow 0^-} \frac{1}{x^4} = \infty$.  Moreover, when $x > 0$, the fraction $\frac{1}{x^4} > 0$ as well.  So, we again have $\displaystyle\lim_{x \rightarrow 0^+} \frac{1}{x^4} = \infty$.  So, to conclude, we see that $$\displaystyle\lim_{x \rightarrow 0} \dfrac{1}{x^4} = \infty.$$
+**Solution:**  [Click here for solution](https://www.youtube.com/watch?v=8P3z5G7MHP4)
 :::
+
 
 
 
